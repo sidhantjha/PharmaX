@@ -59,7 +59,9 @@ PharmaX serves pharmacy and supply-chain operators who need to understand where 
 **Demo video:** pending maintainer URL.
 ## Presentation
 
-[View or download the PharmaX presentation](docs/presentation/PharmaX_Hackathon_Submission_Deck_Final_v2.pptx)
+- [View the PharmaX slide deck (PDF)](PharmaX_Hackathon_Submission_Deck_Final.pdf)
+- [Download the editable PowerPoint](PharmaX_Hackathon_Submission_Deck_Final.pptx))
+
 
 
 ## Measured Hurricane Helene case study
