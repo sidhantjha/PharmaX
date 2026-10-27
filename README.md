@@ -57,10 +57,13 @@ PharmaX serves pharmacy and supply-chain operators who need to understand where 
 ![Actual evidence-backed chat response with a source citation and hypothetical calculation](docs/assets/chat.png)
 
 **Demo video:** pending maintainer URL.
-## Presentation
 
-- [View the PharmaX slide deck (PDF)](PharmaX_Hackathon_Submission_Deck_Final.pdf)
-- [Download the editable PowerPoint](PharmaX_Hackathon_Submission_Deck_Final.pptx))
+<h2>Presentation</h2>
+
+<a href="PharmaX_Hackathon_Submission_Deck_Final.pdf" target="_blank" rel="noopener noreferrer">View PharmaX Presentation (PDF)</a>
+
+<a href="PharmaX_Hackathon_Submission_Deck_Final.pptx">Download PowerPoint (PPTX)</a>
+
 
 
 
