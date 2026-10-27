@@ -56,7 +56,11 @@ PharmaX serves pharmacy and supply-chain operators who need to understand where 
 
 ![Actual evidence-backed chat response with a source citation and hypothetical calculation](docs/assets/chat.png)
 
-**Demo video:** pending maintainer URL.
+
+## Demo
+
+[Watch the PharmaX demo video](https://drive.google.com/file/d/1VFFi75TyhqL5BRMRR5xzzoeVcUlHfIXi/view?usp=sharing)
+
 
 <h2>Presentation</h2>
 
