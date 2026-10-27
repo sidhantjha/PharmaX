@@ -1,14 +1,20 @@
 # Release checks
 
-Publication remains gated on the clean-clone and security checks below. This file
-will be completed with actual results before any public repository is created.
+Verified from an independent local clone of the fresh PharmaX repository.
 
-- Original Project-Dot4 worktree and remote preserved.
-- Fresh export contains PharmaX phase code, contracts, synthetic inputs and sanitized recorded evidence; no municipal source/history or private runtime stores.
-- Third-party originals excluded from Git; explicit source bootstrap uses pinned hashes.
-- Historical source checkpoint: `fca4aeb4c5e5b0ce9e770be056c7aab3a22f7c3a` plus latest uncommitted frontend/chat implementation.
-- Source-history Gitleaks scan: 64 reachable commits / 59 refs after fetch; ten findings reviewed as source-file hashes, with zero credential findings in current release candidates.
-- Clean-clone commands, frontend build/tests, sample results, API/chat/citations, Mermaid rendering and final export scans: **pending**.
+- Locked Python and npm dependency installation: passed.
+- Explicit public-document bootstrap: passed for the October 1 demo.
+- Three actual computed inputs: 172, 72 and 0 central unmet bags.
+- Restored recorded case: 342 → 6 projected network unmet bags; zero new model calls.
+- Backend chat/admission tests: 12 passed.
+- Targeted frontend tests: 10 passed. TypeScript and production build passed.
+- Five real offline chat questions: answered; all five citations resolved; canonical forecasts unchanged.
+- Actual browser: independently cloned UI loaded correct outcome and all three SKU mappings.
+- Three Mermaid diagrams rendered. Twenty local README links resolved.
+- Fresh Git history secret scan: zero findings. No private configuration, personal machine paths, municipal source/history or runtime stores staged.
+- Third-party source originals are not redistributed; notices retained.
+- The Virginia guidance page changed since acquisition. Future documents are skipped before byte access when outside the selected checkpoint; required sources still fail on missing/changed bytes. Two targeted tests verify this release-only reproduction fix.
 
-The source worktree's historical receipts report 523 backend and 53 frontend tests
-passing. They are not substituted for this release's clean-clone check.
+The clean-clone test used free loopback ports 8926/5196 because existing developer services occupied the README defaults 8898/5195. The same documented server flags and PHARMAX_API_TARGET setting were used. No public backend or website was deployed.
+
+[Structured verification](evidence/clean-clone-verification.json) · [Historical accepted test receipts](evidence/validation-history.json)

@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "classification": "Actual independent local clean-clone execution; no sponsor credentials or inference",
+  "python": "3.12.3",
+  "node": "24.22.1",
+  "uv": "0.13.5",
+  "samples_central_unmet": [
+    172,
+    72,
+    0
+  ],
+  "recorded_network_unmet": [
+    342,
+    6
+  ],
+  "backend_targeted_tests": 12,
+  "frontend_targeted_tests": 10,
+  "typecheck": "passed",
+  "production_build": "passed; existing large globe chunk warning",
+  "offline_chat_questions": 5,
+  "citations_resolved": 5,
+  "canonical_unchanged": true,
+  "new_model_calls": 0,
+  "mermaid_diagrams_rendered": 3,
+  "readme_local_links_checked": 20,
+  "secret_scan_findings": 0,
+  "source_originals_redistributed": false,
+  "municipal_code_or_history_included": false,
+  "loopback_test_ports": {
+    "backend": 8926,
+    "frontend": 5196
+  }
+}
