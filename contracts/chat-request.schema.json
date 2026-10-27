@@ -1,0 +1,50 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "execution_mode": {
+      "default": "offline",
+      "enum": [
+        "offline",
+        "live"
+      ],
+      "title": "Execution Mode",
+      "type": "string"
+    },
+    "investigation_id": {
+      "anyOf": [
+        {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Investigation Id"
+    },
+    "question": {
+      "maxLength": 1000,
+      "minLength": 3,
+      "title": "Question",
+      "type": "string"
+    },
+    "scenario": {
+      "default": "red-sea",
+      "enum": [
+        "red-sea",
+        "original",
+        "clean-onset"
+      ],
+      "title": "Scenario",
+      "type": "string"
+    }
+  },
+  "required": [
+    "question"
+  ],
+  "title": "ChatRequest",
+  "type": "object"
+}

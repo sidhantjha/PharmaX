@@ -1,0 +1,4 @@
+record_id,facility_id,local_sku,account_id,supplier_id,line_id,quantity,unit,ordered_on,expected_on
+po-central,sim-nc-central,IV-NS1L,sim-account-central,sim-baxter-channel,line-1,210,bag,2024-10-01,2024-10-04
+po-north,sim-nc-north,SAL-1000,sim-account-north,sim-baxter-channel,line-1,168,bag,2024-10-01,2024-10-04
+po-south,sim-nc-south,NACL009-L,sim-account-south,sim-baxter-channel,line-1,140,bag,2024-10-01,2024-10-04

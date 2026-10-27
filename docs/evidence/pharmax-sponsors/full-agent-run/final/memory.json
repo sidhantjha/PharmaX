@@ -1,0 +1,152 @@
+{
+  "role_id": "memory",
+  "role_name": "Write and retrieve eligible findings using the real H-MEM reference engine.",
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "complete",
+  "continuation_occurred": true,
+  "live_verified": true,
+  "predecessor_roles": [
+    "news",
+    "verification",
+    "dependency",
+    "trade",
+    "disruption"
+  ],
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "tool_selected": "hmem.exchange",
+  "tool_input": {},
+  "tool_input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "tool_result_reference": "memory-tool.json",
+  "tool_result_sha256": "af581609b90b736f4b9944275bf32e1f2b49f95421e485eafc7808e368c008e1",
+  "memory_ids": [
+    "mem-4",
+    "mem-2",
+    "mem-5",
+    "mem-1",
+    "mem-3"
+  ],
+  "excluded_due_to_recalled_rejection": [
+    "sim-nc-north-to-sim-nc-south-170",
+    "external-sim-nc-central",
+    "external-sim-nc-south",
+    "sim-nc-south-to-sim-nc-central-110",
+    "sim-nc-central-to-sim-nc-south-164"
+  ],
+  "structured_finding": {
+    "observation": "memory_recalled",
+    "evidence_ids": [
+      "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+    ],
+    "fact_keys": [
+      "actual_hmem_findings_persisted",
+      "actual_hmem_context_recalled"
+    ],
+    "candidate_id": null,
+    "memory_ids": [
+      "mem-4",
+      "mem-2",
+      "mem-5",
+      "mem-1",
+      "mem-3"
+    ]
+  },
+  "model_receipts": [
+    {
+      "role": "memory",
+      "request_no": 15,
+      "call_id": "call-714fb03b-dac8-4071-8142-a2413966ecd3",
+      "response_id": "chatcmpl-b141363f-115c-491f-969a-57cb1c6782f7",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_8yhn9t4g",
+      "request_id": null,
+      "decision_id": "req_8yhn9t4g",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 897,
+        "completion_tokens": 24,
+        "total_tokens": 921
+      },
+      "selected_tool": "memory_write_and_recall",
+      "arguments": {},
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "memory",
+      "request_no": 16,
+      "call_id": "call-f3fe9c91-e38a-4a60-a187-0576bf0f059a",
+      "response_id": "chatcmpl-6754b762-a014-4710-b4bc-6f93fb615434",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_bh3ru3oo",
+      "request_id": null,
+      "decision_id": "req_bh3ru3oo",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 3096,
+        "completion_tokens": 142,
+        "total_tokens": 3238
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "memory_recalled",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "actual_hmem_findings_persisted",
+          "actual_hmem_context_recalled"
+        ],
+        "candidate_id": null,
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ]
+      },
+      "live": true,
+      "runtime_mcp": null
+    }
+  ],
+  "request_records": [
+    {
+      "role": "memory",
+      "number": 15,
+      "started_at": "2026-10-27T19:14:48.167688+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 3162,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.485,
+      "completed_at": "2026-10-27T19:14:48.652686+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "memory",
+      "number": 16,
+      "started_at": "2026-10-27T19:14:49.773678+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 8826,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 1.38,
+      "completed_at": "2026-10-27T19:14:51.153698+00:00",
+      "usage_reported": true
+    }
+  ],
+  "completed_at": "2026-10-27T19:14:51.154069+00:00"
+}

@@ -1,0 +1,2475 @@
+{
+  "$defs": {
+    "AllocationNotice": {
+      "additionalProperties": false,
+      "properties": {
+        "allocation_percent": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Allocation Percent",
+          "type": "number"
+        },
+        "baseline_end": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Baseline End"
+        },
+        "baseline_start": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Baseline Start"
+        },
+        "container_ml": {
+          "exclusiveMinimum": 0,
+          "title": "Container Ml",
+          "type": "number"
+        },
+        "customer_class": {
+          "minLength": 1,
+          "title": "Customer Class",
+          "type": "string"
+        },
+        "effective_on": {
+          "format": "date",
+          "title": "Effective On",
+          "type": "string"
+        },
+        "exact_claim": {
+          "minLength": 1,
+          "title": "Exact Claim",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "observed",
+            "projected"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "notice_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Notice Id",
+          "type": "string"
+        },
+        "original_baxter_code": {
+          "minLength": 1,
+          "title": "Original Baxter Code",
+          "type": "string"
+        },
+        "original_ndc": {
+          "minLength": 1,
+          "title": "Original Ndc",
+          "type": "string"
+        },
+        "page": {
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "quantity_unit": {
+          "const": "bag",
+          "default": "bag",
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "6a.1",
+          "default": "6a.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_revision_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Source Revision Id",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "table_location": {
+          "minLength": 1,
+          "title": "Table Location",
+          "type": "string"
+        },
+        "validation_status": {
+          "enum": [
+            "validated",
+            "quarantined"
+          ],
+          "title": "Validation Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "notice_id",
+        "source_revision_id",
+        "source_sha256",
+        "product_id",
+        "original_baxter_code",
+        "original_ndc",
+        "container_ml",
+        "allocation_percent",
+        "effective_on",
+        "kind",
+        "exact_claim",
+        "customer_class",
+        "page",
+        "table_location",
+        "validation_status"
+      ],
+      "title": "AllocationNotice",
+      "type": "object"
+    },
+    "CorroborationFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "enum": [
+            "consistent",
+            "compatible",
+            "conflict",
+            "missing",
+            "superseded"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "claim_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Claim Ids",
+          "type": "array"
+        },
+        "discrepancy_bags": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Discrepancy Bags",
+          "type": "integer"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "finding_id": {
+          "title": "Finding Id",
+          "type": "string"
+        },
+        "independent_origins": {
+          "minimum": 0,
+          "title": "Independent Origins",
+          "type": "integer"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "requires_human_review": {
+          "default": false,
+          "title": "Requires Human Review",
+          "type": "boolean"
+        },
+        "verification_steps": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Verification Steps",
+          "type": "array"
+        }
+      },
+      "required": [
+        "finding_id",
+        "category",
+        "claim_ids",
+        "evidence_ids",
+        "reason",
+        "verification_steps",
+        "independent_origins"
+      ],
+      "title": "CorroborationFinding",
+      "type": "object"
+    },
+    "DailyStockPoint": {
+      "additionalProperties": false,
+      "properties": {
+        "buffer_days": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Buffer Days"
+        },
+        "closing_physical": {
+          "minimum": 0,
+          "title": "Closing Physical",
+          "type": "integer"
+        },
+        "closing_usable": {
+          "minimum": 0,
+          "title": "Closing Usable",
+          "type": "integer"
+        },
+        "day": {
+          "format": "date",
+          "title": "Day",
+          "type": "string"
+        },
+        "demand": {
+          "minimum": 0,
+          "title": "Demand",
+          "type": "integer"
+        },
+        "expired_physical": {
+          "minimum": 0,
+          "title": "Expired Physical",
+          "type": "integer"
+        },
+        "lots": {
+          "items": {
+            "$ref": "#/$defs/LotBalance"
+          },
+          "title": "Lots",
+          "type": "array"
+        },
+        "opening_physical": {
+          "minimum": 0,
+          "title": "Opening Physical",
+          "type": "integer"
+        },
+        "opening_usable": {
+          "minimum": 0,
+          "title": "Opening Usable",
+          "type": "integer"
+        },
+        "quarantined": {
+          "minimum": 0,
+          "title": "Quarantined",
+          "type": "integer"
+        },
+        "received": {
+          "minimum": 0,
+          "title": "Received",
+          "type": "integer"
+        },
+        "received_shipment_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Received Shipment Ids",
+          "type": "array"
+        },
+        "reserved": {
+          "minimum": 0,
+          "title": "Reserved",
+          "type": "integer"
+        },
+        "served": {
+          "minimum": 0,
+          "title": "Served",
+          "type": "integer"
+        },
+        "unmet": {
+          "minimum": 0,
+          "title": "Unmet",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "day",
+        "opening_physical",
+        "expired_physical",
+        "opening_usable",
+        "received",
+        "demand",
+        "served",
+        "unmet",
+        "closing_usable",
+        "closing_physical",
+        "reserved",
+        "quarantined",
+        "buffer_days",
+        "received_shipment_ids",
+        "lots"
+      ],
+      "title": "DailyStockPoint",
+      "type": "object"
+    },
+    "EvidenceVerification": {
+      "additionalProperties": false,
+      "properties": {
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/OperationalClaim"
+          },
+          "maxItems": 200,
+          "title": "Claims",
+          "type": "array"
+        },
+        "conditional_forecasts": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Conditional Forecasts",
+          "type": "array"
+        },
+        "cutoff": {
+          "format": "date-time",
+          "title": "Cutoff",
+          "type": "string"
+        },
+        "excluded_claim_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Excluded Claim Ids",
+          "type": "array"
+        },
+        "findings": {
+          "items": {
+            "$ref": "#/$defs/CorroborationFinding"
+          },
+          "maxItems": 1000,
+          "title": "Findings",
+          "type": "array"
+        },
+        "forecast_changes": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Forecast Changes",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "physical_receipts": {
+          "additionalProperties": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "title": "Physical Receipts",
+          "type": "object"
+        },
+        "requires_human_review": {
+          "title": "Requires Human Review",
+          "type": "boolean"
+        },
+        "scenario": {
+          "title": "Scenario",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "7.1",
+          "default": "7.1",
+          "title": "Schema Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scenario",
+        "cutoff",
+        "claims",
+        "findings",
+        "excluded_claim_ids",
+        "physical_receipts",
+        "conditional_forecasts",
+        "forecast_changes",
+        "requires_human_review",
+        "limitations"
+      ],
+      "title": "EvidenceVerification",
+      "type": "object"
+    },
+    "HeleneForecast": {
+      "additionalProperties": false,
+      "properties": {
+        "analysis_id": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "as_of": {
+          "format": "date",
+          "title": "As Of",
+          "type": "string"
+        },
+        "end_on": {
+          "format": "date",
+          "title": "End On",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "expected_daily_demand": {
+          "minimum": 0,
+          "title": "Expected Daily Demand",
+          "type": "integer"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "initial_usable": {
+          "minimum": 0,
+          "title": "Initial Usable",
+          "type": "integer"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/DailyStockPoint"
+          },
+          "title": "Points",
+          "type": "array"
+        },
+        "projected_stockout_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Projected Stockout Date"
+        },
+        "quantity_unit": {
+          "const": "bag",
+          "default": "bag",
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "total_received": {
+          "minimum": 0,
+          "title": "Total Received",
+          "type": "integer"
+        },
+        "total_unmet": {
+          "minimum": 0,
+          "title": "Total Unmet",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "hospital_id",
+        "as_of",
+        "end_on",
+        "expected_daily_demand",
+        "initial_usable",
+        "total_received",
+        "total_unmet",
+        "projected_stockout_date",
+        "analysis_id",
+        "points",
+        "evidence_ids",
+        "limitations"
+      ],
+      "title": "HeleneForecast",
+      "type": "object"
+    },
+    "LotBalance": {
+      "additionalProperties": false,
+      "properties": {
+        "available": {
+          "minimum": 0,
+          "title": "Available",
+          "type": "integer"
+        },
+        "expiry_date": {
+          "format": "date",
+          "title": "Expiry Date",
+          "type": "string"
+        },
+        "lot_id": {
+          "title": "Lot Id",
+          "type": "string"
+        },
+        "on_hand": {
+          "minimum": 0,
+          "title": "On Hand",
+          "type": "integer"
+        },
+        "quarantined": {
+          "title": "Quarantined",
+          "type": "boolean"
+        },
+        "reserved": {
+          "minimum": 0,
+          "title": "Reserved",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "lot_id",
+        "on_hand",
+        "reserved",
+        "expiry_date",
+        "available",
+        "quarantined"
+      ],
+      "title": "LotBalance",
+      "type": "object"
+    },
+    "OperationalClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "account_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Account Id"
+        },
+        "available_at": {
+          "format": "date-time",
+          "title": "Available At",
+          "type": "string"
+        },
+        "case_bags": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Case Bags"
+        },
+        "claim_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "classification": {
+          "enum": [
+            "real",
+            "simulated",
+            "projected",
+            "calculated"
+          ],
+          "title": "Classification",
+          "type": "string"
+        },
+        "document_id": {
+          "minLength": 1,
+          "title": "Document Id",
+          "type": "string"
+        },
+        "effective_at": {
+          "format": "date-time",
+          "title": "Effective At",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "expected_by": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected By"
+        },
+        "facility_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Facility Id"
+        },
+        "issued_at": {
+          "format": "date-time",
+          "title": "Issued At",
+          "type": "string"
+        },
+        "line_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line Id"
+        },
+        "local_sku": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Local Sku"
+        },
+        "meaning": {
+          "enum": [
+            "production_status",
+            "allocation_policy",
+            "requested",
+            "acknowledged",
+            "shipped",
+            "delivered",
+            "accepted_receipt",
+            "usable_inventory",
+            "forecast_incoming",
+            "agency_guidance"
+          ],
+          "title": "Meaning",
+          "type": "string"
+        },
+        "ndc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ndc"
+        },
+        "observation": {
+          "enum": [
+            "independent",
+            "repeated",
+            "derived"
+          ],
+          "title": "Observation",
+          "type": "string"
+        },
+        "order_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Order Id"
+        },
+        "organization": {
+          "minLength": 1,
+          "title": "Organization",
+          "type": "string"
+        },
+        "originating_claim_id": {
+          "minLength": 1,
+          "title": "Originating Claim Id",
+          "type": "string"
+        },
+        "product_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Product Id"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quantity"
+        },
+        "reason": {
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        },
+        "record_id": {
+          "minLength": 1,
+          "title": "Record Id",
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "policy",
+            "event_total",
+            "partial",
+            "snapshot",
+            "expectation"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "shipment_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Shipment Id"
+        },
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "title": "Status",
+          "type": "string"
+        },
+        "supersedes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Supersedes"
+        },
+        "unit": {
+          "enum": [
+            "bag",
+            "percent",
+            "case",
+            "status"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "verification": {
+          "enum": [
+            "verified",
+            "unverified",
+            "rejected"
+          ],
+          "title": "Verification",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "source_id",
+        "organization",
+        "document_id",
+        "record_id",
+        "originating_claim_id",
+        "observation",
+        "meaning",
+        "classification",
+        "unit",
+        "status",
+        "scope",
+        "issued_at",
+        "effective_at",
+        "available_at",
+        "verification",
+        "evidence",
+        "reason"
+      ],
+      "title": "OperationalClaim",
+      "type": "object"
+    },
+    "OperationalImportReceipt": {
+      "additionalProperties": false,
+      "description": "Future CSV/EDI/FHIR adapters must resolve into this simulated boundary.",
+      "properties": {
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "content_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "effective_at": {
+          "format": "date-time",
+          "title": "Effective At",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "exported_at": {
+          "format": "date-time",
+          "title": "Exported At",
+          "type": "string"
+        },
+        "feed": {
+          "enum": [
+            "catalog",
+            "inventory",
+            "consumption",
+            "purchasing",
+            "purchase_orders",
+            "acknowledgments",
+            "shipments",
+            "facilities",
+            "suppliers"
+          ],
+          "title": "Feed",
+          "type": "string"
+        },
+        "format": {
+          "enum": [
+            "csv",
+            "edi-850",
+            "edi-855",
+            "edi-856",
+            "fhir-r5-inventoryreport"
+          ],
+          "title": "Format",
+          "type": "string"
+        },
+        "import_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Import Id",
+          "type": "string"
+        },
+        "mapping_version": {
+          "minLength": 1,
+          "title": "Mapping Version",
+          "type": "string"
+        },
+        "modeled_available_at": {
+          "format": "date-time",
+          "title": "Modeled Available At",
+          "type": "string"
+        },
+        "record_ids": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "maxItems": 10000,
+          "minItems": 1,
+          "title": "Record Ids",
+          "type": "array"
+        },
+        "scenario_id": {
+          "const": "helene-north-cove",
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "6a.1",
+          "default": "6a.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_path": {
+          "minLength": 1,
+          "title": "Source Path",
+          "type": "string"
+        },
+        "validation_status": {
+          "enum": [
+            "validated",
+            "quarantined"
+          ],
+          "title": "Validation Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "import_id",
+        "scenario_id",
+        "feed",
+        "format",
+        "source_path",
+        "content_sha256",
+        "exported_at",
+        "effective_at",
+        "modeled_available_at",
+        "evidence",
+        "mapping_version",
+        "record_ids",
+        "validation_status",
+        "assumptions"
+      ],
+      "title": "OperationalImportReceipt",
+      "type": "object"
+    },
+    "ProductAlias": {
+      "additionalProperties": false,
+      "description": "An explicit reviewed assertion; no automatic base-code/suffix equivalence.",
+      "properties": {
+        "normalized": {
+          "minLength": 1,
+          "title": "Normalized",
+          "type": "string"
+        },
+        "original": {
+          "minLength": 1,
+          "title": "Original",
+          "type": "string"
+        },
+        "review_reference": {
+          "minLength": 1,
+          "title": "Review Reference",
+          "type": "string"
+        },
+        "scheme": {
+          "enum": [
+            "baxter",
+            "ndc"
+          ],
+          "title": "Scheme",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scheme",
+        "original",
+        "normalized",
+        "review_reference"
+      ],
+      "title": "ProductAlias",
+      "type": "object"
+    },
+    "ReplayAcknowledgment": {
+      "additionalProperties": false,
+      "properties": {
+        "account_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Account Id",
+          "type": "string"
+        },
+        "acknowledged_on": {
+          "format": "date",
+          "title": "Acknowledged On",
+          "type": "string"
+        },
+        "acknowledgment_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Acknowledgment Id",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "expected_delivery": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Expected Delivery"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "order_line_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Order Line Id",
+          "type": "string"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "purchase_order_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Purchase Order Id",
+          "type": "string"
+        },
+        "quantity": {
+          "minimum": 0,
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "quantity_unit": {
+          "enum": [
+            "vial",
+            "bag"
+          ],
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "status": {
+          "enum": [
+            "accepted",
+            "backordered",
+            "held",
+            "cancelled"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "supplier_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Supplier Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "acknowledgment_id",
+        "purchase_order_id",
+        "order_line_id",
+        "account_id",
+        "hospital_id",
+        "supplier_id",
+        "product_id",
+        "revision",
+        "acknowledged_on",
+        "status",
+        "quantity",
+        "quantity_unit",
+        "expected_delivery",
+        "evidence"
+      ],
+      "title": "ReplayAcknowledgment",
+      "type": "object"
+    },
+    "ReplayCheckpoint": {
+      "additionalProperties": false,
+      "properties": {
+        "checkpoint_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Checkpoint Id",
+          "type": "string"
+        },
+        "cutoff": {
+          "format": "date-time",
+          "title": "Cutoff",
+          "type": "string"
+        },
+        "import_ids": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "title": "Import Ids",
+          "type": "array"
+        },
+        "limitations": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "mode": {
+          "enum": [
+            "strict-historical",
+            "reconstructed-historical-simulation"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "parent_checkpoint_id": {
+          "anyOf": [
+            {
+              "maxLength": 160,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Checkpoint Id"
+        },
+        "parent_cutoff": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Cutoff"
+        },
+        "parent_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Sha256"
+        },
+        "policy_version": {
+          "const": "helene-admission-v1",
+          "default": "helene-admission-v1",
+          "title": "Policy Version",
+          "type": "string"
+        },
+        "scenario_id": {
+          "const": "helene-north-cove",
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "6a.1",
+          "default": "6a.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_revision_ids": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "title": "Source Revision Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "checkpoint_id",
+        "scenario_id",
+        "cutoff",
+        "mode",
+        "source_revision_ids",
+        "import_ids"
+      ],
+      "title": "ReplayCheckpoint",
+      "type": "object"
+    },
+    "ReplayConsumption": {
+      "additionalProperties": false,
+      "properties": {
+        "consumption_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Consumption Id",
+          "type": "string"
+        },
+        "day": {
+          "format": "date",
+          "title": "Day",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "quantity": {
+          "minimum": 0,
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "quantity_unit": {
+          "enum": [
+            "vial",
+            "bag"
+          ],
+          "title": "Quantity Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "consumption_id",
+        "hospital_id",
+        "product_id",
+        "day",
+        "quantity",
+        "quantity_unit",
+        "evidence"
+      ],
+      "title": "ReplayConsumption",
+      "type": "object"
+    },
+    "ReplayHospital": {
+      "additionalProperties": false,
+      "properties": {
+        "country_iso": {
+          "const": "USA",
+          "default": "USA",
+          "title": "Country Iso",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "hospital_id": {
+          "enum": [
+            "sim-nc-central",
+            "sim-nc-north",
+            "sim-nc-south"
+          ],
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "network_id": {
+          "const": "sim-nc-health-system",
+          "title": "Network Id",
+          "type": "string"
+        },
+        "protects_from_light": {
+          "default": true,
+          "title": "Protects From Light",
+          "type": "boolean"
+        },
+        "state": {
+          "const": "NC",
+          "title": "State",
+          "type": "string"
+        },
+        "storage_max_c": {
+          "default": 25,
+          "title": "Storage Max C",
+          "type": "number"
+        },
+        "storage_min_c": {
+          "default": 20,
+          "title": "Storage Min C",
+          "type": "number"
+        }
+      },
+      "required": [
+        "hospital_id",
+        "name",
+        "state",
+        "evidence",
+        "network_id"
+      ],
+      "title": "ReplayHospital",
+      "type": "object"
+    },
+    "ReplayInventory": {
+      "additionalProperties": false,
+      "properties": {
+        "as_of": {
+          "format": "date",
+          "title": "As Of",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "expiry_date": {
+          "format": "date",
+          "title": "Expiry Date",
+          "type": "string"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "inventory_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Inventory Id",
+          "type": "string"
+        },
+        "lot_id": {
+          "title": "Lot Id",
+          "type": "string"
+        },
+        "on_hand": {
+          "minimum": 0,
+          "title": "On Hand",
+          "type": "integer"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "quality_status": {
+          "enum": [
+            "released",
+            "quarantined"
+          ],
+          "title": "Quality Status",
+          "type": "string"
+        },
+        "quantity_unit": {
+          "enum": [
+            "vial",
+            "bag"
+          ],
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "reserved": {
+          "minimum": 0,
+          "title": "Reserved",
+          "type": "integer"
+        },
+        "supplier_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Supplier Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "inventory_id",
+        "hospital_id",
+        "product_id",
+        "supplier_id",
+        "lot_id",
+        "as_of",
+        "on_hand",
+        "reserved",
+        "expiry_date",
+        "quality_status",
+        "quantity_unit",
+        "evidence"
+      ],
+      "title": "ReplayInventory",
+      "type": "object"
+    },
+    "ReplayProduct": {
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "items": {
+            "$ref": "#/$defs/ProductAlias"
+          },
+          "minItems": 1,
+          "title": "Aliases",
+          "type": "array"
+        },
+        "container_ml": {
+          "exclusiveMinimum": 0,
+          "title": "Container Ml",
+          "type": "number"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "package_ndc": {
+          "anyOf": [
+            {
+              "pattern": "^\\d{4,5}-\\d{3,4}-\\d{1,2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Package Ndc"
+        },
+        "presentation": {
+          "title": "Presentation",
+          "type": "string"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "protect_from_light": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protect From Light"
+        },
+        "quantity_unit": {
+          "enum": [
+            "vial",
+            "bag"
+          ],
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "storage_max_c": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Storage Max C"
+        },
+        "storage_min_c": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Storage Min C"
+        },
+        "strength_mg_per_ml": {
+          "exclusiveMinimum": 0,
+          "title": "Strength Mg Per Ml",
+          "type": "number"
+        },
+        "total_mg": {
+          "exclusiveMinimum": 0,
+          "title": "Total Mg",
+          "type": "number"
+        }
+      },
+      "required": [
+        "product_id",
+        "name",
+        "presentation",
+        "strength_mg_per_ml",
+        "container_ml",
+        "total_mg",
+        "quantity_unit",
+        "evidence",
+        "aliases"
+      ],
+      "title": "ReplayProduct",
+      "type": "object"
+    },
+    "ReplayPurchaseOrder": {
+      "additionalProperties": false,
+      "properties": {
+        "account_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Account Id",
+          "type": "string"
+        },
+        "customer_item_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Customer Item Id",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "expected_delivery": {
+          "format": "date",
+          "title": "Expected Delivery",
+          "type": "string"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "order_line_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Order Line Id",
+          "type": "string"
+        },
+        "ordered_on": {
+          "format": "date",
+          "title": "Ordered On",
+          "type": "string"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "purchase_order_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Purchase Order Id",
+          "type": "string"
+        },
+        "quantity": {
+          "exclusiveMinimum": 0,
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "quantity_unit": {
+          "enum": [
+            "vial",
+            "bag"
+          ],
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "supplier_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Supplier Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "purchase_order_id",
+        "hospital_id",
+        "supplier_id",
+        "product_id",
+        "quantity",
+        "quantity_unit",
+        "ordered_on",
+        "expected_delivery",
+        "evidence",
+        "account_id",
+        "order_line_id",
+        "customer_item_id"
+      ],
+      "title": "ReplayPurchaseOrder",
+      "type": "object"
+    },
+    "ReplayPurchasing": {
+      "additionalProperties": false,
+      "properties": {
+        "account_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Account Id",
+          "type": "string"
+        },
+        "customer_item_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Customer Item Id",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "purchased_on": {
+          "format": "date",
+          "title": "Purchased On",
+          "type": "string"
+        },
+        "purchasing_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Purchasing Id",
+          "type": "string"
+        },
+        "quantity": {
+          "minimum": 0,
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "quantity_unit": {
+          "enum": [
+            "vial",
+            "bag"
+          ],
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "returned_quantity": {
+          "minimum": 0,
+          "title": "Returned Quantity",
+          "type": "integer"
+        },
+        "supplier_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Supplier Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "purchasing_id",
+        "hospital_id",
+        "product_id",
+        "supplier_id",
+        "account_id",
+        "customer_item_id",
+        "purchased_on",
+        "quantity",
+        "returned_quantity",
+        "quantity_unit",
+        "evidence"
+      ],
+      "title": "ReplayPurchasing",
+      "type": "object"
+    },
+    "ReplayShipment": {
+      "additionalProperties": false,
+      "properties": {
+        "account_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Account Id",
+          "type": "string"
+        },
+        "dispatched_on": {
+          "format": "date",
+          "title": "Dispatched On",
+          "type": "string"
+        },
+        "disruption_event_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Disruption Event Ids",
+          "type": "array"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "expected_arrival": {
+          "format": "date",
+          "title": "Expected Arrival",
+          "type": "string"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "order_line_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Order Line Id",
+          "type": "string"
+        },
+        "origin_country_iso": {
+          "pattern": "^[A-Z]{3}$",
+          "title": "Origin Country Iso",
+          "type": "string"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "protects_from_light": {
+          "title": "Protects From Light",
+          "type": "boolean"
+        },
+        "purchase_order_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Purchase Order Id",
+          "type": "string"
+        },
+        "quantity": {
+          "exclusiveMinimum": 0,
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "quantity_unit": {
+          "enum": [
+            "vial",
+            "bag"
+          ],
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "shipment_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Shipment Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "in_transit",
+            "held"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "supplier_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Supplier Id",
+          "type": "string"
+        },
+        "temperature_max_c": {
+          "title": "Temperature Max C",
+          "type": "number"
+        },
+        "temperature_min_c": {
+          "title": "Temperature Min C",
+          "type": "number"
+        }
+      },
+      "required": [
+        "shipment_id",
+        "purchase_order_id",
+        "supplier_id",
+        "hospital_id",
+        "product_id",
+        "quantity",
+        "quantity_unit",
+        "dispatched_on",
+        "expected_arrival",
+        "status",
+        "origin_country_iso",
+        "temperature_min_c",
+        "temperature_max_c",
+        "protects_from_light",
+        "evidence",
+        "account_id",
+        "order_line_id",
+        "revision"
+      ],
+      "title": "ReplayShipment",
+      "type": "object"
+    },
+    "ScenarioOperations": {
+      "additionalProperties": false,
+      "description": "Independent canonical rows; no manufacturer notice required to construct.",
+      "properties": {
+        "acknowledgments": {
+          "items": {
+            "$ref": "#/$defs/ReplayAcknowledgment"
+          },
+          "title": "Acknowledgments",
+          "type": "array"
+        },
+        "consumption": {
+          "items": {
+            "$ref": "#/$defs/ReplayConsumption"
+          },
+          "title": "Consumption",
+          "type": "array"
+        },
+        "hospitals": {
+          "items": {
+            "$ref": "#/$defs/ReplayHospital"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Hospitals",
+          "type": "array"
+        },
+        "inventory": {
+          "items": {
+            "$ref": "#/$defs/ReplayInventory"
+          },
+          "title": "Inventory",
+          "type": "array"
+        },
+        "network_id": {
+          "const": "sim-nc-health-system",
+          "title": "Network Id",
+          "type": "string"
+        },
+        "products": {
+          "items": {
+            "$ref": "#/$defs/ReplayProduct"
+          },
+          "minItems": 1,
+          "title": "Products",
+          "type": "array"
+        },
+        "purchase_orders": {
+          "items": {
+            "$ref": "#/$defs/ReplayPurchaseOrder"
+          },
+          "title": "Purchase Orders",
+          "type": "array"
+        },
+        "purchasing": {
+          "items": {
+            "$ref": "#/$defs/ReplayPurchasing"
+          },
+          "title": "Purchasing",
+          "type": "array"
+        },
+        "scenario_id": {
+          "const": "helene-north-cove",
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "6a.1",
+          "default": "6a.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "shipments": {
+          "items": {
+            "$ref": "#/$defs/ReplayShipment"
+          },
+          "title": "Shipments",
+          "type": "array"
+        }
+      },
+      "required": [
+        "scenario_id",
+        "network_id",
+        "products",
+        "hospitals",
+        "inventory",
+        "consumption",
+        "purchase_orders",
+        "shipments",
+        "purchasing",
+        "acknowledgments"
+      ],
+      "title": "ScenarioOperations",
+      "type": "object"
+    },
+    "ScenarioReplayRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "allocations": {
+          "items": {
+            "$ref": "#/$defs/AllocationNotice"
+          },
+          "maxItems": 1000,
+          "title": "Allocations",
+          "type": "array"
+        },
+        "checkpoint": {
+          "$ref": "#/$defs/ReplayCheckpoint"
+        },
+        "imports": {
+          "items": {
+            "$ref": "#/$defs/OperationalImportReceipt"
+          },
+          "maxItems": 100,
+          "title": "Imports",
+          "type": "array"
+        },
+        "parent_evidence": {
+          "items": {
+            "$ref": "#/$defs/SourceEvidence"
+          },
+          "maxItems": 1000,
+          "title": "Parent Evidence",
+          "type": "array"
+        },
+        "products": {
+          "items": {
+            "$ref": "#/$defs/ReplayProduct"
+          },
+          "maxItems": 100,
+          "title": "Products",
+          "type": "array"
+        },
+        "reconstruction_acknowledged": {
+          "default": false,
+          "title": "Reconstruction Acknowledged",
+          "type": "boolean"
+        },
+        "schema_version": {
+          "const": "6a.1",
+          "default": "6a.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/SourceRevision"
+          },
+          "maxItems": 100,
+          "title": "Sources",
+          "type": "array"
+        }
+      },
+      "required": [
+        "checkpoint",
+        "sources"
+      ],
+      "title": "ScenarioReplayRequest",
+      "type": "object"
+    },
+    "SourceEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "observed",
+            "derived",
+            "simulated"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "title": "Observed At",
+          "type": "string"
+        },
+        "parent_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parent Ids",
+          "type": "array"
+        },
+        "published_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published On"
+        },
+        "raw_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Ref"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_record_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Record Id"
+        },
+        "source_url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Source Url",
+          "type": "string"
+        },
+        "updated_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Updated On"
+        },
+        "version_available_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version Available At"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "kind",
+        "source",
+        "source_url",
+        "observed_at",
+        "content_sha256"
+      ],
+      "title": "SourceEvidence",
+      "type": "object"
+    },
+    "SourceRevision": {
+      "additionalProperties": false,
+      "properties": {
+        "availability_proof": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceEvidence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "document_id": {
+          "minLength": 1,
+          "title": "Document Id",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "extraction_status": {
+          "enum": [
+            "pending",
+            "validated",
+            "quarantined"
+          ],
+          "title": "Extraction Status",
+          "type": "string"
+        },
+        "extractor_version": {
+          "minLength": 1,
+          "title": "Extractor Version",
+          "type": "string"
+        },
+        "issue_date": {
+          "format": "date",
+          "title": "Issue Date",
+          "type": "string"
+        },
+        "publisher": {
+          "minLength": 1,
+          "title": "Publisher",
+          "type": "string"
+        },
+        "revision_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Revision Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "6a.1",
+          "default": "6a.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "validation_reference": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Validation Reference"
+        }
+      },
+      "required": [
+        "revision_id",
+        "publisher",
+        "document_id",
+        "issue_date",
+        "evidence",
+        "extraction_status",
+        "extractor_version"
+      ],
+      "title": "SourceRevision",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "actions": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Actions",
+      "type": "array"
+    },
+    "admission": {
+      "$ref": "#/$defs/ScenarioReplayRequest"
+    },
+    "candidates": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Candidates",
+      "type": "array"
+    },
+    "checkpoint": {
+      "$ref": "#/$defs/ReplayCheckpoint"
+    },
+    "classification": {
+      "const": "observed-documents+simulated-operations+derived-results",
+      "default": "observed-documents+simulated-operations+derived-results",
+      "title": "Classification",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "dataset_version": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "decisions": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Decisions",
+      "type": "array"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/SourceEvidence"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "forecasts": {
+      "items": {
+        "$ref": "#/$defs/HeleneForecast"
+      },
+      "title": "Forecasts",
+      "type": "array"
+    },
+    "investigation_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Investigation Id",
+      "type": "string"
+    },
+    "map_nodes": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Map Nodes",
+      "type": "array"
+    },
+    "memory": {
+      "additionalProperties": true,
+      "title": "Memory",
+      "type": "object"
+    },
+    "mitigated": {
+      "items": {
+        "$ref": "#/$defs/HeleneForecast"
+      },
+      "title": "Mitigated",
+      "type": "array"
+    },
+    "operations": {
+      "$ref": "#/$defs/ScenarioOperations"
+    },
+    "parent_id": {
+      "anyOf": [
+        {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Parent Id"
+    },
+    "reconciliation": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Reconciliation",
+      "type": "array"
+    },
+    "scenario": {
+      "const": "helene-north-cove",
+      "default": "helene-north-cove",
+      "title": "Scenario",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "6.1",
+      "default": "6.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "selected": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Selected",
+      "type": "array"
+    },
+    "unresolved": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unresolved",
+      "type": "array"
+    },
+    "verification": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/EvidenceVerification"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "investigation_id",
+    "checkpoint",
+    "admission",
+    "operations",
+    "dataset_version",
+    "created_at",
+    "parent_id",
+    "evidence",
+    "forecasts",
+    "mitigated",
+    "candidates",
+    "selected",
+    "actions",
+    "decisions",
+    "memory",
+    "reconciliation",
+    "unresolved",
+    "map_nodes"
+  ],
+  "title": "HeleneCase",
+  "type": "object"
+}

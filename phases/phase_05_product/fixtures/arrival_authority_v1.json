@@ -1,0 +1,7 @@
+{
+  "version": "simulation-planning-authority-v1",
+  "description": "Synthetic planning authorization for an exact versioned receipt; no real supplier identity or shipment truth is asserted.",
+  "approved_receipts": {
+    "sim-planning-approval-001": "976d95e9dc6d380b3d541fdfe50f5cd235707f60aaeb3135a3333a8a7b3fe5a9"
+  }
+}

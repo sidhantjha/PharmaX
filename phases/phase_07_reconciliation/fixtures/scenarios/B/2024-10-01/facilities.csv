@@ -1,0 +1,4 @@
+facility_id,name,state,network_id,longitude,latitude
+sim-nc-central,Piedmont Central (fictional),NC,sim-nc-health-system,-81.0,35.9
+sim-nc-north,Foothills North (fictional),NC,sim-nc-health-system,-81.4,36.3
+sim-nc-south,Catawba South (fictional),NC,sim-nc-health-system,-80.8,35.4

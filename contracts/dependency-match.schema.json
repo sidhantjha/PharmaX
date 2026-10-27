@@ -1,0 +1,74 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "dependency_label": {
+      "const": "simulated",
+      "default": "simulated",
+      "title": "Dependency Label",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "maxLength": 160,
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9_.:-]+$",
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "matched_legs": {
+      "items": {
+        "maxLength": 160,
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9_.:-]+$",
+        "type": "string"
+      },
+      "title": "Matched Legs",
+      "type": "array"
+    },
+    "observed_shipment_delay": {
+      "const": false,
+      "default": false,
+      "title": "Observed Shipment Delay",
+      "type": "boolean"
+    },
+    "reasons": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reasons",
+      "type": "array"
+    },
+    "shipment_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Shipment Id",
+      "type": "string"
+    },
+    "signal_revision": {
+      "title": "Signal Revision",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "MATCHED",
+        "POSSIBLE",
+        "UNMATCHED"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "signal_revision",
+    "shipment_id",
+    "status",
+    "reasons",
+    "matched_legs",
+    "evidence_ids"
+  ],
+  "title": "DependencyMatch",
+  "type": "object"
+}

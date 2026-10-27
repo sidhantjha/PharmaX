@@ -1,0 +1,107 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "consecutive_failures": {
+      "default": 0,
+      "title": "Consecutive Failures",
+      "type": "integer"
+    },
+    "content_needs_review": {
+      "default": false,
+      "title": "Content Needs Review",
+      "type": "boolean"
+    },
+    "last_attempt_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Last Attempt At"
+    },
+    "last_error": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Last Error"
+    },
+    "last_success_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Last Success At"
+    },
+    "latest_receipt_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Latest Receipt Ids",
+      "type": "array"
+    },
+    "monitoring": {
+      "const": "last-check-only",
+      "default": "last-check-only",
+      "title": "Monitoring",
+      "type": "string"
+    },
+    "new_revisions": {
+      "default": 0,
+      "title": "New Revisions",
+      "type": "integer"
+    },
+    "next_check_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Next Check At"
+    },
+    "raw_content_changed": {
+      "default": false,
+      "title": "Raw Content Changed",
+      "type": "boolean"
+    },
+    "source": {
+      "enum": [
+        "marad",
+        "gdelt"
+      ],
+      "title": "Source",
+      "type": "string"
+    },
+    "target_cadence_seconds": {
+      "title": "Target Cadence Seconds",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "source",
+    "target_cadence_seconds"
+  ],
+  "title": "SourceStatus",
+  "type": "object"
+}

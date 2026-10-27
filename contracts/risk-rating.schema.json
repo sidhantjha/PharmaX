@@ -1,0 +1,82 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "dimension": {
+      "enum": [
+        "country",
+        "shipment",
+        "supplier",
+        "hospital"
+      ],
+      "title": "Dimension",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "explanation": {
+      "title": "Explanation",
+      "type": "string"
+    },
+    "level": {
+      "anyOf": [
+        {
+          "enum": [
+            "Low",
+            "Moderate",
+            "High",
+            "Critical"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Level"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "measurements": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "title": "Measurements",
+      "type": "object"
+    },
+    "rule_id": {
+      "title": "Rule Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dimension",
+    "level",
+    "rule_id",
+    "explanation",
+    "measurements",
+    "evidence_ids",
+    "limitations"
+  ],
+  "title": "RiskRating",
+  "type": "object"
+}

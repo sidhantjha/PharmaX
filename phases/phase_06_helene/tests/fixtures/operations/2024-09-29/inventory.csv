@@ -1,0 +1,4 @@
+record_id,facility_id,local_sku,snapshot_at,lot_id,on_hand,reserved,unit,expires_on,quality
+stock-central,sim-nc-central,IV-NS1L,2024-09-29T23:00:00-04:00,lot-central,183,20,bag,2024-12-29,released
+stock-north,sim-nc-north,SAL-1000,2024-09-29T23:00:00-04:00,lot-north,728,100,bag,2024-12-29,released
+stock-south,sim-nc-south,NACL009-L,2024-09-29T23:00:00-04:00,lot-south,134,18,bag,2024-12-29,released

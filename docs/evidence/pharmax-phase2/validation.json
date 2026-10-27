@@ -1,0 +1,25 @@
+{
+  "dataset_version": "6a4a8d083742ed7ef0d8a2b1090898f5ab655f0b5b179701c20c8260ba377819",
+  "record_counts": {
+    "trade_flows": 2,
+    "products": 22,
+    "shortages": 20,
+    "events": 2,
+    "recalls": 3,
+    "suppliers": 2,
+    "hospitals": 3,
+    "approvals": 6,
+    "inventory": 4,
+    "consumption": 21,
+    "purchase_orders": 3,
+    "shipments": 3,
+    "evidence": 72
+  },
+  "zetaris_view": "pharmax_p2_data.v_6a4a8d083742ed7ef0d8a2b1090898f5ab655f0b5b179701c20c8260ba377819",
+  "verified_collections": 13,
+  "readback_records": 163,
+  "inference_calls": 0,
+  "fixture_mode_no_network": true,
+  "unit_tests_passed": 98,
+  "raw_snapshot_policy": "Raw response bytes and private configuration remain local/ignored. This folder contains normalized public-source data, simulated scenario records and public receipt metadata."
+}

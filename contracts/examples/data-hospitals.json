@@ -1,0 +1,137 @@
+{
+  "schema_version": "2.0",
+  "dataset_version": "203835cde76d7e5db5bc84056725901089e6a8c56efd65a090e0504ef6c66680",
+  "mode": "fixture",
+  "query": {
+    "collection": "hospitals",
+    "reporter_code": null,
+    "partner_code": null,
+    "product_id": null,
+    "hospital_id": null,
+    "record_id": null,
+    "limit": 100
+  },
+  "items": [
+    {
+      "hospital_id": "sim-central",
+      "name": "Central Illinois Regional Hospital",
+      "state": "IL",
+      "country_iso": "USA",
+      "storage_min_c": 20.0,
+      "storage_max_c": 25.0,
+      "protects_from_light": true,
+      "evidence": {
+        "evidence_id": "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42",
+        "kind": "simulated",
+        "source": "fictional-illinois-v1",
+        "source_record_id": null,
+        "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+      }
+    },
+    {
+      "hospital_id": "sim-north",
+      "name": "North Illinois Medical Center",
+      "state": "IL",
+      "country_iso": "USA",
+      "storage_min_c": 20.0,
+      "storage_max_c": 25.0,
+      "protects_from_light": true,
+      "evidence": {
+        "evidence_id": "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+        "kind": "simulated",
+        "source": "fictional-illinois-v1",
+        "source_record_id": null,
+        "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+      }
+    },
+    {
+      "hospital_id": "sim-south",
+      "name": "South Illinois Oncology Center",
+      "state": "IL",
+      "country_iso": "USA",
+      "storage_min_c": 20.0,
+      "storage_max_c": 25.0,
+      "protects_from_light": true,
+      "evidence": {
+        "evidence_id": "sim:550ad280727aadcb7171d33800aaa633e5babd3c8e37182d588e896e8a675211",
+        "kind": "simulated",
+        "source": "fictional-illinois-v1",
+        "source_record_id": null,
+        "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "550ad280727aadcb7171d33800aaa633e5babd3c8e37182d588e896e8a675211",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "sim:550ad280727aadcb7171d33800aaa633e5babd3c8e37182d588e896e8a675211",
+      "kind": "simulated",
+      "source": "fictional-illinois-v1",
+      "source_record_id": null,
+      "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "550ad280727aadcb7171d33800aaa633e5babd3c8e37182d588e896e8a675211",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+    },
+    {
+      "evidence_id": "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+      "kind": "simulated",
+      "source": "fictional-illinois-v1",
+      "source_record_id": null,
+      "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+    },
+    {
+      "evidence_id": "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42",
+      "kind": "simulated",
+      "source": "fictional-illinois-v1",
+      "source_record_id": null,
+      "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+    }
+  ],
+  "returned_count": 3,
+  "truncated": false
+}

@@ -1,0 +1,267 @@
+{
+  "role": "coordinator",
+  "canonical_tool": "mitigation.read",
+  "simulated_hospital_data": true,
+  "human_review_required": true,
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+  "predecessor_findings": [
+    {
+      "role": "feasibility",
+      "observation": "human_review_required",
+      "evidence_ids": [
+        "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+      ],
+      "fact_keys": [
+        "deterministic_candidate_constraints_retained",
+        "human_pharmacy_review_required",
+        "no_physical_dispatch_authority"
+      ],
+      "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+      "memory_ids": [
+        "mem-4",
+        "mem-2",
+        "mem-5",
+        "mem-1",
+        "mem-3"
+      ]
+    },
+    {
+      "role": "memory",
+      "observation": "memory_recalled",
+      "evidence_ids": [
+        "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+      ],
+      "fact_keys": [
+        "actual_hmem_findings_persisted",
+        "actual_hmem_context_recalled"
+      ],
+      "candidate_id": null,
+      "memory_ids": [
+        "mem-4",
+        "mem-2",
+        "mem-5",
+        "mem-1",
+        "mem-3"
+      ]
+    },
+    {
+      "role": "clinical",
+      "observation": "insufficient_clinical_evidence",
+      "evidence_ids": [
+        "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+      ],
+      "fact_keys": [
+        "saline_clinical_outcomes_unsupported",
+        "oncology_model_not_applicable_to_saline"
+      ],
+      "candidate_id": null,
+      "memory_ids": [
+        "mem-4",
+        "mem-2",
+        "mem-5",
+        "mem-1",
+        "mem-3"
+      ]
+    },
+    {
+      "role": "actions",
+      "observation": "human_review_required",
+      "evidence_ids": [
+        "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+      ],
+      "fact_keys": [
+        "deterministic_candidate_constraints_retained",
+        "human_pharmacy_review_required",
+        "no_physical_dispatch_authority",
+        "existing_action_drafts_are_review_only"
+      ],
+      "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+      "memory_ids": [
+        "mem-4",
+        "mem-2",
+        "mem-5",
+        "mem-1",
+        "mem-3"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+      "source_id": "sim-nc-north",
+      "hospital_id": "sim-nc-central",
+      "quantity": 172,
+      "feasible": true,
+      "failures": []
+    },
+    {
+      "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+      "source_id": "sim-nc-south",
+      "hospital_id": "sim-nc-central",
+      "quantity": 110,
+      "feasible": false,
+      "failures": [
+        "DONOR_SHORTAGE"
+      ]
+    },
+    {
+      "candidate_id": "external-sim-nc-central",
+      "source_id": null,
+      "hospital_id": "sim-nc-central",
+      "quantity": 0,
+      "feasible": false,
+      "failures": [
+        "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+      ]
+    },
+    {
+      "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+      "source_id": "sim-nc-central",
+      "hospital_id": "sim-nc-south",
+      "quantity": 164,
+      "feasible": false,
+      "failures": [
+        "DONOR_SHORTAGE"
+      ]
+    },
+    {
+      "candidate_id": "sim-nc-north-to-sim-nc-south-164",
+      "source_id": "sim-nc-north",
+      "hospital_id": "sim-nc-south",
+      "quantity": 164,
+      "feasible": true,
+      "failures": []
+    },
+    {
+      "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+      "source_id": "sim-nc-north",
+      "hospital_id": "sim-nc-south",
+      "quantity": 170,
+      "feasible": false,
+      "failures": [
+        "DONOR_SHORTAGE"
+      ]
+    },
+    {
+      "candidate_id": "external-sim-nc-south",
+      "source_id": null,
+      "hospital_id": "sim-nc-south",
+      "quantity": 0,
+      "feasible": false,
+      "failures": [
+        "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+      ]
+    }
+  ],
+  "drafts": [
+    {
+      "action_id": "action-617baf242e542e01",
+      "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+      "status": "DRAFT",
+      "dispatch_available": false
+    },
+    {
+      "action_id": "action-60e70fe18ebcb005",
+      "candidate_id": "sim-nc-north-to-sim-nc-south-164",
+      "status": "DRAFT",
+      "dispatch_available": false
+    }
+  ],
+  "memory_ids": [
+    "mem-4",
+    "mem-2",
+    "mem-5",
+    "mem-1",
+    "mem-3"
+  ],
+  "recalled_findings": [
+    {
+      "memory_id": "mem-4",
+      "claim_key": "helene-rejected-5",
+      "evidence_ids": [
+        "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+      ],
+      "value": {
+        "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+        "feasible": false,
+        "failures": [
+          "DONOR_SHORTAGE"
+        ]
+      }
+    },
+    {
+      "memory_id": "mem-2",
+      "claim_key": "helene-rejected-2",
+      "evidence_ids": [
+        "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+      ],
+      "value": {
+        "candidate_id": "external-sim-nc-central",
+        "feasible": false,
+        "failures": [
+          "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+        ]
+      }
+    },
+    {
+      "memory_id": "mem-5",
+      "claim_key": "helene-rejected-6",
+      "evidence_ids": [
+        "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+      ],
+      "value": {
+        "candidate_id": "external-sim-nc-south",
+        "feasible": false,
+        "failures": [
+          "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+        ]
+      }
+    },
+    {
+      "memory_id": "mem-1",
+      "claim_key": "helene-rejected-1",
+      "evidence_ids": [
+        "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+      ],
+      "value": {
+        "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+        "feasible": false,
+        "failures": [
+          "DONOR_SHORTAGE"
+        ]
+      }
+    },
+    {
+      "memory_id": "mem-3",
+      "claim_key": "helene-rejected-3",
+      "evidence_ids": [
+        "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+      ],
+      "value": {
+        "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+        "feasible": false,
+        "failures": [
+          "DONOR_SHORTAGE"
+        ]
+      }
+    }
+  ],
+  "excluded_due_to_recalled_rejection": [
+    "sim-nc-north-to-sim-nc-south-170",
+    "external-sim-nc-central",
+    "external-sim-nc-south",
+    "sim-nc-south-to-sim-nc-central-110",
+    "sim-nc-central-to-sim-nc-south-164"
+  ],
+  "evidence_ids": [
+    "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+  ],
+  "fact_keys": [
+    "deterministic_candidate_constraints_retained",
+    "human_pharmacy_review_required",
+    "no_physical_dispatch_authority"
+  ],
+  "tool_result_reference": "coordinator-tool.json",
+  "tool_result_sha256": "17c32a4fef351fc179ad98faad4b409250c6164ec29dd9c81cac0c7883504807"
+}

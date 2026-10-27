@@ -1,0 +1,16 @@
+{
+  "resourceType":"InventoryReport",
+  "id":"sim-nc-inventory",
+  "status":"active",
+  "countType":"snapshot",
+  "reportedDateTime":"2024-10-01T23:00:00-04:00",
+  "inventoryListing":[{
+    "location":{"reference":"Location/sim-nc-central"},
+    "countingDateTime":"2024-10-01T23:00:00-04:00",
+    "item":[{
+      "quantity":{"value":24,"unit":"bag"},
+      "item":{"reference":{"reference":"Medication/sim-saline-1000"}}
+    }]
+  }],
+  "note":[{"text":"Fictional test snapshot. Explicit lot, reservations and item mapping are supplied separately."}]
+}

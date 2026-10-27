@@ -1,0 +1,35 @@
+{
+  "classification": "Offline consistency audit of genuine retained responses; no inference",
+  "original_partial_run_unchanged": true,
+  "original_files_hash_checked": 36,
+  "roles_executed": 12,
+  "findings_validated": 11,
+  "failed_role": "hospital",
+  "logical_posts": 27,
+  "distinct_response_ids": 27,
+  "distinct_runtime_receipt_ids": 27,
+  "reported_input_tokens": 54360,
+  "reported_output_tokens": 2486,
+  "reported_total_tokens": 56846,
+  "possible_upstream_attempt_exposure": 81,
+  "actual_upstream_attempts": null,
+  "peak_logical_posts_in_any_60_seconds": 11,
+  "peak_observed_http_concurrency": 2,
+  "http_statuses": [
+    200
+  ],
+  "tool_hashes_verified": 12,
+  "exact_delivered_projections_verified": 12,
+  "elapsed_seconds": 516.797,
+  "hmem_writes": 11,
+  "hmem_recalled": 5,
+  "memory_influenced_roles": [
+    "mitigation",
+    "feasibility",
+    "coordinator"
+  ],
+  "zetaris_rows": 20,
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "further_inference_authorized": false,
+  "review_notes": "Dependency unchanged findings validated against delivered predecessor evidence; actions unchanged feasible candidate validated against actual review-only drafts. Original rejections preserved; hospital remains failed."
+}

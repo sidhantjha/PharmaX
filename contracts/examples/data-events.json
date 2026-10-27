@@ -1,0 +1,125 @@
+{
+  "schema_version": "2.0",
+  "dataset_version": "203835cde76d7e5db5bc84056725901089e6a8c56efd65a090e0504ef6c66680",
+  "mode": "fixture",
+  "query": {
+    "collection": "events",
+    "reporter_code": null,
+    "partner_code": null,
+    "product_id": null,
+    "hospital_id": null,
+    "record_id": null,
+    "limit": 100
+  },
+  "items": [
+    {
+      "event_id": "fda-rocky-mount-20230721",
+      "title": "FDA assessment of storm damage at Pfizer Rocky Mount facility",
+      "event_type": "manufacturing",
+      "location": "Rocky Mount, North Carolina, United States",
+      "country_iso": "USA",
+      "starts_on": "2023-07-21",
+      "ends_on": null,
+      "products_stated": [],
+      "established": "FDA reported storm damage at the facility and ongoing assessment of affected products and supply on July 21, 2023.",
+      "uncertain_implications": "FDA did not expect immediate significant supply impacts. This statement does not identify affected carboplatin products, shipment delays, supplier links or hospital dependencies; event date denotes the dated FDA assessment, not an inferred shutdown date.",
+      "evidence": {
+        "evidence_id": "curation:336339d74d3873a1ccb7021ad8b1650f2b38b03aa157c70059f8223d1349ceaa",
+        "kind": "simulated",
+        "source": "reviewed-curation",
+        "source_record_id": null,
+        "source_url": "https://www.fda.gov/news-events/press-announcements/fda-provides-update-regarding-storm-damage-pfizer-facility-north-carolina",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": "2023-07-21",
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "336339d74d3873a1ccb7021ad8b1650f2b38b03aa157c70059f8223d1349ceaa",
+        "raw_ref": null,
+        "parent_ids": [
+          "document:f5b77258579337851a12f9eb67227e5dbd0aef761507147bffe336aff5dd4099"
+        ],
+        "note": "Reviewed structured claim selection; uncertain implications are explicit."
+      }
+    },
+    {
+      "event_id": "sim-dispatch-hold",
+      "title": "Fictional Atlas dispatch hold",
+      "event_type": "logistics",
+      "location": "Modeled dispatch location, India",
+      "country_iso": "IND",
+      "starts_on": "2023-07-22",
+      "ends_on": null,
+      "products_stated": [
+        "sim-carboplatin-450"
+      ],
+      "established": "Synthetic planning input: modeled export dispatch is held.",
+      "uncertain_implications": "No observed supplier outage or causal link to the real FDA storm statement. No forecast, release date or mitigation outcome is asserted.",
+      "evidence": {
+        "evidence_id": "sim:fa9598710156b9dc9958e5303e53f37ad48f107b40be5b71ec01b66b881d3cf7",
+        "kind": "simulated",
+        "source": "fictional-illinois-v1",
+        "source_record_id": null,
+        "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "fa9598710156b9dc9958e5303e53f37ad48f107b40be5b71ec01b66b881d3cf7",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "curation:336339d74d3873a1ccb7021ad8b1650f2b38b03aa157c70059f8223d1349ceaa",
+      "kind": "simulated",
+      "source": "reviewed-curation",
+      "source_record_id": null,
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-provides-update-regarding-storm-damage-pfizer-facility-north-carolina",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": "2023-07-21",
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "336339d74d3873a1ccb7021ad8b1650f2b38b03aa157c70059f8223d1349ceaa",
+      "raw_ref": null,
+      "parent_ids": [
+        "document:f5b77258579337851a12f9eb67227e5dbd0aef761507147bffe336aff5dd4099"
+      ],
+      "note": "Reviewed structured claim selection; uncertain implications are explicit."
+    },
+    {
+      "evidence_id": "document:f5b77258579337851a12f9eb67227e5dbd0aef761507147bffe336aff5dd4099",
+      "kind": "simulated",
+      "source": "fda-statement",
+      "source_record_id": null,
+      "source_url": "https://www.fda.gov/news-events/press-announcements/fda-provides-update-regarding-storm-damage-pfizer-facility-north-carolina",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": "2023-07-21",
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "f5b77258579337851a12f9eb67227e5dbd0aef761507147bffe336aff5dd4099",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Retrieved document; publication is not proof of historical revision availability."
+    },
+    {
+      "evidence_id": "sim:fa9598710156b9dc9958e5303e53f37ad48f107b40be5b71ec01b66b881d3cf7",
+      "kind": "simulated",
+      "source": "fictional-illinois-v1",
+      "source_record_id": null,
+      "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "fa9598710156b9dc9958e5303e53f37ad48f107b40be5b71ec01b66b881d3cf7",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+    }
+  ],
+  "returned_count": 2,
+  "truncated": false
+}

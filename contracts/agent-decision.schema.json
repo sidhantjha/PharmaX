@@ -1,0 +1,107 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "agent_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Agent Id",
+      "type": "string"
+    },
+    "completed_at": {
+      "format": "date-time",
+      "title": "Completed At",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "execution": {
+      "default": "local-deterministic",
+      "enum": [
+        "local-deterministic",
+        "nightshift"
+      ],
+      "title": "Execution",
+      "type": "string"
+    },
+    "explanation": {
+      "title": "Explanation",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "memory_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Memory Ids",
+      "type": "array"
+    },
+    "next_action": {
+      "title": "Next Action",
+      "type": "string"
+    },
+    "rejected": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Rejected",
+      "type": "array"
+    },
+    "responsibility": {
+      "title": "Responsibility",
+      "type": "string"
+    },
+    "started_at": {
+      "format": "date-time",
+      "title": "Started At",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "complete",
+        "unavailable",
+        "blocked"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "task": {
+      "title": "Task",
+      "type": "string"
+    },
+    "tool_records": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Tool Records",
+      "type": "array"
+    }
+  },
+  "required": [
+    "agent_id",
+    "responsibility",
+    "task",
+    "status",
+    "started_at",
+    "completed_at",
+    "tool_records",
+    "evidence_ids",
+    "explanation",
+    "limitations",
+    "next_action"
+  ],
+  "title": "AgentDecision",
+  "type": "object"
+}

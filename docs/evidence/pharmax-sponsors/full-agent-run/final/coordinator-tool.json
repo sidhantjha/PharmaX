@@ -1,0 +1,157 @@
+[
+  {
+    "analysis_ids": [
+      "15d22f4efb11ac0c23638d2da710d3e635e6281006a489cb5d90b79d6dbfc4df",
+      "579dc8364831d9c959856beb46a38b74b2f1e09df338fb6ad943aa4de475018e",
+      "f305c5b287d7501bfa0c1a26ff480dd96840c323c5b199510a4b72d687a2a124"
+    ],
+    "arrival_on": "2024-10-03",
+    "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+    "conservation": {
+      "conserved": true,
+      "debited": 172,
+      "recipient_receipt": 172
+    },
+    "donor_reserved": 100,
+    "donor_unmet": 0,
+    "failures": [],
+    "feasible": true,
+    "hospital_id": "sim-nc-central",
+    "kind": "transfer",
+    "quantity": 172,
+    "quantity_unit": "bag",
+    "remaining_unmet": 0,
+    "requires_human_review": true,
+    "source_id": "sim-nc-north"
+  },
+  {
+    "analysis_ids": [
+      "846f550dde96c35606da702a26f6bf2081c95b830a608d877ee310ca212a0a81",
+      "d4c4eff55173ad863a1b9e1ced470f9a24b6b6e79d77c2733c342f2d116c0d3b",
+      "0f50cc9958110cc61f1759c7407615b00f623fec756edf37e15cdf0273a46e58"
+    ],
+    "arrival_on": "2024-10-03",
+    "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+    "conservation": {
+      "conserved": true,
+      "debited": 110,
+      "recipient_receipt": 110
+    },
+    "donor_reserved": 18,
+    "donor_unmet": 280,
+    "failures": [
+      "DONOR_SHORTAGE"
+    ],
+    "feasible": false,
+    "hospital_id": "sim-nc-central",
+    "kind": "transfer",
+    "quantity": 110,
+    "quantity_unit": "bag",
+    "remaining_unmet": 62,
+    "requires_human_review": true,
+    "source_id": "sim-nc-south"
+  },
+  {
+    "candidate_id": "external-sim-nc-central",
+    "failures": [
+      "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+    ],
+    "feasible": false,
+    "hospital_id": "sim-nc-central",
+    "kind": "supplier_delivery",
+    "quantity": 0,
+    "quantity_unit": "bag",
+    "remaining_unmet": 172
+  },
+  {
+    "analysis_ids": [
+      "eec3ef80a2eee7c3365a0f36277dc5e1f3b25bf7c62dc20e4485511a6a4b6634",
+      "579dc8364831d9c959856beb46a38b74b2f1e09df338fb6ad943aa4de475018e",
+      "c4463900f23fe9d01bef5678682f6942601715f658ddd4add3a66eb26b65a38a"
+    ],
+    "arrival_on": "2024-10-03",
+    "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+    "conservation": {
+      "conserved": true,
+      "debited": 164,
+      "recipient_receipt": 164
+    },
+    "donor_reserved": 20,
+    "donor_unmet": 164,
+    "failures": [
+      "DONOR_SHORTAGE"
+    ],
+    "feasible": false,
+    "hospital_id": "sim-nc-south",
+    "kind": "transfer",
+    "quantity": 164,
+    "quantity_unit": "bag",
+    "remaining_unmet": 6,
+    "requires_human_review": true,
+    "source_id": "sim-nc-central"
+  },
+  {
+    "analysis_ids": [
+      "15d22f4efb11ac0c23638d2da710d3e635e6281006a489cb5d90b79d6dbfc4df",
+      "f284a4a14c9c4290c19d42d665cb2660a2a237a78c17ecf49093c3905a5f6e1d",
+      "8ba90d3bf8ff8f67986b6ca4f9e8171ae91ec634145d9b547149c596826a886f"
+    ],
+    "arrival_on": "2024-10-03",
+    "candidate_id": "sim-nc-north-to-sim-nc-south-164",
+    "conservation": {
+      "conserved": true,
+      "debited": 164,
+      "recipient_receipt": 164
+    },
+    "donor_reserved": 100,
+    "donor_unmet": 0,
+    "failures": [],
+    "feasible": true,
+    "hospital_id": "sim-nc-south",
+    "kind": "transfer",
+    "quantity": 164,
+    "quantity_unit": "bag",
+    "remaining_unmet": 6,
+    "requires_human_review": true,
+    "source_id": "sim-nc-north"
+  },
+  {
+    "analysis_ids": [
+      "15d22f4efb11ac0c23638d2da710d3e635e6281006a489cb5d90b79d6dbfc4df",
+      "74d793099b2789da65dfccb8e4167fb6542e097a76f97032d5bad20ca9da8779",
+      "de3f1eda631c299ff9e85091aef27ab4df5c420876c70d96335f29e067af6ce5"
+    ],
+    "arrival_on": "2024-10-03",
+    "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+    "conservation": {
+      "conserved": true,
+      "debited": 170,
+      "recipient_receipt": 170
+    },
+    "donor_reserved": 100,
+    "donor_unmet": 6,
+    "failures": [
+      "DONOR_SHORTAGE"
+    ],
+    "feasible": false,
+    "hospital_id": "sim-nc-south",
+    "kind": "transfer",
+    "quantity": 170,
+    "quantity_unit": "bag",
+    "remaining_unmet": 0,
+    "requires_human_review": true,
+    "source_id": "sim-nc-north"
+  },
+  {
+    "candidate_id": "external-sim-nc-south",
+    "failures": [
+      "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+    ],
+    "feasible": false,
+    "hospital_id": "sim-nc-south",
+    "kind": "supplier_delivery",
+    "quantity": 0,
+    "quantity_unit": "bag",
+    "remaining_unmet": 170
+  }
+]

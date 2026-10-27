@@ -1,0 +1,66 @@
+{
+  "role": "trade",
+  "canonical_tool": "evidence.records",
+  "simulated_hospital_data": true,
+  "human_review_required": true,
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+  "predecessor_findings": [
+    {
+      "role": "news",
+      "observation": "source_provenance_limited",
+      "evidence_ids": [
+        "baxter-2024-09-29",
+        "baxter-2024-10-01"
+      ],
+      "fact_keys": [
+        "manufacturer_provenance_retained",
+        "historical_version_custody_unproven"
+      ],
+      "candidate_id": null,
+      "memory_ids": []
+    },
+    {
+      "role": "disruption",
+      "observation": "source_provenance_limited",
+      "evidence_ids": [
+        "baxter-2024-09-29",
+        "baxter-2024-10-01"
+      ],
+      "fact_keys": [
+        "manufacturer_provenance_retained",
+        "historical_version_custody_unproven"
+      ],
+      "candidate_id": null,
+      "memory_ids": []
+    },
+    {
+      "role": "verification",
+      "observation": "source_provenance_limited",
+      "evidence_ids": [
+        "baxter-2024-09-29",
+        "baxter-2024-10-01"
+      ],
+      "fact_keys": [
+        "manufacturer_provenance_retained",
+        "historical_version_custody_unproven",
+        "conflicting_or_missing_receipts_require_review"
+      ],
+      "candidate_id": null,
+      "memory_ids": []
+    }
+  ],
+  "admitted_trade_rows": 0,
+  "memory_ids": [],
+  "recalled_findings": [],
+  "excluded_due_to_recalled_rejection": [],
+  "evidence_ids": [
+    "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+  ],
+  "fact_keys": [
+    "comparable_trade_evidence_unavailable",
+    "operational_shipments_are_not_trade_aggregates"
+  ],
+  "tool_result_reference": "trade-tool.json",
+  "tool_result_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+}

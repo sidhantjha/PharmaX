@@ -1,0 +1,592 @@
+{
+  "$defs": {
+    "CorroborationFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "enum": [
+            "consistent",
+            "compatible",
+            "conflict",
+            "missing",
+            "superseded"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "claim_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Claim Ids",
+          "type": "array"
+        },
+        "discrepancy_bags": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Discrepancy Bags",
+          "type": "integer"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "finding_id": {
+          "title": "Finding Id",
+          "type": "string"
+        },
+        "independent_origins": {
+          "minimum": 0,
+          "title": "Independent Origins",
+          "type": "integer"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "requires_human_review": {
+          "default": false,
+          "title": "Requires Human Review",
+          "type": "boolean"
+        },
+        "verification_steps": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Verification Steps",
+          "type": "array"
+        }
+      },
+      "required": [
+        "finding_id",
+        "category",
+        "claim_ids",
+        "evidence_ids",
+        "reason",
+        "verification_steps",
+        "independent_origins"
+      ],
+      "title": "CorroborationFinding",
+      "type": "object"
+    },
+    "OperationalClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "account_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Account Id"
+        },
+        "available_at": {
+          "format": "date-time",
+          "title": "Available At",
+          "type": "string"
+        },
+        "case_bags": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Case Bags"
+        },
+        "claim_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "classification": {
+          "enum": [
+            "real",
+            "simulated",
+            "projected",
+            "calculated"
+          ],
+          "title": "Classification",
+          "type": "string"
+        },
+        "document_id": {
+          "minLength": 1,
+          "title": "Document Id",
+          "type": "string"
+        },
+        "effective_at": {
+          "format": "date-time",
+          "title": "Effective At",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "expected_by": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected By"
+        },
+        "facility_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Facility Id"
+        },
+        "issued_at": {
+          "format": "date-time",
+          "title": "Issued At",
+          "type": "string"
+        },
+        "line_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Line Id"
+        },
+        "local_sku": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Local Sku"
+        },
+        "meaning": {
+          "enum": [
+            "production_status",
+            "allocation_policy",
+            "requested",
+            "acknowledged",
+            "shipped",
+            "delivered",
+            "accepted_receipt",
+            "usable_inventory",
+            "forecast_incoming",
+            "agency_guidance"
+          ],
+          "title": "Meaning",
+          "type": "string"
+        },
+        "ndc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ndc"
+        },
+        "observation": {
+          "enum": [
+            "independent",
+            "repeated",
+            "derived"
+          ],
+          "title": "Observation",
+          "type": "string"
+        },
+        "order_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Order Id"
+        },
+        "organization": {
+          "minLength": 1,
+          "title": "Organization",
+          "type": "string"
+        },
+        "originating_claim_id": {
+          "minLength": 1,
+          "title": "Originating Claim Id",
+          "type": "string"
+        },
+        "product_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Product Id"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quantity"
+        },
+        "reason": {
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        },
+        "record_id": {
+          "minLength": 1,
+          "title": "Record Id",
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "policy",
+            "event_total",
+            "partial",
+            "snapshot",
+            "expectation"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "shipment_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Shipment Id"
+        },
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "title": "Status",
+          "type": "string"
+        },
+        "supersedes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Supersedes"
+        },
+        "unit": {
+          "enum": [
+            "bag",
+            "percent",
+            "case",
+            "status"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "verification": {
+          "enum": [
+            "verified",
+            "unverified",
+            "rejected"
+          ],
+          "title": "Verification",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "source_id",
+        "organization",
+        "document_id",
+        "record_id",
+        "originating_claim_id",
+        "observation",
+        "meaning",
+        "classification",
+        "unit",
+        "status",
+        "scope",
+        "issued_at",
+        "effective_at",
+        "available_at",
+        "verification",
+        "evidence",
+        "reason"
+      ],
+      "title": "OperationalClaim",
+      "type": "object"
+    },
+    "SourceEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "observed",
+            "derived",
+            "simulated"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "title": "Observed At",
+          "type": "string"
+        },
+        "parent_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parent Ids",
+          "type": "array"
+        },
+        "published_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published On"
+        },
+        "raw_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Ref"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_record_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Record Id"
+        },
+        "source_url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Source Url",
+          "type": "string"
+        },
+        "updated_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Updated On"
+        },
+        "version_available_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version Available At"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "kind",
+        "source",
+        "source_url",
+        "observed_at",
+        "content_sha256"
+      ],
+      "title": "SourceEvidence",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "claims": {
+      "items": {
+        "$ref": "#/$defs/OperationalClaim"
+      },
+      "maxItems": 200,
+      "title": "Claims",
+      "type": "array"
+    },
+    "conditional_forecasts": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Conditional Forecasts",
+      "type": "array"
+    },
+    "cutoff": {
+      "format": "date-time",
+      "title": "Cutoff",
+      "type": "string"
+    },
+    "excluded_claim_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Excluded Claim Ids",
+      "type": "array"
+    },
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/CorroborationFinding"
+      },
+      "maxItems": 1000,
+      "title": "Findings",
+      "type": "array"
+    },
+    "forecast_changes": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Forecast Changes",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "physical_receipts": {
+      "additionalProperties": {
+        "minimum": 0,
+        "type": "integer"
+      },
+      "title": "Physical Receipts",
+      "type": "object"
+    },
+    "requires_human_review": {
+      "title": "Requires Human Review",
+      "type": "boolean"
+    },
+    "scenario": {
+      "title": "Scenario",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "7.1",
+      "default": "7.1",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "scenario",
+    "cutoff",
+    "claims",
+    "findings",
+    "excluded_claim_ids",
+    "physical_receipts",
+    "conditional_forecasts",
+    "forecast_changes",
+    "requires_human_review",
+    "limitations"
+  ],
+  "title": "EvidenceVerification",
+  "type": "object"
+}

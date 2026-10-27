@@ -1,0 +1,17 @@
+{
+  "source_url": "https://www.fda.gov/news-events/press-announcements/fda-provides-update-regarding-storm-damage-pfizer-facility-north-carolina",
+  "published_on": "2023-07-21",
+  "required_markers": ["Rocky Mount", "July 21, 2023", "damage", "immediate significant impacts"],
+  "event": {
+    "event_id": "fda-rocky-mount-20230721",
+    "title": "FDA assessment of storm damage at Pfizer Rocky Mount facility",
+    "event_type": "manufacturing",
+    "location": "Rocky Mount, North Carolina, United States",
+    "country_iso": "USA",
+    "starts_on": "2023-07-21",
+    "ends_on": null,
+    "products_stated": [],
+    "established": "FDA reported storm damage at the facility and ongoing assessment of affected products and supply on July 21, 2023.",
+    "uncertain_implications": "FDA did not expect immediate significant supply impacts. This statement does not identify affected carboplatin products, shipment delays, supplier links or hospital dependencies; event date denotes the dated FDA assessment, not an inferred shutdown date."
+  }
+}

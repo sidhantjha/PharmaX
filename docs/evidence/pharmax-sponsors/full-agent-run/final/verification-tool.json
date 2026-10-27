@@ -1,0 +1,161 @@
+[
+  {
+    "category": "compatible",
+    "claim_ids": [
+      "requested-po-central",
+      "baxter-2024-10-01-row-0"
+    ],
+    "discrepancy_bags": 0,
+    "evidence_ids": [
+      "baxter-2024-10-01",
+      "sim-2024-10-01-purchase_orders"
+    ],
+    "finding_id": "finding-678380b45a2a4ef3ace7",
+    "independent_origins": 2,
+    "reason": "Requested bags and account allocation policy describe different stages; the percentage cannot determine this order fill.",
+    "requires_human_review": false,
+    "verification_steps": [
+      "Obtain supplier acknowledgment with account entitlement and shipment reference."
+    ]
+  },
+  {
+    "category": "compatible",
+    "claim_ids": [
+      "requested-po-north",
+      "baxter-2024-10-01-row-0"
+    ],
+    "discrepancy_bags": 0,
+    "evidence_ids": [
+      "baxter-2024-10-01",
+      "sim-2024-10-01-purchase_orders"
+    ],
+    "finding_id": "finding-09f0a61820c815aaff79",
+    "independent_origins": 2,
+    "reason": "Requested bags and account allocation policy describe different stages; the percentage cannot determine this order fill.",
+    "requires_human_review": false,
+    "verification_steps": [
+      "Obtain supplier acknowledgment with account entitlement and shipment reference."
+    ]
+  },
+  {
+    "category": "compatible",
+    "claim_ids": [
+      "requested-po-south",
+      "baxter-2024-10-01-row-0"
+    ],
+    "discrepancy_bags": 0,
+    "evidence_ids": [
+      "baxter-2024-10-01",
+      "sim-2024-10-01-purchase_orders"
+    ],
+    "finding_id": "finding-1d687892d26aa0ebce0c",
+    "independent_origins": 2,
+    "reason": "Requested bags and account allocation policy describe different stages; the percentage cannot determine this order fill.",
+    "requires_human_review": false,
+    "verification_steps": [
+      "Obtain supplier acknowledgment with account entitlement and shipment reference."
+    ]
+  },
+  {
+    "category": "missing",
+    "claim_ids": [
+      "requested-po-central"
+    ],
+    "discrepancy_bags": 0,
+    "evidence_ids": [
+      "sim-2024-10-01-purchase_orders"
+    ],
+    "finding_id": "finding-8177aad922f8cb97dfa9",
+    "independent_origins": 1,
+    "reason": "No hospital-confirmed receipt; purchase order is not inventory.",
+    "requires_human_review": true,
+    "verification_steps": [
+      "Obtain receiving log and independently linked carrier proof of delivery."
+    ]
+  },
+  {
+    "category": "missing",
+    "claim_ids": [
+      "requested-po-north"
+    ],
+    "discrepancy_bags": 0,
+    "evidence_ids": [
+      "sim-2024-10-01-purchase_orders"
+    ],
+    "finding_id": "finding-2677451dc65009b91780",
+    "independent_origins": 1,
+    "reason": "No hospital-confirmed receipt; purchase order is not inventory.",
+    "requires_human_review": true,
+    "verification_steps": [
+      "Obtain receiving log and independently linked carrier proof of delivery."
+    ]
+  },
+  {
+    "category": "missing",
+    "claim_ids": [
+      "requested-po-south"
+    ],
+    "discrepancy_bags": 0,
+    "evidence_ids": [
+      "sim-2024-10-01-purchase_orders"
+    ],
+    "finding_id": "finding-e4cb0a6395ff53035eee",
+    "independent_origins": 1,
+    "reason": "Open order has no verified supplier acknowledgment; fill quantity remains unknown.",
+    "requires_human_review": true,
+    "verification_steps": [
+      "Request supplier acknowledgment, backorder balance and dated delivery commitment."
+    ]
+  },
+  {
+    "category": "missing",
+    "claim_ids": [
+      "requested-po-south"
+    ],
+    "discrepancy_bags": 0,
+    "evidence_ids": [
+      "sim-2024-10-01-purchase_orders"
+    ],
+    "finding_id": "finding-fdce602b95fed5858da3",
+    "independent_origins": 1,
+    "reason": "No hospital-confirmed receipt; purchase order is not inventory.",
+    "requires_human_review": true,
+    "verification_steps": [
+      "Obtain receiving log and independently linked carrier proof of delivery."
+    ]
+  },
+  {
+    "category": "missing",
+    "claim_ids": [
+      "shipped-asn-central"
+    ],
+    "discrepancy_bags": 0,
+    "evidence_ids": [
+      "sim-2024-10-01-shipments"
+    ],
+    "finding_id": "finding-c178602c63af02d50040",
+    "independent_origins": 1,
+    "reason": "Supplier ship notice has no accepted hospital receiving evidence.",
+    "requires_human_review": true,
+    "verification_steps": [
+      "Request carrier delivery scan and hospital receiving/exception log."
+    ]
+  },
+  {
+    "category": "missing",
+    "claim_ids": [
+      "shipped-asn-north"
+    ],
+    "discrepancy_bags": 0,
+    "evidence_ids": [
+      "sim-2024-10-01-shipments"
+    ],
+    "finding_id": "finding-ed859476a53444712619",
+    "independent_origins": 1,
+    "reason": "Supplier ship notice has no accepted hospital receiving evidence.",
+    "requires_human_review": true,
+    "verification_steps": [
+      "Request carrier delivery scan and hospital receiving/exception log."
+    ]
+  }
+]

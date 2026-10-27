@@ -1,0 +1,65 @@
+{
+  "schema_version": "2.0",
+  "dataset_version": "203835cde76d7e5db5bc84056725901089e6a8c56efd65a090e0504ef6c66680",
+  "mode": "fixture",
+  "query": {
+    "collection": "shortages",
+    "reporter_code": null,
+    "partner_code": null,
+    "product_id": null,
+    "hospital_id": null,
+    "record_id": null,
+    "limit": 100
+  },
+  "items": [
+    {
+      "record_id": "fda:22ee9a053ec77b32282d21f5129ddeb4b7f93a9cff6faf3c76b7ffa95b660f60",
+      "generic_name": "SYNTHETIC Carboplatin Injection",
+      "package_ndc": "99999-999-99",
+      "company": "Fictional source fixture",
+      "status": "Current",
+      "availability": "Available",
+      "presentation": "Synthetic 450mg/45mL vial",
+      "initial_posting_date": "2023-04-28",
+      "update_date": "2023-07-21",
+      "shortage_reason": null,
+      "related_information": null,
+      "therapeutic_category": null,
+      "product_id": "fda-product:99999-999-99",
+      "evidence": {
+        "evidence_id": "fda:22ee9a053ec77b32282d21f5129ddeb4b7f93a9cff6faf3c76b7ffa95b660f60",
+        "kind": "simulated",
+        "source": "fda",
+        "source_record_id": "99999-999-99",
+        "source_url": "https://api.fda.gov/drug/shortages.json?fixture=true",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": "2023-04-28",
+        "updated_on": "2023-07-21",
+        "version_available_at": null,
+        "content_sha256": "22ee9a053ec77b32282d21f5129ddeb4b7f93a9cff6faf3c76b7ffa95b660f60",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic offline fixture; no live retrieval."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "fda:22ee9a053ec77b32282d21f5129ddeb4b7f93a9cff6faf3c76b7ffa95b660f60",
+      "kind": "simulated",
+      "source": "fda",
+      "source_record_id": "99999-999-99",
+      "source_url": "https://api.fda.gov/drug/shortages.json?fixture=true",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": "2023-04-28",
+      "updated_on": "2023-07-21",
+      "version_available_at": null,
+      "content_sha256": "22ee9a053ec77b32282d21f5129ddeb4b7f93a9cff6faf3c76b7ffa95b660f60",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Synthetic offline fixture; no live retrieval."
+    }
+  ],
+  "returned_count": 1,
+  "truncated": false
+}

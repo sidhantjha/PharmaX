@@ -1,0 +1,144 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "available": {
+      "title": "Available",
+      "type": "boolean"
+    },
+    "budget": {
+      "additionalProperties": true,
+      "title": "Budget",
+      "type": "object"
+    },
+    "data_layer": {
+      "additionalProperties": true,
+      "title": "Data Layer",
+      "type": "object"
+    },
+    "findings_validated": {
+      "default": 0,
+      "maximum": 12,
+      "minimum": 0,
+      "title": "Findings Validated",
+      "type": "integer"
+    },
+    "graph": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "maxItems": 100,
+      "title": "Graph",
+      "type": "array"
+    },
+    "hmem": {
+      "additionalProperties": true,
+      "title": "Hmem",
+      "type": "object"
+    },
+    "investigation_id": {
+      "title": "Investigation Id",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "mode": {
+      "enum": [
+        "unavailable",
+        "nightshift-live-model"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "model": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model"
+    },
+    "model_requests": {
+      "default": 0,
+      "maximum": 36,
+      "minimum": 0,
+      "title": "Model Requests",
+      "type": "integer"
+    },
+    "roles": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "maxItems": 12,
+      "title": "Roles",
+      "type": "array"
+    },
+    "roles_executed": {
+      "default": 0,
+      "maximum": 12,
+      "minimum": 0,
+      "title": "Roles Executed",
+      "type": "integer"
+    },
+    "run_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Run Id"
+    },
+    "schema_version": {
+      "const": "model-verification-1",
+      "default": "model-verification-1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "status": {
+      "anyOf": [
+        {
+          "enum": [
+            "complete",
+            "partial"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Status"
+    },
+    "trace": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "maxItems": 1000,
+      "title": "Trace",
+      "type": "array"
+    }
+  },
+  "required": [
+    "investigation_id",
+    "available",
+    "mode"
+  ],
+  "title": "ModelVerificationStatus",
+  "type": "object"
+}

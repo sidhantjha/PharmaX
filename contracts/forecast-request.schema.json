@@ -1,0 +1,188 @@
+{
+  "$defs": {
+    "ArrivalOverride": {
+      "additionalProperties": false,
+      "properties": {
+        "arrival_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Arrival On"
+        },
+        "hold": {
+          "default": false,
+          "title": "Hold",
+          "type": "boolean"
+        },
+        "shipment_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Shipment Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "shipment_id"
+      ],
+      "title": "ArrivalOverride",
+      "type": "object"
+    },
+    "ScenarioOverlay": {
+      "additionalProperties": false,
+      "properties": {
+        "arrivals": {
+          "items": {
+            "$ref": "#/$defs/ArrivalOverride"
+          },
+          "maxItems": 20,
+          "title": "Arrivals",
+          "type": "array"
+        },
+        "as_of": {
+          "format": "date",
+          "title": "As Of",
+          "type": "string"
+        },
+        "base_dataset_version": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Base Dataset Version",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "kind": {
+          "const": "simulated",
+          "default": "simulated",
+          "title": "Kind",
+          "type": "string"
+        },
+        "overlay_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Overlay Id",
+          "type": "string"
+        },
+        "stock": {
+          "items": {
+            "$ref": "#/$defs/StockOverride"
+          },
+          "maxItems": 20,
+          "title": "Stock",
+          "type": "array"
+        }
+      },
+      "required": [
+        "overlay_id",
+        "base_dataset_version",
+        "as_of",
+        "description"
+      ],
+      "title": "ScenarioOverlay",
+      "type": "object"
+    },
+    "StockOverride": {
+      "additionalProperties": false,
+      "properties": {
+        "inventory_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Inventory Id",
+          "type": "string"
+        },
+        "on_hand": {
+          "minimum": 0,
+          "title": "On Hand",
+          "type": "integer"
+        },
+        "reserved": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reserved"
+        }
+      },
+      "required": [
+        "inventory_id",
+        "on_hand"
+      ],
+      "title": "StockOverride",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "arrival_shelf_life_days": {
+      "default": 30,
+      "maximum": 365,
+      "minimum": 1,
+      "title": "Arrival Shelf Life Days",
+      "type": "integer"
+    },
+    "horizon_days": {
+      "default": 14,
+      "maximum": 60,
+      "minimum": 1,
+      "title": "Horizon Days",
+      "type": "integer"
+    },
+    "hospital_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Hospital Id",
+      "type": "string"
+    },
+    "overlay": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ScenarioOverlay"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "product_id": {
+      "default": "sim-carboplatin-450",
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Product Id",
+      "type": "string"
+    },
+    "scenario": {
+      "default": "disruption",
+      "enum": [
+        "baseline",
+        "disruption"
+      ],
+      "title": "Scenario",
+      "type": "string"
+    }
+  },
+  "required": [
+    "hospital_id"
+  ],
+  "title": "ForecastRequest",
+  "type": "object"
+}

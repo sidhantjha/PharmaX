@@ -1,0 +1,246 @@
+{
+  "role_id": "actions",
+  "role_name": "Prepare human-review drafts from the selected feasible mitigation.",
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "failed",
+  "continuation_occurred": true,
+  "live_verified": false,
+  "predecessor_roles": [
+    "news",
+    "verification",
+    "dependency",
+    "trade",
+    "disruption",
+    "memory",
+    "mitigation",
+    "feasibility",
+    "clinical"
+  ],
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "tool_selected": "actions.inspect",
+  "tool_input": {},
+  "tool_input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "tool_result_reference": "actions-tool.json",
+  "tool_result_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "memory_ids": [
+    "mem-4",
+    "mem-2",
+    "mem-5",
+    "mem-1",
+    "mem-3"
+  ],
+  "excluded_due_to_recalled_rejection": [
+    "sim-nc-north-to-sim-nc-south-170",
+    "external-sim-nc-central",
+    "external-sim-nc-south",
+    "sim-nc-south-to-sim-nc-central-110",
+    "sim-nc-central-to-sim-nc-south-164"
+  ],
+  "validation_rejections": [
+    {
+      "code": "CANDIDATE_UNSAFE_OR_NOT_SUPPORTED",
+      "actual_arguments": {
+        "observation": "human_review_required",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "deterministic_candidate_constraints_retained",
+          "human_pharmacy_review_required",
+          "no_physical_dispatch_authority",
+          "existing_action_drafts_are_review_only"
+        ],
+        "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ]
+      }
+    },
+    {
+      "code": "CANDIDATE_UNSAFE_OR_NOT_SUPPORTED",
+      "actual_arguments": {
+        "observation": "human_review_required",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "deterministic_candidate_constraints_retained",
+          "human_pharmacy_review_required",
+          "no_physical_dispatch_authority",
+          "existing_action_drafts_are_review_only"
+        ],
+        "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ]
+      }
+    }
+  ],
+  "error_code": "CANDIDATE_UNSAFE_OR_NOT_SUPPORTED",
+  "model_receipts": [
+    {
+      "role": "actions",
+      "request_no": 23,
+      "call_id": "call-c9da3948-71eb-4ed3-af6c-292b6d32453b",
+      "response_id": "chatcmpl-12903779-0cff-4453-9095-4e71186f723f",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_xi1sxgja",
+      "request_id": null,
+      "decision_id": "req_xi1sxgja",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 1107,
+        "completion_tokens": 19,
+        "total_tokens": 1126
+      },
+      "selected_tool": "actions_review_drafts",
+      "arguments": {},
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "actions",
+      "request_no": 24,
+      "call_id": "call-d4c7076a-3802-4016-b9ba-084b51d6d816",
+      "response_id": "chatcmpl-87b21c9b-e5af-4692-abd6-bbf148f513f5",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_w4sddz1t",
+      "request_id": null,
+      "decision_id": "req_w4sddz1t",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 4137,
+        "completion_tokens": 200,
+        "total_tokens": 4337
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "human_review_required",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "deterministic_candidate_constraints_retained",
+          "human_pharmacy_review_required",
+          "no_physical_dispatch_authority",
+          "existing_action_drafts_are_review_only"
+        ],
+        "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ]
+      },
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "actions",
+      "request_no": 25,
+      "call_id": "call-9a70379a-bea6-414d-bc4a-d962e167f5c3",
+      "response_id": "chatcmpl-2519ffdd-426d-445b-b3fc-07040b3b0ebb",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_80wctdul",
+      "request_id": null,
+      "decision_id": "req_80wctdul",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 4623,
+        "completion_tokens": 190,
+        "total_tokens": 4813
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "human_review_required",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "deterministic_candidate_constraints_retained",
+          "human_pharmacy_review_required",
+          "no_physical_dispatch_authority",
+          "existing_action_drafts_are_review_only"
+        ],
+        "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ]
+      },
+      "live": true,
+      "runtime_mcp": null
+    }
+  ],
+  "request_records": [
+    {
+      "role": "actions",
+      "number": 23,
+      "started_at": "2026-10-27T19:14:57.194511+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 3547,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.394,
+      "completed_at": "2026-10-27T19:14:57.588083+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "actions",
+      "number": 24,
+      "started_at": "2026-10-27T19:14:58.394440+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 11518,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 2.069,
+      "completed_at": "2026-10-27T19:15:00.463794+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "actions",
+      "number": 25,
+      "started_at": "2026-10-27T19:15:00.577818+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 13159,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 2.16,
+      "completed_at": "2026-10-27T19:15:02.748092+00:00",
+      "usage_reported": true
+    }
+  ],
+  "completed_at": "2026-10-27T19:15:02.748402+00:00"
+}

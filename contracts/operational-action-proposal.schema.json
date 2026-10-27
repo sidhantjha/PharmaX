@@ -1,0 +1,96 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "actor": {
+      "maxLength": 160,
+      "minLength": 1,
+      "title": "Actor",
+      "type": "string"
+    },
+    "donor": {
+      "anyOf": [
+        {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Donor"
+    },
+    "expected_on": {
+      "format": "date",
+      "title": "Expected On",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "transfer",
+        "replenishment"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "lot_id": {
+      "minLength": 1,
+      "title": "Lot Id",
+      "type": "string"
+    },
+    "product_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Product Id",
+      "type": "string"
+    },
+    "quantity": {
+      "exclusiveMinimum": 0,
+      "maximum": 100000,
+      "title": "Quantity",
+      "type": "integer"
+    },
+    "recipient": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Recipient",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "8.1",
+      "default": "8.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "unit": {
+      "default": "bag",
+      "enum": [
+        "bag",
+        "case"
+      ],
+      "title": "Unit",
+      "type": "string"
+    },
+    "units_per_case": {
+      "exclusiveMinimum": 0,
+      "title": "Units Per Case",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "kind",
+    "recipient",
+    "product_id",
+    "lot_id",
+    "quantity",
+    "units_per_case",
+    "expected_on",
+    "actor"
+  ],
+  "title": "ActionProposal",
+  "type": "object"
+}

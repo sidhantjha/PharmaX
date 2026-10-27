@@ -1,0 +1,62 @@
+{
+  "version": "october-arrival-conflict-v1",
+  "classification": "simulated",
+  "records": [
+    {
+      "claim_id": "supplier-revised-arrival-v1",
+      "shipment_id": "ship-central",
+      "product_id": "sim-carboplatin-450",
+      "supplier_id": "sim-atlas",
+      "source": "fictional-atlas-operations",
+      "effective_at": "2026-10-24T18:30:00Z",
+      "retrieved_at": "2026-10-24T19:00:00Z",
+      "arrival_on": "2026-11-25",
+      "document": "{\"arrival_on\": \"2026-11-25\", \"classification\": \"simulated\", \"note\": \"Fictional operational estimate, not an observed communication.\", \"product_id\": \"sim-carboplatin-450\", \"shipment_id\": \"ship-central\", \"supplier_id\": \"sim-atlas\"}",
+      "authorization_ref": "sim-planning-approval-001",
+      "evidence": {
+        "evidence_id": "sim:p5c-976d95e9dc6d380b3d541fdfe50f5cd235707f60aaeb3135a3333a8a7b3fe5a9",
+        "kind": "simulated",
+        "source": "fictional-atlas-operations",
+        "source_record_id": "supplier-revised-arrival-v1",
+        "source_url": "https://example.invalid/pharmax/arrival-update-v1",
+        "observed_at": "2026-10-24T19:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": "2026-10-24T19:00:00Z",
+        "content_sha256": "976d95e9dc6d380b3d541fdfe50f5cd235707f60aaeb3135a3333a8a7b3fe5a9",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Simulated operational communication. Not an observed shipment, supplier statement or delay."
+      },
+      "classification": "simulated-operational-communication"
+    },
+    {
+      "claim_id": "cached-arrival-estimate-v1",
+      "shipment_id": "ship-central",
+      "product_id": "sim-carboplatin-450",
+      "supplier_id": "sim-atlas",
+      "source": "fictional-logistics-cache",
+      "effective_at": "2026-10-24T18:15:00Z",
+      "retrieved_at": "2026-10-24T19:15:00Z",
+      "arrival_on": "2026-11-18",
+      "document": "{\"arrival_on\": \"2026-11-18\", \"classification\": \"simulated\", \"note\": \"Fictional operational estimate, not an observed communication.\", \"product_id\": \"sim-carboplatin-450\", \"shipment_id\": \"ship-central\", \"supplier_id\": \"sim-atlas\"}",
+      "authorization_ref": null,
+      "evidence": {
+        "evidence_id": "sim:p5c-4cf6f2ef07c95c2684cad444338f28f6beb1402a86b3fa2cae4a0e0f4c881721",
+        "kind": "simulated",
+        "source": "fictional-logistics-cache",
+        "source_record_id": "cached-arrival-estimate-v1",
+        "source_url": "https://example.invalid/pharmax/arrival-update-v1",
+        "observed_at": "2026-10-24T19:15:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": "2026-10-24T19:15:00Z",
+        "content_sha256": "4cf6f2ef07c95c2684cad444338f28f6beb1402a86b3fa2cae4a0e0f4c881721",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Simulated operational communication. Not an observed shipment, supplier statement or delay."
+      },
+      "classification": "simulated-operational-communication"
+    }
+  ]
+}

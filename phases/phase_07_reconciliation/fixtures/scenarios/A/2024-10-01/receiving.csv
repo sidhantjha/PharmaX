@@ -1,0 +1,1 @@
+record_id,facility_id,local_sku,account_id,po_id,line_id,shipment_id,ndc,quantity,unit,case_bags,status,scope,effective_at,available_at,expires_on,quality

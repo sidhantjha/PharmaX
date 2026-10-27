@@ -1,0 +1,60 @@
+{
+  "phase": "4C",
+  "branch": "codex/pharmax-phase-4c-live-intelligence",
+  "base_commit": "4871098f840713551a5b7a2abf9bde510441244c",
+  "checks": {
+    "uv sync --locked --all-groups": "passed; existing local .venv reused",
+    "PHARMAX_NODE=/tmp/pharmax-tools/node_modules/node/bin/node uv run pytest -q": {
+      "passed": 222,
+      "seconds": 155.01,
+      "new_phase_4c_tests": 26
+    },
+    "uv run ruff check contracts phases scripts/verify.py scripts/live_intelligence_demo.py scripts/export_contracts.py": "passed",
+    "uv run python scripts/export_contracts.py --check": {
+      "matched": 39,
+      "previous_schemas_unchanged": true
+    },
+    "official_hmem_conformance": {
+      "passed": 13,
+      "total": 13,
+      "evidence": "conformance.txt",
+      "implementation": "unchanged vendored official reference used by actual memory bridge"
+    },
+    "retained replay JSON typed and exported schema validation": "passed",
+    "uv run python scripts/build_site.py": {
+      "pages": 12,
+      "search_entries": 147
+    },
+    "uv run python scripts/verify_site.py": "passed: 12 pages, links, steps, anchors",
+    "uv run python scripts/package_site.py": "passed: 12 pages and shared assets",
+    "git diff --check": "passed including staged new files; original raw HTTP bodies marked binary to preserve source whitespace and exact hashes",
+    "preservation_diff_from_base": "empty for frontend, data/datasets, phases 1/2/3, risk.py and mitigation.py contracts"
+  },
+  "execution": {
+    "public_http_requests": 5,
+    "marad_successful_gets": 4,
+    "gdelt_gets": 1,
+    "initial_attempt": "MARAD responses retained, parser rejected page-heading banner; GDELT HTTP 429. See initial-fetch-attempt.json and initial-fetch-terminal.txt.",
+    "corrected_attempt": "Two MARAD-only GETs; normalized source, real Zetaris publication/query and local full investigation completed.",
+    "latest_marad_retrieved_at": "2026-10-24T18:17:10.242651Z",
+    "source_publication_time": null,
+    "effective_on": "2026-09-23",
+    "expires_on": "2027-03-22",
+    "zetaris_sql_operations": 4,
+    "zetaris_verified_rows": 1,
+    "offline_replay": "passed, actual local tools and H-MEM; zero HTTP/Zetaris/model calls",
+    "live_model_calls": 0,
+    "paid_inference_calls": 0,
+    "cost_gate": "No paid inference authorized. Nightshift/Nemotron live end-to-end remains unverified."
+  },
+  "limitations": [
+    "GDELT HTTP 429; no retrieved article is claimed. Indexed articles are unverified media in this implementation.",
+    "Real advisory establishes corridor exposure, not actual cargo delay or a carboplatin dependency.",
+    "All October operational relationships and delay assumptions are simulated; forecasts are calculated.",
+    "Fixture coordinator decisions are labelled; no fabricated live reasoning or routing receipts.",
+    "Poller must run explicitly; source-status timestamps do not prove continuous monitoring.",
+    "Independent mitigation alternatives are compared, not combined or globally optimized.",
+    "A hard process interruption can leave a claimed job running; no automatic expensive retry is attempted. Fresh replay uses a new output directory.",
+    "No frontend, final reports, deployment or merge."
+  ]
+}

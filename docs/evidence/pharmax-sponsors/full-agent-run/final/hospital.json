@@ -1,0 +1,206 @@
+{
+  "role_id": "hospital",
+  "role_name": "Calculate lot-level baseline, disruption and donor inventory forecasts.",
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "failed",
+  "continuation_occurred": true,
+  "live_verified": false,
+  "predecessor_roles": [
+    "news",
+    "verification",
+    "dependency",
+    "trade",
+    "disruption"
+  ],
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "tool_selected": "readiness.inspect",
+  "tool_input": {},
+  "tool_input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "tool_result_reference": "hospital-tool.json",
+  "tool_result_sha256": "76894a26b5a7a57b2fcabe63df8e7bbb8b5e8f95d27a2141e792ad3ca568c73b",
+  "memory_ids": [],
+  "excluded_due_to_recalled_rejection": [],
+  "validation_rejections": [
+    {
+      "code": "FINDING_CITATION_OR_FACT_UNSUPPORTED",
+      "actual_arguments": {
+        "observation": "inventory_evidence_limited",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "hospital_stock_and_demand_simulated",
+          "unconfirmed_orders_excluded",
+          "unmet:sim-nc-central:256",
+          "unmet:sim-nc-north:0', 'unmet:sim-nc-south:170"
+        ],
+        "candidate_id": null,
+        "memory_ids": []
+      }
+    },
+    {
+      "code": "FINDING_CITATION_OR_FACT_UNSUPPORTED",
+      "actual_arguments": {
+        "observation": "inventory_evidence_limited",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "hospital_stock_and_demand_simulated",
+          "unconfirmed_orders_excluded",
+          "unmet:sim-nc-central:256",
+          "unmet:sim-nc-north:0', 'unmet:sim-nc-south:170"
+        ],
+        "candidate_id": "none",
+        "memory_ids": []
+      }
+    }
+  ],
+  "error_code": "FINDING_CITATION_OR_FACT_UNSUPPORTED",
+  "model_receipts": [
+    {
+      "role": "hospital",
+      "request_no": 12,
+      "call_id": "call-4eed522c-9bef-48c5-8c92-17febcd1252e",
+      "response_id": "chatcmpl-66d3d3bf-bc8d-4f4c-a96e-e5490e565f0f",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_t72pk6m2",
+      "request_id": null,
+      "decision_id": "req_t72pk6m2",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 902,
+        "completion_tokens": 18,
+        "total_tokens": 920
+      },
+      "selected_tool": "hospital_inventory_forecast",
+      "arguments": {},
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "hospital",
+      "request_no": 13,
+      "call_id": "call-85f73043-7de7-46e3-91d2-7de05fe0bdb3",
+      "response_id": "chatcmpl-a8b0dd39-4d9c-456d-b6b7-df71cee4fde0",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_u0ebhfsl",
+      "request_id": null,
+      "decision_id": "req_u0ebhfsl",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 2510,
+        "completion_tokens": 178,
+        "total_tokens": 2688
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "inventory_evidence_limited",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "hospital_stock_and_demand_simulated",
+          "unconfirmed_orders_excluded",
+          "unmet:sim-nc-central:256",
+          "unmet:sim-nc-north:0', 'unmet:sim-nc-south:170"
+        ],
+        "candidate_id": null,
+        "memory_ids": []
+      },
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "hospital",
+      "request_no": 14,
+      "call_id": "call-c3374922-e3e7-4daf-890e-afed0749353b",
+      "response_id": "chatcmpl-05b9fb59-a393-4e2b-a9e4-df9eac47a34a",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_2votx6hr",
+      "request_id": null,
+      "decision_id": "req_2votx6hr",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 2969,
+        "completion_tokens": 169,
+        "total_tokens": 3138
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "inventory_evidence_limited",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "hospital_stock_and_demand_simulated",
+          "unconfirmed_orders_excluded",
+          "unmet:sim-nc-central:256",
+          "unmet:sim-nc-north:0', 'unmet:sim-nc-south:170"
+        ],
+        "candidate_id": "none",
+        "memory_ids": []
+      },
+      "live": true,
+      "runtime_mcp": null
+    }
+  ],
+  "request_records": [
+    {
+      "role": "hospital",
+      "number": 12,
+      "started_at": "2026-10-27T19:12:31.579062+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 3214,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.363,
+      "completed_at": "2026-10-27T19:12:31.942096+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "hospital",
+      "number": 13,
+      "started_at": "2026-10-27T19:12:32.821348+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 7410,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 3.348,
+      "completed_at": "2026-10-27T19:12:36.169160+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "hospital",
+      "number": 14,
+      "started_at": "2026-10-27T19:12:36.272736+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 8905,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 1.768,
+      "completed_at": "2026-10-27T19:12:38.040630+00:00",
+      "usage_reported": true
+    }
+  ],
+  "completed_at": "2026-10-27T19:12:38.041174+00:00"
+}

@@ -1,0 +1,14 @@
+import { useEffect, useState } from 'react';
+import type { ModelVerification, NativeRole } from './heleneApi';
+export function RecordedExecution({status,select}:{status:ModelVerification|null;select:(id:string)=>void}){
+  const [step,setStep]=useState(0),[playing,setPlaying]=useState(false);
+  const events=(status?.available?status.roles:[]).flatMap(r=>(r.request_records??[]).map(q=>({role:r.role_id,...q}))).sort((a,b)=>a.started_at.localeCompare(b.started_at));
+  const signature=events.map(e=>e.role+e.number).join(',');
+  useEffect(()=>{setStep(0);setPlaying(false);},[signature]);
+  useEffect(()=>{if(!playing)return;const timer=setTimeout(()=>{if(step>=events.length){setPlaying(false);return;}select(events[step].role);setStep(n=>n+1);},900);return()=>clearTimeout(timer);},[playing,step,signature,select]);
+  if(!events.length)return <p>No timestamped model request events saved for replay.</p>;
+  return <div className="recorded-replay"><button className="pill-button" onClick={()=>{if(playing){setPlaying(false);return;}setStep(0);setPlaying(true);}}> {playing?'Pause replay':'Replay recorded execution'}</button><small>Saved request sequence · accelerated playback · 0 new model calls</small><details open={playing||undefined}><summary>Recorded request trace · {playing?step:events.length} / {events.length} events</summary><ol className="terminal-trace">{events.slice(0,playing?step:events.length).map(e=><li key={e.number}><time>{new Date(e.started_at).toISOString()}</time> <button onClick={()=>select(e.role)}>{e.role}</button> → Nightshift / Nemotron → HTTP {e.http_status??'unrecorded'} · {e.completed_at?'response recorded':'completion not recorded'}</li>)}</ol></details></div>;
+}
+export function RoleTrace({role}:{role:NativeRole}){
+  return <div className="role-trace"><p><strong>Recorded task:</strong> {role.role_name??'Task text not recorded'}</p><p>Nightshift / Nemotron: {role.model_receipts?.length?'native receipts retained':'not established'} · H-MEM: {role.memory_ids?.length?`${role.memory_ids.length} recalled references`:'no recalled references recorded'} · Zetaris: {role.zetaris_trace_id?'upstream joined-source provenance retained; direct role access not established':'no role-level provenance recorded'}</p><details><summary>Selected agent observable trace</summary><ol className="terminal-trace">{role.request_records?.map(q=><li key={q.number}>{new Date(q.started_at).toISOString()} · {role.role_id} · model request → Nightshift / Nemotron → HTTP {q.http_status??'unknown'} · {q.completed_at?'response recorded':'completion not recorded'}</li>)}</ol><p>Tool selected: {role.tool_selected??'None recorded'}. {role.tool_result_reference?'Tool result retained; original reference available in technical details.':'No retained tool result reference.'}</p><p>Final validation: {role.status==='complete'?'Accepted':'Rejected; excluded downstream'}.</p></details></div>;
+}

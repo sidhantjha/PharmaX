@@ -1,0 +1,2 @@
+record_id,po_id,facility_id,local_sku,account_id,line_id,revision,quantity,unit,dispatched_on,arrival_on,status
+asn-north,po-north,sim-nc-north,SAL-1000,sim-account-north,line-1,1,67,bag,2024-10-01,2024-10-04,in_transit

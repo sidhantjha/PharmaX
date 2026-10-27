@@ -1,0 +1,301 @@
+{
+  "$defs": {
+    "RiskRating": {
+      "additionalProperties": false,
+      "properties": {
+        "dimension": {
+          "enum": [
+            "country",
+            "shipment",
+            "supplier",
+            "hospital"
+          ],
+          "title": "Dimension",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        },
+        "level": {
+          "anyOf": [
+            {
+              "enum": [
+                "Low",
+                "Moderate",
+                "High",
+                "Critical"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Level"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "measurements": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Measurements",
+          "type": "object"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dimension",
+        "level",
+        "rule_id",
+        "explanation",
+        "measurements",
+        "evidence_ids",
+        "limitations"
+      ],
+      "title": "RiskRating",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "algorithm_version": {
+      "const": "pharmax-risk-v1",
+      "default": "pharmax-risk-v1",
+      "title": "Algorithm Version",
+      "type": "string"
+    },
+    "analysis_id": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Analysis Id",
+      "type": "string"
+    },
+    "arrival_basis": {
+      "enum": [
+        "modeled_schedule",
+        "hypothetical_override",
+        "held",
+        "blocked_constraints",
+        "past_due_not_recredited"
+      ],
+      "title": "Arrival Basis",
+      "type": "string"
+    },
+    "as_of": {
+      "format": "date",
+      "title": "As Of",
+      "type": "string"
+    },
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Assumptions",
+      "type": "array"
+    },
+    "dataset_version": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "delay_days": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Delay Days"
+    },
+    "hospital_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Hospital Id",
+      "type": "string"
+    },
+    "input_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Input Evidence Ids",
+      "type": "array"
+    },
+    "input_values": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "title": "Input Values",
+      "type": "object"
+    },
+    "kind": {
+      "const": "derived",
+      "default": "derived",
+      "title": "Kind",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "linked_simulated_event_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Linked Simulated Event Ids",
+      "type": "array"
+    },
+    "modeled_arrival": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Modeled Arrival"
+    },
+    "original_status": {
+      "title": "Original Status",
+      "type": "string"
+    },
+    "overlay_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Overlay Version"
+    },
+    "product_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Product Id",
+      "type": "string"
+    },
+    "quantity": {
+      "title": "Quantity",
+      "type": "integer"
+    },
+    "quantity_unit": {
+      "const": "vial",
+      "default": "vial",
+      "title": "Quantity Unit",
+      "type": "string"
+    },
+    "rating": {
+      "$ref": "#/$defs/RiskRating"
+    },
+    "scenario": {
+      "enum": [
+        "baseline",
+        "disruption"
+      ],
+      "title": "Scenario",
+      "type": "string"
+    },
+    "scheduled_arrival": {
+      "format": "date",
+      "title": "Scheduled Arrival",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "3.0",
+      "default": "3.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "shipment_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Shipment Id",
+      "type": "string"
+    },
+    "supplier_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Supplier Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "analysis_id",
+    "dataset_version",
+    "input_evidence_ids",
+    "assumptions",
+    "limitations",
+    "as_of",
+    "scenario",
+    "overlay_version",
+    "shipment_id",
+    "supplier_id",
+    "hospital_id",
+    "product_id",
+    "quantity",
+    "original_status",
+    "scheduled_arrival",
+    "modeled_arrival",
+    "arrival_basis",
+    "delay_days",
+    "linked_simulated_event_ids",
+    "rating",
+    "input_values"
+  ],
+  "title": "ShipmentRisk",
+  "type": "object"
+}

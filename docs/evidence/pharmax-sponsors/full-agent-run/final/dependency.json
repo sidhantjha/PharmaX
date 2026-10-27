@@ -1,0 +1,213 @@
+{
+  "role_id": "dependency",
+  "role_name": "Match corridor and validity window to the explicit simulated route.",
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "complete",
+  "continuation_occurred": true,
+  "live_verified": true,
+  "predecessor_roles": [
+    "news",
+    "disruption",
+    "verification"
+  ],
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "tool_selected": "identity.resolve",
+  "tool_input": {},
+  "tool_input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "tool_result_reference": "dependency-tool.json",
+  "tool_result_sha256": "390a58f1150b0f15533236d743ef1a0dc9f3afce4efc68d752da3ddcdccd37d1",
+  "memory_ids": [],
+  "excluded_due_to_recalled_rejection": [],
+  "validation_rejections": [
+    {
+      "code": "FINDING_CITATION_OR_FACT_UNSUPPORTED",
+      "actual_arguments": {
+        "observation": "simulated_hospital_records",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "fact_keys": [
+          "manufacturer_provenance_retained",
+          "historical_version_custody_unproven"
+        ],
+        "candidate_id": null,
+        "memory_ids": []
+      }
+    },
+    {
+      "code": "FINDING_CITATION_OR_FACT_UNSUPPORTED",
+      "actual_arguments": {
+        "observation": "simulated_hospital_records",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "fact_keys": [
+          "manufacturer_provenance_retained",
+          "historical_version_custody_unproven"
+        ],
+        "candidate_id": null,
+        "memory_ids": []
+      }
+    }
+  ],
+  "model_receipts": [
+    {
+      "role": "dependency",
+      "request_no": 7,
+      "call_id": "call-fa8ee5a4-32d1-487a-8106-e9432118ba88",
+      "response_id": "chatcmpl-4d2c5a90-81b9-4535-bc5d-d3cc3c564695",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_selqk23n",
+      "request_id": null,
+      "decision_id": "req_selqk23n",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 780,
+        "completion_tokens": 16,
+        "total_tokens": 796
+      },
+      "selected_tool": "dependency_identity",
+      "arguments": {},
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "dependency",
+      "request_no": 9,
+      "call_id": "call-240b251a-726d-4925-ac43-266eda96e940",
+      "response_id": "chatcmpl-249e6965-434a-413b-b785-1d50523a2d37",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_9quv3wim",
+      "request_id": null,
+      "decision_id": "req_9quv3wim",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 1904,
+        "completion_tokens": 99,
+        "total_tokens": 2003
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "simulated_hospital_records",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "fact_keys": [
+          "manufacturer_provenance_retained",
+          "historical_version_custody_unproven"
+        ],
+        "candidate_id": null,
+        "memory_ids": []
+      },
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "dependency",
+      "request_no": 11,
+      "call_id": "call-9905ce44-9c60-4d0e-8f57-98cfbefaa603",
+      "response_id": "chatcmpl-bf337ec8-d62d-4908-a04a-adceec03c10f",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_438cr81y",
+      "request_id": null,
+      "decision_id": "req_438cr81y",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 2138,
+        "completion_tokens": 99,
+        "total_tokens": 2237
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "simulated_hospital_records",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "fact_keys": [
+          "manufacturer_provenance_retained",
+          "historical_version_custody_unproven"
+        ],
+        "candidate_id": null,
+        "memory_ids": []
+      },
+      "live": true,
+      "runtime_mcp": null
+    }
+  ],
+  "request_records": [
+    {
+      "role": "dependency",
+      "number": 7,
+      "started_at": "2026-10-27T19:09:12.151721+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 2859,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.416,
+      "completed_at": "2026-10-27T19:09:12.567378+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "dependency",
+      "number": 9,
+      "started_at": "2026-10-27T19:09:13.338806+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 6045,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 1.051,
+      "completed_at": "2026-10-27T19:09:14.389735+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "dependency",
+      "number": 11,
+      "started_at": "2026-10-27T19:09:14.482293+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 7007,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 1.801,
+      "completed_at": "2026-10-27T19:09:16.283491+00:00",
+      "usage_reported": true
+    }
+  ],
+  "completed_at": "2026-10-27T19:09:16.283794+00:00",
+  "structured_finding": {
+    "observation": "simulated_hospital_records",
+    "evidence_ids": [
+      "baxter-2024-09-29",
+      "baxter-2024-10-01"
+    ],
+    "fact_keys": [
+      "manufacturer_provenance_retained",
+      "historical_version_custody_unproven"
+    ],
+    "candidate_id": null,
+    "memory_ids": []
+  },
+  "validation_review": "Unchanged native output citations and fact keys are explicitly supported by actual retained predecessor_findings; original rejection preserved. No model request repeated."
+}

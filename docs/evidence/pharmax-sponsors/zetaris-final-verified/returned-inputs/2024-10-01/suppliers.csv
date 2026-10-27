@@ -1,0 +1,4 @@
+facility_id,supplier_id,account_id,approved,transfers_allowed
+sim-nc-central,sim-baxter-channel,sim-account-central,true,true
+sim-nc-north,sim-baxter-channel,sim-account-north,true,true
+sim-nc-south,sim-baxter-channel,sim-account-south,true,true

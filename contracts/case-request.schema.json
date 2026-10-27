@@ -1,0 +1,39 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "delay_days": {
+      "default": 7,
+      "maximum": 21,
+      "minimum": 0,
+      "title": "Delay Days",
+      "type": "integer"
+    },
+    "parent_id": {
+      "anyOf": [
+        {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Parent Id"
+    },
+    "scenario": {
+      "default": "red-sea",
+      "enum": [
+        "red-sea",
+        "original",
+        "clean-onset"
+      ],
+      "title": "Scenario",
+      "type": "string"
+    }
+  },
+  "title": "CaseRequest",
+  "type": "object"
+}

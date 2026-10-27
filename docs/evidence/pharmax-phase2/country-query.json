@@ -1,0 +1,70 @@
+{
+  "schema_version": "2.0",
+  "dataset_version": "6a4a8d083742ed7ef0d8a2b1090898f5ab655f0b5b179701c20c8260ba377819",
+  "mode": "live-zetaris",
+  "query": {
+    "collection": "trade_flows",
+    "reporter_code": 842,
+    "partner_code": 276,
+    "product_id": null,
+    "hospital_id": null,
+    "record_id": null,
+    "limit": 5
+  },
+  "items": [
+    {
+      "record_id": "comtrade:b353e84bc443e7f82ad13ba215492c010f50204c76fe25acbfd99ed3ef303387",
+      "hs_code": "30",
+      "classification": "H6",
+      "period": "2023",
+      "reporter_code": 842,
+      "partner_code": 276,
+      "flow": "M",
+      "value_usd": 19118889945.0,
+      "is_aggregate": true,
+      "is_reported": false,
+      "reporter_name": "USA",
+      "reporter_iso": "USA",
+      "partner_name": "Germany",
+      "partner_iso": "DEU",
+      "commodity_description": "Pharmaceutical products",
+      "quantity": null,
+      "quantity_unit": null,
+      "quantity_estimated": false,
+      "evidence": {
+        "evidence_id": "comtrade:b353e84bc443e7f82ad13ba215492c010f50204c76fe25acbfd99ed3ef303387",
+        "kind": "observed",
+        "source": "comtrade",
+        "source_record_id": "C|A|H6|2023|842|276|0|30|M|C00|0",
+        "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2023&reporterCode=842&partnerCode=276%2C356%2C372&cmdCode=30&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&maxRecords=10&includeDesc=true",
+        "observed_at": "2026-10-24T03:38:56.312575Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "b353e84bc443e7f82ad13ba215492c010f50204c76fe25acbfd99ed3ef303387",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Observed at retrieval; historical version availability unknown."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "comtrade:b353e84bc443e7f82ad13ba215492c010f50204c76fe25acbfd99ed3ef303387",
+      "kind": "observed",
+      "source": "comtrade",
+      "source_record_id": "C|A|H6|2023|842|276|0|30|M|C00|0",
+      "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2023&reporterCode=842&partnerCode=276%2C356%2C372&cmdCode=30&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&maxRecords=10&includeDesc=true",
+      "observed_at": "2026-10-24T03:38:56.312575Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "b353e84bc443e7f82ad13ba215492c010f50204c76fe25acbfd99ed3ef303387",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Observed at retrieval; historical version availability unknown."
+    }
+  ],
+  "returned_count": 1,
+  "truncated": false
+}

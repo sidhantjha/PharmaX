@@ -1,0 +1,54 @@
+{
+  "schema_version": "4c.1",
+  "scenario_anchor": "2026-10-24",
+  "fetch_status": [
+    {
+      "source": "marad",
+      "status": "failed",
+      "error_code": "MARAD_TITLE_INVALID",
+      "receipts": [
+        "9edc194bd21caece7174acd360fb5f10cd348be48a78b25e080b0dc11ce9c2c5",
+        "792ddc71a31813319b6dde9125a80b7aa67e2856be927739c5da0206e788942b"
+      ],
+      "next_check_at": "2026-10-24T18:12:25.378875+00:00"
+    },
+    {
+      "source": "gdelt",
+      "status": "failed",
+      "error_code": "HTTP_429",
+      "receipts": [],
+      "next_check_at": "2026-10-24T18:12:25.378875+00:00"
+    }
+  ],
+  "source_status": [
+    {
+      "source": "gdelt",
+      "target_cadence_seconds": 1800,
+      "last_attempt_at": "2026-10-24T18:11:25.378875Z",
+      "last_success_at": null,
+      "next_check_at": "2026-10-24T18:12:25.378875Z",
+      "last_error": "HTTP_429",
+      "consecutive_failures": 1,
+      "new_revisions": 0,
+      "monitoring": "last-check-only"
+    },
+    {
+      "source": "marad",
+      "target_cadence_seconds": 21600,
+      "last_attempt_at": "2026-10-24T18:11:25.378875Z",
+      "last_success_at": null,
+      "next_check_at": "2026-10-24T18:12:25.378875Z",
+      "last_error": "MARAD_TITLE_INVALID",
+      "consecutive_failures": 1,
+      "new_revisions": 0,
+      "monitoring": "last-check-only"
+    }
+  ],
+  "marad": [],
+  "gdelt": [],
+  "zetaris": {
+    "mode": "live-zetaris",
+    "verified": false,
+    "error_code": "ZETARIS_VERIFICATION_FAILED"
+  }
+}

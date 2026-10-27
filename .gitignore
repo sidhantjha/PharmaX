@@ -1,0 +1,22 @@
+# Private credentials and local state
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.pyc
+*.sqlite*
+*.db
+*.log
+*.tsbuildinfo
+.runtime/
+.pytest_cache/
+.ruff_cache/
+dist/
+.DS_Store
+# Downloaded third-party originals are not redistributed by this repository.
+phases/phase_06_helene/fixtures/manufacturer/*.pdf
+phases/phase_07_reconciliation/fixtures/public/*.pdf
+phases/phase_07_reconciliation/fixtures/public/*.html

@@ -1,0 +1,150 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "allocation_percent": {
+      "maximum": 100,
+      "minimum": 0,
+      "title": "Allocation Percent",
+      "type": "number"
+    },
+    "baseline_end": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Baseline End"
+    },
+    "baseline_start": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Baseline Start"
+    },
+    "container_ml": {
+      "exclusiveMinimum": 0,
+      "title": "Container Ml",
+      "type": "number"
+    },
+    "customer_class": {
+      "minLength": 1,
+      "title": "Customer Class",
+      "type": "string"
+    },
+    "effective_on": {
+      "format": "date",
+      "title": "Effective On",
+      "type": "string"
+    },
+    "exact_claim": {
+      "minLength": 1,
+      "title": "Exact Claim",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "observed",
+        "projected"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "notice_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Notice Id",
+      "type": "string"
+    },
+    "original_baxter_code": {
+      "minLength": 1,
+      "title": "Original Baxter Code",
+      "type": "string"
+    },
+    "original_ndc": {
+      "minLength": 1,
+      "title": "Original Ndc",
+      "type": "string"
+    },
+    "page": {
+      "minimum": 1,
+      "title": "Page",
+      "type": "integer"
+    },
+    "product_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Product Id",
+      "type": "string"
+    },
+    "quantity_unit": {
+      "const": "bag",
+      "default": "bag",
+      "title": "Quantity Unit",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "6a.1",
+      "default": "6a.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_revision_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Source Revision Id",
+      "type": "string"
+    },
+    "source_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Source Sha256",
+      "type": "string"
+    },
+    "table_location": {
+      "minLength": 1,
+      "title": "Table Location",
+      "type": "string"
+    },
+    "validation_status": {
+      "enum": [
+        "validated",
+        "quarantined"
+      ],
+      "title": "Validation Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "notice_id",
+    "source_revision_id",
+    "source_sha256",
+    "product_id",
+    "original_baxter_code",
+    "original_ndc",
+    "container_ml",
+    "allocation_percent",
+    "effective_on",
+    "kind",
+    "exact_claim",
+    "customer_class",
+    "page",
+    "table_location",
+    "validation_status"
+  ],
+  "title": "AllocationNotice",
+  "type": "object"
+}

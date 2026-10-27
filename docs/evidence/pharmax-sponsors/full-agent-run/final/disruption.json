@@ -1,0 +1,126 @@
+{
+  "role_id": "disruption",
+  "role_name": "Inspect available source/product evidence; preserve missing manufacturing links.",
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "complete",
+  "continuation_occurred": true,
+  "live_verified": true,
+  "predecessor_roles": [
+    "news"
+  ],
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "tool_selected": "manufacturer.read",
+  "tool_input": {},
+  "tool_input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "tool_result_reference": "disruption-tool.json",
+  "tool_result_sha256": "0038597a2279abdeb30d0c58a66101d7661cabed68be01a8ed64562e911c52fc",
+  "memory_ids": [],
+  "excluded_due_to_recalled_rejection": [],
+  "structured_finding": {
+    "observation": "source_provenance_limited",
+    "evidence_ids": [
+      "baxter-2024-09-29",
+      "baxter-2024-10-01"
+    ],
+    "fact_keys": [
+      "manufacturer_provenance_retained",
+      "historical_version_custody_unproven"
+    ],
+    "candidate_id": null,
+    "memory_ids": []
+  },
+  "model_receipts": [
+    {
+      "role": "disruption",
+      "request_no": 3,
+      "call_id": "call-100f51bc-dc42-4906-92a3-ad49f5b54f6b",
+      "response_id": "chatcmpl-65db6df9-180a-4f72-9f33-3edf3a8c5ee7",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_ni7svg4s",
+      "request_id": null,
+      "decision_id": "req_ni7svg4s",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 577,
+        "completion_tokens": 17,
+        "total_tokens": 594
+      },
+      "selected_tool": "disruption_allocations",
+      "arguments": {},
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "disruption",
+      "request_no": 5,
+      "call_id": "call-5d749ec1-2524-4736-adfc-76308d2835b7",
+      "response_id": "chatcmpl-7c99ea29-9092-40db-92e9-0dbc9ddbf901",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_qm8ad0yr",
+      "request_id": null,
+      "decision_id": "req_qm8ad0yr",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 1982,
+        "completion_tokens": 111,
+        "total_tokens": 2093
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "source_provenance_limited",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "fact_keys": [
+          "manufacturer_provenance_retained",
+          "historical_version_custody_unproven"
+        ],
+        "candidate_id": null,
+        "memory_ids": []
+      },
+      "live": true,
+      "runtime_mcp": null
+    }
+  ],
+  "request_records": [
+    {
+      "role": "disruption",
+      "number": 3,
+      "started_at": "2026-10-27T19:09:02.275125+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 2239,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.277,
+      "completed_at": "2026-10-27T19:09:02.551886+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "disruption",
+      "number": 5,
+      "started_at": "2026-10-27T19:09:02.683311+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 5734,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.999,
+      "completed_at": "2026-10-27T19:09:03.682435+00:00",
+      "usage_reported": true
+    }
+  ],
+  "completed_at": "2026-10-27T19:09:03.682911+00:00"
+}

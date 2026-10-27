@@ -1,0 +1,252 @@
+/* Review refinements: shared theme tokens, edge-aligned sheets and responsive detail grid.
+   Coss UI's Base UI sheet and semantic surface patterns were reviewed as references;
+   this implementation uses our existing primitives and adds no dependency. */
+:root {
+  --surface: #11191f;
+  --surface-soft: #1a252b;
+  --surface-hover: #25343b;
+  --foreground: #e7eeec;
+  --secondary: #a4b5b7;
+  --hairline: #b6cbc52b;
+  --brand: #168b87;
+}
+html[data-theme="light"] {
+  color-scheme: light;
+  --surface: #ffffff;
+  --surface-soft: #f0f5f3;
+  --surface-hover: #e5efeb;
+  --foreground: #203b3b;
+  --secondary: #526e6c;
+  --hairline: #d9e5df;
+}
+
+/* Use the exact same green monogram in the rail, header and assistant. */
+.app-shell .px-logo, .sheet .px-logo {
+  display: inline-flex;
+  align-items: baseline;
+  flex: 0 0 auto;
+  color: var(--brand);
+  font: 700 27px/1 Arial, sans-serif;
+  letter-spacing: -5px;
+  padding-right: 5px;
+}
+.app-shell .px-logo > span, .sheet .px-logo > span {
+  color: inherit;
+  font-size: 24px;
+}
+.app-shell .wordmark .px-logo { color: var(--brand); }
+.app-shell .rail .brand .px-logo, .app-shell .rail .brand .px-logo > span { color: var(--brand); }
+.app-shell .rail .brand { margin: 5px 0 14px; letter-spacing: normal; }
+.app-shell .wordmark { gap: 11px; letter-spacing: 0; padding-right: 16px; }
+.app-shell .wordmark .brand-name { color: var(--foreground); font-size: 13px; font-weight: 650; }
+.app-shell .chat-trigger .px-logo { font-size: 22px; }
+.app-shell .chat-trigger .px-logo > span { font-size: 20px; }
+.app-shell .chat-trigger { background: var(--surface); color: var(--foreground); border-color: var(--hairline); }
+.sheet .message > span { display: flex; align-items: center; gap: 9px; }
+.sheet .message .px-logo { font-size: 21px; }
+.sheet .message .px-logo > span { font-size: 19px; }
+
+/* All three counters use the same geometry and a centered content column. */
+.app-shell .overview-stats button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 76px;
+  height: 56px;
+  padding: 8px 12px;
+  text-align: center;
+}
+.app-shell .overview-stats strong { justify-content: center; margin: 0; gap: 5px; font-size: 18px; line-height: 1; }
+.app-shell .overview-stats button > span { font-size: 9px; line-height: 1.2; }
+.app-shell .overview-stats { width: auto; gap: 7px; }
+.app-shell:not(.risk-mode) .overview-bar {
+  left: 25px;
+  top: 82px;
+  width: auto;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+.app-shell.theme-light .overview-bar > div:first-child {
+  background: #ffffffed;
+  border: 1px solid var(--hairline);
+  border-radius: 17px;
+}
+.app-shell.theme-light .overview-stats button {
+  background: #ffffffed;
+  border-color: var(--hairline);
+  box-shadow: none;
+}
+.app-shell.theme-light .overview-stats strong.amber { color: #b5413e !important; }
+.app-shell.theme-light .alert-bottom strong { color: #286b79; }
+.app-shell.theme-light .alert-update .alert-bottom strong { color: #27786b; }
+.app-shell.theme-light .alert-risk .alert-bottom strong { color: #b5413e; }
+.app-shell.theme-light .alert-meta time { color: #617874; }
+.app-shell.theme-light .theme-toggle, .app-shell.theme-light .icon-button:hover { background: var(--surface-soft); }
+.app-shell.theme-light .map-legend i { box-shadow: none; }
+.app-shell.theme-light .alerts-overlay { background: #ffffffed; border-color: var(--hairline); }
+.app-shell:not(.risk-mode) .alerts-overlay {
+  left: auto;
+  right: 23px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-43%);
+  width: clamp(300px, 35vw, 352px);
+  max-width: calc(100vw - 194px);
+  max-height: calc(100% - 195px);
+}
+
+/* Base UI portals live outside the app shell: style them with root theme tokens. */
+html[data-theme] .sheet {
+  background: var(--surface);
+  color: var(--foreground);
+  border-color: var(--hairline);
+  backdrop-filter: none;
+}
+.sheet.sheet-right {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: min(480px, 100vw);
+  max-height: 100dvh;
+  border-radius: 20px 0 0 20px;
+}
+.sheet .sheet-heading { flex-shrink: 0; border-color: var(--hairline); }
+.sheet .sheet-heading p, .sheet .detail-copy, .sheet .register-row small,
+.sheet .chat-intro p, .sheet .chat-disclaimer, .sheet .detail-list dt { color: var(--secondary); }
+.sheet .icon-button, .sheet summary, .sheet .detail-list dd, .sheet .message p { color: var(--foreground); }
+.sheet .panel-body { min-height: 0; overscroll-behavior: contain; }
+.sheet .register-row, .sheet details, .sheet .detail-list > div,
+.sheet .message, .sheet .layer-option { border-color: var(--hairline); }
+.sheet .register-row > span:last-child { color: var(--secondary); }
+.sheet .register-row:hover, .sheet .secondary-button, .sheet .chat-suggestions button:hover { background: var(--surface-soft); }
+.sheet .secondary-button { color: var(--foreground); }
+.sheet .chat-suggestions button, .sheet .chat-form { border-color: var(--hairline); }
+.sheet .chat-form { background: var(--surface-soft); }
+.sheet .chat-form input { color: var(--foreground); }
+.sheet .chat-form input::placeholder { color: var(--secondary); }
+.sheet .chat-form button { color: var(--brand); }
+html[data-theme="light"] .dropdown-menu > [data-highlighted] { background: var(--surface-hover); }
+
+/* A single scrollable detail workspace: context beside the persistent globe,
+   forecasts and review below, then a full-width agent trace. No floating overlap. */
+.app-shell.risk-mode main {
+  inset: 85px 20px 20px 166px;
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 1fr);
+  grid-auto-rows: min-content;
+  align-content: start;
+  align-items: start;
+  gap: 22px 24px;
+  padding: 24px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--hairline);
+  border-radius: 24px;
+  background: var(--surface);
+  pointer-events: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #829b93 transparent;
+}
+.app-shell.risk-mode .risk-detail { display: contents; animation: none; }
+.app-shell.risk-mode .risk-intro { grid-column: 1; grid-row: 1; min-width: 0; }
+.app-shell.risk-mode .risk-heading,
+.app-shell.risk-mode .risk-summary,
+.app-shell.risk-mode .source-section { width: 100%; min-width: 0; }
+.app-shell.risk-mode .risk-heading { gap: 12px; }
+.app-shell.risk-mode .risk-heading h1 { font-size: clamp(22px, 2.2vw, 30px); line-height: 1.15; }
+.app-shell.risk-mode .risk-summary { margin: 16px 0; font-size: 13px; }
+.app-shell.risk-mode .risk-location { line-height: 1.6; }
+.app-shell.risk-mode .back-button { margin-bottom: 17px; }
+.app-shell.risk-mode .section-kicker { flex-wrap: wrap; gap: 7px; line-height: 1.5; }
+.app-shell.risk-mode .source-section { margin: 0; padding-bottom: 0; }
+.app-shell.risk-mode .source-list { grid-template-columns: 1fr; }
+.app-shell.risk-mode .source-chip strong { white-space: normal; line-height: 1.4; }
+.app-shell.risk-mode .map-section {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  inset: auto;
+  width: 100%;
+  height: clamp(265px, 39vh, 390px);
+  min-width: 0;
+  margin: 0;
+  border: 1px solid var(--hairline);
+  border-radius: 20px;
+  box-shadow: none;
+  transition: none;
+}
+.app-shell.risk-mode .map-bottom-left { position: absolute; inset: auto 12px 12px auto; }
+.app-shell.risk-mode .map-controls { flex-direction: row; width: auto; }
+.app-shell.risk-mode .impact-section { grid-column: 1; grid-row: 2; }
+.app-shell.risk-mode .recommendation-section { grid-column: 2; grid-row: 2; }
+.app-shell.risk-mode .impact-section,
+.app-shell.risk-mode .recommendation-section,
+.app-shell.risk-mode .agent-activity { min-width: 0; width: 100%; margin: 0; padding-top: 18px; }
+.app-shell.risk-mode .impact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.app-shell.risk-mode .recommendation { margin-top: 13px; }
+.app-shell.risk-mode .recommendation-meta { flex-wrap: wrap; gap: 8px 18px; line-height: 1.5; }
+.app-shell.risk-mode .recommendation-actions { flex-wrap: wrap; }
+.app-shell.risk-mode .recommendation-actions button { min-width: 0; }
+.app-shell.risk-mode .agent-activity { grid-column: 1 / -1; grid-row: 3; }
+.app-shell.risk-mode .agent-title-row { align-items: center; flex-wrap: wrap; gap: 8px; }
+.app-shell.risk-mode .agent-title-row h3 { margin: 0; }
+.app-shell .agent-log-row { margin: 0; padding: 0; border-top: 0; }
+.app-shell .agent-log-row summary {
+  min-height: 64px;
+  display: grid;
+  grid-template-columns: 24px 8px minmax(145px, .7fr) minmax(0, 1.5fr) 16px;
+  grid-template-rows: auto auto;
+  grid-template-areas: "step state name task toggle" "step state name result toggle";
+  gap: 5px 12px;
+  padding: 12px 16px;
+  align-items: center;
+}
+.app-shell .agent-log-row summary .step-no,
+.app-shell .agent-log-row summary > svg { grid-row: 1 / -1; }
+.app-shell .agent-name { font-size: 12px; line-height: 1.5; white-space: normal; }
+.app-shell .agent-task { font-size: 11px; font-weight: 550; color: var(--foreground); }
+.app-shell .agent-result { display: block; font-size: 11px; color: var(--secondary); }
+.app-shell .agent-task, .app-shell .agent-result { white-space: normal; overflow: visible; line-height: 1.5; overflow-wrap: anywhere; }
+.app-shell .agent-log-detail { padding: 14px 20px 16px 72px; gap: 10px; }
+.app-shell .agent-log-detail p { display: grid; grid-template-columns: 125px minmax(0, 1fr); gap: 16px; margin: 0; font-size: 12px; line-height: 1.6; color: var(--secondary); }
+.app-shell .agent-log-detail b { min-width: 0; }
+.app-shell .agent-log-row[open] { background: var(--surface-soft); }
+.app-shell.theme-light .decision-inputs b { color: #365c55; }
+.app-shell.theme-light .source-icon { color: #287a70; }
+.app-shell.theme-light .demo-chip { color: #a43f38; background: #fff0ed; }
+.app-shell.theme-light .focus-risk { color: #456a62; border-color: var(--hairline); }
+
+@media (max-width: 1100px) {
+  .app-shell.risk-mode main { left: 166px; grid-template-columns: minmax(0, 1fr) minmax(235px, .9fr); padding: 20px; gap: 20px; }
+}
+@media (max-width: 760px) {
+  .app-shell:not(.risk-mode) .overview-bar { left: 12px; right: auto; top: 69px; gap: 7px; flex-direction: row; align-items: center; }
+  .app-shell .overview-bar > div:first-child { display: none; }
+  .app-shell .overview-stats button { min-width: 73px; height: 49px; padding: 7px 10px; }
+  .app-shell .overview-stats strong { font-size: 17px; }
+  .app-shell:not(.risk-mode) .alerts-overlay { top: auto; right: 12px; left: auto; bottom: 72px; width: min(330px, calc(100vw - 24px)); max-width: none; max-height: 35vh; transform: none; }
+  .app-shell .map-toolbar { top: 69px; right: 12px; left: auto; transform: none; }
+  .app-shell .map-legend { top: 124px; bottom: auto; right: 12px; }
+  .app-shell .map-context { display: none; }
+  .app-shell .wordmark { padding-right: 8px; gap: 8px; }
+  .app-shell.risk-mode main { inset: 69px 10px 65px; padding: 18px; grid-template-columns: minmax(0, 1fr); gap: 18px; border-radius: 20px; }
+  .app-shell.risk-mode .risk-intro { grid-column: 1; grid-row: 1; }
+  .app-shell.risk-mode .map-section { grid-column: 1; grid-row: 2; height: 250px; }
+  .app-shell.risk-mode .impact-section { grid-column: 1; grid-row: 3; }
+  .app-shell.risk-mode .recommendation-section { grid-column: 1; grid-row: 4; }
+  .app-shell.risk-mode .agent-activity { grid-column: 1; grid-row: 5; }
+  .app-shell .agent-log-row summary { grid-template-columns: 20px 7px minmax(0, 1fr) 14px; grid-template-areas: "step state name toggle" "step . task toggle" "step . result toggle"; grid-template-rows: auto auto auto; gap: 4px 8px; padding: 12px; }
+  .app-shell .agent-log-detail { padding: 14px; }
+  .app-shell .agent-log-detail p { grid-template-columns: 1fr; gap: 3px; }
+  .sheet.sheet-right { border-radius: 0; }
+}
+@media (max-width: 480px) {
+  .app-shell .map-toolbar { top: 125px; max-width: none; height: 34px; }
+  .app-shell .map-legend { top: 168px; }
+}

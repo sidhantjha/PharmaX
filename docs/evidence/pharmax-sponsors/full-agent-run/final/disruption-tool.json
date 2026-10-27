@@ -1,0 +1,54 @@
+[
+  {
+    "availability_proof": null,
+    "document_id": "baxter-2024-09-29",
+    "evidence": {
+      "content_sha256": "090bd715a4186c5636b57d24226b0f7573f34a3a2a156aed3472a86c506cef16",
+      "evidence_id": "baxter-2024-09-29",
+      "kind": "observed",
+      "note": "2024 exact-version availability unproven; current public rehost only",
+      "observed_at": "2026-10-26T20:36:53.661984Z",
+      "parent_ids": [],
+      "published_on": "2024-09-29",
+      "raw_ref": "phases/phase_06_helene/fixtures/manufacturer/090bd715a4186c5636b57d24226b0f7573f34a3a2a156aed3472a86c506cef16.pdf",
+      "source": "Baxter manufacturer letter",
+      "source_record_id": "baxter-2024-09-29",
+      "source_url": "https://www.fda.gov/media/182564/download",
+      "updated_on": null,
+      "version_available_at": null
+    },
+    "extraction_status": "validated",
+    "extractor_version": "pypdf-6.21.2-layout-v1",
+    "issue_date": "2024-09-29",
+    "publisher": "Baxter",
+    "revision_id": "baxter-2024-09-29",
+    "schema_version": "6a.1",
+    "validation_reference": "phase6-exact-row-and-date-validation-v1"
+  },
+  {
+    "availability_proof": null,
+    "document_id": "baxter-2024-10-01",
+    "evidence": {
+      "content_sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+      "evidence_id": "baxter-2024-10-01",
+      "kind": "observed",
+      "note": "2024 exact-version availability unproven; current public rehost only",
+      "observed_at": "2026-10-26T20:36:53.883183Z",
+      "parent_ids": [],
+      "published_on": "2024-10-01",
+      "raw_ref": "phases/phase_06_helene/fixtures/manufacturer/1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b.pdf",
+      "source": "Baxter manufacturer letter",
+      "source_record_id": "baxter-2024-10-01",
+      "source_url": "https://nutritioncare.org/wp-content/uploads/2025/01/241001_Allocation-Letter-Baxter.pdf",
+      "updated_on": null,
+      "version_available_at": null
+    },
+    "extraction_status": "validated",
+    "extractor_version": "pypdf-6.21.2-layout-v1",
+    "issue_date": "2024-10-01",
+    "publisher": "Baxter",
+    "revision_id": "baxter-2024-10-01",
+    "schema_version": "6a.1",
+    "validation_reference": "phase6-exact-row-and-date-validation-v1"
+  }
+]

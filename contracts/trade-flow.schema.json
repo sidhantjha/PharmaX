@@ -1,0 +1,320 @@
+{
+  "$defs": {
+    "SourceEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "observed",
+            "derived",
+            "simulated"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "title": "Observed At",
+          "type": "string"
+        },
+        "parent_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parent Ids",
+          "type": "array"
+        },
+        "published_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published On"
+        },
+        "raw_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Ref"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_record_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Record Id"
+        },
+        "source_url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Source Url",
+          "type": "string"
+        },
+        "updated_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Updated On"
+        },
+        "version_available_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version Available At"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "kind",
+        "source",
+        "source_url",
+        "observed_at",
+        "content_sha256"
+      ],
+      "title": "SourceEvidence",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "classification": {
+      "title": "Classification",
+      "type": "string"
+    },
+    "commodity_description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Commodity Description"
+    },
+    "evidence": {
+      "$ref": "#/$defs/SourceEvidence"
+    },
+    "flow": {
+      "enum": [
+        "M",
+        "X",
+        "RM",
+        "RX"
+      ],
+      "title": "Flow",
+      "type": "string"
+    },
+    "hs_code": {
+      "pattern": "^\\d{2,6}$",
+      "title": "Hs Code",
+      "type": "string"
+    },
+    "is_aggregate": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Is Aggregate"
+    },
+    "is_reported": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Is Reported"
+    },
+    "partner_code": {
+      "minimum": 0,
+      "title": "Partner Code",
+      "type": "integer"
+    },
+    "partner_iso": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Partner Iso"
+    },
+    "partner_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Partner Name"
+    },
+    "period": {
+      "pattern": "^\\d{4}(\\d{2})?$",
+      "title": "Period",
+      "type": "string"
+    },
+    "quantity": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Quantity"
+    },
+    "quantity_estimated": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Quantity Estimated"
+    },
+    "quantity_unit": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Quantity Unit"
+    },
+    "record_id": {
+      "title": "Record Id",
+      "type": "string"
+    },
+    "reporter_code": {
+      "minimum": 0,
+      "title": "Reporter Code",
+      "type": "integer"
+    },
+    "reporter_iso": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reporter Iso"
+    },
+    "reporter_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reporter Name"
+    },
+    "value_usd": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Value Usd"
+    }
+  },
+  "required": [
+    "record_id",
+    "hs_code",
+    "classification",
+    "period",
+    "reporter_code",
+    "partner_code",
+    "flow",
+    "evidence"
+  ],
+  "title": "TradeFlow",
+  "type": "object"
+}

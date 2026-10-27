@@ -1,0 +1,102 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "arrival_on": {
+      "format": "date",
+      "title": "Arrival On",
+      "type": "string"
+    },
+    "candidate_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Candidate Id",
+      "type": "string"
+    },
+    "dispatch_on": {
+      "format": "date",
+      "title": "Dispatch On",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "maxLength": 160,
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9_.:-]+$",
+        "type": "string"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "hospital_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Hospital Id",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "transfer",
+        "supplier_delivery",
+        "reschedule"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "kind_label": {
+      "const": "simulated",
+      "default": "simulated",
+      "title": "Kind Label",
+      "type": "string"
+    },
+    "presentation": {
+      "title": "Presentation",
+      "type": "string"
+    },
+    "product_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Product Id",
+      "type": "string"
+    },
+    "quantity": {
+      "exclusiveMinimum": 0,
+      "maximum": 10000,
+      "title": "Quantity",
+      "type": "integer"
+    },
+    "route_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Route Id",
+      "type": "string"
+    },
+    "source_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Source Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "candidate_id",
+    "kind",
+    "source_id",
+    "route_id",
+    "hospital_id",
+    "product_id",
+    "presentation",
+    "quantity",
+    "dispatch_on",
+    "arrival_on",
+    "evidence_ids"
+  ],
+  "title": "MitigationCandidate",
+  "type": "object"
+}

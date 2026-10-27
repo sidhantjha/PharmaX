@@ -1,0 +1,10 @@
+flowchart LR
+  Z[Zetaris: registered manufacturer + hospital sources] --> J[Product-linked join / canonical import]
+  J --> F[Forecasts and operational tools]
+  F --> R[Specialist role execution]
+  N[Meterless Nightshift: bounded inference route] --> R
+  NM[NVIDIA Nemotron: native model / tool / result / model] --> N
+  R --> V[Validation and rejected findings]
+  V --> HM[Meterless H-MEM: persist and recall constraints]
+  HM --> MT[Mitigation / feasibility / coordinator]
+  MT --> P[Human-reviewed proposal]

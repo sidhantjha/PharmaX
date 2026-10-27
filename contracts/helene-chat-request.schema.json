@@ -1,0 +1,84 @@
+{
+  "$defs": {
+    "ChatScenario": {
+      "additionalProperties": false,
+      "properties": {
+        "additional_bags": {
+          "maximum": 10000,
+          "minimum": 1,
+          "title": "Additional Bags",
+          "type": "integer"
+        },
+        "arrival_on": {
+          "format": "date",
+          "title": "Arrival On",
+          "type": "string"
+        },
+        "hospital_id": {
+          "enum": [
+            "sim-nc-central",
+            "sim-nc-north",
+            "sim-nc-south"
+          ],
+          "title": "Hospital Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hospital_id",
+        "additional_bags",
+        "arrival_on"
+      ],
+      "title": "ChatScenario",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "conversation_id": {
+      "anyOf": [
+        {
+          "pattern": "^conversation-[a-f0-9]{32}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Conversation Id"
+    },
+    "mode": {
+      "default": "offline",
+      "enum": [
+        "offline",
+        "live"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "question": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Question",
+      "type": "string"
+    },
+    "scenario": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ChatScenario"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "question"
+  ],
+  "title": "HeleneChatRequest",
+  "type": "object"
+}

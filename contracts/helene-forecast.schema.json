@@ -1,0 +1,256 @@
+{
+  "$defs": {
+    "DailyStockPoint": {
+      "additionalProperties": false,
+      "properties": {
+        "buffer_days": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Buffer Days"
+        },
+        "closing_physical": {
+          "minimum": 0,
+          "title": "Closing Physical",
+          "type": "integer"
+        },
+        "closing_usable": {
+          "minimum": 0,
+          "title": "Closing Usable",
+          "type": "integer"
+        },
+        "day": {
+          "format": "date",
+          "title": "Day",
+          "type": "string"
+        },
+        "demand": {
+          "minimum": 0,
+          "title": "Demand",
+          "type": "integer"
+        },
+        "expired_physical": {
+          "minimum": 0,
+          "title": "Expired Physical",
+          "type": "integer"
+        },
+        "lots": {
+          "items": {
+            "$ref": "#/$defs/LotBalance"
+          },
+          "title": "Lots",
+          "type": "array"
+        },
+        "opening_physical": {
+          "minimum": 0,
+          "title": "Opening Physical",
+          "type": "integer"
+        },
+        "opening_usable": {
+          "minimum": 0,
+          "title": "Opening Usable",
+          "type": "integer"
+        },
+        "quarantined": {
+          "minimum": 0,
+          "title": "Quarantined",
+          "type": "integer"
+        },
+        "received": {
+          "minimum": 0,
+          "title": "Received",
+          "type": "integer"
+        },
+        "received_shipment_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Received Shipment Ids",
+          "type": "array"
+        },
+        "reserved": {
+          "minimum": 0,
+          "title": "Reserved",
+          "type": "integer"
+        },
+        "served": {
+          "minimum": 0,
+          "title": "Served",
+          "type": "integer"
+        },
+        "unmet": {
+          "minimum": 0,
+          "title": "Unmet",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "day",
+        "opening_physical",
+        "expired_physical",
+        "opening_usable",
+        "received",
+        "demand",
+        "served",
+        "unmet",
+        "closing_usable",
+        "closing_physical",
+        "reserved",
+        "quarantined",
+        "buffer_days",
+        "received_shipment_ids",
+        "lots"
+      ],
+      "title": "DailyStockPoint",
+      "type": "object"
+    },
+    "LotBalance": {
+      "additionalProperties": false,
+      "properties": {
+        "available": {
+          "minimum": 0,
+          "title": "Available",
+          "type": "integer"
+        },
+        "expiry_date": {
+          "format": "date",
+          "title": "Expiry Date",
+          "type": "string"
+        },
+        "lot_id": {
+          "title": "Lot Id",
+          "type": "string"
+        },
+        "on_hand": {
+          "minimum": 0,
+          "title": "On Hand",
+          "type": "integer"
+        },
+        "quarantined": {
+          "title": "Quarantined",
+          "type": "boolean"
+        },
+        "reserved": {
+          "minimum": 0,
+          "title": "Reserved",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "lot_id",
+        "on_hand",
+        "reserved",
+        "expiry_date",
+        "available",
+        "quarantined"
+      ],
+      "title": "LotBalance",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "analysis_id": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Analysis Id",
+      "type": "string"
+    },
+    "as_of": {
+      "format": "date",
+      "title": "As Of",
+      "type": "string"
+    },
+    "end_on": {
+      "format": "date",
+      "title": "End On",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "expected_daily_demand": {
+      "minimum": 0,
+      "title": "Expected Daily Demand",
+      "type": "integer"
+    },
+    "hospital_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Hospital Id",
+      "type": "string"
+    },
+    "initial_usable": {
+      "minimum": 0,
+      "title": "Initial Usable",
+      "type": "integer"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "points": {
+      "items": {
+        "$ref": "#/$defs/DailyStockPoint"
+      },
+      "title": "Points",
+      "type": "array"
+    },
+    "projected_stockout_date": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Projected Stockout Date"
+    },
+    "quantity_unit": {
+      "const": "bag",
+      "default": "bag",
+      "title": "Quantity Unit",
+      "type": "string"
+    },
+    "total_received": {
+      "minimum": 0,
+      "title": "Total Received",
+      "type": "integer"
+    },
+    "total_unmet": {
+      "minimum": 0,
+      "title": "Total Unmet",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "hospital_id",
+    "as_of",
+    "end_on",
+    "expected_daily_demand",
+    "initial_usable",
+    "total_received",
+    "total_unmet",
+    "projected_stockout_date",
+    "analysis_id",
+    "points",
+    "evidence_ids",
+    "limitations"
+  ],
+  "title": "HeleneForecast",
+  "type": "object"
+}

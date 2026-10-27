@@ -1,0 +1,126 @@
+{
+  "role_id": "trade",
+  "role_name": "Calculate bounded HS30 trade context; exclude evidence after cutoff.",
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "complete",
+  "continuation_occurred": true,
+  "live_verified": true,
+  "predecessor_roles": [
+    "news",
+    "disruption",
+    "verification"
+  ],
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "tool_selected": "evidence.records",
+  "tool_input": {},
+  "tool_input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "tool_result_reference": "trade-tool.json",
+  "tool_result_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "memory_ids": [],
+  "excluded_due_to_recalled_rejection": [],
+  "structured_finding": {
+    "observation": "trade_unavailable",
+    "evidence_ids": [
+      "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+    ],
+    "fact_keys": [
+      "comparable_trade_evidence_unavailable",
+      "operational_shipments_are_not_trade_aggregates"
+    ],
+    "candidate_id": null,
+    "memory_ids": []
+  },
+  "model_receipts": [
+    {
+      "role": "trade",
+      "request_no": 8,
+      "call_id": "call-397a7fe3-58a2-4d40-8b1d-3709c3b0a464",
+      "response_id": "chatcmpl-805f8939-849c-48b3-b995-bac8f550c0ce",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_euwdeutu",
+      "request_id": null,
+      "decision_id": "req_euwdeutu",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 775,
+        "completion_tokens": 18,
+        "total_tokens": 793
+      },
+      "selected_tool": "trade_evidence_lookup",
+      "arguments": {},
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "trade",
+      "request_no": 10,
+      "call_id": "call-3ae03317-1a9d-4e69-8881-c128be0699e9",
+      "response_id": "chatcmpl-efd7cabc-e5a5-4c10-b1fa-74cfd85911da",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_kvgnjulv",
+      "request_id": null,
+      "decision_id": "req_kvgnjulv",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 1776,
+        "completion_tokens": 133,
+        "total_tokens": 1909
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "trade_unavailable",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "comparable_trade_evidence_unavailable",
+          "operational_shipments_are_not_trade_aggregates"
+        ],
+        "candidate_id": null,
+        "memory_ids": []
+      },
+      "live": true,
+      "runtime_mcp": null
+    }
+  ],
+  "request_records": [
+    {
+      "role": "trade",
+      "number": 8,
+      "started_at": "2026-10-27T19:09:12.152623+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 2820,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 1.352,
+      "completed_at": "2026-10-27T19:09:13.504844+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "trade",
+      "number": 10,
+      "started_at": "2026-10-27T19:09:13.630762+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 5578,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 1.214,
+      "completed_at": "2026-10-27T19:09:14.844515+00:00",
+      "usage_reported": true
+    }
+  ],
+  "completed_at": "2026-10-27T19:09:14.844862+00:00"
+}

@@ -1,0 +1,103 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "collection": {
+      "enum": [
+        "trade_flows",
+        "products",
+        "shortages",
+        "events",
+        "recalls",
+        "suppliers",
+        "hospitals",
+        "approvals",
+        "inventory",
+        "consumption",
+        "purchase_orders",
+        "shipments",
+        "evidence"
+      ],
+      "title": "Collection",
+      "type": "string"
+    },
+    "hospital_id": {
+      "anyOf": [
+        {
+          "pattern": "^[A-Za-z0-9_.:-]{1,120}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Hospital Id"
+    },
+    "limit": {
+      "default": 20,
+      "maximum": 100,
+      "minimum": 1,
+      "title": "Limit",
+      "type": "integer"
+    },
+    "partner_code": {
+      "anyOf": [
+        {
+          "maximum": 999,
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Partner Code"
+    },
+    "product_id": {
+      "anyOf": [
+        {
+          "pattern": "^[A-Za-z0-9_.:-]{1,120}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Product Id"
+    },
+    "record_id": {
+      "anyOf": [
+        {
+          "pattern": "^[A-Za-z0-9_.:-]{1,160}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Record Id"
+    },
+    "reporter_code": {
+      "anyOf": [
+        {
+          "maximum": 999,
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reporter Code"
+    }
+  },
+  "required": [
+    "collection"
+  ],
+  "title": "DataQuery",
+  "type": "object"
+}

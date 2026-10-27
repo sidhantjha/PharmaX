@@ -1,0 +1,18 @@
+{
+  "schema_version": "2.0",
+  "dataset_version": "203835cde76d7e5db5bc84056725901089e6a8c56efd65a090e0504ef6c66680",
+  "mode": "fixture",
+  "query": {
+    "collection": "recalls",
+    "reporter_code": null,
+    "partner_code": null,
+    "product_id": null,
+    "hospital_id": null,
+    "record_id": null,
+    "limit": 100
+  },
+  "items": [],
+  "evidence": [],
+  "returned_count": 0,
+  "truncated": false
+}

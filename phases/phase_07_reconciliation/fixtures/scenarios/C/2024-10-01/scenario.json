@@ -1,0 +1,10 @@
+{
+  "classification": "simulated",
+  "scenario": "C",
+  "assumptions": [
+    "Fictional three-hospital system; no real procurement or physical delivery.",
+    "Case B central demand is explicitly simulated at 60 bags/day.",
+    "Receipt is a closed accepted cumulative total after delivery window.",
+    "Receipts after 23:00 stock snapshot add released lots; expiry is independently supplied."
+  ]
+}

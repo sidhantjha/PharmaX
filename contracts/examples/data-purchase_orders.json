@@ -1,0 +1,140 @@
+{
+  "schema_version": "2.0",
+  "dataset_version": "203835cde76d7e5db5bc84056725901089e6a8c56efd65a090e0504ef6c66680",
+  "mode": "fixture",
+  "query": {
+    "collection": "purchase_orders",
+    "reporter_code": null,
+    "partner_code": null,
+    "product_id": null,
+    "hospital_id": null,
+    "record_id": null,
+    "limit": 100
+  },
+  "items": [
+    {
+      "purchase_order_id": "po-central",
+      "hospital_id": "sim-central",
+      "supplier_id": "sim-atlas",
+      "product_id": "sim-carboplatin-450",
+      "quantity": 60,
+      "quantity_unit": "vial",
+      "ordered_on": "2023-07-20",
+      "expected_delivery": "2023-07-26",
+      "evidence": {
+        "evidence_id": "sim:cbc459a85deb2b679f136b6c6476d29d32010588d36877d06b08410b77ba3994",
+        "kind": "simulated",
+        "source": "fictional-illinois-v1",
+        "source_record_id": null,
+        "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "cbc459a85deb2b679f136b6c6476d29d32010588d36877d06b08410b77ba3994",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+      }
+    },
+    {
+      "purchase_order_id": "po-north",
+      "hospital_id": "sim-north",
+      "supplier_id": "sim-lakes",
+      "product_id": "sim-carboplatin-450",
+      "quantity": 40,
+      "quantity_unit": "vial",
+      "ordered_on": "2023-07-20",
+      "expected_delivery": "2023-07-25",
+      "evidence": {
+        "evidence_id": "sim:32d2669c090c9af9d35bdbf23d9910c1a2eda8269c747f2c1d4396805efff307",
+        "kind": "simulated",
+        "source": "fictional-illinois-v1",
+        "source_record_id": null,
+        "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "32d2669c090c9af9d35bdbf23d9910c1a2eda8269c747f2c1d4396805efff307",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+      }
+    },
+    {
+      "purchase_order_id": "po-south",
+      "hospital_id": "sim-south",
+      "supplier_id": "sim-lakes",
+      "product_id": "sim-carboplatin-450",
+      "quantity": 30,
+      "quantity_unit": "vial",
+      "ordered_on": "2023-07-20",
+      "expected_delivery": "2023-07-27",
+      "evidence": {
+        "evidence_id": "sim:39050729fc3a7ccf407e3343139696127169699fed8018342ccebc4e29903ba7",
+        "kind": "simulated",
+        "source": "fictional-illinois-v1",
+        "source_record_id": null,
+        "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "39050729fc3a7ccf407e3343139696127169699fed8018342ccebc4e29903ba7",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "sim:32d2669c090c9af9d35bdbf23d9910c1a2eda8269c747f2c1d4396805efff307",
+      "kind": "simulated",
+      "source": "fictional-illinois-v1",
+      "source_record_id": null,
+      "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "32d2669c090c9af9d35bdbf23d9910c1a2eda8269c747f2c1d4396805efff307",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+    },
+    {
+      "evidence_id": "sim:39050729fc3a7ccf407e3343139696127169699fed8018342ccebc4e29903ba7",
+      "kind": "simulated",
+      "source": "fictional-illinois-v1",
+      "source_record_id": null,
+      "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "39050729fc3a7ccf407e3343139696127169699fed8018342ccebc4e29903ba7",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+    },
+    {
+      "evidence_id": "sim:cbc459a85deb2b679f136b6c6476d29d32010588d36877d06b08410b77ba3994",
+      "kind": "simulated",
+      "source": "fictional-illinois-v1",
+      "source_record_id": null,
+      "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "cbc459a85deb2b679f136b6c6476d29d32010588d36877d06b08410b77ba3994",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+    }
+  ],
+  "returned_count": 3,
+  "truncated": false
+}

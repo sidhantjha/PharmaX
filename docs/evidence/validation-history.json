@@ -1,0 +1,26 @@
+[
+  {
+    "name": "backend-full",
+    "source_log_sha256": "03d8a9e55f616d5204b84ff4653bd9718b9ad1746dbf4ba6262def580b74ef3b",
+    "classification": "Historical source-worktree check, not a clean-clone rerun",
+    "summary": "523 passed"
+  },
+  {
+    "name": "frontend-full",
+    "source_log_sha256": "5859d71b84d8726e91382ef4481494cd26b5f82c88dd67eae6f22e6d312bd4bb",
+    "classification": "Historical source-worktree check, not a clean-clone rerun",
+    "summary": "53 passed"
+  },
+  {
+    "name": "frontend-final-targeted",
+    "source_log_sha256": "bf64eb206c5f118b7ec1edcce7d93de7bfcb7bff967b69dcd91879aa4c78c086",
+    "classification": "Historical source-worktree check, not a clean-clone rerun",
+    "summary": "4 passed"
+  },
+  {
+    "name": "product-traceability-targeted",
+    "source_log_sha256": "eb51831e4cea2c216431b8596f2a0d49952d05d377dfc9e7f86c48ed7af11a2f",
+    "classification": "Historical source-worktree check, not a clean-clone rerun",
+    "summary": "Product traceability: 3 tests passed; separate navigation test subsequently corrected and passed"
+  }
+]

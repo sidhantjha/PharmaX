@@ -1,0 +1,17 @@
+{
+  "classification": "simulated",
+  "seed": 629,
+  "created_at": "2026-10-26T21:20:58.285531+00:00",
+  "assumptions": [
+    "Entire NC system, accounts, positions and all operations are fictional.",
+    "Different ERP SKUs represent the exact same 1000 mL presentation.",
+    "Case conversion 12 bags/case is an explicit synthetic catalog assumption, not a Baxter pack claim.",
+    "Stocks/demand/ASN are separately authored simulation parameters, not parsed from letters.",
+    "Explicit simulated accepted/ASN quantities by checkpoint: Sep 180/150, Oct1 84/67, Oct9 126/100, Nov 126/100.",
+    "Daily consumption is unreserved demand; ring-fenced reservations are not consumed twice.",
+    "Alternative supply is absent; only validated local same-product transfers are considered.",
+    "14-day rolling forecast; inventory <=24h old; 7 complete demand days required.",
+    "Weekly entitlement convention uses 184 baseline days, floor rounding; no entitlement implies an ASN.",
+    "No real patient data, ERP access, FHIR service, EDI partner or Zetaris query."
+  ]
+}

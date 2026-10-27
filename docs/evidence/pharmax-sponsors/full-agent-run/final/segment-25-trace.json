@@ -1,0 +1,4760 @@
+{
+  "graph": [
+    {
+      "task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+      "agent_id": "news",
+      "parent_id": null,
+      "dependency_ids": [],
+      "dependency_policy": "success",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:09:00.184816Z",
+      "started_at": "2026-10-27T19:09:00.185422Z",
+      "completed_at": "2026-10-27T19:09:02.191639Z",
+      "status": "complete",
+      "error_code": null
+    },
+    {
+      "task_id": "task-107a84b16ec04ddbabb1385885c59871",
+      "agent_id": "verification",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-cef8e688c6c5417393c0e5a9b3b7d938"
+      ],
+      "dependency_policy": "success",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:09:02.217312Z",
+      "started_at": "2026-10-27T19:09:02.217721Z",
+      "completed_at": "2026-10-27T19:09:12.077042Z",
+      "status": "complete",
+      "error_code": null
+    },
+    {
+      "task_id": "task-450538137322481bb6eea84b6b07bd71",
+      "agent_id": "disruption",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-cef8e688c6c5417393c0e5a9b3b7d938"
+      ],
+      "dependency_policy": "success",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:09:02.217435Z",
+      "started_at": "2026-10-27T19:09:02.218206Z",
+      "completed_at": "2026-10-27T19:09:03.698797Z",
+      "status": "complete",
+      "error_code": null
+    },
+    {
+      "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+      "agent_id": "dependency",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-107a84b16ec04ddbabb1385885c59871",
+        "task-450538137322481bb6eea84b6b07bd71"
+      ],
+      "dependency_policy": "success",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:09:12.102722Z",
+      "started_at": "2026-10-27T19:09:12.103122Z",
+      "completed_at": "2026-10-27T19:09:16.299556Z",
+      "status": "failed",
+      "error_code": "FINDING_CITATION_OR_FACT_UNSUPPORTED"
+    },
+    {
+      "task_id": "task-e792833fc23743d19f05607687c5141b",
+      "agent_id": "trade",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-107a84b16ec04ddbabb1385885c59871",
+        "task-450538137322481bb6eea84b6b07bd71"
+      ],
+      "dependency_policy": "success",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:09:12.102852Z",
+      "started_at": "2026-10-27T19:09:12.103485Z",
+      "completed_at": "2026-10-27T19:09:14.859363Z",
+      "status": "complete",
+      "error_code": null
+    },
+    {
+      "task_id": "task-64a3a7f6c7b74567a74e56587440af3b",
+      "agent_id": "dependency",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-3b3f47af17ad4338bbef3aa1e0302fda"
+      ],
+      "dependency_policy": "settled",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:12:31.298641Z",
+      "started_at": null,
+      "completed_at": "2026-10-27T19:12:31.298807Z",
+      "status": "complete",
+      "error_code": null
+    },
+    {
+      "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+      "agent_id": "hospital",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-64a3a7f6c7b74567a74e56587440af3b"
+      ],
+      "dependency_policy": "success",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:12:31.468195Z",
+      "started_at": "2026-10-27T19:12:31.468819Z",
+      "completed_at": "2026-10-27T19:12:38.053269Z",
+      "status": "failed",
+      "error_code": "FINDING_CITATION_OR_FACT_UNSUPPORTED"
+    },
+    {
+      "task_id": "task-d0bccd163eb846ed8d56c7389de4e9d0",
+      "agent_id": "coordinator",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-a1005dc204714b1e9c03b19d075a3355"
+      ],
+      "dependency_policy": "settled",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:14:47.956601Z",
+      "started_at": null,
+      "completed_at": "2026-10-27T19:14:47.956719Z",
+      "status": "complete",
+      "error_code": null
+    },
+    {
+      "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+      "agent_id": "memory",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-d0bccd163eb846ed8d56c7389de4e9d0"
+      ],
+      "dependency_policy": "success",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:14:48.050209Z",
+      "started_at": "2026-10-27T19:14:48.050588Z",
+      "completed_at": "2026-10-27T19:14:51.171962Z",
+      "status": "complete",
+      "error_code": null
+    },
+    {
+      "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+      "agent_id": "mitigation",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-97f18ec464d145f09d760fb7069726f4"
+      ],
+      "dependency_policy": "success",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:14:51.207748Z",
+      "started_at": "2026-10-27T19:14:51.208277Z",
+      "completed_at": "2026-10-27T19:14:53.763833Z",
+      "status": "complete",
+      "error_code": null
+    },
+    {
+      "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+      "agent_id": "feasibility",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-52b6f45a71974345939a64bf5f4e0920"
+      ],
+      "dependency_policy": "success",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:14:53.796193Z",
+      "started_at": "2026-10-27T19:14:53.796599Z",
+      "completed_at": "2026-10-27T19:14:57.010080Z",
+      "status": "complete",
+      "error_code": null
+    },
+    {
+      "task_id": "task-5d0d738b114b406198f12e63a9145d97",
+      "agent_id": "clinical",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-52b6f45a71974345939a64bf5f4e0920"
+      ],
+      "dependency_policy": "success",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:14:53.796315Z",
+      "started_at": "2026-10-27T19:14:53.797037Z",
+      "completed_at": "2026-10-27T19:14:57.068321Z",
+      "status": "complete",
+      "error_code": null
+    },
+    {
+      "task_id": "task-49251b7eb94048ca933600efa81813da",
+      "agent_id": "actions",
+      "parent_id": null,
+      "dependency_ids": [
+        "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "task-5d0d738b114b406198f12e63a9145d97"
+      ],
+      "dependency_policy": "success",
+      "read_only": true,
+      "launched_at": "2026-10-27T19:14:57.105465Z",
+      "started_at": "2026-10-27T19:14:57.105779Z",
+      "completed_at": "2026-10-27T19:15:02.771369Z",
+      "status": "failed",
+      "error_code": "CANDIDATE_UNSAFE_OR_NOT_SUPPORTED"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "news",
+        "dependencies": [],
+        "child_task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-c34afda864d345ba870a925122da54bb"
+      }
+    },
+    {
+      "sequence": 2,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "news",
+        "child_task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-49c2242b82f748be801beeca9381525c"
+      }
+    },
+    {
+      "sequence": 3,
+      "operation": "coordination.specialist_started",
+      "status": "complete",
+      "data": {
+        "agent_id": "news",
+        "evidence_ids": [],
+        "task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "operation_id": "op-1d6bcdebdeac49f38ccf0eee83659659"
+      }
+    },
+    {
+      "sequence": 4,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "news",
+        "request_no": 1,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "news_source_evidence"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "operation_id": "op-fff2b87c6fda4975af21622d6793c425"
+      }
+    },
+    {
+      "sequence": 5,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "news",
+        "request_no": 1,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_fyup38v0",
+        "call_id": "call-12d0aae4-8539-489c-8645-76ca7215bfae",
+        "selected_tool": "news_source_evidence",
+        "argument_keys": [],
+        "tokens": {
+          "prompt_tokens": 484,
+          "completion_tokens": 18,
+          "total_tokens": 502
+        },
+        "evidence_ids": [],
+        "task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "operation_id": "op-fff2b87c6fda4975af21622d6793c425"
+      }
+    },
+    {
+      "sequence": 6,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "news",
+        "tool_identifier": "news_source_evidence",
+        "call_id": "call-12d0aae4-8539-489c-8645-76ca7215bfae",
+        "arguments": {},
+        "result": {
+          "role": "news",
+          "canonical_tool": "manufacturer.read",
+          "simulated_hospital_data": true,
+          "human_review_required": true,
+          "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+          "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+          "predecessor_findings": [],
+          "manufacturer_sources": [
+            {
+              "id": "baxter-2024-09-29",
+              "publisher": "Baxter",
+              "issue_date": "2024-09-29",
+              "sha256": "090bd715a4186c5636b57d24226b0f7573f34a3a2a156aed3472a86c506cef16",
+              "historical_custody": "unproven"
+            },
+            {
+              "id": "baxter-2024-10-01",
+              "publisher": "Baxter",
+              "issue_date": "2024-10-01",
+              "sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+              "historical_custody": "unproven"
+            }
+          ],
+          "allocation_evidence": [
+            {
+              "schema_version": "6a.1",
+              "notice_id": "baxter-2024-10-01-row-0",
+              "source_revision_id": "baxter-2024-10-01",
+              "source_sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+              "product_id": "sim-baxter-saline-1000",
+              "original_baxter_code": "2B1324X",
+              "original_ndc": "00338-0049-04",
+              "container_ml": 1000.0,
+              "quantity_unit": "bag",
+              "allocation_percent": 40.0,
+              "effective_on": "2024-10-01",
+              "kind": "observed",
+              "exact_claim": "2B1324X          SOD CHLOR 0.9% INJ USP VIAFLEX                00338-      40%\n                                   1000ML MIGRATED                               0049-04",
+              "customer_class": "US direct customers/distribution partners; not designated children hospitals",
+              "baseline_start": "2024-03-01",
+              "baseline_end": "2024-08-31",
+              "page": 5,
+              "table_location": "Table 1 product 2B1324X",
+              "validation_status": "validated"
+            }
+          ],
+          "memory_ids": [],
+          "recalled_findings": [],
+          "excluded_due_to_recalled_rejection": [],
+          "evidence_ids": [
+            "baxter-2024-09-29",
+            "baxter-2024-10-01"
+          ],
+          "fact_keys": [
+            "manufacturer_provenance_retained",
+            "historical_version_custody_unproven"
+          ],
+          "tool_result_reference": "news-tool.json",
+          "tool_result_sha256": "0038597a2279abdeb30d0c58a66101d7661cabed68be01a8ed64562e911c52fc"
+        },
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "operation_id": "op-524fbfd1530949478504b30658d0eec5"
+      }
+    },
+    {
+      "sequence": 7,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "news",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-524fbfd1530949478504b30658d0eec5",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "memory_ids": [],
+        "task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "operation_id": "op-756f7fae4c524e5ba11005cd678ffa15"
+      }
+    },
+    {
+      "sequence": 8,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "news",
+        "request_no": 2,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "operation_id": "op-bc52295fc17545569b051d33b5b7fb6e"
+      }
+    },
+    {
+      "sequence": 9,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "news",
+        "request_no": 2,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_bt9pfoo1",
+        "call_id": "call-91882fed-832c-489d-bd5e-dbeaa89a3bdf",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 1793,
+          "completion_tokens": 94,
+          "total_tokens": 1887
+        },
+        "evidence_ids": [],
+        "task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "operation_id": "op-bc52295fc17545569b051d33b5b7fb6e"
+      }
+    },
+    {
+      "sequence": 10,
+      "operation": "specialist.validated_finding",
+      "status": "complete",
+      "data": {
+        "agent_id": "news",
+        "observation": "source_provenance_limited",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "fact_keys": [
+          "manufacturer_provenance_retained",
+          "historical_version_custody_unproven"
+        ],
+        "candidate_id": null,
+        "memory_ids": [],
+        "task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "operation_id": "op-5946b2ae5b444c43b0085a018409b6aa"
+      }
+    },
+    {
+      "sequence": 11,
+      "operation": "operator.news",
+      "status": "complete",
+      "data": {
+        "result": {
+          "role": "news",
+          "status": "complete",
+          "findings": [],
+          "calculations": [],
+          "error_code": null
+        },
+        "evidence_ids": [],
+        "availability": "complete",
+        "task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "operation_id": "op-a848762f256f46909333011fc20d7a9d"
+      }
+    },
+    {
+      "sequence": 12,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "news",
+        "result_status": "complete",
+        "error_code": null,
+        "evidence_ids": [],
+        "task_id": "task-cef8e688c6c5417393c0e5a9b3b7d938",
+        "operation_id": "op-46cef76b645846c2887d5c0a28113d05"
+      }
+    },
+    {
+      "sequence": 13,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "verification",
+        "dependencies": [
+          "task-cef8e688c6c5417393c0e5a9b3b7d938"
+        ],
+        "child_task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-148e55a7e91e4fb58533ee92af77d153"
+      }
+    },
+    {
+      "sequence": 14,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "verification",
+        "child_task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-fd365c681cf14b61a3b305266aece9cb"
+      }
+    },
+    {
+      "sequence": 15,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "disruption",
+        "dependencies": [
+          "task-cef8e688c6c5417393c0e5a9b3b7d938"
+        ],
+        "child_task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-ab82cc69a21345b6aebd0ee8f0f8de31"
+      }
+    },
+    {
+      "sequence": 16,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "disruption",
+        "child_task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-653fc0d3161f4365ba1ab1c428faf486"
+      }
+    },
+    {
+      "sequence": 17,
+      "operation": "coordination.specialist_started",
+      "status": "complete",
+      "data": {
+        "agent_id": "verification",
+        "evidence_ids": [],
+        "task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "operation_id": "op-e8ea55b834de44a79a73a7b6a7a38454"
+      }
+    },
+    {
+      "sequence": 18,
+      "operation": "coordination.specialist_started",
+      "status": "complete",
+      "data": {
+        "agent_id": "disruption",
+        "evidence_ids": [],
+        "task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "operation_id": "op-5e7968d589414b6f93416b05a43464e9"
+      }
+    },
+    {
+      "sequence": 19,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "disruption",
+        "request_no": 3,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "disruption_allocations"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "operation_id": "op-0883a328cd7141ea8024ecc6ecea64e0"
+      }
+    },
+    {
+      "sequence": 20,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "verification",
+        "request_no": 4,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "verification_reconcile"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "operation_id": "op-0437b272b96e41fba4c515c2c07dd8b3"
+      }
+    },
+    {
+      "sequence": 21,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "disruption",
+        "request_no": 3,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_ni7svg4s",
+        "call_id": "call-100f51bc-dc42-4906-92a3-ad49f5b54f6b",
+        "selected_tool": "disruption_allocations",
+        "argument_keys": [],
+        "tokens": {
+          "prompt_tokens": 577,
+          "completion_tokens": 17,
+          "total_tokens": 594
+        },
+        "evidence_ids": [],
+        "task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "operation_id": "op-0883a328cd7141ea8024ecc6ecea64e0"
+      }
+    },
+    {
+      "sequence": 22,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "disruption",
+        "tool_identifier": "disruption_allocations",
+        "call_id": "call-100f51bc-dc42-4906-92a3-ad49f5b54f6b",
+        "arguments": {},
+        "result": {
+          "role": "disruption",
+          "canonical_tool": "manufacturer.read",
+          "simulated_hospital_data": true,
+          "human_review_required": true,
+          "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+          "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+          "predecessor_findings": [
+            {
+              "role": "news",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            }
+          ],
+          "manufacturer_sources": [
+            {
+              "id": "baxter-2024-09-29",
+              "publisher": "Baxter",
+              "issue_date": "2024-09-29",
+              "sha256": "090bd715a4186c5636b57d24226b0f7573f34a3a2a156aed3472a86c506cef16",
+              "historical_custody": "unproven"
+            },
+            {
+              "id": "baxter-2024-10-01",
+              "publisher": "Baxter",
+              "issue_date": "2024-10-01",
+              "sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+              "historical_custody": "unproven"
+            }
+          ],
+          "allocation_evidence": [
+            {
+              "schema_version": "6a.1",
+              "notice_id": "baxter-2024-10-01-row-0",
+              "source_revision_id": "baxter-2024-10-01",
+              "source_sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+              "product_id": "sim-baxter-saline-1000",
+              "original_baxter_code": "2B1324X",
+              "original_ndc": "00338-0049-04",
+              "container_ml": 1000.0,
+              "quantity_unit": "bag",
+              "allocation_percent": 40.0,
+              "effective_on": "2024-10-01",
+              "kind": "observed",
+              "exact_claim": "2B1324X          SOD CHLOR 0.9% INJ USP VIAFLEX                00338-      40%\n                                   1000ML MIGRATED                               0049-04",
+              "customer_class": "US direct customers/distribution partners; not designated children hospitals",
+              "baseline_start": "2024-03-01",
+              "baseline_end": "2024-08-31",
+              "page": 5,
+              "table_location": "Table 1 product 2B1324X",
+              "validation_status": "validated"
+            }
+          ],
+          "memory_ids": [],
+          "recalled_findings": [],
+          "excluded_due_to_recalled_rejection": [],
+          "evidence_ids": [
+            "baxter-2024-09-29",
+            "baxter-2024-10-01"
+          ],
+          "fact_keys": [
+            "manufacturer_provenance_retained",
+            "historical_version_custody_unproven"
+          ],
+          "tool_result_reference": "disruption-tool.json",
+          "tool_result_sha256": "0038597a2279abdeb30d0c58a66101d7661cabed68be01a8ed64562e911c52fc"
+        },
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "operation_id": "op-2b32cd5389b04ec48df898008c87f2ba"
+      }
+    },
+    {
+      "sequence": 23,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "disruption",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-2b32cd5389b04ec48df898008c87f2ba",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "memory_ids": [],
+        "task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "operation_id": "op-437f3b3ea15c4ab9bf3ba486bf138d53"
+      }
+    },
+    {
+      "sequence": 24,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "verification",
+        "request_no": 4,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_7r6iordc",
+        "call_id": "call-8e2fbbea-c17b-48a6-be62-0f9804abd3f3",
+        "selected_tool": "verification_reconcile",
+        "argument_keys": [],
+        "tokens": {
+          "prompt_tokens": 594,
+          "completion_tokens": 18,
+          "total_tokens": 612
+        },
+        "evidence_ids": [],
+        "task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "operation_id": "op-0437b272b96e41fba4c515c2c07dd8b3"
+      }
+    },
+    {
+      "sequence": 25,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "verification",
+        "tool_identifier": "verification_reconcile",
+        "call_id": "call-8e2fbbea-c17b-48a6-be62-0f9804abd3f3",
+        "arguments": {},
+        "result": {
+          "role": "verification",
+          "canonical_tool": "evidence.findings",
+          "simulated_hospital_data": true,
+          "human_review_required": true,
+          "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+          "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+          "predecessor_findings": [
+            {
+              "role": "news",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            }
+          ],
+          "manufacturer_sources": [
+            {
+              "id": "baxter-2024-09-29",
+              "publisher": "Baxter",
+              "issue_date": "2024-09-29",
+              "sha256": "090bd715a4186c5636b57d24226b0f7573f34a3a2a156aed3472a86c506cef16",
+              "historical_custody": "unproven"
+            },
+            {
+              "id": "baxter-2024-10-01",
+              "publisher": "Baxter",
+              "issue_date": "2024-10-01",
+              "sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+              "historical_custody": "unproven"
+            }
+          ],
+          "allocation_evidence": [
+            {
+              "schema_version": "6a.1",
+              "notice_id": "baxter-2024-10-01-row-0",
+              "source_revision_id": "baxter-2024-10-01",
+              "source_sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+              "product_id": "sim-baxter-saline-1000",
+              "original_baxter_code": "2B1324X",
+              "original_ndc": "00338-0049-04",
+              "container_ml": 1000.0,
+              "quantity_unit": "bag",
+              "allocation_percent": 40.0,
+              "effective_on": "2024-10-01",
+              "kind": "observed",
+              "exact_claim": "2B1324X          SOD CHLOR 0.9% INJ USP VIAFLEX                00338-      40%\n                                   1000ML MIGRATED                               0049-04",
+              "customer_class": "US direct customers/distribution partners; not designated children hospitals",
+              "baseline_start": "2024-03-01",
+              "baseline_end": "2024-08-31",
+              "page": 5,
+              "table_location": "Table 1 product 2B1324X",
+              "validation_status": "validated"
+            }
+          ],
+          "reconciliation": [
+            {
+              "category": "compatible",
+              "reason": "Requested bags and account allocation policy describe different stages; the percentage cannot determine this order fill."
+            },
+            {
+              "category": "compatible",
+              "reason": "Requested bags and account allocation policy describe different stages; the percentage cannot determine this order fill."
+            },
+            {
+              "category": "compatible",
+              "reason": "Requested bags and account allocation policy describe different stages; the percentage cannot determine this order fill."
+            },
+            {
+              "category": "missing",
+              "reason": "No hospital-confirmed receipt; purchase order is not inventory."
+            }
+          ],
+          "memory_ids": [],
+          "recalled_findings": [],
+          "excluded_due_to_recalled_rejection": [],
+          "evidence_ids": [
+            "baxter-2024-09-29",
+            "baxter-2024-10-01"
+          ],
+          "fact_keys": [
+            "manufacturer_provenance_retained",
+            "historical_version_custody_unproven",
+            "conflicting_or_missing_receipts_require_review"
+          ],
+          "tool_result_reference": "verification-tool.json",
+          "tool_result_sha256": "341e3ff427e2494aad4973d908edc56c63ced25a2ec5fa3c5105716c4d281a36"
+        },
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "operation_id": "op-55a7938800d44c62a954f7731c807f5f"
+      }
+    },
+    {
+      "sequence": 26,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "verification",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-55a7938800d44c62a954f7731c807f5f",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "memory_ids": [],
+        "task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "operation_id": "op-b39948112f4e45ecbb8b771eff192853"
+      }
+    },
+    {
+      "sequence": 27,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "disruption",
+        "request_no": 5,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "operation_id": "op-bab34df310ff4474bbf71b2b9397f249"
+      }
+    },
+    {
+      "sequence": 28,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "verification",
+        "request_no": 6,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "operation_id": "op-a19e966bb1484278b199d5a94e3c521e"
+      }
+    },
+    {
+      "sequence": 29,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "disruption",
+        "request_no": 5,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_qm8ad0yr",
+        "call_id": "call-5d749ec1-2524-4736-adfc-76308d2835b7",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 1982,
+          "completion_tokens": 111,
+          "total_tokens": 2093
+        },
+        "evidence_ids": [],
+        "task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "operation_id": "op-bab34df310ff4474bbf71b2b9397f249"
+      }
+    },
+    {
+      "sequence": 30,
+      "operation": "specialist.validated_finding",
+      "status": "complete",
+      "data": {
+        "agent_id": "disruption",
+        "observation": "source_provenance_limited",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "fact_keys": [
+          "manufacturer_provenance_retained",
+          "historical_version_custody_unproven"
+        ],
+        "candidate_id": null,
+        "memory_ids": [],
+        "task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "operation_id": "op-150c8d1151f04631b6699060206e8f66"
+      }
+    },
+    {
+      "sequence": 31,
+      "operation": "operator.disruption",
+      "status": "complete",
+      "data": {
+        "result": {
+          "role": "disruption",
+          "status": "complete",
+          "findings": [],
+          "calculations": [],
+          "error_code": null
+        },
+        "evidence_ids": [],
+        "availability": "complete",
+        "task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "operation_id": "op-c96dd173025246e093672594b094743d"
+      }
+    },
+    {
+      "sequence": 32,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "disruption",
+        "result_status": "complete",
+        "error_code": null,
+        "evidence_ids": [],
+        "task_id": "task-450538137322481bb6eea84b6b07bd71",
+        "operation_id": "op-31c3654f87af4d709e35f896016048a6"
+      }
+    },
+    {
+      "sequence": 33,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "verification",
+        "request_no": 6,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_m0h1sz40",
+        "call_id": "call-92697e43-f989-4c88-9ecc-287948047176",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 2142,
+          "completion_tokens": 115,
+          "total_tokens": 2257
+        },
+        "evidence_ids": [],
+        "task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "operation_id": "op-a19e966bb1484278b199d5a94e3c521e"
+      }
+    },
+    {
+      "sequence": 34,
+      "operation": "specialist.validated_finding",
+      "status": "complete",
+      "data": {
+        "agent_id": "verification",
+        "observation": "source_provenance_limited",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "fact_keys": [
+          "manufacturer_provenance_retained",
+          "historical_version_custody_unproven",
+          "conflicting_or_missing_receipts_require_review"
+        ],
+        "candidate_id": null,
+        "memory_ids": [],
+        "task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "operation_id": "op-fac8f56a8e4d472a828bb283434d43af"
+      }
+    },
+    {
+      "sequence": 35,
+      "operation": "operator.verification",
+      "status": "complete",
+      "data": {
+        "result": {
+          "role": "verification",
+          "status": "complete",
+          "findings": [],
+          "calculations": [],
+          "error_code": null
+        },
+        "evidence_ids": [],
+        "availability": "complete",
+        "task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "operation_id": "op-59b2ced3228f47cbb20143d30fa310b3"
+      }
+    },
+    {
+      "sequence": 36,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "verification",
+        "result_status": "complete",
+        "error_code": null,
+        "evidence_ids": [],
+        "task_id": "task-107a84b16ec04ddbabb1385885c59871",
+        "operation_id": "op-2aaed5aa2e624918939c0984b8179366"
+      }
+    },
+    {
+      "sequence": 37,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "dependencies": [
+          "task-107a84b16ec04ddbabb1385885c59871",
+          "task-450538137322481bb6eea84b6b07bd71"
+        ],
+        "child_task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-ecec822e0a564df0bc10bfbabf4cc5f4"
+      }
+    },
+    {
+      "sequence": 38,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "child_task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-e24a14ea05dd4f48bc02f52782ba4a02"
+      }
+    },
+    {
+      "sequence": 39,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "trade",
+        "dependencies": [
+          "task-107a84b16ec04ddbabb1385885c59871",
+          "task-450538137322481bb6eea84b6b07bd71"
+        ],
+        "child_task_id": "task-e792833fc23743d19f05607687c5141b",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-b2e8a2f2f89640a4ad8b8d4f0fda8d98"
+      }
+    },
+    {
+      "sequence": 40,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "trade",
+        "child_task_id": "task-e792833fc23743d19f05607687c5141b",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-181f0e34f600481f902d5a29483e570e"
+      }
+    },
+    {
+      "sequence": 41,
+      "operation": "coordination.specialist_started",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "evidence_ids": [],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-dce611ae753e4c6e930434eccb90a20c"
+      }
+    },
+    {
+      "sequence": 42,
+      "operation": "coordination.specialist_started",
+      "status": "complete",
+      "data": {
+        "agent_id": "trade",
+        "evidence_ids": [],
+        "task_id": "task-e792833fc23743d19f05607687c5141b",
+        "operation_id": "op-c2ff580dbdbc46f9a31dc2327d666400"
+      }
+    },
+    {
+      "sequence": 43,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "dependency",
+        "request_no": 7,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "dependency_identity"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-3931bd7c97af40758a47460f556cd113"
+      }
+    },
+    {
+      "sequence": 44,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "trade",
+        "request_no": 8,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "trade_evidence_lookup"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-e792833fc23743d19f05607687c5141b",
+        "operation_id": "op-398b89892ea3434aa11978ebccfbef1e"
+      }
+    },
+    {
+      "sequence": 45,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "request_no": 7,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_selqk23n",
+        "call_id": "call-fa8ee5a4-32d1-487a-8106-e9432118ba88",
+        "selected_tool": "dependency_identity",
+        "argument_keys": [],
+        "tokens": {
+          "prompt_tokens": 780,
+          "completion_tokens": 16,
+          "total_tokens": 796
+        },
+        "evidence_ids": [],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-3931bd7c97af40758a47460f556cd113"
+      }
+    },
+    {
+      "sequence": 46,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "tool_identifier": "dependency_identity",
+        "call_id": "call-fa8ee5a4-32d1-487a-8106-e9432118ba88",
+        "arguments": {},
+        "result": {
+          "role": "dependency",
+          "canonical_tool": "identity.resolve",
+          "simulated_hospital_data": true,
+          "human_review_required": true,
+          "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+          "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+          "predecessor_findings": [
+            {
+              "role": "news",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "disruption",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "verification",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven",
+                "conflicting_or_missing_receipts_require_review"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            }
+          ],
+          "identities": [
+            {
+              "ndc": "00338004904",
+              "classification": "usable_with_assumptions",
+              "review_required": false
+            },
+            {
+              "ndc": "00338004904",
+              "classification": "usable_with_assumptions",
+              "review_required": false
+            },
+            {
+              "ndc": "00338004904",
+              "classification": "usable_with_assumptions",
+              "review_required": false
+            }
+          ],
+          "historical_custody": "unproven",
+          "memory_ids": [],
+          "recalled_findings": [],
+          "excluded_due_to_recalled_rejection": [],
+          "evidence_ids": [
+            "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+          ],
+          "fact_keys": [
+            "hospital_identifiers_simulated",
+            "product_identity_deterministically_checked",
+            "historical_version_custody_unproven"
+          ],
+          "tool_result_reference": "dependency-tool.json",
+          "tool_result_sha256": "390a58f1150b0f15533236d743ef1a0dc9f3afce4efc68d752da3ddcdccd37d1"
+        },
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-0a09647809e24e9db2447718d1aa1932"
+      }
+    },
+    {
+      "sequence": 47,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-0a09647809e24e9db2447718d1aa1932",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "memory_ids": [],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-644ab0ed0e424138a5ec9a52e2d9ad2f"
+      }
+    },
+    {
+      "sequence": 48,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "dependency",
+        "request_no": 9,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-cc6974c743734b288562d66aa1d0b09f"
+      }
+    },
+    {
+      "sequence": 49,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "trade",
+        "request_no": 8,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_euwdeutu",
+        "call_id": "call-397a7fe3-58a2-4d40-8b1d-3709c3b0a464",
+        "selected_tool": "trade_evidence_lookup",
+        "argument_keys": [],
+        "tokens": {
+          "prompt_tokens": 775,
+          "completion_tokens": 18,
+          "total_tokens": 793
+        },
+        "evidence_ids": [],
+        "task_id": "task-e792833fc23743d19f05607687c5141b",
+        "operation_id": "op-398b89892ea3434aa11978ebccfbef1e"
+      }
+    },
+    {
+      "sequence": 50,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "trade",
+        "tool_identifier": "trade_evidence_lookup",
+        "call_id": "call-397a7fe3-58a2-4d40-8b1d-3709c3b0a464",
+        "arguments": {},
+        "result": {
+          "role": "trade",
+          "canonical_tool": "evidence.records",
+          "simulated_hospital_data": true,
+          "human_review_required": true,
+          "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+          "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+          "predecessor_findings": [
+            {
+              "role": "news",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "disruption",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "verification",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven",
+                "conflicting_or_missing_receipts_require_review"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            }
+          ],
+          "admitted_trade_rows": 0,
+          "memory_ids": [],
+          "recalled_findings": [],
+          "excluded_due_to_recalled_rejection": [],
+          "evidence_ids": [
+            "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+          ],
+          "fact_keys": [
+            "comparable_trade_evidence_unavailable",
+            "operational_shipments_are_not_trade_aggregates"
+          ],
+          "tool_result_reference": "trade-tool.json",
+          "tool_result_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "task_id": "task-e792833fc23743d19f05607687c5141b",
+        "operation_id": "op-0f7ca087be9c4e3d8fe11f1faabf1ab9"
+      }
+    },
+    {
+      "sequence": 51,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "trade",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-0f7ca087be9c4e3d8fe11f1faabf1ab9",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "memory_ids": [],
+        "task_id": "task-e792833fc23743d19f05607687c5141b",
+        "operation_id": "op-bdd08052f0df4ea1ace1aed2c55b3a93"
+      }
+    },
+    {
+      "sequence": 52,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "trade",
+        "request_no": 10,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-e792833fc23743d19f05607687c5141b",
+        "operation_id": "op-294cb26ecc834ecb8b6fa93977dd4483"
+      }
+    },
+    {
+      "sequence": 53,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "request_no": 9,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_9quv3wim",
+        "call_id": "call-240b251a-726d-4925-ac43-266eda96e940",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 1904,
+          "completion_tokens": 99,
+          "total_tokens": 2003
+        },
+        "evidence_ids": [],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-cc6974c743734b288562d66aa1d0b09f"
+      }
+    },
+    {
+      "sequence": 54,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "tool_identifier": "agent_finding",
+        "call_id": "call-240b251a-726d-4925-ac43-266eda96e940",
+        "arguments": {
+          "observation": "simulated_hospital_records",
+          "evidence_ids": [
+            "baxter-2024-09-29",
+            "baxter-2024-10-01"
+          ],
+          "fact_keys": [
+            "manufacturer_provenance_retained",
+            "historical_version_custody_unproven"
+          ],
+          "candidate_id": null,
+          "memory_ids": []
+        },
+        "result": {
+          "accepted": false,
+          "error_code": "FINDING_CITATION_OR_FACT_UNSUPPORTED",
+          "corrective_attempt_remaining": 1,
+          "instruction": "Correct only unsupported citations, fact keys, memory acknowledgement or unsafe candidate; original tool evidence remains authoritative."
+        },
+        "evidence_ids": [],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-9b6f1d8912a4403f9c89cef49139ca5e"
+      }
+    },
+    {
+      "sequence": 55,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-9b6f1d8912a4403f9c89cef49139ca5e",
+        "evidence_ids": [],
+        "memory_ids": [],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-8e2f8c44f69d4f56809e81b682ff8c1e"
+      }
+    },
+    {
+      "sequence": 56,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "dependency",
+        "request_no": 11,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-70a9a8915c464b66b47fee656d3ecb62"
+      }
+    },
+    {
+      "sequence": 57,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "trade",
+        "request_no": 10,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_kvgnjulv",
+        "call_id": "call-3ae03317-1a9d-4e69-8881-c128be0699e9",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 1776,
+          "completion_tokens": 133,
+          "total_tokens": 1909
+        },
+        "evidence_ids": [],
+        "task_id": "task-e792833fc23743d19f05607687c5141b",
+        "operation_id": "op-294cb26ecc834ecb8b6fa93977dd4483"
+      }
+    },
+    {
+      "sequence": 58,
+      "operation": "specialist.validated_finding",
+      "status": "complete",
+      "data": {
+        "agent_id": "trade",
+        "observation": "trade_unavailable",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "comparable_trade_evidence_unavailable",
+          "operational_shipments_are_not_trade_aggregates"
+        ],
+        "candidate_id": null,
+        "memory_ids": [],
+        "task_id": "task-e792833fc23743d19f05607687c5141b",
+        "operation_id": "op-dd3903509abd4210896dadc7d01dfb46"
+      }
+    },
+    {
+      "sequence": 59,
+      "operation": "operator.trade",
+      "status": "complete",
+      "data": {
+        "result": {
+          "role": "trade",
+          "status": "complete",
+          "findings": [],
+          "calculations": [],
+          "error_code": null
+        },
+        "evidence_ids": [],
+        "availability": "complete",
+        "task_id": "task-e792833fc23743d19f05607687c5141b",
+        "operation_id": "op-e65457d09aa44c3a96d6285fc4bc192b"
+      }
+    },
+    {
+      "sequence": 60,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "trade",
+        "result_status": "complete",
+        "error_code": null,
+        "evidence_ids": [],
+        "task_id": "task-e792833fc23743d19f05607687c5141b",
+        "operation_id": "op-40ba131bb36a4b36ab5b22fb2b78dccd"
+      }
+    },
+    {
+      "sequence": 61,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "request_no": 11,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_438cr81y",
+        "call_id": "call-9905ce44-9c60-4d0e-8f57-98cfbefaa603",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 2138,
+          "completion_tokens": 99,
+          "total_tokens": 2237
+        },
+        "evidence_ids": [],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-70a9a8915c464b66b47fee656d3ecb62"
+      }
+    },
+    {
+      "sequence": 62,
+      "operation": "operator.dependency",
+      "status": "complete",
+      "data": {
+        "result": {
+          "role": "dependency",
+          "status": "failed",
+          "findings": [],
+          "calculations": [],
+          "error_code": "FINDING_CITATION_OR_FACT_UNSUPPORTED"
+        },
+        "evidence_ids": [],
+        "availability": "failed",
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-296140e251694d78a8fa40308c7e5700"
+      }
+    },
+    {
+      "sequence": 63,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "result_status": "failed",
+        "error_code": "FINDING_CITATION_OR_FACT_UNSUPPORTED",
+        "evidence_ids": [],
+        "task_id": "task-3b3f47af17ad4338bbef3aa1e0302fda",
+        "operation_id": "op-2b5b83e348354aa885da05a1cb30c6ef"
+      }
+    },
+    {
+      "sequence": 1,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "dependencies": [
+          "task-3b3f47af17ad4338bbef3aa1e0302fda"
+        ],
+        "child_task_id": "task-64a3a7f6c7b74567a74e56587440af3b",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-89e44927d4bf4e6abeb07e43469e9af0"
+      }
+    },
+    {
+      "sequence": 2,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "child_task_id": "task-64a3a7f6c7b74567a74e56587440af3b",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-9bd6c770e07f4e98b9f39fd281d8c547"
+      }
+    },
+    {
+      "sequence": 3,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "dependency",
+        "result_status": "complete",
+        "error_code": null,
+        "evidence_ids": [],
+        "task_id": "task-64a3a7f6c7b74567a74e56587440af3b",
+        "operation_id": "op-3cdc4cc9fbff4547b3023e86196e9ee5"
+      }
+    },
+    {
+      "sequence": 4,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "dependencies": [
+          "task-64a3a7f6c7b74567a74e56587440af3b"
+        ],
+        "child_task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-c0564e74635f434db900ed67303fe26b"
+      }
+    },
+    {
+      "sequence": 5,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "child_task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-cbc4544a369c48c99a1daf862d161277"
+      }
+    },
+    {
+      "sequence": 6,
+      "operation": "coordination.specialist_started",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "evidence_ids": [],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-dbc3392a9cf44d6eb4d7c0770f887060"
+      }
+    },
+    {
+      "sequence": 7,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "hospital",
+        "request_no": 12,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "hospital_inventory_forecast"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-ce5f936faa15468289c998b05a793410"
+      }
+    },
+    {
+      "sequence": 8,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "request_no": 12,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_t72pk6m2",
+        "call_id": "call-4eed522c-9bef-48c5-8c92-17febcd1252e",
+        "selected_tool": "hospital_inventory_forecast",
+        "argument_keys": [],
+        "tokens": {
+          "prompt_tokens": 902,
+          "completion_tokens": 18,
+          "total_tokens": 920
+        },
+        "evidence_ids": [],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-ce5f936faa15468289c998b05a793410"
+      }
+    },
+    {
+      "sequence": 9,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "tool_identifier": "hospital_inventory_forecast",
+        "call_id": "call-4eed522c-9bef-48c5-8c92-17febcd1252e",
+        "arguments": {},
+        "result": {
+          "role": "hospital",
+          "canonical_tool": "readiness.inspect",
+          "simulated_hospital_data": true,
+          "human_review_required": true,
+          "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+          "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+          "predecessor_findings": [
+            {
+              "role": "verification",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven",
+                "conflicting_or_missing_receipts_require_review"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "dependency",
+              "observation": "simulated_hospital_records",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "trade",
+              "observation": "trade_unavailable",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "comparable_trade_evidence_unavailable",
+                "operational_shipments_are_not_trade_aggregates"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "disruption",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            }
+          ],
+          "forecasts": [
+            {
+              "hospital_id": "sim-nc-central",
+              "initial_usable": 164,
+              "total_unmet": 256,
+              "analysis_id": "1274a2bcd7859ed205f4c23a90eb0cefdc51f2d283691b918f2ab5c428b1cb44"
+            },
+            {
+              "hospital_id": "sim-nc-north",
+              "initial_usable": 619,
+              "total_unmet": 0,
+              "analysis_id": "00095252250df6b25ebfcc8c1a1ce62305270756311fd921fa8f904613077061"
+            },
+            {
+              "hospital_id": "sim-nc-south",
+              "initial_usable": 110,
+              "total_unmet": 170,
+              "analysis_id": "ffff983ecc5dae81db0d4efe34ead1667506cda63cbd91e457b8186ec8a2e436"
+            }
+          ],
+          "scope": "Inventory, demand and lot availability only; no clinical claims",
+          "memory_ids": [],
+          "recalled_findings": [],
+          "excluded_due_to_recalled_rejection": [],
+          "evidence_ids": [
+            "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+          ],
+          "fact_keys": [
+            "hospital_stock_and_demand_simulated",
+            "unconfirmed_orders_excluded",
+            "unmet:sim-nc-central:256",
+            "unmet:sim-nc-north:0",
+            "unmet:sim-nc-south:170"
+          ],
+          "tool_result_reference": "hospital-tool.json",
+          "tool_result_sha256": "76894a26b5a7a57b2fcabe63df8e7bbb8b5e8f95d27a2141e792ad3ca568c73b"
+        },
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-ef4baa8e6f034e239155bdbd4470077c"
+      }
+    },
+    {
+      "sequence": 10,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-ef4baa8e6f034e239155bdbd4470077c",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "memory_ids": [],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-c915764658844d9a9604feaede104d02"
+      }
+    },
+    {
+      "sequence": 11,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "hospital",
+        "request_no": 13,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-5e1d045ac0d0426184b53d95b4ad47b7"
+      }
+    },
+    {
+      "sequence": 12,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "request_no": 13,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_u0ebhfsl",
+        "call_id": "call-85f73043-7de7-46e3-91d2-7de05fe0bdb3",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 2510,
+          "completion_tokens": 178,
+          "total_tokens": 2688
+        },
+        "evidence_ids": [],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-5e1d045ac0d0426184b53d95b4ad47b7"
+      }
+    },
+    {
+      "sequence": 13,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "tool_identifier": "agent_finding",
+        "call_id": "call-85f73043-7de7-46e3-91d2-7de05fe0bdb3",
+        "arguments": {
+          "observation": "inventory_evidence_limited",
+          "evidence_ids": [
+            "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+          ],
+          "fact_keys": [
+            "hospital_stock_and_demand_simulated",
+            "unconfirmed_orders_excluded",
+            "unmet:sim-nc-central:256",
+            "unmet:sim-nc-north:0', 'unmet:sim-nc-south:170"
+          ],
+          "candidate_id": null,
+          "memory_ids": []
+        },
+        "result": {
+          "accepted": false,
+          "error_code": "FINDING_CITATION_OR_FACT_UNSUPPORTED",
+          "corrective_attempt_remaining": 1,
+          "instruction": "Correct only unsupported citations, fact keys, memory acknowledgement or unsafe candidate; original tool evidence remains authoritative."
+        },
+        "evidence_ids": [],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-8a99e9cdf6c248a8b27e3371ede531f5"
+      }
+    },
+    {
+      "sequence": 14,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-8a99e9cdf6c248a8b27e3371ede531f5",
+        "evidence_ids": [],
+        "memory_ids": [],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-f3722e44f13f4835bfc8e71ea0cc48c2"
+      }
+    },
+    {
+      "sequence": 15,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "hospital",
+        "request_no": 14,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-d1fa063834824a45bdf85cf6094d8bc2"
+      }
+    },
+    {
+      "sequence": 16,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "request_no": 14,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_2votx6hr",
+        "call_id": "call-c3374922-e3e7-4daf-890e-afed0749353b",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 2969,
+          "completion_tokens": 169,
+          "total_tokens": 3138
+        },
+        "evidence_ids": [],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-d1fa063834824a45bdf85cf6094d8bc2"
+      }
+    },
+    {
+      "sequence": 17,
+      "operation": "operator.hospital",
+      "status": "complete",
+      "data": {
+        "result": {
+          "role": "hospital",
+          "status": "failed",
+          "findings": [],
+          "calculations": [],
+          "error_code": "FINDING_CITATION_OR_FACT_UNSUPPORTED"
+        },
+        "evidence_ids": [],
+        "availability": "failed",
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-152f0513df634e9db055b609018f0e3b"
+      }
+    },
+    {
+      "sequence": 18,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "result_status": "failed",
+        "error_code": "FINDING_CITATION_OR_FACT_UNSUPPORTED",
+        "evidence_ids": [],
+        "task_id": "task-a1005dc204714b1e9c03b19d075a3355",
+        "operation_id": "op-a4a8e6e2f95f4dbeb9115abe3f599d91"
+      }
+    },
+    {
+      "sequence": 1,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "coordinator",
+        "dependencies": [
+          "task-a1005dc204714b1e9c03b19d075a3355"
+        ],
+        "child_task_id": "task-d0bccd163eb846ed8d56c7389de4e9d0",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-f1cabb79193d4daf867601e57d8c69f8"
+      }
+    },
+    {
+      "sequence": 2,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "coordinator",
+        "child_task_id": "task-d0bccd163eb846ed8d56c7389de4e9d0",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-42b5f7ef97b4445d9633fae40aa9320a"
+      }
+    },
+    {
+      "sequence": 3,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "coordinator",
+        "result_status": "complete",
+        "error_code": null,
+        "evidence_ids": [],
+        "task_id": "task-d0bccd163eb846ed8d56c7389de4e9d0",
+        "operation_id": "op-505764eb38584abc807ff20c23e49ce3"
+      }
+    },
+    {
+      "sequence": 4,
+      "operation": "validation.failure_retained",
+      "status": "complete",
+      "data": {
+        "agent_id": "hospital",
+        "error_code": "FINDING_CITATION_OR_FACT_UNSUPPORTED",
+        "policy": "No repeated inference; rejected finding excluded from all downstream context",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-ad59d194d0dd4c2a9dbb63a2599cfcc2"
+      }
+    },
+    {
+      "sequence": 5,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "memory",
+        "dependencies": [
+          "task-d0bccd163eb846ed8d56c7389de4e9d0"
+        ],
+        "child_task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-61de62f824e344738563c1dd29558389"
+      }
+    },
+    {
+      "sequence": 6,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "memory",
+        "child_task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-921c491a98cb49b08221bde6736d6778"
+      }
+    },
+    {
+      "sequence": 7,
+      "operation": "coordination.specialist_started",
+      "status": "complete",
+      "data": {
+        "agent_id": "memory",
+        "evidence_ids": [],
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-bf029f1b9c52469ab0839dd04bb95cda"
+      }
+    },
+    {
+      "sequence": 8,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "memory",
+        "request_no": 15,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "memory_write_and_recall"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-78a109cf53084c749aaefea6820e7053"
+      }
+    },
+    {
+      "sequence": 9,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "memory",
+        "request_no": 15,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_8yhn9t4g",
+        "call_id": "call-714fb03b-dac8-4071-8142-a2413966ecd3",
+        "selected_tool": "memory_write_and_recall",
+        "argument_keys": [],
+        "tokens": {
+          "prompt_tokens": 897,
+          "completion_tokens": 24,
+          "total_tokens": 921
+        },
+        "evidence_ids": [],
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-78a109cf53084c749aaefea6820e7053"
+      }
+    },
+    {
+      "sequence": 10,
+      "operation": "hmem.influence",
+      "status": "complete",
+      "data": {
+        "agent_id": "memory",
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ],
+        "rejected_candidate_ids": [
+          "sim-nc-north-to-sim-nc-south-170",
+          "external-sim-nc-central",
+          "external-sim-nc-south",
+          "sim-nc-south-to-sim-nc-central-110",
+          "sim-nc-central-to-sim-nc-south-164"
+        ],
+        "policy": "Recalled rejections excluded from model recommendation; deterministic feasibility also required",
+        "evidence_ids": [],
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-0ab9e15a18bd427e87043c8577d1a2cb"
+      }
+    },
+    {
+      "sequence": 11,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "memory",
+        "tool_identifier": "hmem.influence",
+        "source_operation_id": "op-0ab9e15a18bd427e87043c8577d1a2cb",
+        "evidence_ids": [],
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ],
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-da61f7c3e7a241e8aabf1979534e0996"
+      }
+    },
+    {
+      "sequence": 12,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "memory",
+        "tool_identifier": "memory_write_and_recall",
+        "call_id": "call-714fb03b-dac8-4071-8142-a2413966ecd3",
+        "arguments": {},
+        "result": {
+          "role": "memory",
+          "canonical_tool": "hmem.exchange",
+          "simulated_hospital_data": true,
+          "human_review_required": true,
+          "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+          "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+          "predecessor_findings": [
+            {
+              "role": "verification",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven",
+                "conflicting_or_missing_receipts_require_review"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "dependency",
+              "observation": "simulated_hospital_records",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "trade",
+              "observation": "trade_unavailable",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "comparable_trade_evidence_unavailable",
+                "operational_shipments_are_not_trade_aggregates"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "disruption",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            }
+          ],
+          "memory_ids": [
+            "mem-4",
+            "mem-2",
+            "mem-5",
+            "mem-1",
+            "mem-3"
+          ],
+          "recalled_findings": [
+            {
+              "memory_id": "mem-4",
+              "claim_key": "helene-rejected-5",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-2",
+              "claim_key": "helene-rejected-2",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "external-sim-nc-central",
+                "feasible": false,
+                "failures": [
+                  "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-5",
+              "claim_key": "helene-rejected-6",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "external-sim-nc-south",
+                "feasible": false,
+                "failures": [
+                  "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-1",
+              "claim_key": "helene-rejected-1",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-3",
+              "claim_key": "helene-rejected-3",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            }
+          ],
+          "excluded_due_to_recalled_rejection": [
+            "sim-nc-north-to-sim-nc-south-170",
+            "external-sim-nc-central",
+            "external-sim-nc-south",
+            "sim-nc-south-to-sim-nc-central-110",
+            "sim-nc-central-to-sim-nc-south-164"
+          ],
+          "evidence_ids": [
+            "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+          ],
+          "fact_keys": [
+            "actual_hmem_findings_persisted",
+            "actual_hmem_context_recalled"
+          ],
+          "tool_result_reference": "memory-tool.json",
+          "tool_result_sha256": "af581609b90b736f4b9944275bf32e1f2b49f95421e485eafc7808e368c008e1"
+        },
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-4eca3056dadf426a9b2e9f8d19eec9e1"
+      }
+    },
+    {
+      "sequence": 13,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "memory",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-4eca3056dadf426a9b2e9f8d19eec9e1",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "memory_ids": [],
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-dec986184d174fa49913b29278d5f095"
+      }
+    },
+    {
+      "sequence": 14,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "memory",
+        "request_no": 16,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-a46c8ae9e3cc40c4b907423bfb92deeb"
+      }
+    },
+    {
+      "sequence": 15,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "memory",
+        "request_no": 16,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_bh3ru3oo",
+        "call_id": "call-f3fe9c91-e38a-4a60-a187-0576bf0f059a",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 3096,
+          "completion_tokens": 142,
+          "total_tokens": 3238
+        },
+        "evidence_ids": [],
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-a46c8ae9e3cc40c4b907423bfb92deeb"
+      }
+    },
+    {
+      "sequence": 16,
+      "operation": "specialist.validated_finding",
+      "status": "complete",
+      "data": {
+        "agent_id": "memory",
+        "observation": "memory_recalled",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "actual_hmem_findings_persisted",
+          "actual_hmem_context_recalled"
+        ],
+        "candidate_id": null,
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ],
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-176c449df29a437c839ada212f2bcf3a"
+      }
+    },
+    {
+      "sequence": 17,
+      "operation": "operator.memory",
+      "status": "complete",
+      "data": {
+        "result": {
+          "role": "memory",
+          "status": "complete",
+          "findings": [],
+          "calculations": [],
+          "error_code": null
+        },
+        "evidence_ids": [],
+        "availability": "complete",
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-a5b7c00dbcaf4e56b783282dd781700d"
+      }
+    },
+    {
+      "sequence": 18,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "memory",
+        "result_status": "complete",
+        "error_code": null,
+        "evidence_ids": [],
+        "task_id": "task-97f18ec464d145f09d760fb7069726f4",
+        "operation_id": "op-de90ebf3e642475484047977ee9a20fe"
+      }
+    },
+    {
+      "sequence": 19,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "dependencies": [
+          "task-97f18ec464d145f09d760fb7069726f4"
+        ],
+        "child_task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-f5458483a3d94f59abd21e68171d8695"
+      }
+    },
+    {
+      "sequence": 20,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "child_task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-d43e6442c7e3485cb07ec2d2bbb77244"
+      }
+    },
+    {
+      "sequence": 21,
+      "operation": "coordination.specialist_started",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "evidence_ids": [],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-fd5e15e214714548b2a5d12e7e59a40f"
+      }
+    },
+    {
+      "sequence": 22,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "mitigation",
+        "request_no": 17,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "mitigation_compare"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-0f2b647d981c4bffa5e00a059b917d76"
+      }
+    },
+    {
+      "sequence": 23,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "request_no": 17,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_4471onjb",
+        "call_id": "call-30aeed6d-c3ae-4de6-b6ae-21a02f752585",
+        "selected_tool": "mitigation_compare",
+        "argument_keys": [
+          "candidate_id"
+        ],
+        "tokens": {
+          "prompt_tokens": 1182,
+          "completion_tokens": 38,
+          "total_tokens": 1220
+        },
+        "evidence_ids": [],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-0f2b647d981c4bffa5e00a059b917d76"
+      }
+    },
+    {
+      "sequence": 24,
+      "operation": "coordinator.replanning",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "selected_for_inspection": "sim-nc-north-to-sim-nc-central-172",
+        "evidence_ids": [],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-a94fce53ec0045ee8b4d9721ad5beb1d"
+      }
+    },
+    {
+      "sequence": 25,
+      "operation": "coordination.next_decision_selected",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "source_operation_id": "op-a94fce53ec0045ee8b4d9721ad5beb1d",
+        "decision": {
+          "agent_id": "mitigation",
+          "selected_for_inspection": "sim-nc-north-to-sim-nc-central-172",
+          "evidence_ids": [],
+          "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+          "operation_id": "op-a94fce53ec0045ee8b4d9721ad5beb1d"
+        },
+        "evidence_ids": [],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-47568a5bb4184998a6e6b117ea57c403"
+      }
+    },
+    {
+      "sequence": 26,
+      "operation": "hmem.influence",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ],
+        "rejected_candidate_ids": [
+          "sim-nc-north-to-sim-nc-south-170",
+          "external-sim-nc-central",
+          "external-sim-nc-south",
+          "sim-nc-south-to-sim-nc-central-110",
+          "sim-nc-central-to-sim-nc-south-164"
+        ],
+        "policy": "Recalled rejections excluded from model recommendation; deterministic feasibility also required",
+        "evidence_ids": [],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-9258fe37ffa5460eb25721efa984ff41"
+      }
+    },
+    {
+      "sequence": 27,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "tool_identifier": "hmem.influence",
+        "source_operation_id": "op-9258fe37ffa5460eb25721efa984ff41",
+        "evidence_ids": [],
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-eb375752182c4ef7a3ffc092c5477759"
+      }
+    },
+    {
+      "sequence": 28,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "tool_identifier": "mitigation_compare",
+        "call_id": "call-30aeed6d-c3ae-4de6-b6ae-21a02f752585",
+        "arguments": {
+          "candidate_id": "sim-nc-north-to-sim-nc-central-172"
+        },
+        "result": {
+          "role": "mitigation",
+          "canonical_tool": "mitigation.read",
+          "simulated_hospital_data": true,
+          "human_review_required": true,
+          "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+          "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+          "predecessor_findings": [
+            {
+              "role": "dependency",
+              "observation": "simulated_hospital_records",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "trade",
+              "observation": "trade_unavailable",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "comparable_trade_evidence_unavailable",
+                "operational_shipments_are_not_trade_aggregates"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "disruption",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "memory",
+              "observation": "memory_recalled",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "actual_hmem_findings_persisted",
+                "actual_hmem_context_recalled"
+              ],
+              "candidate_id": null,
+              "memory_ids": [
+                "mem-4",
+                "mem-2",
+                "mem-5",
+                "mem-1",
+                "mem-3"
+              ]
+            }
+          ],
+          "candidates": [
+            {
+              "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+              "source_id": "sim-nc-north",
+              "hospital_id": "sim-nc-central",
+              "quantity": 172,
+              "feasible": true,
+              "failures": []
+            },
+            {
+              "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+              "source_id": "sim-nc-south",
+              "hospital_id": "sim-nc-central",
+              "quantity": 110,
+              "feasible": false,
+              "failures": [
+                "DONOR_SHORTAGE"
+              ]
+            },
+            {
+              "candidate_id": "external-sim-nc-central",
+              "source_id": null,
+              "hospital_id": "sim-nc-central",
+              "quantity": 0,
+              "feasible": false,
+              "failures": [
+                "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+              ]
+            },
+            {
+              "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+              "source_id": "sim-nc-central",
+              "hospital_id": "sim-nc-south",
+              "quantity": 164,
+              "feasible": false,
+              "failures": [
+                "DONOR_SHORTAGE"
+              ]
+            },
+            {
+              "candidate_id": "sim-nc-north-to-sim-nc-south-164",
+              "source_id": "sim-nc-north",
+              "hospital_id": "sim-nc-south",
+              "quantity": 164,
+              "feasible": true,
+              "failures": []
+            },
+            {
+              "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+              "source_id": "sim-nc-north",
+              "hospital_id": "sim-nc-south",
+              "quantity": 170,
+              "feasible": false,
+              "failures": [
+                "DONOR_SHORTAGE"
+              ]
+            },
+            {
+              "candidate_id": "external-sim-nc-south",
+              "source_id": null,
+              "hospital_id": "sim-nc-south",
+              "quantity": 0,
+              "feasible": false,
+              "failures": [
+                "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+              ]
+            }
+          ],
+          "drafts": [
+            {
+              "action_id": "action-617baf242e542e01",
+              "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+              "status": "DRAFT",
+              "dispatch_available": false
+            },
+            {
+              "action_id": "action-60e70fe18ebcb005",
+              "candidate_id": "sim-nc-north-to-sim-nc-south-164",
+              "status": "DRAFT",
+              "dispatch_available": false
+            }
+          ],
+          "investigated_candidate": "sim-nc-north-to-sim-nc-central-172",
+          "memory_ids": [
+            "mem-4",
+            "mem-2",
+            "mem-5",
+            "mem-1",
+            "mem-3"
+          ],
+          "recalled_findings": [
+            {
+              "memory_id": "mem-4",
+              "claim_key": "helene-rejected-5",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-2",
+              "claim_key": "helene-rejected-2",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "external-sim-nc-central",
+                "feasible": false,
+                "failures": [
+                  "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-5",
+              "claim_key": "helene-rejected-6",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "external-sim-nc-south",
+                "feasible": false,
+                "failures": [
+                  "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-1",
+              "claim_key": "helene-rejected-1",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-3",
+              "claim_key": "helene-rejected-3",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            }
+          ],
+          "excluded_due_to_recalled_rejection": [
+            "sim-nc-north-to-sim-nc-south-170",
+            "external-sim-nc-central",
+            "external-sim-nc-south",
+            "sim-nc-south-to-sim-nc-central-110",
+            "sim-nc-central-to-sim-nc-south-164"
+          ],
+          "evidence_ids": [
+            "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+          ],
+          "fact_keys": [
+            "deterministic_candidate_constraints_retained",
+            "human_pharmacy_review_required",
+            "no_physical_dispatch_authority"
+          ],
+          "tool_result_reference": "mitigation-tool.json",
+          "tool_result_sha256": "17c32a4fef351fc179ad98faad4b409250c6164ec29dd9c81cac0c7883504807"
+        },
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-0e646bd313e041a5b57fbeda4d258c17"
+      }
+    },
+    {
+      "sequence": 29,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-0e646bd313e041a5b57fbeda4d258c17",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "memory_ids": [],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-361634bd8dde45abbbaf0bf6bb200ac3"
+      }
+    },
+    {
+      "sequence": 30,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "mitigation",
+        "request_no": 18,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-923bc19f5497411c8c9fe6da8ee43e47"
+      }
+    },
+    {
+      "sequence": 31,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "request_no": 18,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_7minemsc",
+        "call_id": "call-714b31d1-7c14-41a1-a255-4b9b53f229d0",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 3329,
+          "completion_tokens": 178,
+          "total_tokens": 3507
+        },
+        "evidence_ids": [],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-923bc19f5497411c8c9fe6da8ee43e47"
+      }
+    },
+    {
+      "sequence": 32,
+      "operation": "specialist.validated_finding",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "observation": "conditional_recommendation",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "deterministic_candidate_constraints_retained",
+          "human_pharmacy_review_required",
+          "no_physical_dispatch_authority"
+        ],
+        "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-452e34a99d794f459bb36da989182da9"
+      }
+    },
+    {
+      "sequence": 33,
+      "operation": "operator.mitigation",
+      "status": "complete",
+      "data": {
+        "result": {
+          "role": "mitigation",
+          "status": "complete",
+          "findings": [],
+          "calculations": [],
+          "error_code": null
+        },
+        "evidence_ids": [],
+        "availability": "complete",
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-94924feb89dd43b4a2dfa81fd64d9ac6"
+      }
+    },
+    {
+      "sequence": 34,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "mitigation",
+        "result_status": "complete",
+        "error_code": null,
+        "evidence_ids": [],
+        "task_id": "task-52b6f45a71974345939a64bf5f4e0920",
+        "operation_id": "op-5a2a8933ef1b4839bf6bc775fcaaf1d0"
+      }
+    },
+    {
+      "sequence": 35,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "dependencies": [
+          "task-52b6f45a71974345939a64bf5f4e0920"
+        ],
+        "child_task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-93f178b43dd54e98b548c7d5d358f910"
+      }
+    },
+    {
+      "sequence": 36,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "child_task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-5b4e6283ee504027ae7ce5da540a6635"
+      }
+    },
+    {
+      "sequence": 37,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "clinical",
+        "dependencies": [
+          "task-52b6f45a71974345939a64bf5f4e0920"
+        ],
+        "child_task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-f22df82be29d43fdb4e911c0df8e3bea"
+      }
+    },
+    {
+      "sequence": 38,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "clinical",
+        "child_task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-4da89870e58b498c86e8b1fc98658b22"
+      }
+    },
+    {
+      "sequence": 39,
+      "operation": "coordination.specialist_started",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "evidence_ids": [],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-3770671fb50d4c45a75a1778f0746a6a"
+      }
+    },
+    {
+      "sequence": 40,
+      "operation": "coordination.specialist_started",
+      "status": "complete",
+      "data": {
+        "agent_id": "clinical",
+        "evidence_ids": [],
+        "task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "operation_id": "op-55750a38b6d54b2286a66722cbdde2a6"
+      }
+    },
+    {
+      "sequence": 41,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "feasibility",
+        "request_no": 19,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "feasibility_critic"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-92e270ed5c4b4c838fab419c04ff6e81"
+      }
+    },
+    {
+      "sequence": 42,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "clinical",
+        "request_no": 20,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "clinical_support_check"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "operation_id": "op-64112c41b6c44a4b94c4e92964ba6bc6"
+      }
+    },
+    {
+      "sequence": 43,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "clinical",
+        "request_no": 20,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_lw9yl9ni",
+        "call_id": "call-8772c6c3-6e1c-4c24-9ad9-c867b5b19ec8",
+        "selected_tool": "clinical_support_check",
+        "argument_keys": [],
+        "tokens": {
+          "prompt_tokens": 1005,
+          "completion_tokens": 18,
+          "total_tokens": 1023
+        },
+        "evidence_ids": [],
+        "task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "operation_id": "op-64112c41b6c44a4b94c4e92964ba6bc6"
+      }
+    },
+    {
+      "sequence": 44,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "request_no": 19,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_676ibkwk",
+        "call_id": "call-9b8fee20-73ff-4a59-99b2-df4f5f4b6ba8",
+        "selected_tool": "feasibility_critic",
+        "argument_keys": [],
+        "tokens": {
+          "prompt_tokens": 1019,
+          "completion_tokens": 24,
+          "total_tokens": 1043
+        },
+        "evidence_ids": [],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-92e270ed5c4b4c838fab419c04ff6e81"
+      }
+    },
+    {
+      "sequence": 45,
+      "operation": "planner.critic_feedback",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "proposal": "sim-nc-north-to-sim-nc-central-172",
+        "rejection_codes": [
+          "DONOR_SHORTAGE",
+          "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+        ],
+        "evidence_ids": [],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-fc5e59d334f14aa7b74b5c71a5e62f78"
+      }
+    },
+    {
+      "sequence": 46,
+      "operation": "hmem.influence",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ],
+        "rejected_candidate_ids": [
+          "sim-nc-north-to-sim-nc-south-170",
+          "external-sim-nc-central",
+          "external-sim-nc-south",
+          "sim-nc-south-to-sim-nc-central-110",
+          "sim-nc-central-to-sim-nc-south-164"
+        ],
+        "policy": "Recalled rejections excluded from model recommendation; deterministic feasibility also required",
+        "evidence_ids": [],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-ea6bda1aace84162871b72a359b40eba"
+      }
+    },
+    {
+      "sequence": 47,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "tool_identifier": "hmem.influence",
+        "source_operation_id": "op-ea6bda1aace84162871b72a359b40eba",
+        "evidence_ids": [],
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-4d0eb70cd2dd484abece847dd1dc0fc1"
+      }
+    },
+    {
+      "sequence": 48,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "clinical",
+        "tool_identifier": "clinical_support_check",
+        "call_id": "call-8772c6c3-6e1c-4c24-9ad9-c867b5b19ec8",
+        "arguments": {},
+        "result": {
+          "role": "clinical",
+          "canonical_tool": "forecast.read",
+          "simulated_hospital_data": true,
+          "human_review_required": true,
+          "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+          "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+          "predecessor_findings": [
+            {
+              "role": "trade",
+              "observation": "trade_unavailable",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "comparable_trade_evidence_unavailable",
+                "operational_shipments_are_not_trade_aggregates"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "disruption",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "memory",
+              "observation": "memory_recalled",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "actual_hmem_findings_persisted",
+                "actual_hmem_context_recalled"
+              ],
+              "candidate_id": null,
+              "memory_ids": [
+                "mem-4",
+                "mem-2",
+                "mem-5",
+                "mem-1",
+                "mem-3"
+              ]
+            },
+            {
+              "role": "mitigation",
+              "observation": "conditional_recommendation",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "deterministic_candidate_constraints_retained",
+                "human_pharmacy_review_required",
+                "no_physical_dispatch_authority"
+              ],
+              "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+              "memory_ids": [
+                "mem-4",
+                "mem-2",
+                "mem-5",
+                "mem-1",
+                "mem-3"
+              ]
+            }
+          ],
+          "saline_patient_outcome_model_supported": false,
+          "memory_ids": [
+            "mem-4",
+            "mem-2",
+            "mem-5",
+            "mem-1",
+            "mem-3"
+          ],
+          "recalled_findings": [
+            {
+              "memory_id": "mem-4",
+              "claim_key": "helene-rejected-5",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-2",
+              "claim_key": "helene-rejected-2",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "external-sim-nc-central",
+                "feasible": false,
+                "failures": [
+                  "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-5",
+              "claim_key": "helene-rejected-6",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "external-sim-nc-south",
+                "feasible": false,
+                "failures": [
+                  "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-1",
+              "claim_key": "helene-rejected-1",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-3",
+              "claim_key": "helene-rejected-3",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            }
+          ],
+          "excluded_due_to_recalled_rejection": [
+            "sim-nc-north-to-sim-nc-south-170",
+            "external-sim-nc-central",
+            "external-sim-nc-south",
+            "sim-nc-south-to-sim-nc-central-110",
+            "sim-nc-central-to-sim-nc-south-164"
+          ],
+          "evidence_ids": [
+            "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+          ],
+          "fact_keys": [
+            "saline_clinical_outcomes_unsupported",
+            "oncology_model_not_applicable_to_saline"
+          ],
+          "tool_result_reference": "clinical-tool.json",
+          "tool_result_sha256": "d85cb48de1d9565f24b4009ca0f190eecae1659815b5f8c4c678134a71bbe452"
+        },
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "operation_id": "op-bd72e19267314b54867e8ac19831f6fa"
+      }
+    },
+    {
+      "sequence": 49,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "clinical",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-bd72e19267314b54867e8ac19831f6fa",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "memory_ids": [],
+        "task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "operation_id": "op-6ef45f144cf84c3486e15eb8bbdad1a8"
+      }
+    },
+    {
+      "sequence": 50,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "tool_identifier": "feasibility_critic",
+        "call_id": "call-9b8fee20-73ff-4a59-99b2-df4f5f4b6ba8",
+        "arguments": {},
+        "result": {
+          "role": "feasibility",
+          "canonical_tool": "supply.validated",
+          "simulated_hospital_data": true,
+          "human_review_required": true,
+          "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+          "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+          "predecessor_findings": [
+            {
+              "role": "trade",
+              "observation": "trade_unavailable",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "comparable_trade_evidence_unavailable",
+                "operational_shipments_are_not_trade_aggregates"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "disruption",
+              "observation": "source_provenance_limited",
+              "evidence_ids": [
+                "baxter-2024-09-29",
+                "baxter-2024-10-01"
+              ],
+              "fact_keys": [
+                "manufacturer_provenance_retained",
+                "historical_version_custody_unproven"
+              ],
+              "candidate_id": null,
+              "memory_ids": []
+            },
+            {
+              "role": "memory",
+              "observation": "memory_recalled",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "actual_hmem_findings_persisted",
+                "actual_hmem_context_recalled"
+              ],
+              "candidate_id": null,
+              "memory_ids": [
+                "mem-4",
+                "mem-2",
+                "mem-5",
+                "mem-1",
+                "mem-3"
+              ]
+            },
+            {
+              "role": "mitigation",
+              "observation": "conditional_recommendation",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "deterministic_candidate_constraints_retained",
+                "human_pharmacy_review_required",
+                "no_physical_dispatch_authority"
+              ],
+              "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+              "memory_ids": [
+                "mem-4",
+                "mem-2",
+                "mem-5",
+                "mem-1",
+                "mem-3"
+              ]
+            }
+          ],
+          "candidates": [
+            {
+              "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+              "source_id": "sim-nc-north",
+              "hospital_id": "sim-nc-central",
+              "quantity": 172,
+              "feasible": true,
+              "failures": []
+            },
+            {
+              "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+              "source_id": "sim-nc-south",
+              "hospital_id": "sim-nc-central",
+              "quantity": 110,
+              "feasible": false,
+              "failures": [
+                "DONOR_SHORTAGE"
+              ]
+            },
+            {
+              "candidate_id": "external-sim-nc-central",
+              "source_id": null,
+              "hospital_id": "sim-nc-central",
+              "quantity": 0,
+              "feasible": false,
+              "failures": [
+                "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+              ]
+            },
+            {
+              "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+              "source_id": "sim-nc-central",
+              "hospital_id": "sim-nc-south",
+              "quantity": 164,
+              "feasible": false,
+              "failures": [
+                "DONOR_SHORTAGE"
+              ]
+            },
+            {
+              "candidate_id": "sim-nc-north-to-sim-nc-south-164",
+              "source_id": "sim-nc-north",
+              "hospital_id": "sim-nc-south",
+              "quantity": 164,
+              "feasible": true,
+              "failures": []
+            },
+            {
+              "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+              "source_id": "sim-nc-north",
+              "hospital_id": "sim-nc-south",
+              "quantity": 170,
+              "feasible": false,
+              "failures": [
+                "DONOR_SHORTAGE"
+              ]
+            },
+            {
+              "candidate_id": "external-sim-nc-south",
+              "source_id": null,
+              "hospital_id": "sim-nc-south",
+              "quantity": 0,
+              "feasible": false,
+              "failures": [
+                "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+              ]
+            }
+          ],
+          "drafts": [
+            {
+              "action_id": "action-617baf242e542e01",
+              "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+              "status": "DRAFT",
+              "dispatch_available": false
+            },
+            {
+              "action_id": "action-60e70fe18ebcb005",
+              "candidate_id": "sim-nc-north-to-sim-nc-south-164",
+              "status": "DRAFT",
+              "dispatch_available": false
+            }
+          ],
+          "planner_proposal": "sim-nc-north-to-sim-nc-central-172",
+          "memory_ids": [
+            "mem-4",
+            "mem-2",
+            "mem-5",
+            "mem-1",
+            "mem-3"
+          ],
+          "recalled_findings": [
+            {
+              "memory_id": "mem-4",
+              "claim_key": "helene-rejected-5",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-2",
+              "claim_key": "helene-rejected-2",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "external-sim-nc-central",
+                "feasible": false,
+                "failures": [
+                  "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-5",
+              "claim_key": "helene-rejected-6",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "external-sim-nc-south",
+                "feasible": false,
+                "failures": [
+                  "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-1",
+              "claim_key": "helene-rejected-1",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-3",
+              "claim_key": "helene-rejected-3",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            }
+          ],
+          "excluded_due_to_recalled_rejection": [
+            "sim-nc-north-to-sim-nc-south-170",
+            "external-sim-nc-central",
+            "external-sim-nc-south",
+            "sim-nc-south-to-sim-nc-central-110",
+            "sim-nc-central-to-sim-nc-south-164"
+          ],
+          "evidence_ids": [
+            "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+          ],
+          "fact_keys": [
+            "deterministic_candidate_constraints_retained",
+            "human_pharmacy_review_required",
+            "no_physical_dispatch_authority"
+          ],
+          "tool_result_reference": "feasibility-tool.json",
+          "tool_result_sha256": "73ddcd7ab71ef8eba045b8a5739df8c24fdd051747f31538da47b35a2c5f558a"
+        },
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-15fe4df178a045b3b0987cb9101b86e7"
+      }
+    },
+    {
+      "sequence": 51,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-15fe4df178a045b3b0987cb9101b86e7",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "memory_ids": [],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-298126981b8a45218ce8febf2dbb5ba1"
+      }
+    },
+    {
+      "sequence": 52,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "clinical",
+        "request_no": 21,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "operation_id": "op-097321ef92724ce29f184e46ec443f20"
+      }
+    },
+    {
+      "sequence": 53,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "feasibility",
+        "request_no": 22,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-801f87e53f94453f959ab07fb09720bf"
+      }
+    },
+    {
+      "sequence": 54,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "request_no": 22,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_kgtxih8z",
+        "call_id": "call-742c3ea6-781d-4982-ac58-78d4f1047fb5",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 3998,
+          "completion_tokens": 178,
+          "total_tokens": 4176
+        },
+        "evidence_ids": [],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-801f87e53f94453f959ab07fb09720bf"
+      }
+    },
+    {
+      "sequence": 55,
+      "operation": "specialist.validated_finding",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "observation": "human_review_required",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "deterministic_candidate_constraints_retained",
+          "human_pharmacy_review_required",
+          "no_physical_dispatch_authority"
+        ],
+        "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-2daf7dc2f09044d3919c3b64343d7969"
+      }
+    },
+    {
+      "sequence": 56,
+      "operation": "operator.feasibility",
+      "status": "complete",
+      "data": {
+        "result": {
+          "role": "feasibility",
+          "status": "complete",
+          "findings": [],
+          "calculations": [],
+          "error_code": null
+        },
+        "evidence_ids": [],
+        "availability": "complete",
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-d8ed7567a12640e481774e0c2bce42ac"
+      }
+    },
+    {
+      "sequence": 57,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "feasibility",
+        "result_status": "complete",
+        "error_code": null,
+        "evidence_ids": [],
+        "task_id": "task-3b383a53a45e42d9a2752cb8e0a55603",
+        "operation_id": "op-d85a96eaade64862b149b8c7115b3ba1"
+      }
+    },
+    {
+      "sequence": 58,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "clinical",
+        "request_no": 21,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_gse9coqe",
+        "call_id": "call-c0cdae47-e3e1-4553-9169-01a6c5a52132",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 3375,
+          "completion_tokens": 167,
+          "total_tokens": 3542
+        },
+        "evidence_ids": [],
+        "task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "operation_id": "op-097321ef92724ce29f184e46ec443f20"
+      }
+    },
+    {
+      "sequence": 59,
+      "operation": "specialist.validated_finding",
+      "status": "complete",
+      "data": {
+        "agent_id": "clinical",
+        "observation": "insufficient_clinical_evidence",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "saline_clinical_outcomes_unsupported",
+          "oncology_model_not_applicable_to_saline"
+        ],
+        "candidate_id": null,
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ],
+        "task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "operation_id": "op-29e2f71ca65c4d87b3f207a4a419cb60"
+      }
+    },
+    {
+      "sequence": 60,
+      "operation": "operator.clinical",
+      "status": "complete",
+      "data": {
+        "result": {
+          "role": "clinical",
+          "status": "complete",
+          "findings": [],
+          "calculations": [],
+          "error_code": null
+        },
+        "evidence_ids": [],
+        "availability": "complete",
+        "task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "operation_id": "op-a65de86665ea408f8e9f9947763aa762"
+      }
+    },
+    {
+      "sequence": 61,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "clinical",
+        "result_status": "complete",
+        "error_code": null,
+        "evidence_ids": [],
+        "task_id": "task-5d0d738b114b406198f12e63a9145d97",
+        "operation_id": "op-6090ebed4e564869b25272346bcdddd7"
+      }
+    },
+    {
+      "sequence": 62,
+      "operation": "coordination.dependencies_satisfied",
+      "status": "complete",
+      "data": {
+        "agent_id": "actions",
+        "dependencies": [
+          "task-3b383a53a45e42d9a2752cb8e0a55603",
+          "task-5d0d738b114b406198f12e63a9145d97"
+        ],
+        "child_task_id": "task-49251b7eb94048ca933600efa81813da",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-dab57f3f163348b0b713ba07c6dcfa2d"
+      }
+    },
+    {
+      "sequence": 63,
+      "operation": "coordination.task_launched",
+      "status": "complete",
+      "data": {
+        "agent_id": "actions",
+        "child_task_id": "task-49251b7eb94048ca933600efa81813da",
+        "evidence_ids": [],
+        "task_id": null,
+        "operation_id": "op-27c36c3d89a6481e94f2864ea657ff32"
+      }
+    },
+    {
+      "sequence": 64,
+      "operation": "coordination.specialist_started",
+      "status": "complete",
+      "data": {
+        "agent_id": "actions",
+        "evidence_ids": [],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-ec0ee8b91d9c4b378ae62f26db342213"
+      }
+    },
+    {
+      "sequence": 65,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "actions",
+        "request_no": 23,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "actions_review_drafts"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-1dd5a3f04b084634880862bcedebae8c"
+      }
+    },
+    {
+      "sequence": 66,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "actions",
+        "request_no": 23,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_xi1sxgja",
+        "call_id": "call-c9da3948-71eb-4ed3-af6c-292b6d32453b",
+        "selected_tool": "actions_review_drafts",
+        "argument_keys": [],
+        "tokens": {
+          "prompt_tokens": 1107,
+          "completion_tokens": 19,
+          "total_tokens": 1126
+        },
+        "evidence_ids": [],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-1dd5a3f04b084634880862bcedebae8c"
+      }
+    },
+    {
+      "sequence": 67,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "actions",
+        "tool_identifier": "actions_review_drafts",
+        "call_id": "call-c9da3948-71eb-4ed3-af6c-292b6d32453b",
+        "arguments": {},
+        "result": {
+          "role": "actions",
+          "canonical_tool": "actions.inspect",
+          "simulated_hospital_data": true,
+          "human_review_required": true,
+          "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+          "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+          "predecessor_findings": [
+            {
+              "role": "memory",
+              "observation": "memory_recalled",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "actual_hmem_findings_persisted",
+                "actual_hmem_context_recalled"
+              ],
+              "candidate_id": null,
+              "memory_ids": [
+                "mem-4",
+                "mem-2",
+                "mem-5",
+                "mem-1",
+                "mem-3"
+              ]
+            },
+            {
+              "role": "mitigation",
+              "observation": "conditional_recommendation",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "deterministic_candidate_constraints_retained",
+                "human_pharmacy_review_required",
+                "no_physical_dispatch_authority"
+              ],
+              "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+              "memory_ids": [
+                "mem-4",
+                "mem-2",
+                "mem-5",
+                "mem-1",
+                "mem-3"
+              ]
+            },
+            {
+              "role": "feasibility",
+              "observation": "human_review_required",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "deterministic_candidate_constraints_retained",
+                "human_pharmacy_review_required",
+                "no_physical_dispatch_authority"
+              ],
+              "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+              "memory_ids": [
+                "mem-4",
+                "mem-2",
+                "mem-5",
+                "mem-1",
+                "mem-3"
+              ]
+            },
+            {
+              "role": "clinical",
+              "observation": "insufficient_clinical_evidence",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "fact_keys": [
+                "saline_clinical_outcomes_unsupported",
+                "oncology_model_not_applicable_to_saline"
+              ],
+              "candidate_id": null,
+              "memory_ids": [
+                "mem-4",
+                "mem-2",
+                "mem-5",
+                "mem-1",
+                "mem-3"
+              ]
+            }
+          ],
+          "candidates": [
+            {
+              "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+              "source_id": "sim-nc-north",
+              "hospital_id": "sim-nc-central",
+              "quantity": 172,
+              "feasible": true,
+              "failures": []
+            },
+            {
+              "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+              "source_id": "sim-nc-south",
+              "hospital_id": "sim-nc-central",
+              "quantity": 110,
+              "feasible": false,
+              "failures": [
+                "DONOR_SHORTAGE"
+              ]
+            },
+            {
+              "candidate_id": "external-sim-nc-central",
+              "source_id": null,
+              "hospital_id": "sim-nc-central",
+              "quantity": 0,
+              "feasible": false,
+              "failures": [
+                "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+              ]
+            },
+            {
+              "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+              "source_id": "sim-nc-central",
+              "hospital_id": "sim-nc-south",
+              "quantity": 164,
+              "feasible": false,
+              "failures": [
+                "DONOR_SHORTAGE"
+              ]
+            },
+            {
+              "candidate_id": "sim-nc-north-to-sim-nc-south-164",
+              "source_id": "sim-nc-north",
+              "hospital_id": "sim-nc-south",
+              "quantity": 164,
+              "feasible": true,
+              "failures": []
+            },
+            {
+              "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+              "source_id": "sim-nc-north",
+              "hospital_id": "sim-nc-south",
+              "quantity": 170,
+              "feasible": false,
+              "failures": [
+                "DONOR_SHORTAGE"
+              ]
+            },
+            {
+              "candidate_id": "external-sim-nc-south",
+              "source_id": null,
+              "hospital_id": "sim-nc-south",
+              "quantity": 0,
+              "feasible": false,
+              "failures": [
+                "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+              ]
+            }
+          ],
+          "drafts": [
+            {
+              "action_id": "action-617baf242e542e01",
+              "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+              "status": "DRAFT",
+              "dispatch_available": false
+            },
+            {
+              "action_id": "action-60e70fe18ebcb005",
+              "candidate_id": "sim-nc-north-to-sim-nc-south-164",
+              "status": "DRAFT",
+              "dispatch_available": false
+            }
+          ],
+          "memory_ids": [
+            "mem-4",
+            "mem-2",
+            "mem-5",
+            "mem-1",
+            "mem-3"
+          ],
+          "recalled_findings": [
+            {
+              "memory_id": "mem-4",
+              "claim_key": "helene-rejected-5",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-2",
+              "claim_key": "helene-rejected-2",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "external-sim-nc-central",
+                "feasible": false,
+                "failures": [
+                  "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-5",
+              "claim_key": "helene-rejected-6",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "external-sim-nc-south",
+                "feasible": false,
+                "failures": [
+                  "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-1",
+              "claim_key": "helene-rejected-1",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            },
+            {
+              "memory_id": "mem-3",
+              "claim_key": "helene-rejected-3",
+              "evidence_ids": [
+                "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+              ],
+              "value": {
+                "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+                "feasible": false,
+                "failures": [
+                  "DONOR_SHORTAGE"
+                ]
+              }
+            }
+          ],
+          "excluded_due_to_recalled_rejection": [
+            "sim-nc-north-to-sim-nc-south-170",
+            "external-sim-nc-central",
+            "external-sim-nc-south",
+            "sim-nc-south-to-sim-nc-central-110",
+            "sim-nc-central-to-sim-nc-south-164"
+          ],
+          "evidence_ids": [
+            "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+          ],
+          "fact_keys": [
+            "deterministic_candidate_constraints_retained",
+            "human_pharmacy_review_required",
+            "no_physical_dispatch_authority",
+            "existing_action_drafts_are_review_only"
+          ],
+          "tool_result_reference": "actions-tool.json",
+          "tool_result_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-8402d643a4244318b7324b98501f3160"
+      }
+    },
+    {
+      "sequence": 68,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "actions",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-8402d643a4244318b7324b98501f3160",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "memory_ids": [],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-9a632bd7fcc9458c8fbd62708b5d143c"
+      }
+    },
+    {
+      "sequence": 69,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "actions",
+        "request_no": 24,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-5bbfbf8195044e21ac4c70b6503ad533"
+      }
+    },
+    {
+      "sequence": 70,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "actions",
+        "request_no": 24,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_w4sddz1t",
+        "call_id": "call-d4c7076a-3802-4016-b9ba-084b51d6d816",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 4137,
+          "completion_tokens": 200,
+          "total_tokens": 4337
+        },
+        "evidence_ids": [],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-5bbfbf8195044e21ac4c70b6503ad533"
+      }
+    },
+    {
+      "sequence": 71,
+      "operation": "data.specialist_read",
+      "status": "complete",
+      "data": {
+        "agent_id": "actions",
+        "tool_identifier": "agent_finding",
+        "call_id": "call-d4c7076a-3802-4016-b9ba-084b51d6d816",
+        "arguments": {
+          "observation": "human_review_required",
+          "evidence_ids": [
+            "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+          ],
+          "fact_keys": [
+            "deterministic_candidate_constraints_retained",
+            "human_pharmacy_review_required",
+            "no_physical_dispatch_authority",
+            "existing_action_drafts_are_review_only"
+          ],
+          "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+          "memory_ids": [
+            "mem-4",
+            "mem-2",
+            "mem-5",
+            "mem-1",
+            "mem-3"
+          ]
+        },
+        "result": {
+          "accepted": false,
+          "error_code": "CANDIDATE_UNSAFE_OR_NOT_SUPPORTED",
+          "corrective_attempt_remaining": 1,
+          "instruction": "Correct only unsupported citations, fact keys, memory acknowledgement or unsafe candidate; original tool evidence remains authoritative."
+        },
+        "evidence_ids": [],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-b3e63254ba0e4aaabd0839ecd9dc3f63"
+      }
+    },
+    {
+      "sequence": 72,
+      "operation": "coordination.evidence_returned",
+      "status": "complete",
+      "data": {
+        "agent_id": "actions",
+        "tool_identifier": "data.specialist_read",
+        "source_operation_id": "op-b3e63254ba0e4aaabd0839ecd9dc3f63",
+        "evidence_ids": [],
+        "memory_ids": [],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-1310b1507aba430e913314a55d895577"
+      }
+    },
+    {
+      "sequence": 73,
+      "operation": "nightshift.specialist_decision",
+      "status": "started",
+      "data": {
+        "agent_id": "actions",
+        "request_no": 25,
+        "max_requests": 36,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "allowed_tools": [
+          "agent_finding"
+        ],
+        "max_tokens": 384,
+        "max_response_bytes": 32000,
+        "evidence_ids": [],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-e50a8f0a7160420a89b26b4457854b3d"
+      }
+    },
+    {
+      "sequence": 74,
+      "operation": "nightshift.specialist_decision",
+      "status": "complete",
+      "data": {
+        "agent_id": "actions",
+        "request_no": 25,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "provider": "nvidia",
+        "winning_route": {
+          "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+          "provider": "nvidia"
+        },
+        "receipt_id": "rcpt_req_80wctdul",
+        "call_id": "call-9a70379a-bea6-414d-bc4a-d962e167f5c3",
+        "selected_tool": "agent_finding",
+        "argument_keys": [
+          "candidate_id",
+          "evidence_ids",
+          "fact_keys",
+          "memory_ids",
+          "observation"
+        ],
+        "tokens": {
+          "prompt_tokens": 4623,
+          "completion_tokens": 190,
+          "total_tokens": 4813
+        },
+        "evidence_ids": [],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-e50a8f0a7160420a89b26b4457854b3d"
+      }
+    },
+    {
+      "sequence": 75,
+      "operation": "operator.actions",
+      "status": "complete",
+      "data": {
+        "result": {
+          "role": "actions",
+          "status": "failed",
+          "findings": [],
+          "calculations": [],
+          "error_code": "CANDIDATE_UNSAFE_OR_NOT_SUPPORTED"
+        },
+        "evidence_ids": [],
+        "availability": "failed",
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-a40f406f746242e29388491c031792a2"
+      }
+    },
+    {
+      "sequence": 76,
+      "operation": "coordination.specialist_completed",
+      "status": "complete",
+      "data": {
+        "agent_id": "actions",
+        "result_status": "failed",
+        "error_code": "CANDIDATE_UNSAFE_OR_NOT_SUPPORTED",
+        "evidence_ids": [],
+        "task_id": "task-49251b7eb94048ca933600efa81813da",
+        "operation_id": "op-71c69178fcea4b89a85ee1d895f28f75"
+      }
+    }
+  ]
+}

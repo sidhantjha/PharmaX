@@ -1,0 +1,74 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "category": {
+      "enum": [
+        "consistent",
+        "compatible",
+        "conflict",
+        "missing",
+        "superseded"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "claim_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Claim Ids",
+      "type": "array"
+    },
+    "discrepancy_bags": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Discrepancy Bags",
+      "type": "integer"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "finding_id": {
+      "title": "Finding Id",
+      "type": "string"
+    },
+    "independent_origins": {
+      "minimum": 0,
+      "title": "Independent Origins",
+      "type": "integer"
+    },
+    "reason": {
+      "title": "Reason",
+      "type": "string"
+    },
+    "requires_human_review": {
+      "default": false,
+      "title": "Requires Human Review",
+      "type": "boolean"
+    },
+    "verification_steps": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Verification Steps",
+      "type": "array"
+    }
+  },
+  "required": [
+    "finding_id",
+    "category",
+    "claim_ids",
+    "evidence_ids",
+    "reason",
+    "verification_steps",
+    "independent_origins"
+  ],
+  "title": "CorroborationFinding",
+  "type": "object"
+}

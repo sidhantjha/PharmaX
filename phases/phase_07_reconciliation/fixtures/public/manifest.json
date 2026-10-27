@@ -1,0 +1,35 @@
+[
+  {
+    "source_id": "sc-dph",
+    "organization": "South Carolina DPH",
+    "issue_date": "2024-10-04",
+    "url": "https://www.dph.sc.gov/sites/scdph/files/2024-10/10589-DHD-10-04-2024-IVS.pdf",
+    "file": "8acc75642ac12476d3c566ad236cd05e8b117e409c7d0bad377620ca4e66968b.pdf",
+    "sha256": "8acc75642ac12476d3c566ad236cd05e8b117e409c7d0bad377620ca4e66968b",
+    "retrieved_at": "2026-10-26T22:40:04.688745+00:00",
+    "custody": "Exact historical version unproven; reconstructed issue-day availability only.",
+    "revision_note": "Current retrieved version; historical custody unproven."
+  },
+  {
+    "source_id": "va-doh",
+    "organization": "Virginia Department of Health",
+    "issue_date": "2024-10-08",
+    "url": "https://www.vdh.virginia.gov/clinicians/clinician-letters/update-on-disruption-in-production-of-intravenous-iv-fluid-due-to-impacts-from-hurricane-helene/",
+    "file": "0bc668b63b1d5e48ba952a217167cda84190a8f9b4e4893ec30540678db1510c.html",
+    "sha256": "0bc668b63b1d5e48ba952a217167cda84190a8f9b4e4893ec30540678db1510c",
+    "retrieved_at": "2026-10-26T22:40:05.357423+00:00",
+    "custody": "Exact historical version unproven; reconstructed issue-day availability only.",
+    "revision_note": "VDH page says Last Updated January 21, 2026; no claim of 2024 byte availability."
+  },
+  {
+    "source_id": "cdc-han-00518",
+    "organization": "CDC",
+    "issue_date": "2024-10-12",
+    "url": "https://www.cdc.gov/han/2024/han00518.html",
+    "file": "503412e081a4a41a5286b63b84681abc0eec976d8d5dc7314e84ccbf2850294e.html",
+    "sha256": "503412e081a4a41a5286b63b84681abc0eec976d8d5dc7314e84ccbf2850294e",
+    "retrieved_at": "2026-10-26T22:40:06.488358+00:00",
+    "custody": "Exact historical version unproven; reconstructed issue-day availability only.",
+    "revision_note": "Current retrieved version; historical custody unproven."
+  }
+]

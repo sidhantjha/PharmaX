@@ -1,0 +1,189 @@
+{
+  "$defs": {
+    "GeoBox": {
+      "additionalProperties": false,
+      "properties": {
+        "east": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "East",
+          "type": "number"
+        },
+        "north": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "North",
+          "type": "number"
+        },
+        "south": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "South",
+          "type": "number"
+        },
+        "west": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "West",
+          "type": "number"
+        }
+      },
+      "required": [
+        "west",
+        "south",
+        "east",
+        "north"
+      ],
+      "title": "GeoBox",
+      "type": "object"
+    },
+    "RouteLeg": {
+      "additionalProperties": false,
+      "properties": {
+        "corridors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Corridors",
+          "type": "array"
+        },
+        "destination": {
+          "title": "Destination",
+          "type": "string"
+        },
+        "ends_on": {
+          "format": "date",
+          "title": "Ends On",
+          "type": "string"
+        },
+        "geography": {
+          "$ref": "#/$defs/GeoBox"
+        },
+        "leg_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Leg Id",
+          "type": "string"
+        },
+        "mode": {
+          "enum": [
+            "sea",
+            "road"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "origin": {
+          "title": "Origin",
+          "type": "string"
+        },
+        "starts_on": {
+          "format": "date",
+          "title": "Starts On",
+          "type": "string"
+        }
+      },
+      "required": [
+        "leg_id",
+        "mode",
+        "origin",
+        "destination",
+        "corridors",
+        "geography",
+        "starts_on",
+        "ends_on"
+      ],
+      "title": "RouteLeg",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Assumptions",
+      "type": "array"
+    },
+    "dataset_version": {
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "evidence_label": {
+      "const": "simulated",
+      "default": "simulated",
+      "title": "Evidence Label",
+      "type": "string"
+    },
+    "hospital_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Hospital Id",
+      "type": "string"
+    },
+    "legs": {
+      "items": {
+        "$ref": "#/$defs/RouteLeg"
+      },
+      "maxItems": 12,
+      "minItems": 1,
+      "title": "Legs",
+      "type": "array"
+    },
+    "planned_arrival": {
+      "format": "date",
+      "title": "Planned Arrival",
+      "type": "string"
+    },
+    "product_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Product Id",
+      "type": "string"
+    },
+    "quantity_vials": {
+      "exclusiveMinimum": 0,
+      "title": "Quantity Vials",
+      "type": "integer"
+    },
+    "scenario_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Scenario Id",
+      "type": "string"
+    },
+    "shipment_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Shipment Id",
+      "type": "string"
+    },
+    "supplier_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Supplier Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "scenario_id",
+    "dataset_version",
+    "shipment_id",
+    "supplier_id",
+    "hospital_id",
+    "product_id",
+    "quantity_vials",
+    "planned_arrival",
+    "legs",
+    "assumptions"
+  ],
+  "title": "SupplyDependency",
+  "type": "object"
+}

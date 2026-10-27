@@ -1,0 +1,936 @@
+{
+  "schema_version": "3.0",
+  "algorithm_version": "pharmax-risk-v1",
+  "analysis_id": "2b3e822e8fef019fc8afb1cfc3a735d68df7daae405f1b2cc50634a365d5d7fe",
+  "dataset_version": "6a4a8d083742ed7ef0d8a2b1090898f5ab655f0b5b179701c20c8260ba377819",
+  "kind": "derived",
+  "input_evidence_ids": [
+    "sim:130b3e1decb9d22a4a785e293625d55230fae9d989995494d164a34b5a516f34",
+    "sim:32d2669c090c9af9d35bdbf23d9910c1a2eda8269c747f2c1d4396805efff307",
+    "sim:3b2a65123bd2b6786307a841a57e56c9219eec209ccdc3c518d7b9ac3a0e801e",
+    "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+    "sim:4b73ac8a49f72d13e98d063f7a7409dade221e5718e8cb61bc0fb6549a92fc7b",
+    "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+    "sim:656056b4036bcd3e61b8122780bf208c6606670f7ad5c3ff189611a28e1e87f7",
+    "sim:83c0c47318c53faa9bf9bf32457c7a376a47b58218bac581d06c21c9db9f5f43",
+    "sim:8c74820a60e14194f6d81ac6f2c63e3d3f6eef9f59b6b49894ed14fe8a2c62ca",
+    "sim:8ff2610e51bc7d4959e89efb8bfccfe612b765c0dda4b09a1f82cfc5f48fd100",
+    "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+    "sim:b02dbc6d6eff38fe8726531154528d05cd3a287bd8cd2cb1c55308a70c6b27ee",
+    "sim:e02e0e40ec57e3a39cfbc7414fa691bfa0c81339d16250bef6719ec0ed5579af",
+    "sim:fa56988bcc4740c5dcdb6d09aacb5cee0dd971d4a582c9cd1fd1711e1f85a774"
+  ],
+  "assumptions": [
+    "Demand is ceiling(mean of exactly seven complete pre-anchor daily quantities).",
+    "Demand is additional unreserved demand. Existing reservations remain ring-fenced; no double consumption of reservations.",
+    "Expire at start of the day AFTER expiry; receive at start of day; serve by FEFO, then lot ID.",
+    "No backlog carryover: unmet demand is counted once each day, not automatically ordered later.",
+    "Incoming lots are modeled released, unreserved and expire arrival + 30 days.",
+    "Stockout date means first unmet-demand date; shortage duration counts unmet days within horizon, not elapsed span.",
+    "Different product IDs/strengths are never substituted; POs are never additional receipts.",
+    "Only simulated inputs available at anchor-day start UTC drive projections; historical backtest=false."
+  ],
+  "limitations": [
+    "Synthetic scenario projection, not an observed hospital shortage or calibrated clinical forecast.",
+    "Future FDA revisions and later-retrieved documents do not enter demand, eligibility or risk.",
+    "Held shipments have no arrival unless explicitly released in a hypothetical override.",
+    "Horizon limits shortage duration; right_censored flags unmet demand on its final day."
+  ],
+  "hospital_id": "sim-north",
+  "product_id": "sim-carboplatin-450",
+  "forecast": {
+    "schema_version": "3.0",
+    "algorithm_version": "pharmax-risk-v1",
+    "analysis_id": "4777f31bde0b3246b2d0106c5b7b015fe86824dd5d7499322a251f0bebafc9a5",
+    "dataset_version": "6a4a8d083742ed7ef0d8a2b1090898f5ab655f0b5b179701c20c8260ba377819",
+    "kind": "derived",
+    "input_evidence_ids": [
+      "sim:130b3e1decb9d22a4a785e293625d55230fae9d989995494d164a34b5a516f34",
+      "sim:32d2669c090c9af9d35bdbf23d9910c1a2eda8269c747f2c1d4396805efff307",
+      "sim:3b2a65123bd2b6786307a841a57e56c9219eec209ccdc3c518d7b9ac3a0e801e",
+      "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+      "sim:4b73ac8a49f72d13e98d063f7a7409dade221e5718e8cb61bc0fb6549a92fc7b",
+      "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+      "sim:656056b4036bcd3e61b8122780bf208c6606670f7ad5c3ff189611a28e1e87f7",
+      "sim:83c0c47318c53faa9bf9bf32457c7a376a47b58218bac581d06c21c9db9f5f43",
+      "sim:8c74820a60e14194f6d81ac6f2c63e3d3f6eef9f59b6b49894ed14fe8a2c62ca",
+      "sim:8ff2610e51bc7d4959e89efb8bfccfe612b765c0dda4b09a1f82cfc5f48fd100",
+      "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+      "sim:b02dbc6d6eff38fe8726531154528d05cd3a287bd8cd2cb1c55308a70c6b27ee",
+      "sim:e02e0e40ec57e3a39cfbc7414fa691bfa0c81339d16250bef6719ec0ed5579af",
+      "sim:fa56988bcc4740c5dcdb6d09aacb5cee0dd971d4a582c9cd1fd1711e1f85a774"
+    ],
+    "assumptions": [
+      "Demand is ceiling(mean of exactly seven complete pre-anchor daily quantities).",
+      "Demand is additional unreserved demand. Existing reservations remain ring-fenced; no double consumption of reservations.",
+      "Expire at start of the day AFTER expiry; receive at start of day; serve by FEFO, then lot ID.",
+      "No backlog carryover: unmet demand is counted once each day, not automatically ordered later.",
+      "Incoming lots are modeled released, unreserved and expire arrival + 30 days.",
+      "Stockout date means first unmet-demand date; shortage duration counts unmet days within horizon, not elapsed span.",
+      "Different product IDs/strengths are never substituted; POs are never additional receipts.",
+      "Only simulated inputs available at anchor-day start UTC drive projections; historical backtest=false."
+    ],
+    "limitations": [
+      "Synthetic scenario projection, not an observed hospital shortage or calibrated clinical forecast.",
+      "Future FDA revisions and later-retrieved documents do not enter demand, eligibility or risk.",
+      "Held shipments have no arrival unless explicitly released in a hypothetical override.",
+      "Horizon limits shortage duration; right_censored flags unmet demand on its final day."
+    ],
+    "request": {
+      "hospital_id": "sim-north",
+      "product_id": "sim-carboplatin-450",
+      "horizon_days": 14,
+      "scenario": "disruption",
+      "overlay": null,
+      "arrival_shelf_life_days": 30
+    },
+    "as_of": "2023-07-24",
+    "end_on": "2023-08-06",
+    "historical_backtest": false,
+    "dependency_kind": "simulated",
+    "product_identity": {
+      "product_id": "sim-carboplatin-450",
+      "presentation": "450 mg / 45 mL unopened single-use vial; modeled product, not a clinical substitution",
+      "strength_mg_per_ml": 10.0,
+      "container_ml": 45.0,
+      "total_mg": 450.0,
+      "quantity_unit": "vial"
+    },
+    "overlay_version": null,
+    "initial_inventory_inputs": [
+      {
+        "inventory_id": "stock-north",
+        "hospital_id": "sim-north",
+        "product_id": "sim-carboplatin-450",
+        "supplier_id": "sim-lakes",
+        "lot_id": "FICTIONAL-LOT-north",
+        "as_of": "2023-07-24",
+        "on_hand": 80,
+        "reserved": 20,
+        "expiry_date": "2023-09-30",
+        "quality_status": "released",
+        "quantity_unit": "vial",
+        "evidence": {
+          "evidence_id": "sim:8c74820a60e14194f6d81ac6f2c63e3d3f6eef9f59b6b49894ed14fe8a2c62ca",
+          "kind": "simulated",
+          "source": "fictional-illinois-v1",
+          "source_record_id": null,
+          "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+          "observed_at": "2023-07-24T00:00:00Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "8c74820a60e14194f6d81ac6f2c63e3d3f6eef9f59b6b49894ed14fe8a2c62ca",
+          "raw_ref": null,
+          "parent_ids": [],
+          "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+        }
+      }
+    ],
+    "consumption_inputs": [
+      {
+        "consumption_id": "use-north-7",
+        "hospital_id": "sim-north",
+        "product_id": "sim-carboplatin-450",
+        "day": "2023-07-17",
+        "quantity": 4,
+        "quantity_unit": "vial",
+        "evidence": {
+          "evidence_id": "sim:b02dbc6d6eff38fe8726531154528d05cd3a287bd8cd2cb1c55308a70c6b27ee",
+          "kind": "simulated",
+          "source": "fictional-illinois-v1",
+          "source_record_id": null,
+          "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+          "observed_at": "2023-07-24T00:00:00Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "b02dbc6d6eff38fe8726531154528d05cd3a287bd8cd2cb1c55308a70c6b27ee",
+          "raw_ref": null,
+          "parent_ids": [],
+          "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+        }
+      },
+      {
+        "consumption_id": "use-north-6",
+        "hospital_id": "sim-north",
+        "product_id": "sim-carboplatin-450",
+        "day": "2023-07-18",
+        "quantity": 4,
+        "quantity_unit": "vial",
+        "evidence": {
+          "evidence_id": "sim:3b2a65123bd2b6786307a841a57e56c9219eec209ccdc3c518d7b9ac3a0e801e",
+          "kind": "simulated",
+          "source": "fictional-illinois-v1",
+          "source_record_id": null,
+          "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+          "observed_at": "2023-07-24T00:00:00Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "3b2a65123bd2b6786307a841a57e56c9219eec209ccdc3c518d7b9ac3a0e801e",
+          "raw_ref": null,
+          "parent_ids": [],
+          "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+        }
+      },
+      {
+        "consumption_id": "use-north-5",
+        "hospital_id": "sim-north",
+        "product_id": "sim-carboplatin-450",
+        "day": "2023-07-19",
+        "quantity": 4,
+        "quantity_unit": "vial",
+        "evidence": {
+          "evidence_id": "sim:4b73ac8a49f72d13e98d063f7a7409dade221e5718e8cb61bc0fb6549a92fc7b",
+          "kind": "simulated",
+          "source": "fictional-illinois-v1",
+          "source_record_id": null,
+          "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+          "observed_at": "2023-07-24T00:00:00Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "4b73ac8a49f72d13e98d063f7a7409dade221e5718e8cb61bc0fb6549a92fc7b",
+          "raw_ref": null,
+          "parent_ids": [],
+          "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+        }
+      },
+      {
+        "consumption_id": "use-north-4",
+        "hospital_id": "sim-north",
+        "product_id": "sim-carboplatin-450",
+        "day": "2023-07-20",
+        "quantity": 4,
+        "quantity_unit": "vial",
+        "evidence": {
+          "evidence_id": "sim:fa56988bcc4740c5dcdb6d09aacb5cee0dd971d4a582c9cd1fd1711e1f85a774",
+          "kind": "simulated",
+          "source": "fictional-illinois-v1",
+          "source_record_id": null,
+          "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+          "observed_at": "2023-07-24T00:00:00Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "fa56988bcc4740c5dcdb6d09aacb5cee0dd971d4a582c9cd1fd1711e1f85a774",
+          "raw_ref": null,
+          "parent_ids": [],
+          "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+        }
+      },
+      {
+        "consumption_id": "use-north-3",
+        "hospital_id": "sim-north",
+        "product_id": "sim-carboplatin-450",
+        "day": "2023-07-21",
+        "quantity": 4,
+        "quantity_unit": "vial",
+        "evidence": {
+          "evidence_id": "sim:130b3e1decb9d22a4a785e293625d55230fae9d989995494d164a34b5a516f34",
+          "kind": "simulated",
+          "source": "fictional-illinois-v1",
+          "source_record_id": null,
+          "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+          "observed_at": "2023-07-24T00:00:00Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "130b3e1decb9d22a4a785e293625d55230fae9d989995494d164a34b5a516f34",
+          "raw_ref": null,
+          "parent_ids": [],
+          "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+        }
+      },
+      {
+        "consumption_id": "use-north-2",
+        "hospital_id": "sim-north",
+        "product_id": "sim-carboplatin-450",
+        "day": "2023-07-22",
+        "quantity": 4,
+        "quantity_unit": "vial",
+        "evidence": {
+          "evidence_id": "sim:656056b4036bcd3e61b8122780bf208c6606670f7ad5c3ff189611a28e1e87f7",
+          "kind": "simulated",
+          "source": "fictional-illinois-v1",
+          "source_record_id": null,
+          "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+          "observed_at": "2023-07-24T00:00:00Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "656056b4036bcd3e61b8122780bf208c6606670f7ad5c3ff189611a28e1e87f7",
+          "raw_ref": null,
+          "parent_ids": [],
+          "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+        }
+      },
+      {
+        "consumption_id": "use-north-1",
+        "hospital_id": "sim-north",
+        "product_id": "sim-carboplatin-450",
+        "day": "2023-07-23",
+        "quantity": 4,
+        "quantity_unit": "vial",
+        "evidence": {
+          "evidence_id": "sim:8ff2610e51bc7d4959e89efb8bfccfe612b765c0dda4b09a1f82cfc5f48fd100",
+          "kind": "simulated",
+          "source": "fictional-illinois-v1",
+          "source_record_id": null,
+          "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+          "observed_at": "2023-07-24T00:00:00Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "8ff2610e51bc7d4959e89efb8bfccfe612b765c0dda4b09a1f82cfc5f48fd100",
+          "raw_ref": null,
+          "parent_ids": [],
+          "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+        }
+      }
+    ],
+    "excluded_temporal_evidence_ids": [
+      "comtrade:b353e84bc443e7f82ad13ba215492c010f50204c76fe25acbfd99ed3ef303387",
+      "comtrade:b9e0a7e0314c2363023dbd27645b2d495befcc2fcd90ad6b47adb01909c07aa4",
+      "curation:336339d74d3873a1ccb7021ad8b1650f2b38b03aa157c70059f8223d1349ceaa",
+      "document:a56081c52130068679ba2fcde9160c1b75efbaa555b4e7cb0e1adb4956fd43d5",
+      "fda-recall:4d484c569ef020d39aaaa6e814e5480823c93c146536dc6ecb0985d09e8672eb",
+      "fda-recall:8fd01d5a71272556cffbfc637a0ec2279076f00543e51dc84436e71afee0b031",
+      "fda-recall:f0bfc634baf68e93e833dd515f29569fa6f00f87eb3abc49e11aa79659b9f18a",
+      "fda:147706eff64a6fd7e6bc41952c8269d4a7e16deabfb95a5b1f000e65c6c19e41",
+      "fda:236e0965158557ece0e30278e9d171afa3cd117c2dcfcf04316067d91b66e981",
+      "fda:3094a53b004d49dd52c87681fa6ec55dfd5d36b47ae613cf7a925b6218eb848b",
+      "fda:380877c52552467cbed5052e57782715c05c3fd8500150a494788156d23f3801",
+      "fda:3b698195f1102969193e18f872fd64808facc0b21575c4811f19c08aa0a53c99",
+      "fda:4f1a6c11aac3ccb8894d7ee91ab51c78d94419d8379965e85c8237b7ab569630",
+      "fda:730d4eed2adadd091c57c7b3c73d9a26a6fb232d64b44bb0fd2e0e282b7f001f",
+      "fda:7992dda440b8e66d58e349e9f5e10e0387e3bc717ab2b0a73169b1eb9d80feca",
+      "fda:881785cc4bdfd4291b78b43c2e257a2b72c55f9b5e49494ed8a96e6172297e70",
+      "fda:94c4d34aa2390044fdf66984084f5a8c7af2b4a6305b88e6a2481fce4d71eaf5",
+      "fda:b264f4c49f7d5e19765de65cea06e6f90f914b1abdddbdf23afb7076d2ebcef5",
+      "fda:c0465faa1cc889a84a1f1fb402e2e694dd2cc7e1513b60b7b28c02a54a685f8c",
+      "fda:c3167e12276e3ebf33b7351985c361ccbeed16c2eb0868c6352f61084479ae50",
+      "fda:d2ad7c6e295ab118cf050b061c0e1395c0581ee548537399876309fb426b2b96",
+      "fda:d3b6759ab66d466d2be122f7364661b9e8bbafb4b0b4cd01be77dd94b3c589fc",
+      "fda:d6b1dc8f321e0feab1dc6cb26d54ec94b84fa22cc91a421a6525bf9307749581",
+      "fda:d75b813d80bc14577256b2b4a4539953fb4612713e500a2ae7453d96b73dfafa",
+      "fda:da83a5712d78dce5b8dede7d588c5f0715dd16d36dfb09b89d94f24a2089b7d2",
+      "fda:f4811dc95cbd461062060d96a9c7971ce45f4d66e7d388604d4f330724b85d97",
+      "fda:f74874424140f9f7829a93fe29a642ead24b2c5cdd13613a318361bf4cdef968"
+    ],
+    "expected_daily_demand": 4,
+    "initial_usable": 60,
+    "total_received": 40,
+    "total_served": 56,
+    "total_unmet": 0,
+    "shortage_days": 0,
+    "longest_shortage_run": 0,
+    "projected_stockout_date": null,
+    "right_censored": false,
+    "ending_buffer_days": 11.0,
+    "points": [
+      {
+        "day": "2023-07-24",
+        "opening_physical": 80,
+        "expired_physical": 0,
+        "opening_usable": 60,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 56,
+        "closing_physical": 76,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 14.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 76,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 56,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-07-25",
+        "opening_physical": 76,
+        "expired_physical": 0,
+        "opening_usable": 56,
+        "received": 40,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 92,
+        "closing_physical": 112,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 23.0,
+        "received_shipment_ids": [
+          "ship-north"
+        ],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 76,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 56,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 36,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 36,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-07-26",
+        "opening_physical": 112,
+        "expired_physical": 0,
+        "opening_usable": 92,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 88,
+        "closing_physical": 108,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 22.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 76,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 56,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 32,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 32,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-07-27",
+        "opening_physical": 108,
+        "expired_physical": 0,
+        "opening_usable": 88,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 84,
+        "closing_physical": 104,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 21.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 76,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 56,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 28,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 28,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-07-28",
+        "opening_physical": 104,
+        "expired_physical": 0,
+        "opening_usable": 84,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 80,
+        "closing_physical": 100,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 20.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 76,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 56,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 24,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 24,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-07-29",
+        "opening_physical": 100,
+        "expired_physical": 0,
+        "opening_usable": 80,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 76,
+        "closing_physical": 96,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 19.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 76,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 56,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 20,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 20,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-07-30",
+        "opening_physical": 96,
+        "expired_physical": 0,
+        "opening_usable": 76,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 72,
+        "closing_physical": 92,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 18.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 76,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 56,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 16,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 16,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-07-31",
+        "opening_physical": 92,
+        "expired_physical": 0,
+        "opening_usable": 72,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 68,
+        "closing_physical": 88,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 17.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 76,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 56,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 12,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 12,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-08-01",
+        "opening_physical": 88,
+        "expired_physical": 0,
+        "opening_usable": 68,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 64,
+        "closing_physical": 84,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 16.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 76,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 56,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 8,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 8,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-08-02",
+        "opening_physical": 84,
+        "expired_physical": 0,
+        "opening_usable": 64,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 60,
+        "closing_physical": 80,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 15.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 76,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 56,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 4,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 4,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-08-03",
+        "opening_physical": 80,
+        "expired_physical": 0,
+        "opening_usable": 60,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 56,
+        "closing_physical": 76,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 14.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 76,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 56,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 0,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 0,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-08-04",
+        "opening_physical": 76,
+        "expired_physical": 0,
+        "opening_usable": 56,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 52,
+        "closing_physical": 72,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 13.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 72,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 52,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 0,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 0,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-08-05",
+        "opening_physical": 72,
+        "expired_physical": 0,
+        "opening_usable": 52,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 48,
+        "closing_physical": 68,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 12.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 68,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 48,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 0,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 0,
+            "quarantined": false
+          }
+        ]
+      },
+      {
+        "day": "2023-08-06",
+        "opening_physical": 68,
+        "expired_physical": 0,
+        "opening_usable": 48,
+        "received": 0,
+        "demand": 4,
+        "served": 4,
+        "unmet": 0,
+        "closing_usable": 44,
+        "closing_physical": 64,
+        "reserved": 20,
+        "quarantined": 0,
+        "buffer_days": 11.0,
+        "received_shipment_ids": [],
+        "lots": [
+          {
+            "lot_id": "FICTIONAL-LOT-north",
+            "on_hand": 64,
+            "reserved": 20,
+            "expiry_date": "2023-09-30",
+            "available": 44,
+            "quarantined": false
+          },
+          {
+            "lot_id": "arrival:ship-north",
+            "on_hand": 0,
+            "reserved": 0,
+            "expiry_date": "2023-08-24",
+            "available": 0,
+            "quarantined": false
+          }
+        ]
+      }
+    ],
+    "shipment_risks": [
+      {
+        "schema_version": "3.0",
+        "algorithm_version": "pharmax-risk-v1",
+        "analysis_id": "dc048173863c2ff242e67a7a80990f1d578b9ef80ed59148be146d866b21e786",
+        "dataset_version": "6a4a8d083742ed7ef0d8a2b1090898f5ab655f0b5b179701c20c8260ba377819",
+        "kind": "derived",
+        "input_evidence_ids": [
+          "sim:32d2669c090c9af9d35bdbf23d9910c1a2eda8269c747f2c1d4396805efff307",
+          "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+          "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+          "sim:83c0c47318c53faa9bf9bf32457c7a376a47b58218bac581d06c21c9db9f5f43",
+          "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+          "sim:e02e0e40ec57e3a39cfbc7414fa691bfa0c81339d16250bef6719ec0ed5579af"
+        ],
+        "assumptions": [
+          "Baseline counterfactual ignores modeled holds; disruption case honors them.",
+          "Eligible scheduled arrivals and override releases are simulated, not confirmed physical deliveries.",
+          "POs do not create additional arrivals. Past-due schedules are never recredited to starting inventory."
+        ],
+        "limitations": [
+          "No linkage to the real Rocky Mount event is inferred. Supplier origin is a simulated relationship."
+        ],
+        "as_of": "2023-07-24",
+        "scenario": "disruption",
+        "overlay_version": null,
+        "shipment_id": "ship-north",
+        "supplier_id": "sim-lakes",
+        "hospital_id": "sim-north",
+        "product_id": "sim-carboplatin-450",
+        "quantity": 40,
+        "quantity_unit": "vial",
+        "original_status": "in_transit",
+        "scheduled_arrival": "2023-07-25",
+        "modeled_arrival": "2023-07-25",
+        "arrival_basis": "modeled_schedule",
+        "delay_days": 0,
+        "linked_simulated_event_ids": [],
+        "rating": {
+          "dimension": "shipment",
+          "level": "Low",
+          "rule_id": "shipment.modeled_schedule_on_time",
+          "explanation": "modeled_schedule; original status=in_transit; modeled arrival=2023-07-25.",
+          "measurements": {
+            "quantity_vials": 40.0,
+            "delay_days": 0.0,
+            "overdue_days": 0.0
+          },
+          "evidence_ids": [
+            "sim:32d2669c090c9af9d35bdbf23d9910c1a2eda8269c747f2c1d4396805efff307",
+            "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+            "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+            "sim:83c0c47318c53faa9bf9bf32457c7a376a47b58218bac581d06c21c9db9f5f43",
+            "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+            "sim:e02e0e40ec57e3a39cfbc7414fa691bfa0c81339d16250bef6719ec0ed5579af"
+          ],
+          "limitations": [
+            "Rule-based scenario review priority; not clinically or predictively calibrated."
+          ]
+        },
+        "input_values": {
+          "approved": true,
+          "handling_compatible": true,
+          "temperature_min_c": 20.0,
+          "temperature_max_c": 25.0,
+          "protects_from_light": true,
+          "product_storage_min_c": 20.0,
+          "product_storage_max_c": 25.0,
+          "product_requires_light_protection": true,
+          "hospital_storage_min_c": 20.0,
+          "hospital_storage_max_c": 25.0,
+          "hospital_protects_from_light": true,
+          "order_quantity_vials": 40,
+          "supplier_country": "USA",
+          "purchase_order_id": "po-north",
+          "expected_delivery": "2023-07-25"
+        }
+      }
+    ]
+  },
+  "rating": {
+    "dimension": "hospital",
+    "level": "Low",
+    "rule_id": "hospital.no_unmet_and_buffer_at_least_3_days",
+    "explanation": "0 vials unmet over 0 days in the modeled horizon; first unmet-demand date=None.",
+    "measurements": {
+      "unmet_vials": 0.0,
+      "shortage_days": 0.0,
+      "minimum_closing_buffer_days": 11.0
+    },
+    "evidence_ids": [
+      "sim:130b3e1decb9d22a4a785e293625d55230fae9d989995494d164a34b5a516f34",
+      "sim:32d2669c090c9af9d35bdbf23d9910c1a2eda8269c747f2c1d4396805efff307",
+      "sim:3b2a65123bd2b6786307a841a57e56c9219eec209ccdc3c518d7b9ac3a0e801e",
+      "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+      "sim:4b73ac8a49f72d13e98d063f7a7409dade221e5718e8cb61bc0fb6549a92fc7b",
+      "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+      "sim:656056b4036bcd3e61b8122780bf208c6606670f7ad5c3ff189611a28e1e87f7",
+      "sim:83c0c47318c53faa9bf9bf32457c7a376a47b58218bac581d06c21c9db9f5f43",
+      "sim:8c74820a60e14194f6d81ac6f2c63e3d3f6eef9f59b6b49894ed14fe8a2c62ca",
+      "sim:8ff2610e51bc7d4959e89efb8bfccfe612b765c0dda4b09a1f82cfc5f48fd100",
+      "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+      "sim:b02dbc6d6eff38fe8726531154528d05cd3a287bd8cd2cb1c55308a70c6b27ee",
+      "sim:e02e0e40ec57e3a39cfbc7414fa691bfa0c81339d16250bef6719ec0ed5579af",
+      "sim:fa56988bcc4740c5dcdb6d09aacb5cee0dd971d4a582c9cd1fd1711e1f85a774"
+    ],
+    "limitations": [
+      "Rule-based scenario review priority; not clinically or predictively calibrated."
+    ]
+  },
+  "supplier_ratings": {
+    "sim-lakes": {
+      "dimension": "supplier",
+      "level": "Low",
+      "rule_id": "supplier.maximum_shipment_level",
+      "explanation": "Maximum rule level among this hospital/product supplier shipments; independent of hospital availability.",
+      "measurements": {
+        "shipment_count": 1.0
+      },
+      "evidence_ids": [
+        "sim:32d2669c090c9af9d35bdbf23d9910c1a2eda8269c747f2c1d4396805efff307",
+        "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+        "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+        "sim:83c0c47318c53faa9bf9bf32457c7a376a47b58218bac581d06c21c9db9f5f43",
+        "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+        "sim:e02e0e40ec57e3a39cfbc7414fa691bfa0c81339d16250bef6719ec0ed5579af"
+      ],
+      "limitations": [
+        "Rule-based scenario review priority; not clinically or predictively calibrated."
+      ]
+    }
+  }
+}

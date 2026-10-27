@@ -1,0 +1,116 @@
+{
+  "$defs": {
+    "ClinicalAllocation": {
+      "additionalProperties": false,
+      "properties": {
+        "allocated": {
+          "minimum": 0,
+          "title": "Allocated",
+          "type": "integer"
+        },
+        "session_id": {
+          "title": "Session Id",
+          "type": "string"
+        },
+        "uncovered": {
+          "minimum": 0,
+          "title": "Uncovered",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "session_id",
+        "allocated",
+        "uncovered"
+      ],
+      "title": "ClinicalAllocation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "allocations": {
+      "items": {
+        "$ref": "#/$defs/ClinicalAllocation"
+      },
+      "title": "Allocations",
+      "type": "array"
+    },
+    "analysis_id": {
+      "title": "Analysis Id",
+      "type": "string"
+    },
+    "case": {
+      "enum": [
+        "baseline",
+        "disruption",
+        "mitigation"
+      ],
+      "title": "Case",
+      "type": "string"
+    },
+    "classification": {
+      "const": "calculated-from-synthetic-schedules",
+      "default": "calculated-from-synthetic-schedules",
+      "title": "Classification",
+      "type": "string"
+    },
+    "exposed_sessions": {
+      "title": "Exposed Sessions",
+      "type": "integer"
+    },
+    "first_unmet_on": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "First Unmet On"
+    },
+    "hospital_id": {
+      "title": "Hospital Id",
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "schedule_version": {
+      "const": "synthetic-schedule-v1",
+      "default": "synthetic-schedule-v1",
+      "title": "Schedule Version",
+      "type": "string"
+    },
+    "services": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Services",
+      "type": "array"
+    },
+    "unique_exposed_patients": {
+      "title": "Unique Exposed Patients",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "case",
+    "hospital_id",
+    "unique_exposed_patients",
+    "exposed_sessions",
+    "first_unmet_on",
+    "services",
+    "allocations",
+    "analysis_id",
+    "limitations"
+  ],
+  "title": "ClinicalImpact",
+  "type": "object"
+}

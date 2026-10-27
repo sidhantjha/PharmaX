@@ -1,0 +1,427 @@
+{
+  "classification": "usable_with_assumptions",
+  "errors": [],
+  "excluded_lots": [],
+  "feeds": [
+    {
+      "actual_fields": [
+        "facility_id",
+        "local_sku",
+        "manufacturer_code",
+        "ndc",
+        "volume_ml",
+        "strength_mg_ml",
+        "total_mg",
+        "base_unit",
+        "case_bags",
+        "account_id",
+        "supplier_id"
+      ],
+      "classification": "synthetic ERP export; actual local ingestion",
+      "last_update": "2026-10-26T21:20:58.285531+00:00",
+      "live_access": "Unverified; partner read-only export/view and owner approval required.",
+      "missing_fields": [],
+      "owner": "Pharmacy item-master steward",
+      "records": 3,
+      "required_fields": [
+        "facility_id",
+        "local_sku",
+        "manufacturer_code",
+        "ndc",
+        "volume_ml",
+        "strength_mg_ml",
+        "total_mg",
+        "base_unit",
+        "case_bags",
+        "account_id",
+        "supplier_id"
+      ],
+      "sha256": "65e2084e983429445c6bd3c8185095a8f77215ffeae3dba06703118c0c6dcdf1",
+      "source": "catalog",
+      "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/catalog.csv"
+    },
+    {
+      "actual_fields": [
+        "record_id",
+        "facility_id",
+        "local_sku",
+        "snapshot_at",
+        "lot_id",
+        "on_hand",
+        "reserved",
+        "unit",
+        "expires_on",
+        "quality"
+      ],
+      "classification": "synthetic ERP export; actual local ingestion",
+      "last_update": "2026-10-26T21:20:58.285531+00:00",
+      "live_access": "Unverified; partner read-only export/view and owner approval required.",
+      "missing_fields": [],
+      "owner": "Pharmacy inventory control",
+      "records": 3,
+      "required_fields": [
+        "record_id",
+        "facility_id",
+        "local_sku",
+        "snapshot_at",
+        "lot_id",
+        "on_hand",
+        "reserved",
+        "unit",
+        "expires_on",
+        "quality"
+      ],
+      "sha256": "3c5def4dd7147cde5ce0886b4a92035ca6d6c80035952336813ebbe10721c4c9",
+      "source": "inventory",
+      "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/inventory.csv"
+    },
+    {
+      "actual_fields": [
+        "record_id",
+        "facility_id",
+        "local_sku",
+        "day",
+        "quantity",
+        "unit"
+      ],
+      "classification": "synthetic ERP export; actual local ingestion",
+      "last_update": "2026-10-26T21:20:58.285531+00:00",
+      "live_access": "Unverified; partner read-only export/view and owner approval required.",
+      "missing_fields": [],
+      "owner": "Pharmacy dispensing analytics",
+      "records": 21,
+      "required_fields": [
+        "record_id",
+        "facility_id",
+        "local_sku",
+        "day",
+        "quantity",
+        "unit"
+      ],
+      "sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+      "source": "consumption",
+      "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv"
+    },
+    {
+      "actual_fields": [
+        "record_id",
+        "facility_id",
+        "local_sku",
+        "account_id",
+        "supplier_id",
+        "line_id",
+        "quantity",
+        "unit",
+        "ordered_on",
+        "expected_on"
+      ],
+      "classification": "synthetic ERP export; actual local ingestion",
+      "last_update": "2026-10-26T21:20:58.285531+00:00",
+      "live_access": "Unverified; partner read-only export/view and owner approval required.",
+      "missing_fields": [],
+      "owner": "Purchasing / materials management",
+      "records": 3,
+      "required_fields": [
+        "record_id",
+        "facility_id",
+        "local_sku",
+        "account_id",
+        "supplier_id",
+        "line_id",
+        "quantity",
+        "unit",
+        "ordered_on",
+        "expected_on"
+      ],
+      "sha256": "62af979ba80476d73b2043649c12fbfd0b55c383b9b336db93f8ab31db3ea89d",
+      "source": "purchase_orders",
+      "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchase_orders.csv"
+    },
+    {
+      "actual_fields": [
+        "record_id",
+        "po_id",
+        "facility_id",
+        "local_sku",
+        "account_id",
+        "line_id",
+        "revision",
+        "quantity",
+        "unit",
+        "status",
+        "expected_on"
+      ],
+      "classification": "synthetic ERP export; actual local ingestion",
+      "last_update": "2026-10-26T21:20:58.285531+00:00",
+      "live_access": "Unverified; partner read-only export/view and owner approval required.",
+      "missing_fields": [],
+      "owner": "Purchasing / materials management",
+      "records": 2,
+      "required_fields": [
+        "record_id",
+        "facility_id",
+        "local_sku",
+        "account_id",
+        "po_id",
+        "line_id",
+        "revision",
+        "status",
+        "quantity",
+        "unit",
+        "expected_on"
+      ],
+      "sha256": "dd7eaee16dbd63b060e8375ae612322edc3e73295a81905949523d92edad64d4",
+      "source": "acknowledgments",
+      "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/acknowledgments.csv"
+    },
+    {
+      "actual_fields": [
+        "record_id",
+        "po_id",
+        "facility_id",
+        "local_sku",
+        "account_id",
+        "line_id",
+        "revision",
+        "quantity",
+        "unit",
+        "dispatched_on",
+        "arrival_on",
+        "status"
+      ],
+      "classification": "synthetic ERP export; actual local ingestion",
+      "last_update": "2026-10-26T21:20:58.285531+00:00",
+      "live_access": "Unverified; partner read-only export/view and owner approval required.",
+      "missing_fields": [],
+      "owner": "Purchasing / materials management",
+      "records": 2,
+      "required_fields": [
+        "record_id",
+        "facility_id",
+        "local_sku",
+        "account_id",
+        "po_id",
+        "line_id",
+        "revision",
+        "quantity",
+        "unit",
+        "dispatched_on",
+        "arrival_on",
+        "status"
+      ],
+      "sha256": "1260beb8c0862e124c16ebae060cb327011a6855cad80371d099ce274d012f0c",
+      "source": "shipments",
+      "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/shipments.csv"
+    },
+    {
+      "actual_fields": [
+        "facility_id",
+        "name",
+        "state",
+        "network_id",
+        "longitude",
+        "latitude"
+      ],
+      "classification": "synthetic ERP export; actual local ingestion",
+      "last_update": "2026-10-26T21:20:58.285531+00:00",
+      "live_access": "Unverified; partner read-only export/view and owner approval required.",
+      "missing_fields": [],
+      "owner": "Health-system administration",
+      "records": 3,
+      "required_fields": [
+        "facility_id",
+        "name",
+        "state",
+        "network_id"
+      ],
+      "sha256": "3b622257b4e68805806ed3e83ea71877a53c7430217fb6861a2f097ef27cb9f7",
+      "source": "facilities",
+      "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/facilities.csv"
+    },
+    {
+      "actual_fields": [
+        "facility_id",
+        "supplier_id",
+        "account_id",
+        "approved",
+        "transfers_allowed"
+      ],
+      "classification": "synthetic ERP export; actual local ingestion",
+      "last_update": "2026-10-26T21:20:58.285531+00:00",
+      "live_access": "Unverified; partner read-only export/view and owner approval required.",
+      "missing_fields": [],
+      "owner": "Supply-chain contracting",
+      "records": 3,
+      "required_fields": [
+        "facility_id",
+        "supplier_id",
+        "account_id",
+        "approved",
+        "transfers_allowed"
+      ],
+      "sha256": "607a37ce49bb820bfa69b43f7de2598ce352c2454b8996333b04c2b297b0a22b",
+      "source": "suppliers",
+      "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/suppliers.csv"
+    },
+    {
+      "actual_fields": [
+        "record_id",
+        "facility_id",
+        "local_sku",
+        "account_id",
+        "period_start",
+        "period_end",
+        "quantity",
+        "returned",
+        "unit"
+      ],
+      "classification": "synthetic ERP export; actual local ingestion",
+      "last_update": "2026-10-26T21:20:58.285531+00:00",
+      "live_access": "Unverified; partner read-only export/view and owner approval required.",
+      "missing_fields": [],
+      "owner": "Purchasing / materials management",
+      "records": 18,
+      "required_fields": [
+        "record_id",
+        "facility_id",
+        "local_sku",
+        "period_start",
+        "period_end",
+        "quantity",
+        "returned",
+        "unit"
+      ],
+      "sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+      "source": "purchasing",
+      "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv"
+    }
+  ],
+  "hospitals": [
+    {
+      "facility_id": "sim-nc-central",
+      "mapping_coverage": 1,
+      "missing_records": [],
+      "supports_forecast": true,
+      "unresolved_identifiers": []
+    },
+    {
+      "facility_id": "sim-nc-north",
+      "mapping_coverage": 1,
+      "missing_records": [],
+      "supports_forecast": true,
+      "unresolved_identifiers": []
+    },
+    {
+      "facility_id": "sim-nc-south",
+      "mapping_coverage": 1,
+      "missing_records": [],
+      "supports_forecast": true,
+      "unresolved_identifiers": []
+    }
+  ],
+  "identities": [
+    {
+      "canonical_ndc": "00338004904",
+      "classification": "usable_with_assumptions",
+      "failures": [],
+      "limitations": [
+        "Pack count is a synthetic item-master assertion, not verified manufacturer packaging.",
+        "Current public catalog is not proof of exact historical catalog custody."
+      ],
+      "manufacturer_code": "2B1324X",
+      "original": {
+        "container": "viaflex-bag",
+        "distributor_item": null,
+        "dosage_form": "injection",
+        "gs1_gtin": null,
+        "labeler": "Baxter",
+        "local_sku": "IV-NS1L",
+        "manufacturer": "Baxter",
+        "manufacturer_code": "2B1324X",
+        "mapping_reference": "synthetic-catalog-exact-presentation",
+        "name": "Baxter Sodium Chloride",
+        "ndc": "00338-0049-04",
+        "schema_version": "8.1",
+        "source_organization": "sim-nc-central",
+        "strength_mg_ml": 9,
+        "units_per_case": 12,
+        "volume_ml": 1000
+      },
+      "reference": "https://catalog.baxter.com/baxterUS/en/Products/Infusion-Therapies-%26-Technologies/IV-Solutions/0-9%25-Sodium-Chloride-Injection%2C-USP%2C-1000-mL-VIAFLEX-Plastic-Container/p/2B1324X",
+      "review_required": false,
+      "units_per_case": 12
+    },
+    {
+      "canonical_ndc": "00338004904",
+      "classification": "usable_with_assumptions",
+      "failures": [],
+      "limitations": [
+        "Pack count is a synthetic item-master assertion, not verified manufacturer packaging.",
+        "Current public catalog is not proof of exact historical catalog custody."
+      ],
+      "manufacturer_code": "2B1324X",
+      "original": {
+        "container": "viaflex-bag",
+        "distributor_item": null,
+        "dosage_form": "injection",
+        "gs1_gtin": null,
+        "labeler": "Baxter",
+        "local_sku": "SAL-1000",
+        "manufacturer": "Baxter",
+        "manufacturer_code": "2B1324X",
+        "mapping_reference": "synthetic-catalog-exact-presentation",
+        "name": "Baxter Sodium Chloride",
+        "ndc": "00338-0049-04",
+        "schema_version": "8.1",
+        "source_organization": "sim-nc-north",
+        "strength_mg_ml": 9,
+        "units_per_case": 12,
+        "volume_ml": 1000
+      },
+      "reference": "https://catalog.baxter.com/baxterUS/en/Products/Infusion-Therapies-%26-Technologies/IV-Solutions/0-9%25-Sodium-Chloride-Injection%2C-USP%2C-1000-mL-VIAFLEX-Plastic-Container/p/2B1324X",
+      "review_required": false,
+      "units_per_case": 12
+    },
+    {
+      "canonical_ndc": "00338004904",
+      "classification": "usable_with_assumptions",
+      "failures": [],
+      "limitations": [
+        "Pack count is a synthetic item-master assertion, not verified manufacturer packaging.",
+        "Current public catalog is not proof of exact historical catalog custody."
+      ],
+      "manufacturer_code": "2B1324X",
+      "original": {
+        "container": "viaflex-bag",
+        "distributor_item": null,
+        "dosage_form": "injection",
+        "gs1_gtin": null,
+        "labeler": "Baxter",
+        "local_sku": "NACL009-L",
+        "manufacturer": "Baxter",
+        "manufacturer_code": "2B1324X",
+        "mapping_reference": "synthetic-catalog-exact-presentation",
+        "name": "Baxter Sodium Chloride",
+        "ndc": "00338-0049-04",
+        "schema_version": "8.1",
+        "source_organization": "sim-nc-south",
+        "strength_mg_ml": 9,
+        "units_per_case": 12,
+        "volume_ml": 1000
+      },
+      "reference": "https://catalog.baxter.com/baxterUS/en/Products/Infusion-Therapies-%26-Technologies/IV-Solutions/0-9%25-Sodium-Chloride-Injection%2C-USP%2C-1000-mL-VIAFLEX-Plastic-Container/p/2B1324X",
+      "review_required": false,
+      "units_per_case": 12
+    }
+  ],
+  "limitations": [
+    "Hospital, distributor and lot records are fictional; local import is real.",
+    "Public manufacturer evidence remains separate from ERP assertions.",
+    "Live hospital access and live Zetaris federation are unverified.",
+    "Minimum partner access: read-only item master, lot inventory, dispensing history, open orders.",
+    "Optional: receiving, supplier acknowledgment and shipment feeds; pharmacy and IT approval required.",
+    "CSV contract is the default; existing FHIR R5 snapshot subset remains available; no generic EDI support."
+  ],
+  "schema_version": "8.1",
+  "supports_forecast": true
+}

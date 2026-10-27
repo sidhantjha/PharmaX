@@ -1,0 +1,89 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "hospital_id": {
+      "title": "Hospital Id",
+      "type": "string"
+    },
+    "previous_analysis_id": {
+      "title": "Previous Analysis Id",
+      "type": "string"
+    },
+    "previous_first_unmet": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Previous First Unmet"
+    },
+    "previous_mitigated_unmet": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Previous Mitigated Unmet"
+    },
+    "previous_unmet_vials": {
+      "title": "Previous Unmet Vials",
+      "type": "integer"
+    },
+    "revised_analysis_id": {
+      "title": "Revised Analysis Id",
+      "type": "string"
+    },
+    "revised_first_unmet": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Revised First Unmet"
+    },
+    "revised_mitigated_unmet": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Revised Mitigated Unmet"
+    },
+    "revised_unmet_vials": {
+      "title": "Revised Unmet Vials",
+      "type": "integer"
+    },
+    "unmet_delta": {
+      "title": "Unmet Delta",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "hospital_id",
+    "previous_analysis_id",
+    "revised_analysis_id",
+    "previous_unmet_vials",
+    "revised_unmet_vials",
+    "unmet_delta",
+    "previous_first_unmet",
+    "revised_first_unmet",
+    "previous_mitigated_unmet",
+    "revised_mitigated_unmet"
+  ],
+  "title": "ForecastDelta",
+  "type": "object"
+}

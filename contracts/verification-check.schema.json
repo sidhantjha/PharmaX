@@ -1,0 +1,46 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "check": {
+      "enum": [
+        "identity",
+        "document_support",
+        "dates",
+        "corroboration",
+        "contradictions",
+        "operational_relevance"
+      ],
+      "title": "Check",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "explanation": {
+      "title": "Explanation",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "supported",
+        "limited",
+        "unsupported",
+        "unavailable"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "check",
+    "status",
+    "explanation",
+    "evidence_ids"
+  ],
+  "title": "VerificationCheck",
+  "type": "object"
+}

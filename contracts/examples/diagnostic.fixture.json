@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "product": "PharmaX",
+  "checked_at": "2026-10-23T00:00:00Z",
+  "mode": "fixture",
+  "checks": [
+    {
+      "name": "repository",
+      "status": "PASS",
+      "detail": "pivot/pharmax-foundation @ 08839ac2be3f; dirty=True; Python 3.12.3; virtualenv=True",
+      "evidence_ids": [],
+      "record_count": 0
+    },
+    {
+      "name": "zetaris",
+      "status": "BLOCKED",
+      "detail": "Offline fixture mode; no connection attempted.",
+      "evidence_ids": [],
+      "record_count": 0
+    },
+    {
+      "name": "nightshift/nemotron",
+      "status": "BLOCKED",
+      "detail": "Offline fixture mode; no model activity.",
+      "evidence_ids": [],
+      "record_count": 0
+    },
+    {
+      "name": "meterless engine",
+      "status": "BLOCKED",
+      "detail": "Archived H-MEM reference requires Node 22.22+. Engine bridge not ported or validated in PharmaX.",
+      "evidence_ids": [],
+      "record_count": 0
+    },
+    {
+      "name": "fda",
+      "status": "PASS",
+      "detail": "1 records (fixture).",
+      "evidence_ids": [
+        "fda:83591599ad1a3ba5e32e2eea2685f4c839acc41cd0f808737659cccfda9e84c3"
+      ],
+      "record_count": 1
+    },
+    {
+      "name": "comtrade",
+      "status": "PASS",
+      "detail": "1 records (fixture). HS 30; US reporter 842; world partner 0; imports; 2023; aggregate USD, not shipments.",
+      "evidence_ids": [
+        "comtrade:655f03ad5f5bda042510240143601de03cff8716dde435e6be6f345b8a2c1e89"
+      ],
+      "record_count": 1
+    }
+  ],
+  "shortages": [
+    {
+      "record_id": "fda:83591599ad1a3ba5e32e2eea2685f4c839acc41cd0f808737659cccfda9e84c3",
+      "generic_name": "FICTIONAL fixture medicine",
+      "package_ndc": "fixture-only",
+      "company": null,
+      "status": "Current",
+      "availability": null,
+      "presentation": null,
+      "evidence": {
+        "evidence_id": "fda:83591599ad1a3ba5e32e2eea2685f4c839acc41cd0f808737659cccfda9e84c3",
+        "kind": "simulated",
+        "source": "fda",
+        "source_record_id": "fixture-only",
+        "source_url": "https://api.fda.gov/drug/shortages.json?limit=1",
+        "observed_at": "2026-10-23T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "83591599ad1a3ba5e32e2eea2685f4c839acc41cd0f808737659cccfda9e84c3",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic offline fixture; no live retrieval."
+      }
+    }
+  ],
+  "trade_flows": [
+    {
+      "record_id": "comtrade:655f03ad5f5bda042510240143601de03cff8716dde435e6be6f345b8a2c1e89",
+      "hs_code": "30",
+      "classification": "H6",
+      "period": "2023",
+      "reporter_code": 842,
+      "partner_code": 0,
+      "flow": "M",
+      "value_usd": 123.0,
+      "is_aggregate": true,
+      "is_reported": false,
+      "evidence": {
+        "evidence_id": "comtrade:655f03ad5f5bda042510240143601de03cff8716dde435e6be6f345b8a2c1e89",
+        "kind": "simulated",
+        "source": "comtrade",
+        "source_record_id": "C|A|H6|2023|842|0||30|M||",
+        "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+        "observed_at": "2026-10-23T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "655f03ad5f5bda042510240143601de03cff8716dde435e6be6f345b8a2c1e89",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic offline fixture; no live retrieval."
+      }
+    }
+  ],
+  "events": [
+    {
+      "event_id": "07002e86-8c33-4a9a-8410-953987da9305",
+      "timestamp": "2026-10-24T02:40:08.849648Z",
+      "mode": "fixture",
+      "operation": "fda.sample.started",
+      "status": "PASS",
+      "request_id": "fda",
+      "evidence_ids": [],
+      "duration_ms": 0,
+      "model_id": null,
+      "tokens": {},
+      "error_code": null
+    },
+    {
+      "event_id": "7bbb5345-cb56-4288-9162-606c109965d7",
+      "timestamp": "2026-10-24T02:40:08.855485Z",
+      "mode": "fixture",
+      "operation": "fda.sample",
+      "status": "PASS",
+      "request_id": "fda",
+      "evidence_ids": [
+        "fda:83591599ad1a3ba5e32e2eea2685f4c839acc41cd0f808737659cccfda9e84c3"
+      ],
+      "duration_ms": 6,
+      "model_id": null,
+      "tokens": {},
+      "error_code": null
+    },
+    {
+      "event_id": "327d42eb-af8a-4dab-924e-92a1de74c5d1",
+      "timestamp": "2026-10-24T02:40:08.887203Z",
+      "mode": "fixture",
+      "operation": "comtrade.sample.started",
+      "status": "PASS",
+      "request_id": "comtrade",
+      "evidence_ids": [],
+      "duration_ms": 0,
+      "model_id": null,
+      "tokens": {},
+      "error_code": null
+    },
+    {
+      "event_id": "19bbed60-4549-490f-b62f-2e840efba2de",
+      "timestamp": "2026-10-24T02:40:08.914228Z",
+      "mode": "fixture",
+      "operation": "comtrade.sample",
+      "status": "PASS",
+      "request_id": "comtrade",
+      "evidence_ids": [
+        "comtrade:655f03ad5f5bda042510240143601de03cff8716dde435e6be6f345b8a2c1e89"
+      ],
+      "duration_ms": 27,
+      "model_id": null,
+      "tokens": {},
+      "error_code": null
+    }
+  ],
+  "repository": {
+    "branch": "example-only",
+    "commit": "0000000000000000000000000000000000000000",
+    "dirty": false,
+    "python": "3.12",
+    "virtualenv": true
+  }
+}

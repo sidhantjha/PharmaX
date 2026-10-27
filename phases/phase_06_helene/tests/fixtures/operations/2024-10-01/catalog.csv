@@ -1,0 +1,4 @@
+facility_id,local_sku,manufacturer_code,ndc,volume_ml,strength_mg_ml,total_mg,base_unit,case_bags,account_id,supplier_id
+sim-nc-central,IV-NS1L,2B1324X,00338-0049-04,1000,9,9000,bag,12,sim-account-central,sim-baxter-channel
+sim-nc-north,SAL-1000,2B1324X,00338-0049-04,1000,9,9000,bag,12,sim-account-north,sim-baxter-channel
+sim-nc-south,NACL009-L,2B1324X,00338-0049-04,1000,9,9000,bag,12,sim-account-south,sim-baxter-channel

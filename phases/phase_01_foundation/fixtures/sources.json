@@ -1,0 +1,8 @@
+{
+  "label": "SYNTHETIC OFFLINE FIXTURE — no live retrieval or real medicine claim",
+  "observed_at": "2026-10-23T00:00:00+00:00",
+  "fda_url": "https://api.fda.gov/drug/shortages.json?limit=1",
+  "comtrade_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "fda": [{"generic_name": "FICTIONAL fixture medicine", "package_ndc": "fixture-only", "status": "Current", "availability": null, "initial_posting_date": null}],
+  "comtrade": [{"typeCode": "C", "freqCode": "A", "cmdCode": "30", "period": "2023", "classificationCode": "H6", "reporterCode": 842, "partnerCode": 0, "flowCode": "M", "primaryValue": 123.0, "isAggregate": true, "isReported": false}]
+}

@@ -1,0 +1,51 @@
+{
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "partial",
+  "genuinely_completed": 9,
+  "roles": {
+    "coordinator": "not_attempted",
+    "news": "complete",
+    "verification": "complete",
+    "dependency": "complete",
+    "trade": "complete",
+    "disruption": "complete",
+    "hospital": "failed",
+    "mitigation": "complete",
+    "feasibility": "complete",
+    "memory": "complete",
+    "clinical": "complete",
+    "actions": "failed"
+  },
+  "actual_model_posts": 25,
+  "actual_upstream_attempts": null,
+  "budget": {
+    "logical_turns_reserved": 25,
+    "possible_upstream_attempts_reserved": 75,
+    "started_at_utc": "2026-10-27T19:08:56.131884+00:00",
+    "actual_upstream_attempts": null,
+    "application_retries": 0,
+    "reported_or_reserved_tokens": 51375,
+    "unmeasured_failed_tokens_reserved": 0,
+    "elapsed_seconds": 366.682,
+    "max_logical_turns": 36,
+    "max_possible_upstream_attempts": 108,
+    "max_concurrent_logical_requests": 2,
+    "max_output_tokens_per_turn": 1024,
+    "max_reported_logical_tokens": 90000,
+    "max_turns_per_role": 3,
+    "rate_limit_envelopes_per_minute": 12,
+    "limitation": "Failed internal-retry token usage and exact attempts are not exposed by Nightshift; token guard covers logical submitted/reported usage, not unobservable retry tokens."
+  },
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+  "hmem_influence": true,
+  "application_retry_count": 0,
+  "finalized_at": "2026-10-27T19:15:02.823674+00:00",
+  "limitations": [
+    "Real current inference over reconstructed historical manufacturer documents and simulated hospital records",
+    "No clinical saline outcome estimates or physical action authority",
+    "Internal retry token usage is not exposed; no independent billing receipt"
+  ],
+  "further_inference_authorized": false
+}

@@ -1,0 +1,380 @@
+[
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/actions-model-tool-result.json",
+    "original_sha256": "9d011191213b1731257f005a99910e6e807935d636f9c595f6f9c2789795135e",
+    "published_sha256": "9d011191213b1731257f005a99910e6e807935d636f9c595f6f9c2789795135e",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/actions-original-validation.json",
+    "original_sha256": "72fcd2844ffb8430bd462394380ecfbb0ba7ee47427f0e915fd8211bcf545ed0",
+    "published_sha256": "72fcd2844ffb8430bd462394380ecfbb0ba7ee47427f0e915fd8211bcf545ed0",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/actions-tool.json",
+    "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "published_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/actions.json",
+    "original_sha256": "a6452c1ac390c0d0382bd1766549ecf68012a9fb2edaf62e9adca193ec693b36",
+    "published_sha256": "a6452c1ac390c0d0382bd1766549ecf68012a9fb2edaf62e9adca193ec693b36",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/audit.json",
+    "original_sha256": "efa697e474973be330a695422c9f18b513276722319449698bcc25b79a837904",
+    "published_sha256": "efa697e474973be330a695422c9f18b513276722319449698bcc25b79a837904",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/authorization.json",
+    "original_sha256": "350e4c5ec2cc87947b2eb6f2c74cc8323e6450c62e6bcc0341e600b73b234e45",
+    "published_sha256": "350e4c5ec2cc87947b2eb6f2c74cc8323e6450c62e6bcc0341e600b73b234e45",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/clinical-model-tool-result.json",
+    "original_sha256": "d295c19b978ea4334e6424a59c188c19dc0d5ac7ab384c0542215d60dfae9f87",
+    "published_sha256": "d295c19b978ea4334e6424a59c188c19dc0d5ac7ab384c0542215d60dfae9f87",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/clinical-tool.json",
+    "original_sha256": "d85cb48de1d9565f24b4009ca0f190eecae1659815b5f8c4c678134a71bbe452",
+    "published_sha256": "f13156b09c38d007146fad6481ff1fadbb34d3b0ea63faa4729ccaa51a5c0de8",
+    "changed": true
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/clinical.json",
+    "original_sha256": "d03a3dfc25dba8f148654b36579c70c00a7fc3aaceac971fd3435ce017180ed0",
+    "published_sha256": "d03a3dfc25dba8f148654b36579c70c00a7fc3aaceac971fd3435ce017180ed0",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/closed.json",
+    "original_sha256": "ea8121c11b7fe3aa94442bfd16f3e95f9a961b06460b319f68c87751fc9769fb",
+    "published_sha256": "ea8121c11b7fe3aa94442bfd16f3e95f9a961b06460b319f68c87751fc9769fb",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/coordinator-model-tool-result.json",
+    "original_sha256": "562d02f5af4df049e1a0ee6193d48342927ee5a2a37e89a7e8427a4e11501137",
+    "published_sha256": "562d02f5af4df049e1a0ee6193d48342927ee5a2a37e89a7e8427a4e11501137",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/coordinator-tool.json",
+    "original_sha256": "17c32a4fef351fc179ad98faad4b409250c6164ec29dd9c81cac0c7883504807",
+    "published_sha256": "b824c047f7cf4cc209e098be3b3b98cc4ec90fc70f8291c62326d83b83c41ff6",
+    "changed": true
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/coordinator.json",
+    "original_sha256": "04b8dbba1a9fee3249f1e12e7acf597ad3331221193d589dbdf94ac1bcb5db3f",
+    "published_sha256": "04b8dbba1a9fee3249f1e12e7acf597ad3331221193d589dbdf94ac1bcb5db3f",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/dependency-model-tool-result.json",
+    "original_sha256": "10044ccbcce074e906b5690c19d72ada16e99012693aefa65e77a28320bc1a7a",
+    "published_sha256": "10044ccbcce074e906b5690c19d72ada16e99012693aefa65e77a28320bc1a7a",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/dependency-original-validation.json",
+    "original_sha256": "2d845507ebbebee8274497b088e081e8c14877a3e164077bb0a4d9578c30f9a7",
+    "published_sha256": "2d845507ebbebee8274497b088e081e8c14877a3e164077bb0a4d9578c30f9a7",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/dependency-tool.json",
+    "original_sha256": "390a58f1150b0f15533236d743ef1a0dc9f3afce4efc68d752da3ddcdccd37d1",
+    "published_sha256": "8cf0ce566731400cc9759ef8ac5e8d85d23b28e540c45c69d4584586e49b24ae",
+    "changed": true
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/dependency.json",
+    "original_sha256": "2c083e3a447c710b989b92a596ab67a36154de849a4d9b0198342d13693b4104",
+    "published_sha256": "2c083e3a447c710b989b92a596ab67a36154de849a4d9b0198342d13693b4104",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/disruption-model-tool-result.json",
+    "original_sha256": "3e0368b7932fd8d10ef60bf0274e368ab57ffe8f6c572e85874f5c539890c717",
+    "published_sha256": "3e0368b7932fd8d10ef60bf0274e368ab57ffe8f6c572e85874f5c539890c717",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/disruption-tool.json",
+    "original_sha256": "0038597a2279abdeb30d0c58a66101d7661cabed68be01a8ed64562e911c52fc",
+    "published_sha256": "69e4357074667f9e6d2ea96cfd1ac15473ca7c1c44124596b797b8d5bc669630",
+    "changed": true
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/disruption.json",
+    "original_sha256": "ac4a4c5c462f7d84edc3035ce6cd0dbd42f1cd859615a2a7c60c5d2faff84cef",
+    "published_sha256": "ac4a4c5c462f7d84edc3035ce6cd0dbd42f1cd859615a2a7c60c5d2faff84cef",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/feasibility-model-tool-result.json",
+    "original_sha256": "bdba40466427fd25872f7c1ae160578997444d39a70048e5164a7388bd6e35c9",
+    "published_sha256": "bdba40466427fd25872f7c1ae160578997444d39a70048e5164a7388bd6e35c9",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/feasibility-tool.json",
+    "original_sha256": "73ddcd7ab71ef8eba045b8a5739df8c24fdd051747f31538da47b35a2c5f558a",
+    "published_sha256": "2121c06d71f9cd12f14b9777a2a5b2b6a2bca01804388db91c351cebd14f698e",
+    "changed": true
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/feasibility.json",
+    "original_sha256": "32e7742887be84b6efc3c71bce81827909ec68b80c7bfd480aecf0d26939ac47",
+    "published_sha256": "32e7742887be84b6efc3c71bce81827909ec68b80c7bfd480aecf0d26939ac47",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/hmem.json",
+    "original_sha256": "68f9468fd8002ab8245c83e3b0154e053a3b15c6985384b19f41ff12c0cf538c",
+    "published_sha256": "68f9468fd8002ab8245c83e3b0154e053a3b15c6985384b19f41ff12c0cf538c",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/hospital-model-tool-result.json",
+    "original_sha256": "6b17072f27c302dab08184bc47270b30df710158e13277992a572533be6d1316",
+    "published_sha256": "6b17072f27c302dab08184bc47270b30df710158e13277992a572533be6d1316",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/hospital-tool.json",
+    "original_sha256": "76894a26b5a7a57b2fcabe63df8e7bbb8b5e8f95d27a2141e792ad3ca568c73b",
+    "published_sha256": "192d28f87200a28e5ab8201b92bd7fdf7c32801f78ea94db1232f4eb2b015274",
+    "changed": true
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/hospital.json",
+    "original_sha256": "f0c884698060222635e69c4a4067140722c7dee55a0d8901d67d32fd34e6ff14",
+    "published_sha256": "f0c884698060222635e69c4a4067140722c7dee55a0d8901d67d32fd34e6ff14",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/memory-model-tool-result.json",
+    "original_sha256": "e1d5d31d02947c66200c5b5b4d1420b3fc0add4a095811e45ccd52a9c3243e33",
+    "published_sha256": "e1d5d31d02947c66200c5b5b4d1420b3fc0add4a095811e45ccd52a9c3243e33",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/memory-tool.json",
+    "original_sha256": "af581609b90b736f4b9944275bf32e1f2b49f95421e485eafc7808e368c008e1",
+    "published_sha256": "24aaa7a6875252e8e8b416c38380c92893a28473844fd358c3ae3bce0654072f",
+    "changed": true
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/memory.json",
+    "original_sha256": "11d71ed5f35c957ab9d7cb02995d5eefd795fee4356e09960397a40fdc191abb",
+    "published_sha256": "11d71ed5f35c957ab9d7cb02995d5eefd795fee4356e09960397a40fdc191abb",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/mitigation-model-tool-result.json",
+    "original_sha256": "f15cfa979891b435876b2932346736f887f2e8cce6ca02a5b059c765cc2e3c32",
+    "published_sha256": "f15cfa979891b435876b2932346736f887f2e8cce6ca02a5b059c765cc2e3c32",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/mitigation-tool.json",
+    "original_sha256": "17c32a4fef351fc179ad98faad4b409250c6164ec29dd9c81cac0c7883504807",
+    "published_sha256": "b824c047f7cf4cc209e098be3b3b98cc4ec90fc70f8291c62326d83b83c41ff6",
+    "changed": true
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/mitigation.json",
+    "original_sha256": "0b5b7c21594319af515fc1ccbcd543e4344c9e07dfc4e37ce877adbf2eba5e1a",
+    "published_sha256": "0b5b7c21594319af515fc1ccbcd543e4344c9e07dfc4e37ce877adbf2eba5e1a",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/news-model-tool-result.json",
+    "original_sha256": "b38769810a1b02b763c544ca2c2914bfa94ed5ecdea5f70732b5d48ce74d09de",
+    "published_sha256": "b38769810a1b02b763c544ca2c2914bfa94ed5ecdea5f70732b5d48ce74d09de",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/news-tool.json",
+    "original_sha256": "0038597a2279abdeb30d0c58a66101d7661cabed68be01a8ed64562e911c52fc",
+    "published_sha256": "69e4357074667f9e6d2ea96cfd1ac15473ca7c1c44124596b797b8d5bc669630",
+    "changed": true
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/news.json",
+    "original_sha256": "27df5e0178ae3b971faae7ce8dca0d3c7e3579ff97d41291fc37a23ca7ade649",
+    "published_sha256": "27df5e0178ae3b971faae7ce8dca0d3c7e3579ff97d41291fc37a23ca7ade649",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/segment-11-summary.json",
+    "original_sha256": "fcbe7f254408d0c442b566f5882ad2a611f81a87cc8f4a619ea2cfaa4c0f92bf",
+    "published_sha256": "fcbe7f254408d0c442b566f5882ad2a611f81a87cc8f4a619ea2cfaa4c0f92bf",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/segment-11-trace.json",
+    "original_sha256": "2990b543e6b0d3b3837c0f0b0ff3ccc0198481f9a99caa4be0810f243a8967fc",
+    "published_sha256": "2990b543e6b0d3b3837c0f0b0ff3ccc0198481f9a99caa4be0810f243a8967fc",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/segment-14-summary.json",
+    "original_sha256": "b7a12fc5b3a48a19240d571da85d15094c3e12bb2f0a35bd83bb3bee5a21186a",
+    "published_sha256": "b7a12fc5b3a48a19240d571da85d15094c3e12bb2f0a35bd83bb3bee5a21186a",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/segment-14-trace.json",
+    "original_sha256": "7f73e483dd60a53ae15dff69a93c19f566c8b472e5226d026cf85ff24dc04b3f",
+    "published_sha256": "7f73e483dd60a53ae15dff69a93c19f566c8b472e5226d026cf85ff24dc04b3f",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/segment-25-summary.json",
+    "original_sha256": "9374e6f1652f3de5c4908e9093d03a7bb795c72c72f76a43b31715f0b72338f4",
+    "published_sha256": "9374e6f1652f3de5c4908e9093d03a7bb795c72c72f76a43b31715f0b72338f4",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/segment-25-trace.json",
+    "original_sha256": "02f6d02f37170b3956a5f597402b4629a68af729adae6327e6333d08de0e19a6",
+    "published_sha256": "02f6d02f37170b3956a5f597402b4629a68af729adae6327e6333d08de0e19a6",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/status-api.json",
+    "original_sha256": "b82288e43903320742e5dccd55a921ca659f6a7a8d49be9dcf5c7fbe5e683e49",
+    "published_sha256": "b82288e43903320742e5dccd55a921ca659f6a7a8d49be9dcf5c7fbe5e683e49",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/summary.json",
+    "original_sha256": "da1f8015f3bca451376ae4b7faf35e59a56982a10f6c6c69d18429d9f1e907f4",
+    "published_sha256": "da1f8015f3bca451376ae4b7faf35e59a56982a10f6c6c69d18429d9f1e907f4",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/trace.json",
+    "original_sha256": "2905fb33aa4131429584c3039573aeff666776d30929de0d349a8adc8573e36e",
+    "published_sha256": "2905fb33aa4131429584c3039573aeff666776d30929de0d349a8adc8573e36e",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/trade-model-tool-result.json",
+    "original_sha256": "f34125101f3d0bdb1d023510bec69a35f9908aee848e25e4b2f0933ba42d1f13",
+    "published_sha256": "f34125101f3d0bdb1d023510bec69a35f9908aee848e25e4b2f0933ba42d1f13",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/trade-tool.json",
+    "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "published_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/trade.json",
+    "original_sha256": "d7941d388d62085f99fcc490854860b1bb307dfa4dbc2dfc8574fb49fc4843c0",
+    "published_sha256": "d7941d388d62085f99fcc490854860b1bb307dfa4dbc2dfc8574fb49fc4843c0",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/verification-model-tool-result.json",
+    "original_sha256": "f074e15f1a72282fd80ed0e7df1134aeb86719c302286de25bb795d3a4297d41",
+    "published_sha256": "f074e15f1a72282fd80ed0e7df1134aeb86719c302286de25bb795d3a4297d41",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/verification-tool.json",
+    "original_sha256": "341e3ff427e2494aad4973d908edc56c63ced25a2ec5fa3c5105716c4d281a36",
+    "published_sha256": "59e20024c5f68753645a6bd6cf3662926f0af00e788afd6460e629f36a437d04",
+    "changed": true
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/full-agent-run/final/verification.json",
+    "original_sha256": "db9c5e06c8f7fe1ce4d8d63acb5355e4d6fd36262540b978c22691b2c8e1fc08",
+    "published_sha256": "db9c5e06c8f7fe1ce4d8d63acb5355e4d6fd36262540b978c22691b2c8e1fc08",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/proof.json",
+    "original_sha256": "69d08aa0a0069e4508f56d27d02567d4faad67215694008f0b9bdd86409db165",
+    "published_sha256": "576d63081c782c97e8e8aa500ab342e9e363805baf9e0381bc4b1a5f1ec165d1",
+    "changed": true
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/acknowledgments.csv",
+    "original_sha256": "dd7eaee16dbd63b060e8375ae612322edc3e73295a81905949523d92edad64d4",
+    "published_sha256": "dd7eaee16dbd63b060e8375ae612322edc3e73295a81905949523d92edad64d4",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/catalog.csv",
+    "original_sha256": "65e2084e983429445c6bd3c8185095a8f77215ffeae3dba06703118c0c6dcdf1",
+    "published_sha256": "65e2084e983429445c6bd3c8185095a8f77215ffeae3dba06703118c0c6dcdf1",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/clocks.json",
+    "original_sha256": "056aa62126d2717b0f5c02207b4790f021170d06c495705cfc09a8658e974107",
+    "published_sha256": "056aa62126d2717b0f5c02207b4790f021170d06c495705cfc09a8658e974107",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+    "original_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+    "published_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/facilities.csv",
+    "original_sha256": "3b622257b4e68805806ed3e83ea71877a53c7430217fb6861a2f097ef27cb9f7",
+    "published_sha256": "3b622257b4e68805806ed3e83ea71877a53c7430217fb6861a2f097ef27cb9f7",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/inventory.csv",
+    "original_sha256": "3c5def4dd7147cde5ce0886b4a92035ca6d6c80035952336813ebbe10721c4c9",
+    "published_sha256": "3c5def4dd7147cde5ce0886b4a92035ca6d6c80035952336813ebbe10721c4c9",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchase_orders.csv",
+    "original_sha256": "62af979ba80476d73b2043649c12fbfd0b55c383b9b336db93f8ab31db3ea89d",
+    "published_sha256": "62af979ba80476d73b2043649c12fbfd0b55c383b9b336db93f8ab31db3ea89d",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+    "original_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+    "published_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/shipments.csv",
+    "original_sha256": "1260beb8c0862e124c16ebae060cb327011a6855cad80371d099ce274d012f0c",
+    "published_sha256": "1260beb8c0862e124c16ebae060cb327011a6855cad80371d099ce274d012f0c",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/suppliers.csv",
+    "original_sha256": "607a37ce49bb820bfa69b43f7de2598ce352c2454b8996333b04c2b297b0a22b",
+    "published_sha256": "607a37ce49bb820bfa69b43f7de2598ce352c2454b8996333b04c2b297b0a22b",
+    "changed": false
+  },
+  {
+    "path": "docs/evidence/recorded-case.json",
+    "original_sha256": "e6550d2eb73ad484018efb387072f2ab4871e11b662d277fb0c40c422523befd",
+    "published_sha256": "a208b3127eedfe14bcd080b0e55fb297571055fb19212fbf6c3868ce40d268b4",
+    "changed": true
+  }
+]

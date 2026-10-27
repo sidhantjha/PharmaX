@@ -1,0 +1,81 @@
+{
+  "schema_version": "3.0",
+  "algorithm_version": "pharmax-risk-v1",
+  "analysis_id": "3495c85c2b5149e5a360ad2f3785c4b029cef94ab0eb3c46a58735b45d9ecca9",
+  "dataset_version": "6a4a8d083742ed7ef0d8a2b1090898f5ab655f0b5b179701c20c8260ba377819",
+  "kind": "derived",
+  "input_evidence_ids": [
+    "sim:16d829e187fff45d9e4cd2d547b17b93d8a8a952e1357d68140e02990f8e69e4",
+    "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+    "sim:76c58bc886e2cc6b3d58140ff5ed4c34e3952ea8b04776c40c097616ce114e57",
+    "sim:7f481fe039beb18e23f58e7348f4ba173dc8730d33a93b9fd28d197dfadce9fc",
+    "sim:cbc459a85deb2b679f136b6c6476d29d32010588d36877d06b08410b77ba3994",
+    "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42",
+    "sim:fa9598710156b9dc9958e5303e53f37ad48f107b40be5b71ec01b66b881d3cf7"
+  ],
+  "assumptions": [
+    "Baseline counterfactual ignores modeled holds; disruption case honors them.",
+    "Eligible scheduled arrivals and override releases are simulated, not confirmed physical deliveries.",
+    "POs do not create additional arrivals. Past-due schedules are never recredited to starting inventory."
+  ],
+  "limitations": [
+    "No linkage to the real Rocky Mount event is inferred. Supplier origin is a simulated relationship."
+  ],
+  "as_of": "2023-07-24",
+  "scenario": "disruption",
+  "overlay_version": null,
+  "shipment_id": "ship-central",
+  "supplier_id": "sim-atlas",
+  "hospital_id": "sim-central",
+  "product_id": "sim-carboplatin-450",
+  "quantity": 60,
+  "quantity_unit": "vial",
+  "original_status": "held",
+  "scheduled_arrival": "2023-07-26",
+  "modeled_arrival": null,
+  "arrival_basis": "held",
+  "delay_days": null,
+  "linked_simulated_event_ids": [
+    "sim-dispatch-hold"
+  ],
+  "rating": {
+    "dimension": "shipment",
+    "level": "High",
+    "rule_id": "shipment.held_blocked_or_delay_over_2_days",
+    "explanation": "held; original status=held; modeled arrival=None.",
+    "measurements": {
+      "quantity_vials": 60.0,
+      "delay_days": null,
+      "overdue_days": 0.0
+    },
+    "evidence_ids": [
+      "sim:16d829e187fff45d9e4cd2d547b17b93d8a8a952e1357d68140e02990f8e69e4",
+      "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+      "sim:76c58bc886e2cc6b3d58140ff5ed4c34e3952ea8b04776c40c097616ce114e57",
+      "sim:7f481fe039beb18e23f58e7348f4ba173dc8730d33a93b9fd28d197dfadce9fc",
+      "sim:cbc459a85deb2b679f136b6c6476d29d32010588d36877d06b08410b77ba3994",
+      "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42",
+      "sim:fa9598710156b9dc9958e5303e53f37ad48f107b40be5b71ec01b66b881d3cf7"
+    ],
+    "limitations": [
+      "Rule-based scenario review priority; not clinically or predictively calibrated."
+    ]
+  },
+  "input_values": {
+    "approved": true,
+    "handling_compatible": true,
+    "temperature_min_c": 20.0,
+    "temperature_max_c": 25.0,
+    "protects_from_light": true,
+    "product_storage_min_c": 20.0,
+    "product_storage_max_c": 25.0,
+    "product_requires_light_protection": true,
+    "hospital_storage_min_c": 20.0,
+    "hospital_storage_max_c": 25.0,
+    "hospital_protects_from_light": true,
+    "order_quantity_vials": 60,
+    "supplier_country": "IND",
+    "purchase_order_id": "po-central",
+    "expected_delivery": "2023-07-26"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "container": {
+      "enum": [
+        "viaflex-bag",
+        "bottle"
+      ],
+      "title": "Container",
+      "type": "string"
+    },
+    "distributor_item": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Distributor Item"
+    },
+    "dosage_form": {
+      "enum": [
+        "injection",
+        "irrigation"
+      ],
+      "title": "Dosage Form",
+      "type": "string"
+    },
+    "gs1_gtin": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Gs1 Gtin"
+    },
+    "labeler": {
+      "minLength": 1,
+      "title": "Labeler",
+      "type": "string"
+    },
+    "local_sku": {
+      "minLength": 1,
+      "title": "Local Sku",
+      "type": "string"
+    },
+    "manufacturer": {
+      "minLength": 1,
+      "title": "Manufacturer",
+      "type": "string"
+    },
+    "manufacturer_code": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Manufacturer Code"
+    },
+    "mapping_reference": {
+      "minLength": 1,
+      "title": "Mapping Reference",
+      "type": "string"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "ndc": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ndc"
+    },
+    "schema_version": {
+      "const": "8.1",
+      "default": "8.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_organization": {
+      "minLength": 1,
+      "title": "Source Organization",
+      "type": "string"
+    },
+    "strength_mg_ml": {
+      "exclusiveMinimum": 0,
+      "title": "Strength Mg Ml",
+      "type": "integer"
+    },
+    "units_per_case": {
+      "exclusiveMinimum": 0,
+      "title": "Units Per Case",
+      "type": "integer"
+    },
+    "volume_ml": {
+      "exclusiveMinimum": 0,
+      "title": "Volume Ml",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "source_organization",
+    "local_sku",
+    "name",
+    "strength_mg_ml",
+    "volume_ml",
+    "dosage_form",
+    "container",
+    "units_per_case",
+    "manufacturer",
+    "labeler",
+    "mapping_reference"
+  ],
+  "title": "ProductIdentity",
+  "type": "object"
+}

@@ -1,0 +1,128 @@
+{
+  "role_id": "verification",
+  "role_name": "Check identity, document support, dates, corroboration, contradictions and operational relevance.",
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "complete",
+  "continuation_occurred": true,
+  "live_verified": true,
+  "predecessor_roles": [
+    "news"
+  ],
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "tool_selected": "evidence.findings",
+  "tool_input": {},
+  "tool_input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "tool_result_reference": "verification-tool.json",
+  "tool_result_sha256": "341e3ff427e2494aad4973d908edc56c63ced25a2ec5fa3c5105716c4d281a36",
+  "memory_ids": [],
+  "excluded_due_to_recalled_rejection": [],
+  "structured_finding": {
+    "observation": "source_provenance_limited",
+    "evidence_ids": [
+      "baxter-2024-09-29",
+      "baxter-2024-10-01"
+    ],
+    "fact_keys": [
+      "manufacturer_provenance_retained",
+      "historical_version_custody_unproven",
+      "conflicting_or_missing_receipts_require_review"
+    ],
+    "candidate_id": null,
+    "memory_ids": []
+  },
+  "model_receipts": [
+    {
+      "role": "verification",
+      "request_no": 4,
+      "call_id": "call-8e2fbbea-c17b-48a6-be62-0f9804abd3f3",
+      "response_id": "chatcmpl-4aaf155e-a2ba-4ce3-9565-118bfc7d0f35",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_7r6iordc",
+      "request_id": null,
+      "decision_id": "req_7r6iordc",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 594,
+        "completion_tokens": 18,
+        "total_tokens": 612
+      },
+      "selected_tool": "verification_reconcile",
+      "arguments": {},
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "verification",
+      "request_no": 6,
+      "call_id": "call-92697e43-f989-4c88-9ecc-287948047176",
+      "response_id": "chatcmpl-4b38676f-77f9-49a6-8004-0d2fd6ca1500",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_m0h1sz40",
+      "request_id": null,
+      "decision_id": "req_m0h1sz40",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 2142,
+        "completion_tokens": 115,
+        "total_tokens": 2257
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "source_provenance_limited",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "fact_keys": [
+          "manufacturer_provenance_retained",
+          "historical_version_custody_unproven",
+          "conflicting_or_missing_receipts_require_review"
+        ],
+        "candidate_id": null,
+        "memory_ids": []
+      },
+      "live": true,
+      "runtime_mcp": null
+    }
+  ],
+  "request_records": [
+    {
+      "role": "verification",
+      "number": 4,
+      "started_at": "2026-10-27T19:09:02.278652+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 2313,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.343,
+      "completed_at": "2026-10-27T19:09:02.622159+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "verification",
+      "number": 6,
+      "started_at": "2026-10-27T19:09:02.738843+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 6544,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 9.327,
+      "completed_at": "2026-10-27T19:09:12.065662+00:00",
+      "usage_reported": true
+    }
+  ],
+  "completed_at": "2026-10-27T19:09:12.065942+00:00"
+}

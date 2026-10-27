@@ -1,0 +1,154 @@
+{
+  "role_id": "clinical",
+  "role_name": "Allocate synthetic administration preparation requirements against calculated served supply.",
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "complete",
+  "continuation_occurred": true,
+  "live_verified": true,
+  "predecessor_roles": [
+    "news",
+    "verification",
+    "dependency",
+    "trade",
+    "disruption",
+    "memory",
+    "mitigation"
+  ],
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "tool_selected": "forecast.read",
+  "tool_input": {},
+  "tool_input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "tool_result_reference": "clinical-tool.json",
+  "tool_result_sha256": "d85cb48de1d9565f24b4009ca0f190eecae1659815b5f8c4c678134a71bbe452",
+  "memory_ids": [
+    "mem-4",
+    "mem-2",
+    "mem-5",
+    "mem-1",
+    "mem-3"
+  ],
+  "excluded_due_to_recalled_rejection": [
+    "sim-nc-north-to-sim-nc-south-170",
+    "external-sim-nc-central",
+    "external-sim-nc-south",
+    "sim-nc-south-to-sim-nc-central-110",
+    "sim-nc-central-to-sim-nc-south-164"
+  ],
+  "structured_finding": {
+    "observation": "insufficient_clinical_evidence",
+    "evidence_ids": [
+      "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+    ],
+    "fact_keys": [
+      "saline_clinical_outcomes_unsupported",
+      "oncology_model_not_applicable_to_saline"
+    ],
+    "candidate_id": null,
+    "memory_ids": [
+      "mem-4",
+      "mem-2",
+      "mem-5",
+      "mem-1",
+      "mem-3"
+    ]
+  },
+  "model_receipts": [
+    {
+      "role": "clinical",
+      "request_no": 20,
+      "call_id": "call-8772c6c3-6e1c-4c24-9ad9-c867b5b19ec8",
+      "response_id": "chatcmpl-b10c6f2c-c46d-4f80-afe1-0c355b5d9218",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_lw9yl9ni",
+      "request_id": null,
+      "decision_id": "req_lw9yl9ni",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 1005,
+        "completion_tokens": 18,
+        "total_tokens": 1023
+      },
+      "selected_tool": "clinical_support_check",
+      "arguments": {},
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "clinical",
+      "request_no": 21,
+      "call_id": "call-c0cdae47-e3e1-4553-9169-01a6c5a52132",
+      "response_id": "chatcmpl-48c1f5bd-c24e-4ee0-a9ed-c772c4084d28",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_gse9coqe",
+      "request_id": null,
+      "decision_id": "req_gse9coqe",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 3375,
+        "completion_tokens": 167,
+        "total_tokens": 3542
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "insufficient_clinical_evidence",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "saline_clinical_outcomes_unsupported",
+          "oncology_model_not_applicable_to_saline"
+        ],
+        "candidate_id": null,
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ]
+      },
+      "live": true,
+      "runtime_mcp": null
+    }
+  ],
+  "request_records": [
+    {
+      "role": "clinical",
+      "number": 20,
+      "started_at": "2026-10-27T19:14:53.859935+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 3400,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.349,
+      "completed_at": "2026-10-27T19:14:54.209450+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "clinical",
+      "number": 21,
+      "started_at": "2026-10-27T19:14:54.329533+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 9509,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 2.718,
+      "completed_at": "2026-10-27T19:14:57.047418+00:00",
+      "usage_reported": true
+    }
+  ],
+  "completed_at": "2026-10-27T19:14:57.047742+00:00"
+}

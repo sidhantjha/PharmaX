@@ -1,0 +1,18 @@
+flowchart TD
+  news[News: retain manufacturer sources] --> verification[Verification: evidence support and contradictions]
+  news --> disruption[Disruption: manufacturing evidence]
+  verification --> dependency[Dependency: identity and supply links]
+  disruption --> dependency
+  verification --> trade[Trade: bounded context / unavailable evidence]
+  dependency --> hospital[Hospital: inventory readiness]
+  trade --> hospital
+  hospital --> rejected[Rejected finding excluded downstream]
+  dependency --> memory[Memory: H-MEM persistence and recall]
+  trade --> memory
+  memory --> mitigation[Mitigation: candidate options]
+  mitigation --> feasibility[Feasibility: stock / timing / donor safety]
+  mitigation --> clinical[Clinical: limits of supported outcomes]
+  feasibility --> actions[Actions: human-review drafts]
+  clinical --> actions
+  actions --> coordinator[Coordinator: constrained synthesis]
+  style rejected fill:#fae8e6,stroke:#aa5555,color:#332222

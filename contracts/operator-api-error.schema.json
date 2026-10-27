@@ -1,0 +1,21 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "error": {
+      "pattern": "^[A-Z_]+$",
+      "title": "Error",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "5a.1",
+      "default": "5a.1",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "error"
+  ],
+  "title": "ApiError",
+  "type": "object"
+}

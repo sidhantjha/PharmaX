@@ -1,0 +1,1368 @@
+{
+  "forecasts": [
+    {
+      "analysis_id": "7ad2f90252cdce56cf1ecb1f7538fd33083c1644c0ec93adf3e3e2cddfceca5d",
+      "as_of": "2024-10-02",
+      "end_on": "2024-10-15",
+      "evidence_ids": [
+        "sim-2024-10-01-consumption",
+        "sim-2024-10-01-inventory",
+        "sim-2024-10-01-shipments"
+      ],
+      "expected_daily_demand": 30,
+      "hospital_id": "sim-nc-central",
+      "initial_usable": 164,
+      "limitations": [
+        "Reconstructed historical simulation: exact 2024 version custody unproven; fictional receipt at document end-of-day.",
+        "All hospital operations, accounts, geography and supply timing are simulated; outputs are conditional calculations.",
+        "No real ERP, EDI partner, FHIR server, live Zetaris query, live model inference or external action.",
+        "No patient outcome estimate or clinical equivalence model for saline."
+      ],
+      "points": [
+        {
+          "buffer_days": 4.466666666666667,
+          "closing_physical": 154,
+          "closing_usable": 134,
+          "day": "2024-10-02",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 134,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 154,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 184,
+          "opening_usable": 164,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 30,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 3.466666666666667,
+          "closing_physical": 124,
+          "closing_usable": 104,
+          "day": "2024-10-03",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 104,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 124,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 154,
+          "opening_usable": 134,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 30,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 5.266666666666667,
+          "closing_physical": 178,
+          "closing_usable": 158,
+          "day": "2024-10-04",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 54,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 54,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 104,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 124,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 124,
+          "opening_usable": 104,
+          "quarantined": 0,
+          "received": 84,
+          "received_shipment_ids": [
+            "asn-central"
+          ],
+          "reserved": 20,
+          "served": 30,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 4.266666666666667,
+          "closing_physical": 148,
+          "closing_usable": 128,
+          "day": "2024-10-05",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 24,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 24,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 104,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 124,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 178,
+          "opening_usable": 158,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 30,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 3.2666666666666666,
+          "closing_physical": 118,
+          "closing_usable": 98,
+          "day": "2024-10-06",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 98,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 118,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 148,
+          "opening_usable": 128,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 30,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 2.2666666666666666,
+          "closing_physical": 88,
+          "closing_usable": 68,
+          "day": "2024-10-07",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 68,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 88,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 118,
+          "opening_usable": 98,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 30,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 1.2666666666666666,
+          "closing_physical": 58,
+          "closing_usable": 38,
+          "day": "2024-10-08",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 38,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 58,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 88,
+          "opening_usable": 68,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 30,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 0.26666666666666666,
+          "closing_physical": 28,
+          "closing_usable": 8,
+          "day": "2024-10-09",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 8,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 28,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 58,
+          "opening_usable": 38,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 30,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 20,
+          "closing_usable": 0,
+          "day": "2024-10-10",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 28,
+          "opening_usable": 8,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 8,
+          "unmet": 22
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 20,
+          "closing_usable": 0,
+          "day": "2024-10-11",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 20,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 0,
+          "unmet": 30
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 20,
+          "closing_usable": 0,
+          "day": "2024-10-12",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 20,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 0,
+          "unmet": 30
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 20,
+          "closing_usable": 0,
+          "day": "2024-10-13",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 20,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 0,
+          "unmet": 30
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 20,
+          "closing_usable": 0,
+          "day": "2024-10-14",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 20,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 0,
+          "unmet": 30
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 20,
+          "closing_usable": 0,
+          "day": "2024-10-15",
+          "demand": 30,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "quarantined": false,
+              "reserved": 20
+            }
+          ],
+          "opening_physical": 20,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 20,
+          "served": 0,
+          "unmet": 30
+        }
+      ],
+      "projected_stockout_date": "2024-10-10",
+      "quantity_unit": "bag",
+      "total_received": 84,
+      "total_unmet": 172
+    },
+    {
+      "analysis_id": "d4c4eff55173ad863a1b9e1ced470f9a24b6b6e79d77c2733c342f2d116c0d3b",
+      "as_of": "2024-10-02",
+      "end_on": "2024-10-15",
+      "evidence_ids": [
+        "sim-2024-10-01-consumption",
+        "sim-2024-10-01-inventory",
+        "sim-2024-10-01-shipments"
+      ],
+      "expected_daily_demand": 25,
+      "hospital_id": "sim-nc-north",
+      "initial_usable": 619,
+      "limitations": [
+        "Reconstructed historical simulation: exact 2024 version custody unproven; fictional receipt at document end-of-day.",
+        "All hospital operations, accounts, geography and supply timing are simulated; outputs are conditional calculations.",
+        "No real ERP, EDI partner, FHIR server, live Zetaris query, live model inference or external action.",
+        "No patient outcome estimate or clinical equivalence model for saline."
+      ],
+      "points": [
+        {
+          "buffer_days": 23.76,
+          "closing_physical": 694,
+          "closing_usable": 594,
+          "day": "2024-10-02",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 594,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 694,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 719,
+          "opening_usable": 619,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 22.76,
+          "closing_physical": 669,
+          "closing_usable": 569,
+          "day": "2024-10-03",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 569,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 669,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 694,
+          "opening_usable": 594,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 24.44,
+          "closing_physical": 711,
+          "closing_usable": 611,
+          "day": "2024-10-04",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 42,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 42,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 569,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 669,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 669,
+          "opening_usable": 569,
+          "quarantined": 0,
+          "received": 67,
+          "received_shipment_ids": [
+            "asn-north"
+          ],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 23.44,
+          "closing_physical": 686,
+          "closing_usable": 586,
+          "day": "2024-10-05",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 17,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 17,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 569,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 669,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 711,
+          "opening_usable": 611,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 22.44,
+          "closing_physical": 661,
+          "closing_usable": 561,
+          "day": "2024-10-06",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 561,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 661,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 686,
+          "opening_usable": 586,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 21.44,
+          "closing_physical": 636,
+          "closing_usable": 536,
+          "day": "2024-10-07",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 536,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 636,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 661,
+          "opening_usable": 561,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 20.44,
+          "closing_physical": 611,
+          "closing_usable": 511,
+          "day": "2024-10-08",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 511,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 611,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 636,
+          "opening_usable": 536,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 19.44,
+          "closing_physical": 586,
+          "closing_usable": 486,
+          "day": "2024-10-09",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 486,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 586,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 611,
+          "opening_usable": 511,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 18.44,
+          "closing_physical": 561,
+          "closing_usable": 461,
+          "day": "2024-10-10",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 461,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 561,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 586,
+          "opening_usable": 486,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 17.44,
+          "closing_physical": 536,
+          "closing_usable": 436,
+          "day": "2024-10-11",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 436,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 536,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 561,
+          "opening_usable": 461,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 16.44,
+          "closing_physical": 511,
+          "closing_usable": 411,
+          "day": "2024-10-12",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 411,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 511,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 536,
+          "opening_usable": 436,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 15.44,
+          "closing_physical": 486,
+          "closing_usable": 386,
+          "day": "2024-10-13",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 386,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 486,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 511,
+          "opening_usable": 411,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 14.44,
+          "closing_physical": 461,
+          "closing_usable": 361,
+          "day": "2024-10-14",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 361,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 461,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 486,
+          "opening_usable": 386,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 13.44,
+          "closing_physical": 436,
+          "closing_usable": 336,
+          "day": "2024-10-15",
+          "demand": 25,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-11-03",
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "quarantined": false,
+              "reserved": 0
+            },
+            {
+              "available": 336,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-north",
+              "on_hand": 436,
+              "quarantined": false,
+              "reserved": 100
+            }
+          ],
+          "opening_physical": 461,
+          "opening_usable": 361,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 100,
+          "served": 25,
+          "unmet": 0
+        }
+      ],
+      "projected_stockout_date": null,
+      "quantity_unit": "bag",
+      "total_received": 67,
+      "total_unmet": 0
+    },
+    {
+      "analysis_id": "f305c5b287d7501bfa0c1a26ff480dd96840c323c5b199510a4b72d687a2a124",
+      "as_of": "2024-10-02",
+      "end_on": "2024-10-15",
+      "evidence_ids": [
+        "sim-2024-10-01-consumption",
+        "sim-2024-10-01-inventory"
+      ],
+      "expected_daily_demand": 20,
+      "hospital_id": "sim-nc-south",
+      "initial_usable": 110,
+      "limitations": [
+        "Reconstructed historical simulation: exact 2024 version custody unproven; fictional receipt at document end-of-day.",
+        "All hospital operations, accounts, geography and supply timing are simulated; outputs are conditional calculations.",
+        "No real ERP, EDI partner, FHIR server, live Zetaris query, live model inference or external action.",
+        "No patient outcome estimate or clinical equivalence model for saline."
+      ],
+      "points": [
+        {
+          "buffer_days": 4.5,
+          "closing_physical": 108,
+          "closing_usable": 90,
+          "day": "2024-10-02",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 90,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 108,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 128,
+          "opening_usable": 110,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 20,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 3.5,
+          "closing_physical": 88,
+          "closing_usable": 70,
+          "day": "2024-10-03",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 70,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 88,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 108,
+          "opening_usable": 90,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 20,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 2.5,
+          "closing_physical": 68,
+          "closing_usable": 50,
+          "day": "2024-10-04",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 50,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 68,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 88,
+          "opening_usable": 70,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 20,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 1.5,
+          "closing_physical": 48,
+          "closing_usable": 30,
+          "day": "2024-10-05",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 30,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 48,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 68,
+          "opening_usable": 50,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 20,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 0.5,
+          "closing_physical": 28,
+          "closing_usable": 10,
+          "day": "2024-10-06",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 10,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 28,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 48,
+          "opening_usable": 30,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 20,
+          "unmet": 0
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 18,
+          "closing_usable": 0,
+          "day": "2024-10-07",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 28,
+          "opening_usable": 10,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 10,
+          "unmet": 10
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 18,
+          "closing_usable": 0,
+          "day": "2024-10-08",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 18,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 0,
+          "unmet": 20
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 18,
+          "closing_usable": 0,
+          "day": "2024-10-09",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 18,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 0,
+          "unmet": 20
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 18,
+          "closing_usable": 0,
+          "day": "2024-10-10",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 18,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 0,
+          "unmet": 20
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 18,
+          "closing_usable": 0,
+          "day": "2024-10-11",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 18,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 0,
+          "unmet": 20
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 18,
+          "closing_usable": 0,
+          "day": "2024-10-12",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 18,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 0,
+          "unmet": 20
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 18,
+          "closing_usable": 0,
+          "day": "2024-10-13",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 18,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 0,
+          "unmet": 20
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 18,
+          "closing_usable": 0,
+          "day": "2024-10-14",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 18,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 0,
+          "unmet": 20
+        },
+        {
+          "buffer_days": 0.0,
+          "closing_physical": 18,
+          "closing_usable": 0,
+          "day": "2024-10-15",
+          "demand": 20,
+          "expired_physical": 0,
+          "lots": [
+            {
+              "available": 0,
+              "expiry_date": "2024-12-31",
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "quarantined": false,
+              "reserved": 18
+            }
+          ],
+          "opening_physical": 18,
+          "opening_usable": 0,
+          "quarantined": 0,
+          "received": 0,
+          "received_shipment_ids": [],
+          "reserved": 18,
+          "served": 0,
+          "unmet": 20
+        }
+      ],
+      "projected_stockout_date": "2024-10-07",
+      "quantity_unit": "bag",
+      "total_received": 0,
+      "total_unmet": 170
+    }
+  ],
+  "receipts": {},
+  "requires_human_review": true
+}

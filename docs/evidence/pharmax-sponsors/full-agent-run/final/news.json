@@ -1,0 +1,124 @@
+{
+  "role_id": "news",
+  "role_name": "Normalize retained or explicitly refreshed source receipts.",
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "complete",
+  "continuation_occurred": true,
+  "live_verified": true,
+  "predecessor_roles": [],
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "tool_selected": "manufacturer.read",
+  "tool_input": {},
+  "tool_input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "tool_result_reference": "news-tool.json",
+  "tool_result_sha256": "0038597a2279abdeb30d0c58a66101d7661cabed68be01a8ed64562e911c52fc",
+  "memory_ids": [],
+  "excluded_due_to_recalled_rejection": [],
+  "structured_finding": {
+    "observation": "source_provenance_limited",
+    "evidence_ids": [
+      "baxter-2024-09-29",
+      "baxter-2024-10-01"
+    ],
+    "fact_keys": [
+      "manufacturer_provenance_retained",
+      "historical_version_custody_unproven"
+    ],
+    "candidate_id": null,
+    "memory_ids": []
+  },
+  "model_receipts": [
+    {
+      "role": "news",
+      "request_no": 1,
+      "call_id": "call-12d0aae4-8539-489c-8645-76ca7215bfae",
+      "response_id": "chatcmpl-111d4741-dbdb-4774-b188-ed49f93e256b",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_fyup38v0",
+      "request_id": null,
+      "decision_id": "req_fyup38v0",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 484,
+        "completion_tokens": 18,
+        "total_tokens": 502
+      },
+      "selected_tool": "news_source_evidence",
+      "arguments": {},
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "news",
+      "request_no": 2,
+      "call_id": "call-91882fed-832c-489d-bd5e-dbeaa89a3bdf",
+      "response_id": "chatcmpl-3c7731b4-c32d-486b-90e2-6e16e6c30c52",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_bt9pfoo1",
+      "request_id": null,
+      "decision_id": "req_bt9pfoo1",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 1793,
+        "completion_tokens": 94,
+        "total_tokens": 1887
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "source_provenance_limited",
+        "evidence_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ],
+        "fact_keys": [
+          "manufacturer_provenance_retained",
+          "historical_version_custody_unproven"
+        ],
+        "candidate_id": null,
+        "memory_ids": []
+      },
+      "live": true,
+      "runtime_mcp": null
+    }
+  ],
+  "request_records": [
+    {
+      "role": "news",
+      "number": 1,
+      "started_at": "2026-10-27T19:09:00.295986+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 1913,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.747,
+      "completed_at": "2026-10-27T19:09:01.055662+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "news",
+      "number": 2,
+      "started_at": "2026-10-27T19:09:01.187609+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 5118,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.988,
+      "completed_at": "2026-10-27T19:09:02.175842+00:00",
+      "usage_reported": true
+    }
+  ],
+  "completed_at": "2026-10-27T19:09:02.176251+00:00"
+}

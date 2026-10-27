@@ -1,0 +1,59 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "error_code": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Error Code"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "mode": {
+      "enum": [
+        "live",
+        "fixture",
+        "mock"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "record_count": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Record Count",
+      "type": "integer"
+    },
+    "request_id": {
+      "title": "Request Id",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "request_id",
+    "status",
+    "mode"
+  ],
+  "title": "ToolResult",
+  "type": "object"
+}

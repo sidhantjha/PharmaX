@@ -1,0 +1,2825 @@
+{
+  "$defs": {
+    "ArrivalOverride": {
+      "additionalProperties": false,
+      "properties": {
+        "arrival_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Arrival On"
+        },
+        "hold": {
+          "default": false,
+          "title": "Hold",
+          "type": "boolean"
+        },
+        "shipment_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Shipment Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "shipment_id"
+      ],
+      "title": "ArrivalOverride",
+      "type": "object"
+    },
+    "CandidateEvaluation": {
+      "additionalProperties": false,
+      "properties": {
+        "analysis_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Analysis Ids",
+          "type": "array"
+        },
+        "candidate": {
+          "$ref": "#/$defs/MitigationCandidate"
+        },
+        "evaluation_id": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Evaluation Id",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "failures": {
+          "items": {
+            "$ref": "#/$defs/ConstraintFailure"
+          },
+          "title": "Failures",
+          "type": "array"
+        },
+        "feasible": {
+          "title": "Feasible",
+          "type": "boolean"
+        },
+        "impacts": {
+          "items": {
+            "$ref": "#/$defs/MitigationImpact"
+          },
+          "title": "Impacts",
+          "type": "array"
+        },
+        "original_unmet": {
+          "minimum": 0,
+          "title": "Original Unmet",
+          "type": "integer"
+        },
+        "projected_dataset_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Projected Dataset Version"
+        },
+        "projection_evidence": {
+          "items": {
+            "$ref": "#/$defs/SourceEvidence"
+          },
+          "title": "Projection Evidence",
+          "type": "array"
+        },
+        "quantity_moved": {
+          "minimum": 0,
+          "title": "Quantity Moved",
+          "type": "integer"
+        },
+        "remaining_unmet": {
+          "minimum": 0,
+          "title": "Remaining Unmet",
+          "type": "integer"
+        },
+        "requires_human_review": {
+          "const": true,
+          "default": true,
+          "title": "Requires Human Review",
+          "type": "boolean"
+        },
+        "simulated": {
+          "const": true,
+          "default": true,
+          "title": "Simulated",
+          "type": "boolean"
+        },
+        "supply_balance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SupplyBalance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "evaluation_id",
+        "candidate",
+        "feasible",
+        "failures",
+        "original_unmet",
+        "remaining_unmet",
+        "quantity_moved",
+        "impacts",
+        "evidence_ids",
+        "analysis_ids"
+      ],
+      "title": "CandidateEvaluation",
+      "type": "object"
+    },
+    "ConstraintFailure": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "enum": [
+            "UNKNOWN_SOURCE",
+            "UNKNOWN_ROUTE",
+            "PRODUCT_MISMATCH",
+            "PRESENTATION_MISMATCH",
+            "INSUFFICIENT_UNRESERVED_STOCK",
+            "QUARANTINED",
+            "EXPIRED",
+            "INSUFFICIENT_SHELF_LIFE",
+            "SOURCE_NOT_AVAILABLE",
+            "SOURCE_AUTHORIZATION",
+            "TRANSFER_NOT_AUTHORIZED",
+            "ROUTE_CAPACITY",
+            "DELIVERY_TOO_LATE",
+            "INVALID_DELIVERY_DATE",
+            "TRANSPORT_REQUIREMENTS",
+            "STORAGE_REQUIREMENTS",
+            "HOLD_NOT_RELEASED",
+            "DONOR_SHORTAGE",
+            "DONOR_RISK_WORSE",
+            "EVIDENCE_AFTER_CUTOFF",
+            "SCENARIO_DATE_MISMATCH",
+            "FUTURE_TRANSFER_UNSUPPORTED",
+            "NO_IMPROVEMENT",
+            "TARGET_MISMATCH",
+            "EVIDENCE_LINEAGE"
+          ],
+          "title": "Code",
+          "type": "string"
+        },
+        "detail": {
+          "title": "Detail",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "code",
+        "detail",
+        "evidence_ids"
+      ],
+      "title": "ConstraintFailure",
+      "type": "object"
+    },
+    "DailyConsumption": {
+      "additionalProperties": false,
+      "properties": {
+        "consumption_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Consumption Id",
+          "type": "string"
+        },
+        "day": {
+          "format": "date",
+          "title": "Day",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "quantity": {
+          "minimum": 0,
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "quantity_unit": {
+          "const": "vial",
+          "default": "vial",
+          "title": "Quantity Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "consumption_id",
+        "hospital_id",
+        "product_id",
+        "day",
+        "quantity",
+        "evidence"
+      ],
+      "title": "DailyConsumption",
+      "type": "object"
+    },
+    "DailyStockPoint": {
+      "additionalProperties": false,
+      "properties": {
+        "buffer_days": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Buffer Days"
+        },
+        "closing_physical": {
+          "minimum": 0,
+          "title": "Closing Physical",
+          "type": "integer"
+        },
+        "closing_usable": {
+          "minimum": 0,
+          "title": "Closing Usable",
+          "type": "integer"
+        },
+        "day": {
+          "format": "date",
+          "title": "Day",
+          "type": "string"
+        },
+        "demand": {
+          "minimum": 0,
+          "title": "Demand",
+          "type": "integer"
+        },
+        "expired_physical": {
+          "minimum": 0,
+          "title": "Expired Physical",
+          "type": "integer"
+        },
+        "lots": {
+          "items": {
+            "$ref": "#/$defs/LotBalance"
+          },
+          "title": "Lots",
+          "type": "array"
+        },
+        "opening_physical": {
+          "minimum": 0,
+          "title": "Opening Physical",
+          "type": "integer"
+        },
+        "opening_usable": {
+          "minimum": 0,
+          "title": "Opening Usable",
+          "type": "integer"
+        },
+        "quarantined": {
+          "minimum": 0,
+          "title": "Quarantined",
+          "type": "integer"
+        },
+        "received": {
+          "minimum": 0,
+          "title": "Received",
+          "type": "integer"
+        },
+        "received_shipment_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Received Shipment Ids",
+          "type": "array"
+        },
+        "reserved": {
+          "minimum": 0,
+          "title": "Reserved",
+          "type": "integer"
+        },
+        "served": {
+          "minimum": 0,
+          "title": "Served",
+          "type": "integer"
+        },
+        "unmet": {
+          "minimum": 0,
+          "title": "Unmet",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "day",
+        "opening_physical",
+        "expired_physical",
+        "opening_usable",
+        "received",
+        "demand",
+        "served",
+        "unmet",
+        "closing_usable",
+        "closing_physical",
+        "reserved",
+        "quarantined",
+        "buffer_days",
+        "received_shipment_ids",
+        "lots"
+      ],
+      "title": "DailyStockPoint",
+      "type": "object"
+    },
+    "DelayRisk": {
+      "additionalProperties": false,
+      "properties": {
+        "assessment": {
+          "$ref": "#/$defs/HospitalRiskAssessment"
+        },
+        "assumed_arrival": {
+          "format": "date",
+          "title": "Assumed Arrival",
+          "type": "string"
+        },
+        "assumption_label": {
+          "const": "simulated",
+          "default": "simulated",
+          "title": "Assumption Label",
+          "type": "string"
+        },
+        "delay_days": {
+          "maximum": 21,
+          "minimum": 0,
+          "title": "Delay Days",
+          "type": "integer"
+        },
+        "delivery_difference_days": {
+          "title": "Delivery Difference Days",
+          "type": "integer"
+        },
+        "result_label": {
+          "const": "calculated",
+          "default": "calculated",
+          "title": "Result Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "delay_days",
+        "assumed_arrival",
+        "delivery_difference_days",
+        "assessment"
+      ],
+      "title": "DelayRisk",
+      "type": "object"
+    },
+    "DependencyMatch": {
+      "additionalProperties": false,
+      "properties": {
+        "dependency_label": {
+          "const": "simulated",
+          "default": "simulated",
+          "title": "Dependency Label",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "matched_legs": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "title": "Matched Legs",
+          "type": "array"
+        },
+        "observed_shipment_delay": {
+          "const": false,
+          "default": false,
+          "title": "Observed Shipment Delay",
+          "type": "boolean"
+        },
+        "reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "shipment_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Shipment Id",
+          "type": "string"
+        },
+        "signal_revision": {
+          "title": "Signal Revision",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "MATCHED",
+            "POSSIBLE",
+            "UNMATCHED"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "signal_revision",
+        "shipment_id",
+        "status",
+        "reasons",
+        "matched_legs",
+        "evidence_ids"
+      ],
+      "title": "DependencyMatch",
+      "type": "object"
+    },
+    "DisruptionSignal": {
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "enum": [
+            "maritime_security",
+            "port_disruption",
+            "manufacturing",
+            "trade_restriction",
+            "shipping",
+            "unknown"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "claim_limitations": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "minItems": 1,
+          "title": "Claim Limitations",
+          "type": "array"
+        },
+        "confirmation": {
+          "enum": [
+            "official_notice",
+            "unverified_media"
+          ],
+          "title": "Confirmation",
+          "type": "string"
+        },
+        "corridors": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Corridors",
+          "type": "array"
+        },
+        "deduplication_identity": {
+          "title": "Deduplication Identity",
+          "type": "string"
+        },
+        "effective_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Effective On"
+        },
+        "event_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Event Id",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/SourceEvidence"
+          },
+          "maxItems": 5,
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "maxItems": 5,
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "evidence_label": {
+          "const": "observed",
+          "default": "observed",
+          "title": "Evidence Label",
+          "type": "string"
+        },
+        "expires_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expires On"
+        },
+        "geography": {
+          "items": {
+            "$ref": "#/$defs/GeoBox"
+          },
+          "maxItems": 12,
+          "title": "Geography",
+          "type": "array"
+        },
+        "impacted_assets": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "maxItems": 10,
+          "title": "Impacted Assets",
+          "type": "array"
+        },
+        "indexed_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Indexed At"
+        },
+        "location": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Location",
+          "type": "array"
+        },
+        "observed_event_time": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Observed Event Time"
+        },
+        "original_urls": {
+          "items": {
+            "format": "uri",
+            "maxLength": 2083,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Original Urls",
+          "type": "array"
+        },
+        "provider": {
+          "enum": [
+            "marad",
+            "gdelt"
+          ],
+          "title": "Provider",
+          "type": "string"
+        },
+        "publisher": {
+          "title": "Publisher",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "format": "date-time",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "revision_id": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Revision Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "4c.1",
+          "default": "4c.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_published_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Published At"
+        },
+        "source_published_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Published On"
+        },
+        "source_type": {
+          "enum": [
+            "official",
+            "media"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "active",
+            "cancelled",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "supersedes": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "maxItems": 10,
+          "title": "Supersedes",
+          "type": "array"
+        },
+        "supported_claims": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 10,
+          "minItems": 1,
+          "title": "Supported Claims",
+          "type": "array"
+        },
+        "title": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_id",
+        "revision_id",
+        "deduplication_identity",
+        "category",
+        "title",
+        "provider",
+        "source_type",
+        "publisher",
+        "original_urls",
+        "location",
+        "corridors",
+        "retrieved_at",
+        "status",
+        "confirmation",
+        "supported_claims",
+        "claim_limitations",
+        "evidence_ids",
+        "evidence"
+      ],
+      "title": "DisruptionSignal",
+      "type": "object"
+    },
+    "ForecastRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "arrival_shelf_life_days": {
+          "default": 30,
+          "maximum": 365,
+          "minimum": 1,
+          "title": "Arrival Shelf Life Days",
+          "type": "integer"
+        },
+        "horizon_days": {
+          "default": 14,
+          "maximum": 60,
+          "minimum": 1,
+          "title": "Horizon Days",
+          "type": "integer"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "overlay": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScenarioOverlay"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "product_id": {
+          "default": "sim-carboplatin-450",
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "scenario": {
+          "default": "disruption",
+          "enum": [
+            "baseline",
+            "disruption"
+          ],
+          "title": "Scenario",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hospital_id"
+      ],
+      "title": "ForecastRequest",
+      "type": "object"
+    },
+    "GeoBox": {
+      "additionalProperties": false,
+      "properties": {
+        "east": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "East",
+          "type": "number"
+        },
+        "north": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "North",
+          "type": "number"
+        },
+        "south": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "South",
+          "type": "number"
+        },
+        "west": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "West",
+          "type": "number"
+        }
+      },
+      "required": [
+        "west",
+        "south",
+        "east",
+        "north"
+      ],
+      "title": "GeoBox",
+      "type": "object"
+    },
+    "HospitalMetrics": {
+      "additionalProperties": false,
+      "properties": {
+        "ending_usable": {
+          "minimum": 0,
+          "title": "Ending Usable",
+          "type": "integer"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "risk": {
+          "enum": [
+            "Low",
+            "Moderate",
+            "High",
+            "Critical"
+          ],
+          "title": "Risk",
+          "type": "string"
+        },
+        "shortage_days": {
+          "minimum": 0,
+          "title": "Shortage Days",
+          "type": "integer"
+        },
+        "shortage_onset": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Shortage Onset"
+        },
+        "unmet_vials": {
+          "minimum": 0,
+          "title": "Unmet Vials",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "hospital_id",
+        "unmet_vials",
+        "shortage_onset",
+        "shortage_days",
+        "risk",
+        "ending_usable"
+      ],
+      "title": "HospitalMetrics",
+      "type": "object"
+    },
+    "HospitalRiskAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm_version": {
+          "const": "pharmax-risk-v1",
+          "default": "pharmax-risk-v1",
+          "title": "Algorithm Version",
+          "type": "string"
+        },
+        "analysis_id": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "dataset_version": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "forecast": {
+          "$ref": "#/$defs/InventoryForecast"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "input_evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Input Evidence Ids",
+          "type": "array"
+        },
+        "kind": {
+          "const": "derived",
+          "default": "derived",
+          "title": "Kind",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "rating": {
+          "$ref": "#/$defs/RiskRating"
+        },
+        "schema_version": {
+          "const": "3.0",
+          "default": "3.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "supplier_ratings": {
+          "additionalProperties": {
+            "$ref": "#/$defs/RiskRating"
+          },
+          "title": "Supplier Ratings",
+          "type": "object"
+        }
+      },
+      "required": [
+        "analysis_id",
+        "dataset_version",
+        "input_evidence_ids",
+        "assumptions",
+        "limitations",
+        "hospital_id",
+        "product_id",
+        "forecast",
+        "rating",
+        "supplier_ratings"
+      ],
+      "title": "HospitalRiskAssessment",
+      "type": "object"
+    },
+    "InventoryForecast": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm_version": {
+          "const": "pharmax-risk-v1",
+          "default": "pharmax-risk-v1",
+          "title": "Algorithm Version",
+          "type": "string"
+        },
+        "analysis_id": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "as_of": {
+          "format": "date",
+          "title": "As Of",
+          "type": "string"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "consumption_inputs": {
+          "items": {
+            "$ref": "#/$defs/DailyConsumption"
+          },
+          "title": "Consumption Inputs",
+          "type": "array"
+        },
+        "dataset_version": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "dependency_kind": {
+          "const": "simulated",
+          "default": "simulated",
+          "title": "Dependency Kind",
+          "type": "string"
+        },
+        "end_on": {
+          "format": "date",
+          "title": "End On",
+          "type": "string"
+        },
+        "ending_buffer_days": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Ending Buffer Days"
+        },
+        "excluded_temporal_evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Excluded Temporal Evidence Ids",
+          "type": "array"
+        },
+        "expected_daily_demand": {
+          "title": "Expected Daily Demand",
+          "type": "integer"
+        },
+        "historical_backtest": {
+          "const": false,
+          "default": false,
+          "title": "Historical Backtest",
+          "type": "boolean"
+        },
+        "initial_inventory_inputs": {
+          "items": {
+            "$ref": "#/$defs/InventoryRecord"
+          },
+          "title": "Initial Inventory Inputs",
+          "type": "array"
+        },
+        "initial_usable": {
+          "title": "Initial Usable",
+          "type": "integer"
+        },
+        "input_evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Input Evidence Ids",
+          "type": "array"
+        },
+        "kind": {
+          "const": "derived",
+          "default": "derived",
+          "title": "Kind",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "longest_shortage_run": {
+          "title": "Longest Shortage Run",
+          "type": "integer"
+        },
+        "overlay_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Overlay Version"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/DailyStockPoint"
+          },
+          "title": "Points",
+          "type": "array"
+        },
+        "product_identity": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "title": "Product Identity",
+          "type": "object"
+        },
+        "projected_stockout_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Projected Stockout Date"
+        },
+        "request": {
+          "$ref": "#/$defs/ForecastRequest"
+        },
+        "right_censored": {
+          "title": "Right Censored",
+          "type": "boolean"
+        },
+        "schema_version": {
+          "const": "3.0",
+          "default": "3.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "shipment_risks": {
+          "items": {
+            "$ref": "#/$defs/ShipmentRisk"
+          },
+          "title": "Shipment Risks",
+          "type": "array"
+        },
+        "shortage_days": {
+          "title": "Shortage Days",
+          "type": "integer"
+        },
+        "total_received": {
+          "title": "Total Received",
+          "type": "integer"
+        },
+        "total_served": {
+          "title": "Total Served",
+          "type": "integer"
+        },
+        "total_unmet": {
+          "title": "Total Unmet",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "analysis_id",
+        "dataset_version",
+        "input_evidence_ids",
+        "assumptions",
+        "limitations",
+        "request",
+        "as_of",
+        "end_on",
+        "product_identity",
+        "overlay_version",
+        "initial_inventory_inputs",
+        "consumption_inputs",
+        "excluded_temporal_evidence_ids",
+        "expected_daily_demand",
+        "initial_usable",
+        "total_received",
+        "total_served",
+        "total_unmet",
+        "shortage_days",
+        "longest_shortage_run",
+        "projected_stockout_date",
+        "right_censored",
+        "ending_buffer_days",
+        "points",
+        "shipment_risks"
+      ],
+      "title": "InventoryForecast",
+      "type": "object"
+    },
+    "InventoryRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "as_of": {
+          "format": "date",
+          "title": "As Of",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "expiry_date": {
+          "format": "date",
+          "title": "Expiry Date",
+          "type": "string"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "inventory_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Inventory Id",
+          "type": "string"
+        },
+        "lot_id": {
+          "title": "Lot Id",
+          "type": "string"
+        },
+        "on_hand": {
+          "minimum": 0,
+          "title": "On Hand",
+          "type": "integer"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "quality_status": {
+          "enum": [
+            "released",
+            "quarantined"
+          ],
+          "title": "Quality Status",
+          "type": "string"
+        },
+        "quantity_unit": {
+          "const": "vial",
+          "default": "vial",
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "reserved": {
+          "minimum": 0,
+          "title": "Reserved",
+          "type": "integer"
+        },
+        "supplier_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Supplier Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "inventory_id",
+        "hospital_id",
+        "product_id",
+        "supplier_id",
+        "lot_id",
+        "as_of",
+        "on_hand",
+        "reserved",
+        "expiry_date",
+        "quality_status",
+        "evidence"
+      ],
+      "title": "InventoryRecord",
+      "type": "object"
+    },
+    "LotBalance": {
+      "additionalProperties": false,
+      "properties": {
+        "available": {
+          "minimum": 0,
+          "title": "Available",
+          "type": "integer"
+        },
+        "expiry_date": {
+          "format": "date",
+          "title": "Expiry Date",
+          "type": "string"
+        },
+        "lot_id": {
+          "title": "Lot Id",
+          "type": "string"
+        },
+        "on_hand": {
+          "minimum": 0,
+          "title": "On Hand",
+          "type": "integer"
+        },
+        "quarantined": {
+          "title": "Quarantined",
+          "type": "boolean"
+        },
+        "reserved": {
+          "minimum": 0,
+          "title": "Reserved",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "lot_id",
+        "on_hand",
+        "reserved",
+        "expiry_date",
+        "available",
+        "quarantined"
+      ],
+      "title": "LotBalance",
+      "type": "object"
+    },
+    "MitigationCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "arrival_on": {
+          "format": "date",
+          "title": "Arrival On",
+          "type": "string"
+        },
+        "candidate_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Candidate Id",
+          "type": "string"
+        },
+        "dispatch_on": {
+          "format": "date",
+          "title": "Dispatch On",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "maxItems": 30,
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "transfer",
+            "supplier_delivery",
+            "reschedule"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "kind_label": {
+          "const": "simulated",
+          "default": "simulated",
+          "title": "Kind Label",
+          "type": "string"
+        },
+        "presentation": {
+          "title": "Presentation",
+          "type": "string"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "quantity": {
+          "exclusiveMinimum": 0,
+          "maximum": 10000,
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "route_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Route Id",
+          "type": "string"
+        },
+        "source_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Source Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "candidate_id",
+        "kind",
+        "source_id",
+        "route_id",
+        "hospital_id",
+        "product_id",
+        "presentation",
+        "quantity",
+        "dispatch_on",
+        "arrival_on",
+        "evidence_ids"
+      ],
+      "title": "MitigationCandidate",
+      "type": "object"
+    },
+    "MitigationImpact": {
+      "additionalProperties": false,
+      "properties": {
+        "before": {
+          "$ref": "#/$defs/HospitalMetrics"
+        },
+        "donor": {
+          "default": false,
+          "title": "Donor",
+          "type": "boolean"
+        },
+        "effective": {
+          "$ref": "#/$defs/HospitalMetrics"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "projected": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HospitalRiskAssessment"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "hospital_id",
+        "before",
+        "effective"
+      ],
+      "title": "MitigationImpact",
+      "type": "object"
+    },
+    "MitigationRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_as_of": {
+          "format": "date-time",
+          "title": "Evidence As Of",
+          "type": "string"
+        },
+        "horizon_days": {
+          "default": 14,
+          "maximum": 60,
+          "minimum": 1,
+          "title": "Horizon Days",
+          "type": "integer"
+        },
+        "hospital_id": {
+          "default": "sim-central",
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "objective": {
+          "default": "Investigate simulated alternatives to reduce Central shortage safely.",
+          "maxLength": 500,
+          "minLength": 3,
+          "title": "Objective",
+          "type": "string"
+        },
+        "product_id": {
+          "default": "sim-carboplatin-450",
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "reasoning": {
+          "default": "fixture",
+          "enum": [
+            "fixture",
+            "nightshift"
+          ],
+          "title": "Reasoning",
+          "type": "string"
+        },
+        "scenario": {
+          "default": "original",
+          "enum": [
+            "original",
+            "clean-onset"
+          ],
+          "title": "Scenario",
+          "type": "string"
+        },
+        "session_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "session_id",
+        "evidence_as_of"
+      ],
+      "title": "MitigationRequest",
+      "type": "object"
+    },
+    "MitigationResult": {
+      "additionalProperties": false,
+      "properties": {
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "base_dataset_version": {
+          "title": "Base Dataset Version",
+          "type": "string"
+        },
+        "catalog_version": {
+          "title": "Catalog Version",
+          "type": "string"
+        },
+        "completed_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Completed At"
+        },
+        "error_code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error Code"
+        },
+        "evaluations": {
+          "items": {
+            "$ref": "#/$defs/CandidateEvaluation"
+          },
+          "title": "Evaluations",
+          "type": "array"
+        },
+        "events": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Events",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/SourceEvidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "historical_backtest": {
+          "const": false,
+          "default": false,
+          "title": "Historical Backtest",
+          "type": "boolean"
+        },
+        "memory_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Memory Ids",
+          "type": "array"
+        },
+        "overlay": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScenarioOverlay"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "overlay_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Overlay Version"
+        },
+        "recommendation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recommendation"
+        },
+        "recommendation_id": {
+          "anyOf": [
+            {
+              "maxLength": 160,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recommendation Id"
+        },
+        "reference": {
+          "items": {
+            "$ref": "#/$defs/ScenarioComparison"
+          },
+          "title": "Reference",
+          "type": "array"
+        },
+        "request": {
+          "$ref": "#/$defs/MitigationRequest"
+        },
+        "requires_human_review": {
+          "const": true,
+          "default": true,
+          "title": "Requires Human Review",
+          "type": "boolean"
+        },
+        "scenario_dataset_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scenario Dataset Version"
+        },
+        "schema_version": {
+          "const": "4b.1",
+          "default": "4b.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "simulated": {
+          "const": true,
+          "default": true,
+          "title": "Simulated",
+          "type": "boolean"
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "incomplete",
+            "blocked"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "stop_reason": {
+          "enum": [
+            "exhausted",
+            "no_shortage",
+            "candidate_budget",
+            "tool_budget",
+            "model_stop",
+            "timeout",
+            "blocked"
+          ],
+          "title": "Stop Reason",
+          "type": "string"
+        },
+        "uncertainties": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Uncertainties",
+          "type": "array"
+        }
+      },
+      "required": [
+        "request",
+        "base_dataset_version",
+        "catalog_version",
+        "status",
+        "stop_reason"
+      ],
+      "title": "MitigationResult",
+      "type": "object"
+    },
+    "RiskRating": {
+      "additionalProperties": false,
+      "properties": {
+        "dimension": {
+          "enum": [
+            "country",
+            "shipment",
+            "supplier",
+            "hospital"
+          ],
+          "title": "Dimension",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        },
+        "level": {
+          "anyOf": [
+            {
+              "enum": [
+                "Low",
+                "Moderate",
+                "High",
+                "Critical"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Level"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "measurements": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Measurements",
+          "type": "object"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dimension",
+        "level",
+        "rule_id",
+        "explanation",
+        "measurements",
+        "evidence_ids",
+        "limitations"
+      ],
+      "title": "RiskRating",
+      "type": "object"
+    },
+    "RouteLeg": {
+      "additionalProperties": false,
+      "properties": {
+        "corridors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Corridors",
+          "type": "array"
+        },
+        "destination": {
+          "title": "Destination",
+          "type": "string"
+        },
+        "ends_on": {
+          "format": "date",
+          "title": "Ends On",
+          "type": "string"
+        },
+        "geography": {
+          "$ref": "#/$defs/GeoBox"
+        },
+        "leg_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Leg Id",
+          "type": "string"
+        },
+        "mode": {
+          "enum": [
+            "sea",
+            "road"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "origin": {
+          "title": "Origin",
+          "type": "string"
+        },
+        "starts_on": {
+          "format": "date",
+          "title": "Starts On",
+          "type": "string"
+        }
+      },
+      "required": [
+        "leg_id",
+        "mode",
+        "origin",
+        "destination",
+        "corridors",
+        "geography",
+        "starts_on",
+        "ends_on"
+      ],
+      "title": "RouteLeg",
+      "type": "object"
+    },
+    "ScenarioComparison": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm_version": {
+          "const": "pharmax-risk-v1",
+          "default": "pharmax-risk-v1",
+          "title": "Algorithm Version",
+          "type": "string"
+        },
+        "analysis_id": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "as_of": {
+          "format": "date",
+          "title": "As Of",
+          "type": "string"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "baseline": {
+          "$ref": "#/$defs/HospitalRiskAssessment"
+        },
+        "baseline_already_short": {
+          "title": "Baseline Already Short",
+          "type": "boolean"
+        },
+        "causal_explanation": {
+          "title": "Causal Explanation",
+          "type": "string"
+        },
+        "dataset_version": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "disruption": {
+          "$ref": "#/$defs/HospitalRiskAssessment"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "incremental_shortage_days": {
+          "title": "Incremental Shortage Days",
+          "type": "integer"
+        },
+        "incremental_unmet": {
+          "title": "Incremental Unmet",
+          "type": "integer"
+        },
+        "input_evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Input Evidence Ids",
+          "type": "array"
+        },
+        "kind": {
+          "const": "derived",
+          "default": "derived",
+          "title": "Kind",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "overlay": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScenarioOverlay"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "overlay_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Overlay Version"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "3.0",
+          "default": "3.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "stockout_advance_days": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Stockout Advance Days"
+        }
+      },
+      "required": [
+        "analysis_id",
+        "dataset_version",
+        "input_evidence_ids",
+        "assumptions",
+        "limitations",
+        "as_of",
+        "hospital_id",
+        "product_id",
+        "overlay",
+        "overlay_version",
+        "baseline",
+        "disruption",
+        "incremental_unmet",
+        "incremental_shortage_days",
+        "stockout_advance_days",
+        "baseline_already_short",
+        "causal_explanation"
+      ],
+      "title": "ScenarioComparison",
+      "type": "object"
+    },
+    "ScenarioOverlay": {
+      "additionalProperties": false,
+      "properties": {
+        "arrivals": {
+          "items": {
+            "$ref": "#/$defs/ArrivalOverride"
+          },
+          "maxItems": 20,
+          "title": "Arrivals",
+          "type": "array"
+        },
+        "as_of": {
+          "format": "date",
+          "title": "As Of",
+          "type": "string"
+        },
+        "base_dataset_version": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Base Dataset Version",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "kind": {
+          "const": "simulated",
+          "default": "simulated",
+          "title": "Kind",
+          "type": "string"
+        },
+        "overlay_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Overlay Id",
+          "type": "string"
+        },
+        "stock": {
+          "items": {
+            "$ref": "#/$defs/StockOverride"
+          },
+          "maxItems": 20,
+          "title": "Stock",
+          "type": "array"
+        }
+      },
+      "required": [
+        "overlay_id",
+        "base_dataset_version",
+        "as_of",
+        "description"
+      ],
+      "title": "ScenarioOverlay",
+      "type": "object"
+    },
+    "ShipmentRisk": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm_version": {
+          "const": "pharmax-risk-v1",
+          "default": "pharmax-risk-v1",
+          "title": "Algorithm Version",
+          "type": "string"
+        },
+        "analysis_id": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "arrival_basis": {
+          "enum": [
+            "modeled_schedule",
+            "hypothetical_override",
+            "held",
+            "blocked_constraints",
+            "past_due_not_recredited"
+          ],
+          "title": "Arrival Basis",
+          "type": "string"
+        },
+        "as_of": {
+          "format": "date",
+          "title": "As Of",
+          "type": "string"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "dataset_version": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "delay_days": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Delay Days"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "input_evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Input Evidence Ids",
+          "type": "array"
+        },
+        "input_values": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Input Values",
+          "type": "object"
+        },
+        "kind": {
+          "const": "derived",
+          "default": "derived",
+          "title": "Kind",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "linked_simulated_event_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Linked Simulated Event Ids",
+          "type": "array"
+        },
+        "modeled_arrival": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Modeled Arrival"
+        },
+        "original_status": {
+          "title": "Original Status",
+          "type": "string"
+        },
+        "overlay_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Overlay Version"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "quantity_unit": {
+          "const": "vial",
+          "default": "vial",
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "rating": {
+          "$ref": "#/$defs/RiskRating"
+        },
+        "scenario": {
+          "enum": [
+            "baseline",
+            "disruption"
+          ],
+          "title": "Scenario",
+          "type": "string"
+        },
+        "scheduled_arrival": {
+          "format": "date",
+          "title": "Scheduled Arrival",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "3.0",
+          "default": "3.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "shipment_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Shipment Id",
+          "type": "string"
+        },
+        "supplier_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Supplier Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "analysis_id",
+        "dataset_version",
+        "input_evidence_ids",
+        "assumptions",
+        "limitations",
+        "as_of",
+        "scenario",
+        "overlay_version",
+        "shipment_id",
+        "supplier_id",
+        "hospital_id",
+        "product_id",
+        "quantity",
+        "original_status",
+        "scheduled_arrival",
+        "modeled_arrival",
+        "arrival_basis",
+        "delay_days",
+        "linked_simulated_event_ids",
+        "rating",
+        "input_values"
+      ],
+      "title": "ShipmentRisk",
+      "type": "object"
+    },
+    "SourceEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "observed",
+            "derived",
+            "simulated"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "title": "Observed At",
+          "type": "string"
+        },
+        "parent_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parent Ids",
+          "type": "array"
+        },
+        "published_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published On"
+        },
+        "raw_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Ref"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_record_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Record Id"
+        },
+        "source_url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Source Url",
+          "type": "string"
+        },
+        "updated_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Updated On"
+        },
+        "version_available_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version Available At"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "kind",
+        "source",
+        "source_url",
+        "observed_at",
+        "content_sha256"
+      ],
+      "title": "SourceEvidence",
+      "type": "object"
+    },
+    "StockOverride": {
+      "additionalProperties": false,
+      "properties": {
+        "inventory_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Inventory Id",
+          "type": "string"
+        },
+        "on_hand": {
+          "minimum": 0,
+          "title": "On Hand",
+          "type": "integer"
+        },
+        "reserved": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reserved"
+        }
+      },
+      "required": [
+        "inventory_id",
+        "on_hand"
+      ],
+      "title": "StockOverride",
+      "type": "object"
+    },
+    "SupplyBalance": {
+      "additionalProperties": false,
+      "properties": {
+        "available_after": {
+          "minimum": 0,
+          "title": "Available After",
+          "type": "integer"
+        },
+        "available_before": {
+          "minimum": 0,
+          "title": "Available Before",
+          "type": "integer"
+        },
+        "conserved": {
+          "title": "Conserved",
+          "type": "boolean"
+        },
+        "debited": {
+          "minimum": 0,
+          "title": "Debited",
+          "type": "integer"
+        },
+        "diagnostic_only": {
+          "default": false,
+          "title": "Diagnostic Only",
+          "type": "boolean"
+        },
+        "existing_shipment_reused": {
+          "title": "Existing Shipment Reused",
+          "type": "boolean"
+        },
+        "recipient_receipt": {
+          "minimum": 0,
+          "title": "Recipient Receipt",
+          "type": "integer"
+        },
+        "source_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Source Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "available_before",
+        "available_after",
+        "debited",
+        "recipient_receipt",
+        "existing_shipment_reused",
+        "conserved"
+      ],
+      "title": "SupplyBalance",
+      "type": "object"
+    },
+    "SupplyDependency": {
+      "additionalProperties": false,
+      "properties": {
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "dataset_version": {
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "evidence_label": {
+          "const": "simulated",
+          "default": "simulated",
+          "title": "Evidence Label",
+          "type": "string"
+        },
+        "hospital_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Hospital Id",
+          "type": "string"
+        },
+        "legs": {
+          "items": {
+            "$ref": "#/$defs/RouteLeg"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "title": "Legs",
+          "type": "array"
+        },
+        "planned_arrival": {
+          "format": "date",
+          "title": "Planned Arrival",
+          "type": "string"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "quantity_vials": {
+          "exclusiveMinimum": 0,
+          "title": "Quantity Vials",
+          "type": "integer"
+        },
+        "scenario_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "shipment_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Shipment Id",
+          "type": "string"
+        },
+        "supplier_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Supplier Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scenario_id",
+        "dataset_version",
+        "shipment_id",
+        "supplier_id",
+        "hospital_id",
+        "product_id",
+        "quantity_vials",
+        "planned_arrival",
+        "legs",
+        "assumptions"
+      ],
+      "title": "SupplyDependency",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "baseline": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/HospitalRiskAssessment"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "decision_at": {
+      "format": "date-time",
+      "title": "Decision At",
+      "type": "string"
+    },
+    "dependency": {
+      "$ref": "#/$defs/SupplyDependency"
+    },
+    "error_code": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Error Code"
+    },
+    "events": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Events",
+      "type": "array"
+    },
+    "historical": {
+      "const": false,
+      "default": false,
+      "title": "Historical",
+      "type": "boolean"
+    },
+    "match": {
+      "$ref": "#/$defs/DependencyMatch"
+    },
+    "mitigation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/MitigationResult"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "mode": {
+      "enum": [
+        "live-fetch",
+        "frozen-replay"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "requires_human_review": {
+      "const": true,
+      "default": true,
+      "title": "Requires Human Review",
+      "type": "boolean"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "4c.1",
+      "default": "4c.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "selected_delay_days": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Selected Delay Days"
+    },
+    "sensitivity": {
+      "items": {
+        "$ref": "#/$defs/DelayRisk"
+      },
+      "title": "Sensitivity",
+      "type": "array"
+    },
+    "signal": {
+      "$ref": "#/$defs/DisruptionSignal"
+    },
+    "status": {
+      "enum": [
+        "complete",
+        "unmatched",
+        "blocked"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "uncertainties": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Uncertainties",
+      "type": "array"
+    },
+    "zetaris": {
+      "additionalProperties": true,
+      "title": "Zetaris",
+      "type": "object"
+    }
+  },
+  "required": [
+    "run_id",
+    "mode",
+    "decision_at",
+    "signal",
+    "dependency",
+    "match",
+    "uncertainties",
+    "status"
+  ],
+  "title": "IntelligenceRun",
+  "type": "object"
+}

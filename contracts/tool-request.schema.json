@@ -1,0 +1,34 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "limit": {
+      "default": 3,
+      "maximum": 5,
+      "minimum": 1,
+      "title": "Limit",
+      "type": "integer"
+    },
+    "name": {
+      "enum": [
+        "zetaris.connection_check",
+        "fda.sample",
+        "comtrade.sample"
+      ],
+      "title": "Name",
+      "type": "string"
+    },
+    "request_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Request Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "request_id",
+    "name"
+  ],
+  "title": "ToolRequest",
+  "type": "object"
+}

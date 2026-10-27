@@ -1,0 +1,46 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "attestations": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "title": "Attestations",
+      "type": "array"
+    },
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "note": {
+      "maxLength": 1000,
+      "minLength": 3,
+      "title": "Note",
+      "type": "string"
+    },
+    "operator": {
+      "maxLength": 100,
+      "minLength": 2,
+      "title": "Operator",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "READY_FOR_REVIEW",
+        "APPROVED"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "status",
+    "operator",
+    "note"
+  ],
+  "title": "ActionReview",
+  "type": "object"
+}

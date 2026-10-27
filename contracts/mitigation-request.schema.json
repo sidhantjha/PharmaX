@@ -1,0 +1,71 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "evidence_as_of": {
+      "format": "date-time",
+      "title": "Evidence As Of",
+      "type": "string"
+    },
+    "horizon_days": {
+      "default": 14,
+      "maximum": 60,
+      "minimum": 1,
+      "title": "Horizon Days",
+      "type": "integer"
+    },
+    "hospital_id": {
+      "default": "sim-central",
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Hospital Id",
+      "type": "string"
+    },
+    "objective": {
+      "default": "Investigate simulated alternatives to reduce Central shortage safely.",
+      "maxLength": 500,
+      "minLength": 3,
+      "title": "Objective",
+      "type": "string"
+    },
+    "product_id": {
+      "default": "sim-carboplatin-450",
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Product Id",
+      "type": "string"
+    },
+    "reasoning": {
+      "default": "fixture",
+      "enum": [
+        "fixture",
+        "nightshift"
+      ],
+      "title": "Reasoning",
+      "type": "string"
+    },
+    "scenario": {
+      "default": "original",
+      "enum": [
+        "original",
+        "clean-onset"
+      ],
+      "title": "Scenario",
+      "type": "string"
+    },
+    "session_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Session Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "session_id",
+    "evidence_as_of"
+  ],
+  "title": "MitigationRequest",
+  "type": "object"
+}

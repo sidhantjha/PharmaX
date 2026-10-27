@@ -1,0 +1,336 @@
+{
+  "$defs": {
+    "ArrivalClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "arrival_on": {
+          "format": "date",
+          "title": "Arrival On",
+          "type": "string"
+        },
+        "authorization_ref": {
+          "anyOf": [
+            {
+              "maxLength": 160,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Authorization Ref"
+        },
+        "claim_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "classification": {
+          "const": "simulated-operational-communication",
+          "default": "simulated-operational-communication",
+          "title": "Classification",
+          "type": "string"
+        },
+        "document": {
+          "maxLength": 4000,
+          "minLength": 2,
+          "title": "Document",
+          "type": "string"
+        },
+        "effective_at": {
+          "format": "date-time",
+          "title": "Effective At",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence",
+          "allOf": [
+            {
+              "properties": {
+                "kind": {
+                  "const": "simulated"
+                }
+              }
+            }
+          ]
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Product Id",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "format": "date-time",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "shipment_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Shipment Id",
+          "type": "string"
+        },
+        "source": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "supplier_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Supplier Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "shipment_id",
+        "product_id",
+        "supplier_id",
+        "source",
+        "effective_at",
+        "retrieved_at",
+        "arrival_on",
+        "document",
+        "evidence"
+      ],
+      "title": "ArrivalClaim",
+      "type": "object"
+    },
+    "ClaimCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "check": {
+          "title": "Check",
+          "type": "string"
+        },
+        "claim_id": {
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "passed": {
+          "title": "Passed",
+          "type": "boolean"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "check",
+        "passed",
+        "reason"
+      ],
+      "title": "ClaimCheck",
+      "type": "object"
+    },
+    "SourceEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "observed",
+            "derived",
+            "simulated"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "title": "Observed At",
+          "type": "string"
+        },
+        "parent_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parent Ids",
+          "type": "array"
+        },
+        "published_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published On"
+        },
+        "raw_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Ref"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_record_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Record Id"
+        },
+        "source_url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Source Url",
+          "type": "string"
+        },
+        "updated_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Updated On"
+        },
+        "version_available_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version Available At"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "kind",
+        "source",
+        "source_url",
+        "observed_at",
+        "content_sha256"
+      ],
+      "title": "SourceEvidence",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "assessments": {
+      "items": {
+        "$ref": "#/$defs/ClaimCheck"
+      },
+      "title": "Assessments",
+      "type": "array"
+    },
+    "competing_claims": {
+      "items": {
+        "$ref": "#/$defs/ArrivalClaim"
+      },
+      "title": "Competing Claims",
+      "type": "array"
+    },
+    "conflict_id": {
+      "title": "Conflict Id",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "justification": {
+      "title": "Justification",
+      "type": "string"
+    },
+    "reason": {
+      "title": "Reason",
+      "type": "string"
+    },
+    "selected_claim_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Selected Claim Id"
+    },
+    "unresolved_uncertainty": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unresolved Uncertainty",
+      "type": "array"
+    },
+    "verification_status": {
+      "enum": [
+        "resolved-for-planning",
+        "unresolved",
+        "no-disagreement"
+      ],
+      "title": "Verification Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "conflict_id",
+    "competing_claims",
+    "evidence_ids",
+    "reason",
+    "assessments",
+    "verification_status",
+    "selected_claim_id",
+    "justification",
+    "unresolved_uncertainty"
+  ],
+  "title": "EvidenceConflict",
+  "type": "object"
+}

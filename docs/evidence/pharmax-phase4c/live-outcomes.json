@@ -1,0 +1,609 @@
+{
+  "mode": "live-fetch",
+  "source": {
+    "schema_version": "4c.1",
+    "event_id": "marad:2026-013",
+    "revision_id": "828bc72b02e5ffda96cca8ac6b8dbd74b281cd900811dc1027b8763c81a087d4",
+    "deduplication_identity": "marad:2026-013",
+    "category": "maritime_security",
+    "title": "2026-013-Red Sea, Bab el Mandeb Strait, Gulf of Aden, Arabian Sea, and Somali Basin-Houthi Attacks on Commercial Vessels",
+    "provider": "marad",
+    "source_type": "official",
+    "publisher": "U.S. MARAD",
+    "original_urls": [
+      "https://www.maritime.dot.gov/msci/2026-013-red-sea-bab-el-mandeb-strait-gulf-aden-arabian-sea-and-somali-basin-houthi-attacks",
+      "https://www.maritime.dot.gov/msci-advisories"
+    ],
+    "location": [
+      "arabian sea",
+      "bab el mandeb",
+      "gulf of aden",
+      "red sea"
+    ],
+    "corridors": [
+      "arabian-sea",
+      "bab-el-mandeb",
+      "gulf-of-aden",
+      "red-sea"
+    ],
+    "geography": [
+      {
+        "west": 50.0,
+        "south": 5.0,
+        "east": 74.0,
+        "north": 26.0
+      },
+      {
+        "west": 42.0,
+        "south": 12.0,
+        "east": 44.0,
+        "north": 14.0
+      },
+      {
+        "west": 43.0,
+        "south": 10.0,
+        "east": 52.0,
+        "north": 16.0
+      },
+      {
+        "west": 32.0,
+        "south": 12.0,
+        "east": 44.0,
+        "north": 30.0
+      }
+    ],
+    "observed_event_time": null,
+    "source_published_at": null,
+    "source_published_on": null,
+    "indexed_at": null,
+    "retrieved_at": "2026-10-24T18:17:10.242651Z",
+    "effective_on": "2026-09-23",
+    "expires_on": "2027-03-22",
+    "status": "active",
+    "supersedes": [
+      "marad:2026-006"
+    ],
+    "confirmation": "official_notice",
+    "supported_claims": [
+      "MARAD published a maritime security advisory covering the locations stated in its title.",
+      "The official listing states status Active, effective 2026-09-23, expiry 2027-03-22.",
+      "The advisory describes security threats to commercial vessels; this is an authority statement, not an independent incident verification.",
+      "The notice explicitly supersedes/cancels 2026-006."
+    ],
+    "claim_limitations": [
+      "Publication timestamp is not supplied by the parsed notice/listing; effective date is separate.",
+      "Coarse geography is a curated interpretation of named waters, not an observed vessel track.",
+      "An advisory does not prove delay, route use, supplier dependency or carboplatin impact."
+    ],
+    "impacted_assets": [],
+    "evidence_ids": [
+      "marad:7a778a5718f599284f80914098a60014bbeefb34b751c1d06bb3146c3bf6a989",
+      "marad:0e97439542957280921810fe94746ba0a40818d2830a003558916bbce6fa8025"
+    ],
+    "evidence": [
+      {
+        "evidence_id": "marad:7a778a5718f599284f80914098a60014bbeefb34b751c1d06bb3146c3bf6a989",
+        "kind": "observed",
+        "source": "marad",
+        "source_record_id": "listing-2026-013",
+        "source_url": "https://www.maritime.dot.gov/msci-advisories",
+        "observed_at": "2026-10-24T18:17:10.187026Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "e7de381b6bf1e13d1574b60b266a680ad0f2b3c0256ed0d4fb98bf995a3bc6d1",
+        "raw_ref": "snapshot:13f7dbce808dd72ce3510135dec907b78414438450ea87a546a3d508571c67f1",
+        "parent_ids": [],
+        "note": "Retrieval establishes availability of this revision only; no backdating to publication."
+      },
+      {
+        "evidence_id": "marad:0e97439542957280921810fe94746ba0a40818d2830a003558916bbce6fa8025",
+        "kind": "observed",
+        "source": "marad",
+        "source_record_id": "2026-013",
+        "source_url": "https://www.maritime.dot.gov/msci/2026-013-red-sea-bab-el-mandeb-strait-gulf-aden-arabian-sea-and-somali-basin-houthi-attacks",
+        "observed_at": "2026-10-24T18:17:10.242651Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "cc396da749ea7f87c6b0ea815bb9c10610b7f980f607cd071879a51b504ec4eb",
+        "raw_ref": "snapshot:df507cc3c709c29dc19226ba29331f4388071733a02d5ffb09acbd88b20b3614",
+        "parent_ids": [],
+        "note": "Retrieval establishes availability of this revision only; no backdating to publication."
+      }
+    ],
+    "evidence_label": "observed"
+  },
+  "zetaris": {
+    "table": "pharmax_p2_data.li_90aed086479a72e3038dedcf1e0d4e41dc550375bf16d9c736fd80a0bc42a6da",
+    "version": "90aed086479a72e3038dedcf1e0d4e41dc550375bf16d9c736fd80a0bc42a6da",
+    "rows": 1,
+    "verified": true,
+    "queries": 4,
+    "signal_revisions": [
+      "828bc72b02e5ffda96cca8ac6b8dbd74b281cd900811dc1027b8763c81a087d4"
+    ],
+    "queried_events": [
+      "marad:2026-013"
+    ],
+    "mode": "live-zetaris"
+  },
+  "dependency": {
+    "scenario_id": "october-2026-red-sea-v1",
+    "dataset_version": "722ba6cfe6660d43e78f48f58e51d796fa53d54e72e8f610c22fddbcceaa90cc",
+    "shipment_id": "ship-central",
+    "supplier_id": "sim-atlas",
+    "hospital_id": "sim-central",
+    "product_id": "sim-carboplatin-450",
+    "quantity_vials": 90,
+    "planned_arrival": "2026-11-15",
+    "legs": [
+      {
+        "leg_id": "arabian",
+        "mode": "sea",
+        "origin": "Nhava Sheva, India",
+        "destination": "Arabian Sea",
+        "corridors": [
+          "arabian-sea"
+        ],
+        "geography": {
+          "west": 55.0,
+          "south": 12.0,
+          "east": 74.0,
+          "north": 23.0
+        },
+        "starts_on": "2026-10-17",
+        "ends_on": "2026-10-24"
+      },
+      {
+        "leg_id": "aden",
+        "mode": "sea",
+        "origin": "Arabian Sea",
+        "destination": "Gulf of Aden",
+        "corridors": [
+          "gulf-of-aden"
+        ],
+        "geography": {
+          "west": 43.0,
+          "south": 10.0,
+          "east": 52.0,
+          "north": 16.0
+        },
+        "starts_on": "2026-10-24",
+        "ends_on": "2026-10-25"
+      },
+      {
+        "leg_id": "red-sea",
+        "mode": "sea",
+        "origin": "Bab el Mandeb",
+        "destination": "Northern Red Sea",
+        "corridors": [
+          "bab-el-mandeb",
+          "red-sea"
+        ],
+        "geography": {
+          "west": 32.0,
+          "south": 12.0,
+          "east": 44.0,
+          "north": 30.0
+        },
+        "starts_on": "2026-10-25",
+        "ends_on": "2026-10-29"
+      },
+      {
+        "leg_id": "suez",
+        "mode": "sea",
+        "origin": "Suez",
+        "destination": "Port Said",
+        "corridors": [
+          "suez"
+        ],
+        "geography": {
+          "west": 32.0,
+          "south": 29.0,
+          "east": 33.0,
+          "north": 32.0
+        },
+        "starts_on": "2026-10-30",
+        "ends_on": "2026-10-30"
+      },
+      {
+        "leg_id": "mediterranean",
+        "mode": "sea",
+        "origin": "Port Said",
+        "destination": "Gibraltar",
+        "corridors": [
+          "mediterranean"
+        ],
+        "geography": {
+          "west": -6.0,
+          "south": 30.0,
+          "east": 33.0,
+          "north": 38.0
+        },
+        "starts_on": "2026-10-31",
+        "ends_on": "2026-11-03"
+      },
+      {
+        "leg_id": "atlantic",
+        "mode": "sea",
+        "origin": "Gibraltar",
+        "destination": "Port Newark, USA",
+        "corridors": [
+          "north-atlantic"
+        ],
+        "geography": {
+          "west": -75.0,
+          "south": 30.0,
+          "east": -5.0,
+          "north": 42.0
+        },
+        "starts_on": "2026-11-04",
+        "ends_on": "2026-11-13"
+      },
+      {
+        "leg_id": "illinois",
+        "mode": "road",
+        "origin": "Port Newark",
+        "destination": "Fictional Central Illinois hospital",
+        "corridors": [
+          "us-inland"
+        ],
+        "geography": {
+          "west": -90.0,
+          "south": 38.0,
+          "east": -74.0,
+          "north": 42.0
+        },
+        "starts_on": "2026-11-14",
+        "ends_on": "2026-11-15"
+      }
+    ],
+    "assumptions": [
+      "Simulated temperature-controlled sea/inland journey from Nhava Sheva via Red Sea/Suez and Port Newark.",
+      "Approximately thirty-day modeled voyage from dispatch to Illinois; legs, geography and transit times are assumptions.",
+      "No source establishes a real carboplatin shipment, supplier exposure, carrier affiliation or actual delay."
+    ],
+    "evidence_label": "simulated"
+  },
+  "match": {
+    "signal_revision": "828bc72b02e5ffda96cca8ac6b8dbd74b281cd900811dc1027b8763c81a087d4",
+    "shipment_id": "ship-central",
+    "status": "MATCHED",
+    "reasons": [
+      "Official advisory validity, named corridor and coarse geography intersect simulated future/in-progress route legs.",
+      "Matching establishes modeled exposure only, not actual delay, a real supplier dependency or a carboplatin cargo."
+    ],
+    "matched_legs": [
+      "arabian",
+      "aden",
+      "red-sea"
+    ],
+    "evidence_ids": [
+      "marad:7a778a5718f599284f80914098a60014bbeefb34b751c1d06bb3146c3bf6a989",
+      "marad:0e97439542957280921810fe94746ba0a40818d2830a003558916bbce6fa8025"
+    ],
+    "dependency_label": "simulated",
+    "observed_shipment_delay": false
+  },
+  "sensitivity": [
+    {
+      "delay_days": 0,
+      "arrival": "2026-11-15",
+      "unmet": 0,
+      "onset": null,
+      "affected_days": 0,
+      "risk": "Low",
+      "analysis_id": "930e8f4f4fc4260027d1a1340a958fdd7a5c801db47c108046b70846399ffb05"
+    },
+    {
+      "delay_days": 3,
+      "arrival": "2026-11-18",
+      "unmet": 0,
+      "onset": null,
+      "affected_days": 0,
+      "risk": "Moderate",
+      "analysis_id": "de31d17788bda0a5afa797c0623688639793df7a6f1f10af44da9a69b3c26917"
+    },
+    {
+      "delay_days": 7,
+      "arrival": "2026-11-22",
+      "unmet": 24,
+      "onset": "2026-11-18",
+      "affected_days": 4,
+      "risk": "High",
+      "analysis_id": "5cd76301eb95085d852ff5f6c5e3b3c6fa653f5b5d369f7ddf99ae24dccd976f"
+    }
+  ],
+  "recommendation": "For human review: north-conservative; 24 \u2192 0 unmet vials; 24 simulated vials supplied. Best among evaluated feasible alternatives; other hospitals are checked. No recipient unmet demand in this horizon.",
+  "recommendation_id": "north-conservative",
+  "evaluations": [
+    {
+      "candidate_id": "north-bulk",
+      "feasible": false,
+      "reasons": [
+        "DONOR_SHORTAGE",
+        "DONOR_RISK_WORSE"
+      ],
+      "before": 24,
+      "remaining": 24,
+      "quantity": 0,
+      "impacts": [
+        {
+          "hospital_id": "sim-central",
+          "before": {
+            "hospital_id": "sim-central",
+            "unmet_vials": 24,
+            "shortage_onset": "2026-11-18",
+            "shortage_days": 4,
+            "risk": "High",
+            "ending_usable": 84
+          },
+          "effective": {
+            "hospital_id": "sim-central",
+            "unmet_vials": 24,
+            "shortage_onset": "2026-11-18",
+            "shortage_days": 4,
+            "risk": "High",
+            "ending_usable": 84
+          },
+          "donor": false
+        },
+        {
+          "hospital_id": "sim-north",
+          "before": {
+            "hospital_id": "sim-north",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 100
+          },
+          "effective": {
+            "hospital_id": "sim-north",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 100
+          },
+          "donor": true
+        },
+        {
+          "hospital_id": "sim-south",
+          "before": {
+            "hospital_id": "sim-south",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 70
+          },
+          "effective": {
+            "hospital_id": "sim-south",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 70
+          },
+          "donor": false
+        }
+      ]
+    },
+    {
+      "candidate_id": "north-other-strength",
+      "feasible": false,
+      "reasons": [
+        "PRODUCT_MISMATCH",
+        "PRESENTATION_MISMATCH",
+        "PRODUCT_MISMATCH"
+      ],
+      "before": 24,
+      "remaining": 24,
+      "quantity": 0,
+      "impacts": [
+        {
+          "hospital_id": "sim-central",
+          "before": {
+            "hospital_id": "sim-central",
+            "unmet_vials": 24,
+            "shortage_onset": "2026-11-18",
+            "shortage_days": 4,
+            "risk": "High",
+            "ending_usable": 84
+          },
+          "effective": {
+            "hospital_id": "sim-central",
+            "unmet_vials": 24,
+            "shortage_onset": "2026-11-18",
+            "shortage_days": 4,
+            "risk": "High",
+            "ending_usable": 84
+          },
+          "donor": false
+        },
+        {
+          "hospital_id": "sim-north",
+          "before": {
+            "hospital_id": "sim-north",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 100
+          },
+          "effective": {
+            "hospital_id": "sim-north",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 100
+          },
+          "donor": true
+        },
+        {
+          "hospital_id": "sim-south",
+          "before": {
+            "hospital_id": "sim-south",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 70
+          },
+          "effective": {
+            "hospital_id": "sim-south",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 70
+          },
+          "donor": false
+        }
+      ]
+    },
+    {
+      "candidate_id": "lakes-additional",
+      "feasible": true,
+      "reasons": [],
+      "before": 24,
+      "remaining": 0,
+      "quantity": 36,
+      "impacts": [
+        {
+          "hospital_id": "sim-central",
+          "before": {
+            "hospital_id": "sim-central",
+            "unmet_vials": 24,
+            "shortage_onset": "2026-11-18",
+            "shortage_days": 4,
+            "risk": "High",
+            "ending_usable": 84
+          },
+          "effective": {
+            "hospital_id": "sim-central",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Moderate",
+            "ending_usable": 96
+          },
+          "donor": false
+        },
+        {
+          "hospital_id": "sim-north",
+          "before": {
+            "hospital_id": "sim-north",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 100
+          },
+          "effective": {
+            "hospital_id": "sim-north",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 100
+          },
+          "donor": false
+        },
+        {
+          "hospital_id": "sim-south",
+          "before": {
+            "hospital_id": "sim-south",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 70
+          },
+          "effective": {
+            "hospital_id": "sim-south",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 70
+          },
+          "donor": false
+        }
+      ]
+    },
+    {
+      "candidate_id": "north-conservative",
+      "feasible": true,
+      "reasons": [],
+      "before": 24,
+      "remaining": 0,
+      "quantity": 24,
+      "impacts": [
+        {
+          "hospital_id": "sim-central",
+          "before": {
+            "hospital_id": "sim-central",
+            "unmet_vials": 24,
+            "shortage_onset": "2026-11-18",
+            "shortage_days": 4,
+            "risk": "High",
+            "ending_usable": 84
+          },
+          "effective": {
+            "hospital_id": "sim-central",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Moderate",
+            "ending_usable": 84
+          },
+          "donor": false
+        },
+        {
+          "hospital_id": "sim-north",
+          "before": {
+            "hospital_id": "sim-north",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 100
+          },
+          "effective": {
+            "hospital_id": "sim-north",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 76
+          },
+          "donor": true
+        },
+        {
+          "hospital_id": "sim-south",
+          "before": {
+            "hospital_id": "sim-south",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 70
+          },
+          "effective": {
+            "hospital_id": "sim-south",
+            "unmet_vials": 0,
+            "shortage_onset": null,
+            "shortage_days": 0,
+            "risk": "Low",
+            "ending_usable": 70
+          },
+          "donor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+/* Scoped saved-case drawer. Existing globe, layout, themes and demo interactions stay intact. */
+.operator-cases{font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+.operator-cases h3{margin:20px 0 12px;font-size:16px}.operator-cases h4{margin:24px 0 8px;font-size:13px}
+.operator-connection{font-size:11px;color:inherit;font-weight:600;letter-spacing:.04em}
+.operator-case{width:100%;text-align:left}.operator-case>span:last-child{font-size:11px;flex-shrink:0}
+.operator-case small,.operator-id{font-family:monospace;font-size:10px;overflow-wrap:anywhere}
+.operator-pagination{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.operator-pagination button:disabled{opacity:.4;cursor:default}
+.operator-table-wrap{width:100%;overflow-x:auto;margin:12px 0 20px}
+.operator-cases table{border-collapse:collapse;width:100%;font-size:12px;text-align:left}
+.operator-cases caption{text-align:left;padding:8px 0}.operator-cases th,.operator-cases td{border-bottom:1px solid #788b8733;padding:10px 5px}
+.operator-cases th{font-weight:500}.operator-cases td{text-align:right;font-variant-numeric:tabular-nums}
+.operator-cases th small{display:block;font-size:10px;font-weight:400;opacity:.7}
+.operator-cases details{margin:12px 0;border-bottom:1px solid #788b8733;padding-bottom:12px}
+.operator-cases details>summary{cursor:pointer}.operator-record{padding:12px 0;font-size:11px}
+.operator-record p{margin:4px 0}.operator-record code{display:block;font-size:9px;overflow-wrap:anywhere;opacity:.75}
+.operator-record a{color:inherit;text-decoration:underline}.operator-state{font-size:13px;line-height:1.6}
+.operator-cases button:focus-visible,.operator-cases summary:focus-visible,.operator-record a:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+/* Portal content inherits the sheet theme; avoid prototype-only pale text in light mode. */
+.operator-cases .detail-copy{color:inherit;opacity:.82}
+.operator-cases .detail-list dd,.operator-cases .secondary-button{color:inherit}
+.operator-cases .detail-list dt{color:inherit;opacity:.75}

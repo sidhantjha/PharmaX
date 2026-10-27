@@ -1,0 +1,2 @@
+record_id,facility_id,local_sku,account_id,po_id,line_id,shipment_id,ndc,quantity,unit,case_bags,status,scope,effective_at,available_at,expires_on,quality
+receipt-central,sim-nc-central,IV-NS1L,sim-account-central,po-central,line-1,asn-central,00338-0049-04,500,bag,,closed,event_total,2024-10-01T23:30:00-04:00,2024-10-02T00:00:00-04:00,2024-12-31,released

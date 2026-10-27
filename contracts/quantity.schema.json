@@ -1,0 +1,31 @@
+{
+  "additionalProperties": false,
+  "description": "6a.1 container count; never substitute into legacy *_vials fields.",
+  "properties": {
+    "schema_version": {
+      "const": "6a.1",
+      "default": "6a.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "unit": {
+      "enum": [
+        "vial",
+        "bag"
+      ],
+      "title": "Unit",
+      "type": "string"
+    },
+    "value": {
+      "minimum": 0,
+      "title": "Value",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "value",
+    "unit"
+  ],
+  "title": "Quantity",
+  "type": "object"
+}

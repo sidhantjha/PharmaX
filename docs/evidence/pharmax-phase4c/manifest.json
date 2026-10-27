@@ -1,0 +1,64 @@
+{
+  "schema_version": "4c.1",
+  "scenario_anchor": "2026-10-24",
+  "fetch_status": [
+    {
+      "source": "marad",
+      "new_revisions": [
+        "828bc72b02e5ffda96cca8ac6b8dbd74b281cd900811dc1027b8763c81a087d4"
+      ],
+      "relevant_revisions": [
+        "828bc72b02e5ffda96cca8ac6b8dbd74b281cd900811dc1027b8763c81a087d4"
+      ],
+      "retrieved_count": 1,
+      "status": "success",
+      "receipts": [
+        "13f7dbce808dd72ce3510135dec907b78414438450ea87a546a3d508571c67f1",
+        "df507cc3c709c29dc19226ba29331f4388071733a02d5ffb09acbd88b20b3614"
+      ]
+    }
+  ],
+  "source_status": [
+    {
+      "source": "gdelt",
+      "target_cadence_seconds": 1800,
+      "last_attempt_at": "2026-10-24T18:11:25.378875Z",
+      "last_success_at": null,
+      "next_check_at": "2026-10-24T18:12:25.378875Z",
+      "last_error": "HTTP_429",
+      "consecutive_failures": 1,
+      "new_revisions": 0,
+      "monitoring": "last-check-only"
+    },
+    {
+      "source": "marad",
+      "target_cadence_seconds": 21600,
+      "last_attempt_at": "2026-10-24T18:17:10.037990Z",
+      "last_success_at": "2026-10-24T18:17:10.242651Z",
+      "next_check_at": "2026-10-25T00:17:10.242651Z",
+      "last_error": null,
+      "consecutive_failures": 0,
+      "new_revisions": 1,
+      "monitoring": "last-check-only"
+    }
+  ],
+  "marad": [
+    "13f7dbce808dd72ce3510135dec907b78414438450ea87a546a3d508571c67f1",
+    "df507cc3c709c29dc19226ba29331f4388071733a02d5ffb09acbd88b20b3614"
+  ],
+  "gdelt": [],
+  "zetaris": {
+    "table": "pharmax_p2_data.li_90aed086479a72e3038dedcf1e0d4e41dc550375bf16d9c736fd80a0bc42a6da",
+    "version": "90aed086479a72e3038dedcf1e0d4e41dc550375bf16d9c736fd80a0bc42a6da",
+    "rows": 1,
+    "verified": true,
+    "queries": 4,
+    "signal_revisions": [
+      "828bc72b02e5ffda96cca8ac6b8dbd74b281cd900811dc1027b8763c81a087d4"
+    ],
+    "queried_events": [
+      "marad:2026-013"
+    ],
+    "mode": "live-zetaris"
+  }
+}

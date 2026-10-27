@@ -1,0 +1,455 @@
+{
+  "$defs": {
+    "GeoBox": {
+      "additionalProperties": false,
+      "properties": {
+        "east": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "East",
+          "type": "number"
+        },
+        "north": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "North",
+          "type": "number"
+        },
+        "south": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "South",
+          "type": "number"
+        },
+        "west": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "West",
+          "type": "number"
+        }
+      },
+      "required": [
+        "west",
+        "south",
+        "east",
+        "north"
+      ],
+      "title": "GeoBox",
+      "type": "object"
+    },
+    "SourceEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "observed",
+            "derived",
+            "simulated"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "title": "Observed At",
+          "type": "string"
+        },
+        "parent_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parent Ids",
+          "type": "array"
+        },
+        "published_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published On"
+        },
+        "raw_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Ref"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_record_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Record Id"
+        },
+        "source_url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Source Url",
+          "type": "string"
+        },
+        "updated_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Updated On"
+        },
+        "version_available_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version Available At"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "kind",
+        "source",
+        "source_url",
+        "observed_at",
+        "content_sha256"
+      ],
+      "title": "SourceEvidence",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "category": {
+      "enum": [
+        "maritime_security",
+        "port_disruption",
+        "manufacturing",
+        "trade_restriction",
+        "shipping",
+        "unknown"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "claim_limitations": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Claim Limitations",
+      "type": "array"
+    },
+    "confirmation": {
+      "enum": [
+        "official_notice",
+        "unverified_media"
+      ],
+      "title": "Confirmation",
+      "type": "string"
+    },
+    "corridors": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 12,
+      "title": "Corridors",
+      "type": "array"
+    },
+    "deduplication_identity": {
+      "title": "Deduplication Identity",
+      "type": "string"
+    },
+    "effective_on": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Effective On"
+    },
+    "event_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Event Id",
+      "type": "string"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/SourceEvidence"
+      },
+      "maxItems": 5,
+      "minItems": 1,
+      "title": "Evidence",
+      "type": "array"
+    },
+    "evidence_ids": {
+      "items": {
+        "maxLength": 160,
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9_.:-]+$",
+        "type": "string"
+      },
+      "maxItems": 5,
+      "minItems": 1,
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "evidence_label": {
+      "const": "observed",
+      "default": "observed",
+      "title": "Evidence Label",
+      "type": "string"
+    },
+    "expires_on": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expires On"
+    },
+    "geography": {
+      "items": {
+        "$ref": "#/$defs/GeoBox"
+      },
+      "maxItems": 12,
+      "title": "Geography",
+      "type": "array"
+    },
+    "impacted_assets": {
+      "items": {
+        "maxLength": 160,
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9_.:-]+$",
+        "type": "string"
+      },
+      "maxItems": 10,
+      "title": "Impacted Assets",
+      "type": "array"
+    },
+    "indexed_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Indexed At"
+    },
+    "location": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 12,
+      "title": "Location",
+      "type": "array"
+    },
+    "observed_event_time": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Observed Event Time"
+    },
+    "original_urls": {
+      "items": {
+        "format": "uri",
+        "maxLength": 2083,
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Original Urls",
+      "type": "array"
+    },
+    "provider": {
+      "enum": [
+        "marad",
+        "gdelt"
+      ],
+      "title": "Provider",
+      "type": "string"
+    },
+    "publisher": {
+      "title": "Publisher",
+      "type": "string"
+    },
+    "retrieved_at": {
+      "format": "date-time",
+      "title": "Retrieved At",
+      "type": "string"
+    },
+    "revision_id": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Revision Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "4c.1",
+      "default": "4c.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_published_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Published At"
+    },
+    "source_published_on": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Published On"
+    },
+    "source_type": {
+      "enum": [
+        "official",
+        "media"
+      ],
+      "title": "Source Type",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "cancelled",
+        "unknown"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "supersedes": {
+      "items": {
+        "maxLength": 160,
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9_.:-]+$",
+        "type": "string"
+      },
+      "maxItems": 10,
+      "title": "Supersedes",
+      "type": "array"
+    },
+    "supported_claims": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10,
+      "minItems": 1,
+      "title": "Supported Claims",
+      "type": "array"
+    },
+    "title": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    }
+  },
+  "required": [
+    "event_id",
+    "revision_id",
+    "deduplication_identity",
+    "category",
+    "title",
+    "provider",
+    "source_type",
+    "publisher",
+    "original_urls",
+    "location",
+    "corridors",
+    "retrieved_at",
+    "status",
+    "confirmation",
+    "supported_claims",
+    "claim_limitations",
+    "evidence_ids",
+    "evidence"
+  ],
+  "title": "DisruptionSignal",
+  "type": "object"
+}

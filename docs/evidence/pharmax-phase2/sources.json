@@ -1,0 +1,34 @@
+{
+  "comtrade": {
+    "snapshot_id": "56cea16d0ac6cccc8a1133efafd702f88097ac92d2cc70caa852551df5dae2f7",
+    "body_sha256": "3be5d06324a5c6860a62baaefb2dc28a402344591e249fabec4720556e9a3833",
+    "content_type": "application/json; charset=utf-8",
+    "observed_at": "2026-10-24T03:38:56.312575+00:00",
+    "source": "comtrade",
+    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2023&reporterCode=842&partnerCode=276%2C356%2C372&cmdCode=30&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&maxRecords=10&includeDesc=true"
+  },
+  "fda-shortages": {
+    "snapshot_id": "b4013a4f70245941aa45f400e528240510a7fb65629130f18424da49f3c90974",
+    "body_sha256": "58776c4069bb7f4937fb3c852dd51dba7b5d37ba0a1c92e1e266ab06c58aa5c2",
+    "content_type": "application/json; charset=utf-8",
+    "observed_at": "2026-10-24T03:37:13.920170+00:00",
+    "source": "fda-shortages",
+    "url": "https://api.fda.gov/drug/shortages.json?search=generic_name%3Acarboplatin&limit=20"
+  },
+  "fda-recalls": {
+    "snapshot_id": "b09940fd7d2da3e856746049d31e82fba034d8eb4b0112c8b7b064fd511490a2",
+    "body_sha256": "a9aa2dd61085b0e38c50b46453a33de0a08ea5cdee3f1fe6fb1f7b89b3ec0b11",
+    "content_type": "application/json; charset=utf-8",
+    "observed_at": "2026-10-24T03:37:17.815431+00:00",
+    "source": "fda-recalls",
+    "url": "https://api.fda.gov/drug/enforcement.json?search=product_description%3Acarboplatin&limit=3"
+  },
+  "curated-document": {
+    "snapshot_id": "0408ff091b6e371f0b87d41697b8a68fc4cd6d36e0e029c4bccfe6205569e638",
+    "body_sha256": "a56081c52130068679ba2fcde9160c1b75efbaa555b4e7cb0e1adb4956fd43d5",
+    "content_type": "text/html; charset=UTF-8",
+    "observed_at": "2026-10-24T03:37:18.003124+00:00",
+    "source": "curated-document",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-provides-update-regarding-storm-damage-pfizer-facility-north-carolina"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "role": "verification",
+  "canonical_tool": "evidence.findings",
+  "simulated_hospital_data": true,
+  "human_review_required": true,
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "zetaris_result_sha256": "caab24bfdfc88f1308db218701d898c8604c30e6116fe1d4cda9930b6d09a37e",
+  "predecessor_findings": [
+    {
+      "role": "news",
+      "observation": "source_provenance_limited",
+      "evidence_ids": [
+        "baxter-2024-09-29",
+        "baxter-2024-10-01"
+      ],
+      "fact_keys": [
+        "manufacturer_provenance_retained",
+        "historical_version_custody_unproven"
+      ],
+      "candidate_id": null,
+      "memory_ids": []
+    }
+  ],
+  "manufacturer_sources": [
+    {
+      "id": "baxter-2024-09-29",
+      "publisher": "Baxter",
+      "issue_date": "2024-09-29",
+      "sha256": "090bd715a4186c5636b57d24226b0f7573f34a3a2a156aed3472a86c506cef16",
+      "historical_custody": "unproven"
+    },
+    {
+      "id": "baxter-2024-10-01",
+      "publisher": "Baxter",
+      "issue_date": "2024-10-01",
+      "sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+      "historical_custody": "unproven"
+    }
+  ],
+  "allocation_evidence": [
+    {
+      "schema_version": "6a.1",
+      "notice_id": "baxter-2024-10-01-row-0",
+      "source_revision_id": "baxter-2024-10-01",
+      "source_sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+      "product_id": "sim-baxter-saline-1000",
+      "original_baxter_code": "2B1324X",
+      "original_ndc": "00338-0049-04",
+      "container_ml": 1000.0,
+      "quantity_unit": "bag",
+      "allocation_percent": 40.0,
+      "effective_on": "2024-10-01",
+      "kind": "observed",
+      "exact_claim": "2B1324X          SOD CHLOR 0.9% INJ USP VIAFLEX                00338-      40%\n                                   1000ML MIGRATED                               0049-04",
+      "customer_class": "US direct customers/distribution partners; not designated children hospitals",
+      "baseline_start": "2024-03-01",
+      "baseline_end": "2024-08-31",
+      "page": 5,
+      "table_location": "Table 1 product 2B1324X",
+      "validation_status": "validated"
+    }
+  ],
+  "reconciliation": [
+    {
+      "category": "compatible",
+      "reason": "Requested bags and account allocation policy describe different stages; the percentage cannot determine this order fill."
+    },
+    {
+      "category": "compatible",
+      "reason": "Requested bags and account allocation policy describe different stages; the percentage cannot determine this order fill."
+    },
+    {
+      "category": "compatible",
+      "reason": "Requested bags and account allocation policy describe different stages; the percentage cannot determine this order fill."
+    },
+    {
+      "category": "missing",
+      "reason": "No hospital-confirmed receipt; purchase order is not inventory."
+    }
+  ],
+  "memory_ids": [],
+  "recalled_findings": [],
+  "excluded_due_to_recalled_rejection": [],
+  "evidence_ids": [
+    "baxter-2024-09-29",
+    "baxter-2024-10-01"
+  ],
+  "fact_keys": [
+    "manufacturer_provenance_retained",
+    "historical_version_custody_unproven",
+    "conflicting_or_missing_receipts_require_review"
+  ],
+  "tool_result_reference": "verification-tool.json",
+  "tool_result_sha256": "341e3ff427e2494aad4973d908edc56c63ced25a2ec5fa3c5105716c4d281a36"
+}

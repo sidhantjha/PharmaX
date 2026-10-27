@@ -1,0 +1,201 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "action_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Action Id",
+      "type": "string"
+    },
+    "calculation_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Calculation Ids",
+      "type": "array"
+    },
+    "calculation_url": {
+      "title": "Calculation Url",
+      "type": "string"
+    },
+    "classification": {
+      "const": "simulated-plan-draft",
+      "default": "simulated-plan-draft",
+      "title": "Classification",
+      "type": "string"
+    },
+    "clinical_alternative_state": {
+      "const": "REQUIRES_CLINICAL_REVIEW",
+      "default": "REQUIRES_CLINICAL_REVIEW",
+      "title": "Clinical Alternative State",
+      "type": "string"
+    },
+    "dispatch_available": {
+      "const": false,
+      "default": false,
+      "title": "Dispatch Available",
+      "type": "boolean"
+    },
+    "draft": {
+      "title": "Draft",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "evidence_url": {
+      "title": "Evidence Url",
+      "type": "string"
+    },
+    "expected_benefit": {
+      "title": "Expected Benefit",
+      "type": "string"
+    },
+    "investigation_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Investigation Id",
+      "type": "string"
+    },
+    "justification": {
+      "title": "Justification",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "supplier_inquiry",
+        "purchase_order",
+        "stock_transfer",
+        "procurement_approval",
+        "clinical_review",
+        "follow_up"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "mitigation_id": {
+      "title": "Mitigation Id",
+      "type": "string"
+    },
+    "outstanding_verification": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Outstanding Verification",
+      "type": "array"
+    },
+    "product_id": {
+      "title": "Product Id",
+      "type": "string"
+    },
+    "quantity": {
+      "exclusiveMinimum": 0,
+      "title": "Quantity",
+      "type": "integer"
+    },
+    "quantity_unit": {
+      "const": "vial",
+      "default": "vial",
+      "title": "Quantity Unit",
+      "type": "string"
+    },
+    "receiving_organization": {
+      "title": "Receiving Organization",
+      "type": "string"
+    },
+    "requesting_organization": {
+      "title": "Requesting Organization",
+      "type": "string"
+    },
+    "required_authorizations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Required Authorizations",
+      "type": "array"
+    },
+    "review_history": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Review History",
+      "type": "array"
+    },
+    "revision": {
+      "default": 1,
+      "minimum": 1,
+      "title": "Revision",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "5a.1",
+      "default": "5a.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_organization": {
+      "title": "Source Organization",
+      "type": "string"
+    },
+    "source_record_id": {
+      "title": "Source Record Id",
+      "type": "string"
+    },
+    "status": {
+      "default": "DRAFT",
+      "enum": [
+        "DRAFT",
+        "READY_FOR_REVIEW",
+        "APPROVED",
+        "SENT",
+        "SUBMITTED",
+        "CONFIRMED",
+        "COMPLETED"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "target_on": {
+      "format": "date",
+      "title": "Target On",
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "title": "Updated At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "action_id",
+    "investigation_id",
+    "mitigation_id",
+    "kind",
+    "product_id",
+    "quantity",
+    "requesting_organization",
+    "receiving_organization",
+    "source_organization",
+    "source_record_id",
+    "target_on",
+    "justification",
+    "expected_benefit",
+    "evidence_ids",
+    "calculation_ids",
+    "evidence_url",
+    "calculation_url",
+    "required_authorizations",
+    "outstanding_verification",
+    "draft",
+    "updated_at"
+  ],
+  "title": "ActionPackage",
+  "type": "object"
+}

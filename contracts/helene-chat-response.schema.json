@@ -1,0 +1,150 @@
+{
+  "$defs": {
+    "ChatCitation": {
+      "additionalProperties": false,
+      "properties": {
+        "href": {
+          "pattern": "^/api/v1/helene/cases/[^/]+/chat-sources/[^/]+$",
+          "title": "Href",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "reference": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Reference",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reference",
+        "label",
+        "href"
+      ],
+      "title": "ChatCitation",
+      "type": "object"
+    },
+    "ChatExecution": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "const": "complete",
+          "default": "complete",
+          "title": "Status",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "tool": {
+          "title": "Tool",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tool",
+        "summary"
+      ],
+      "title": "ChatExecution",
+      "type": "object"
+    },
+    "HeleneChatTurn": {
+      "additionalProperties": false,
+      "properties": {
+        "answer": {
+          "maxLength": 12000,
+          "title": "Answer",
+          "type": "string"
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/ChatCitation"
+          },
+          "maxItems": 16,
+          "title": "Citations",
+          "type": "array"
+        },
+        "executions": {
+          "items": {
+            "$ref": "#/$defs/ChatExecution"
+          },
+          "maxItems": 8,
+          "title": "Executions",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "question": {
+          "maxLength": 2000,
+          "title": "Question",
+          "type": "string"
+        }
+      },
+      "required": [
+        "question",
+        "answer",
+        "citations",
+        "executions",
+        "limitations"
+      ],
+      "title": "HeleneChatTurn",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "conversation_id": {
+      "title": "Conversation Id",
+      "type": "string"
+    },
+    "investigation_id": {
+      "title": "Investigation Id",
+      "type": "string"
+    },
+    "mode": {
+      "const": "offline-deterministic",
+      "default": "offline-deterministic",
+      "title": "Mode",
+      "type": "string"
+    },
+    "model_executed": {
+      "const": false,
+      "default": false,
+      "title": "Model Executed",
+      "type": "boolean"
+    },
+    "schema_version": {
+      "const": "helene-chat-1",
+      "default": "helene-chat-1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "turns": {
+      "items": {
+        "$ref": "#/$defs/HeleneChatTurn"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Turns",
+      "type": "array"
+    }
+  },
+  "required": [
+    "investigation_id",
+    "conversation_id",
+    "turns"
+  ],
+  "title": "HeleneChatResponse",
+  "type": "object"
+}

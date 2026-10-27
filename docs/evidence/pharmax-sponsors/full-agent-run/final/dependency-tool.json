@@ -1,0 +1,95 @@
+[
+  {
+    "canonical_ndc": "00338004904",
+    "classification": "usable_with_assumptions",
+    "failures": [],
+    "limitations": [
+      "Pack count is a synthetic item-master assertion, not verified manufacturer packaging.",
+      "Current public catalog is not proof of exact historical catalog custody."
+    ],
+    "manufacturer_code": "2B1324X",
+    "original": {
+      "container": "viaflex-bag",
+      "distributor_item": null,
+      "dosage_form": "injection",
+      "gs1_gtin": null,
+      "labeler": "Baxter",
+      "local_sku": "IV-NS1L",
+      "manufacturer": "Baxter",
+      "manufacturer_code": "2B1324X",
+      "mapping_reference": "synthetic-catalog-exact-presentation",
+      "name": "Baxter Sodium Chloride",
+      "ndc": "00338-0049-04",
+      "schema_version": "8.1",
+      "source_organization": "sim-nc-central",
+      "strength_mg_ml": 9,
+      "units_per_case": 12,
+      "volume_ml": 1000
+    },
+    "reference": "https://catalog.baxter.com/baxterUS/en/Products/Infusion-Therapies-%26-Technologies/IV-Solutions/0-9%25-Sodium-Chloride-Injection%2C-USP%2C-1000-mL-VIAFLEX-Plastic-Container/p/2B1324X",
+    "review_required": false,
+    "units_per_case": 12
+  },
+  {
+    "canonical_ndc": "00338004904",
+    "classification": "usable_with_assumptions",
+    "failures": [],
+    "limitations": [
+      "Pack count is a synthetic item-master assertion, not verified manufacturer packaging.",
+      "Current public catalog is not proof of exact historical catalog custody."
+    ],
+    "manufacturer_code": "2B1324X",
+    "original": {
+      "container": "viaflex-bag",
+      "distributor_item": null,
+      "dosage_form": "injection",
+      "gs1_gtin": null,
+      "labeler": "Baxter",
+      "local_sku": "SAL-1000",
+      "manufacturer": "Baxter",
+      "manufacturer_code": "2B1324X",
+      "mapping_reference": "synthetic-catalog-exact-presentation",
+      "name": "Baxter Sodium Chloride",
+      "ndc": "00338-0049-04",
+      "schema_version": "8.1",
+      "source_organization": "sim-nc-north",
+      "strength_mg_ml": 9,
+      "units_per_case": 12,
+      "volume_ml": 1000
+    },
+    "reference": "https://catalog.baxter.com/baxterUS/en/Products/Infusion-Therapies-%26-Technologies/IV-Solutions/0-9%25-Sodium-Chloride-Injection%2C-USP%2C-1000-mL-VIAFLEX-Plastic-Container/p/2B1324X",
+    "review_required": false,
+    "units_per_case": 12
+  },
+  {
+    "canonical_ndc": "00338004904",
+    "classification": "usable_with_assumptions",
+    "failures": [],
+    "limitations": [
+      "Pack count is a synthetic item-master assertion, not verified manufacturer packaging.",
+      "Current public catalog is not proof of exact historical catalog custody."
+    ],
+    "manufacturer_code": "2B1324X",
+    "original": {
+      "container": "viaflex-bag",
+      "distributor_item": null,
+      "dosage_form": "injection",
+      "gs1_gtin": null,
+      "labeler": "Baxter",
+      "local_sku": "NACL009-L",
+      "manufacturer": "Baxter",
+      "manufacturer_code": "2B1324X",
+      "mapping_reference": "synthetic-catalog-exact-presentation",
+      "name": "Baxter Sodium Chloride",
+      "ndc": "00338-0049-04",
+      "schema_version": "8.1",
+      "source_organization": "sim-nc-south",
+      "strength_mg_ml": 9,
+      "units_per_case": 12,
+      "volume_ml": 1000
+    },
+    "reference": "https://catalog.baxter.com/baxterUS/en/Products/Infusion-Therapies-%26-Technologies/IV-Solutions/0-9%25-Sodium-Chloride-Injection%2C-USP%2C-1000-mL-VIAFLEX-Plastic-Container/p/2B1324X",
+    "review_required": false,
+    "units_per_case": 12
+  }
+]

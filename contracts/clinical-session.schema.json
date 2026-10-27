@@ -1,0 +1,99 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "allocation_constraint": {
+      "default": "Exact product; stable session-ID order; partial supply leaves session exposed; no regimen changes.",
+      "title": "Allocation Constraint",
+      "type": "string"
+    },
+    "classification": {
+      "const": "synthetic",
+      "default": "synthetic",
+      "title": "Classification",
+      "type": "string"
+    },
+    "clinical_service": {
+      "default": "oncology infusion / oncology pharmacy preparation",
+      "title": "Clinical Service",
+      "type": "string"
+    },
+    "dataset_version": {
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "hospital_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Hospital Id",
+      "type": "string"
+    },
+    "patient_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Patient Id",
+      "type": "string"
+    },
+    "product_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Product Id",
+      "type": "string"
+    },
+    "quantity_unit": {
+      "const": "vial",
+      "default": "vial",
+      "title": "Quantity Unit",
+      "type": "string"
+    },
+    "required_quantity": {
+      "exclusiveMinimum": 0,
+      "title": "Required Quantity",
+      "type": "integer"
+    },
+    "scenario_id": {
+      "title": "Scenario Id",
+      "type": "string"
+    },
+    "schedule_version": {
+      "const": "synthetic-schedule-v1",
+      "default": "synthetic-schedule-v1",
+      "title": "Schedule Version",
+      "type": "string"
+    },
+    "scheduled_on": {
+      "format": "date",
+      "title": "Scheduled On",
+      "type": "string"
+    },
+    "session_id": {
+      "maxLength": 160,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$",
+      "title": "Session Id",
+      "type": "string"
+    },
+    "source_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Evidence Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "session_id",
+    "patient_id",
+    "hospital_id",
+    "scheduled_on",
+    "product_id",
+    "required_quantity",
+    "scenario_id",
+    "dataset_version",
+    "source_evidence_ids"
+  ],
+  "title": "ClinicalSession",
+  "type": "object"
+}

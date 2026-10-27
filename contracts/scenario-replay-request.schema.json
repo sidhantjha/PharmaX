@@ -1,0 +1,831 @@
+{
+  "$defs": {
+    "AllocationNotice": {
+      "additionalProperties": false,
+      "properties": {
+        "allocation_percent": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Allocation Percent",
+          "type": "number"
+        },
+        "baseline_end": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Baseline End"
+        },
+        "baseline_start": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Baseline Start"
+        },
+        "container_ml": {
+          "exclusiveMinimum": 0,
+          "title": "Container Ml",
+          "type": "number"
+        },
+        "customer_class": {
+          "minLength": 1,
+          "title": "Customer Class",
+          "type": "string"
+        },
+        "effective_on": {
+          "format": "date",
+          "title": "Effective On",
+          "type": "string"
+        },
+        "exact_claim": {
+          "minLength": 1,
+          "title": "Exact Claim",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "observed",
+            "projected"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "notice_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Notice Id",
+          "type": "string"
+        },
+        "original_baxter_code": {
+          "minLength": 1,
+          "title": "Original Baxter Code",
+          "type": "string"
+        },
+        "original_ndc": {
+          "minLength": 1,
+          "title": "Original Ndc",
+          "type": "string"
+        },
+        "page": {
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "quantity_unit": {
+          "const": "bag",
+          "default": "bag",
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "6a.1",
+          "default": "6a.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_revision_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Source Revision Id",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Source Sha256",
+          "type": "string"
+        },
+        "table_location": {
+          "minLength": 1,
+          "title": "Table Location",
+          "type": "string"
+        },
+        "validation_status": {
+          "enum": [
+            "validated",
+            "quarantined"
+          ],
+          "title": "Validation Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "notice_id",
+        "source_revision_id",
+        "source_sha256",
+        "product_id",
+        "original_baxter_code",
+        "original_ndc",
+        "container_ml",
+        "allocation_percent",
+        "effective_on",
+        "kind",
+        "exact_claim",
+        "customer_class",
+        "page",
+        "table_location",
+        "validation_status"
+      ],
+      "title": "AllocationNotice",
+      "type": "object"
+    },
+    "OperationalImportReceipt": {
+      "additionalProperties": false,
+      "description": "Future CSV/EDI/FHIR adapters must resolve into this simulated boundary.",
+      "properties": {
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "content_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "effective_at": {
+          "format": "date-time",
+          "title": "Effective At",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "exported_at": {
+          "format": "date-time",
+          "title": "Exported At",
+          "type": "string"
+        },
+        "feed": {
+          "enum": [
+            "catalog",
+            "inventory",
+            "consumption",
+            "purchasing",
+            "purchase_orders",
+            "acknowledgments",
+            "shipments",
+            "facilities",
+            "suppliers"
+          ],
+          "title": "Feed",
+          "type": "string"
+        },
+        "format": {
+          "enum": [
+            "csv",
+            "edi-850",
+            "edi-855",
+            "edi-856",
+            "fhir-r5-inventoryreport"
+          ],
+          "title": "Format",
+          "type": "string"
+        },
+        "import_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Import Id",
+          "type": "string"
+        },
+        "mapping_version": {
+          "minLength": 1,
+          "title": "Mapping Version",
+          "type": "string"
+        },
+        "modeled_available_at": {
+          "format": "date-time",
+          "title": "Modeled Available At",
+          "type": "string"
+        },
+        "record_ids": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "maxItems": 10000,
+          "minItems": 1,
+          "title": "Record Ids",
+          "type": "array"
+        },
+        "scenario_id": {
+          "const": "helene-north-cove",
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "6a.1",
+          "default": "6a.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_path": {
+          "minLength": 1,
+          "title": "Source Path",
+          "type": "string"
+        },
+        "validation_status": {
+          "enum": [
+            "validated",
+            "quarantined"
+          ],
+          "title": "Validation Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "import_id",
+        "scenario_id",
+        "feed",
+        "format",
+        "source_path",
+        "content_sha256",
+        "exported_at",
+        "effective_at",
+        "modeled_available_at",
+        "evidence",
+        "mapping_version",
+        "record_ids",
+        "validation_status",
+        "assumptions"
+      ],
+      "title": "OperationalImportReceipt",
+      "type": "object"
+    },
+    "ProductAlias": {
+      "additionalProperties": false,
+      "description": "An explicit reviewed assertion; no automatic base-code/suffix equivalence.",
+      "properties": {
+        "normalized": {
+          "minLength": 1,
+          "title": "Normalized",
+          "type": "string"
+        },
+        "original": {
+          "minLength": 1,
+          "title": "Original",
+          "type": "string"
+        },
+        "review_reference": {
+          "minLength": 1,
+          "title": "Review Reference",
+          "type": "string"
+        },
+        "scheme": {
+          "enum": [
+            "baxter",
+            "ndc"
+          ],
+          "title": "Scheme",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scheme",
+        "original",
+        "normalized",
+        "review_reference"
+      ],
+      "title": "ProductAlias",
+      "type": "object"
+    },
+    "ReplayCheckpoint": {
+      "additionalProperties": false,
+      "properties": {
+        "checkpoint_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Checkpoint Id",
+          "type": "string"
+        },
+        "cutoff": {
+          "format": "date-time",
+          "title": "Cutoff",
+          "type": "string"
+        },
+        "import_ids": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "title": "Import Ids",
+          "type": "array"
+        },
+        "limitations": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "mode": {
+          "enum": [
+            "strict-historical",
+            "reconstructed-historical-simulation"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "parent_checkpoint_id": {
+          "anyOf": [
+            {
+              "maxLength": 160,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Checkpoint Id"
+        },
+        "parent_cutoff": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Cutoff"
+        },
+        "parent_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Sha256"
+        },
+        "policy_version": {
+          "const": "helene-admission-v1",
+          "default": "helene-admission-v1",
+          "title": "Policy Version",
+          "type": "string"
+        },
+        "scenario_id": {
+          "const": "helene-north-cove",
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "6a.1",
+          "default": "6a.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_revision_ids": {
+          "items": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.:-]+$",
+            "type": "string"
+          },
+          "title": "Source Revision Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "checkpoint_id",
+        "scenario_id",
+        "cutoff",
+        "mode",
+        "source_revision_ids",
+        "import_ids"
+      ],
+      "title": "ReplayCheckpoint",
+      "type": "object"
+    },
+    "ReplayProduct": {
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "items": {
+            "$ref": "#/$defs/ProductAlias"
+          },
+          "minItems": 1,
+          "title": "Aliases",
+          "type": "array"
+        },
+        "container_ml": {
+          "exclusiveMinimum": 0,
+          "title": "Container Ml",
+          "type": "number"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "package_ndc": {
+          "anyOf": [
+            {
+              "pattern": "^\\d{4,5}-\\d{3,4}-\\d{1,2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Package Ndc"
+        },
+        "presentation": {
+          "title": "Presentation",
+          "type": "string"
+        },
+        "product_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "protect_from_light": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protect From Light"
+        },
+        "quantity_unit": {
+          "enum": [
+            "vial",
+            "bag"
+          ],
+          "title": "Quantity Unit",
+          "type": "string"
+        },
+        "storage_max_c": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Storage Max C"
+        },
+        "storage_min_c": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Storage Min C"
+        },
+        "strength_mg_per_ml": {
+          "exclusiveMinimum": 0,
+          "title": "Strength Mg Per Ml",
+          "type": "number"
+        },
+        "total_mg": {
+          "exclusiveMinimum": 0,
+          "title": "Total Mg",
+          "type": "number"
+        }
+      },
+      "required": [
+        "product_id",
+        "name",
+        "presentation",
+        "strength_mg_per_ml",
+        "container_ml",
+        "total_mg",
+        "quantity_unit",
+        "evidence",
+        "aliases"
+      ],
+      "title": "ReplayProduct",
+      "type": "object"
+    },
+    "SourceEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "observed",
+            "derived",
+            "simulated"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "title": "Observed At",
+          "type": "string"
+        },
+        "parent_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Parent Ids",
+          "type": "array"
+        },
+        "published_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published On"
+        },
+        "raw_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Ref"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_record_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Record Id"
+        },
+        "source_url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Source Url",
+          "type": "string"
+        },
+        "updated_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Updated On"
+        },
+        "version_available_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version Available At"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "kind",
+        "source",
+        "source_url",
+        "observed_at",
+        "content_sha256"
+      ],
+      "title": "SourceEvidence",
+      "type": "object"
+    },
+    "SourceRevision": {
+      "additionalProperties": false,
+      "properties": {
+        "availability_proof": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceEvidence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "document_id": {
+          "minLength": 1,
+          "title": "Document Id",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "extraction_status": {
+          "enum": [
+            "pending",
+            "validated",
+            "quarantined"
+          ],
+          "title": "Extraction Status",
+          "type": "string"
+        },
+        "extractor_version": {
+          "minLength": 1,
+          "title": "Extractor Version",
+          "type": "string"
+        },
+        "issue_date": {
+          "format": "date",
+          "title": "Issue Date",
+          "type": "string"
+        },
+        "publisher": {
+          "minLength": 1,
+          "title": "Publisher",
+          "type": "string"
+        },
+        "revision_id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Revision Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "6a.1",
+          "default": "6a.1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "validation_reference": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Validation Reference"
+        }
+      },
+      "required": [
+        "revision_id",
+        "publisher",
+        "document_id",
+        "issue_date",
+        "evidence",
+        "extraction_status",
+        "extractor_version"
+      ],
+      "title": "SourceRevision",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "allocations": {
+      "items": {
+        "$ref": "#/$defs/AllocationNotice"
+      },
+      "maxItems": 1000,
+      "title": "Allocations",
+      "type": "array"
+    },
+    "checkpoint": {
+      "$ref": "#/$defs/ReplayCheckpoint"
+    },
+    "imports": {
+      "items": {
+        "$ref": "#/$defs/OperationalImportReceipt"
+      },
+      "maxItems": 100,
+      "title": "Imports",
+      "type": "array"
+    },
+    "parent_evidence": {
+      "items": {
+        "$ref": "#/$defs/SourceEvidence"
+      },
+      "maxItems": 1000,
+      "title": "Parent Evidence",
+      "type": "array"
+    },
+    "products": {
+      "items": {
+        "$ref": "#/$defs/ReplayProduct"
+      },
+      "maxItems": 100,
+      "title": "Products",
+      "type": "array"
+    },
+    "reconstruction_acknowledged": {
+      "default": false,
+      "title": "Reconstruction Acknowledged",
+      "type": "boolean"
+    },
+    "schema_version": {
+      "const": "6a.1",
+      "default": "6a.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/SourceRevision"
+      },
+      "maxItems": 100,
+      "title": "Sources",
+      "type": "array"
+    }
+  },
+  "required": [
+    "checkpoint",
+    "sources"
+  ],
+  "title": "ScenarioReplayRequest",
+  "type": "object"
+}

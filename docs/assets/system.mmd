@@ -1,0 +1,14 @@
+flowchart TD
+  UI[Overview / Situation / Agent activity / Decisions / Chat] --> O[Investigation orchestrator and immutable case state]
+  M[Historical manufacturer evidence] --> R[Evidence and identity reconciliation]
+  H[Synthetic inventory / orders / shipments / receipts] --> R
+  Z[Zetaris registered source join] --> R
+  R --> F[Deterministic lot-level FEFO forecasts]
+  O --> R
+  O --> S[Specialist roles and shared evidence]
+  F --> S
+  S --> V[Schema validation and feasibility constraints]
+  V --> P[Evidence-backed mitigation proposals]
+  P --> A[Human pharmacy and logistics review]
+  UI --> C[Offline evidence-backed chat tools]
+  C --> O

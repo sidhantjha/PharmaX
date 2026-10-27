@@ -1,0 +1,158 @@
+{
+  "schema_version": "3.0",
+  "algorithm_version": "pharmax-risk-v1",
+  "analysis_id": "5ca642533c5565fdc4f05ef866aa5b6e9ab81619c81c247c9ad7757a531f811f",
+  "dataset_version": "6a4a8d083742ed7ef0d8a2b1090898f5ab655f0b5b179701c20c8260ba377819",
+  "kind": "derived",
+  "input_evidence_ids": [
+    "comtrade:b353e84bc443e7f82ad13ba215492c010f50204c76fe25acbfd99ed3ef303387",
+    "comtrade:b9e0a7e0314c2363023dbd27645b2d495befcc2fcd90ad6b47adb01909c07aa4"
+  ],
+  "assumptions": [
+    "Shares use USD import values within one matching period/classification/scope.",
+    "This is retrospective context only; no trade/FDA values enter the July 2023 inventory simulation."
+  ],
+  "limitations": [
+    "Two observed partners do not establish the largest partners or a global concentration index.",
+    "No national denominator or prior-period value is fabricated. Source revisions have their own retrieval cutoffs."
+  ],
+  "context_as_of": "2026-10-24",
+  "forecast_input": false,
+  "reporter_code": 842,
+  "period": "2023",
+  "hs_code": "30",
+  "classification": "H6",
+  "input_flows": [
+    {
+      "record_id": "comtrade:b353e84bc443e7f82ad13ba215492c010f50204c76fe25acbfd99ed3ef303387",
+      "hs_code": "30",
+      "classification": "H6",
+      "period": "2023",
+      "reporter_code": 842,
+      "partner_code": 276,
+      "flow": "M",
+      "value_usd": 19118889945.0,
+      "is_aggregate": true,
+      "is_reported": false,
+      "reporter_name": "USA",
+      "reporter_iso": "USA",
+      "partner_name": "Germany",
+      "partner_iso": "DEU",
+      "commodity_description": "Pharmaceutical products",
+      "quantity": null,
+      "quantity_unit": null,
+      "quantity_estimated": false,
+      "evidence": {
+        "evidence_id": "comtrade:b353e84bc443e7f82ad13ba215492c010f50204c76fe25acbfd99ed3ef303387",
+        "kind": "observed",
+        "source": "comtrade",
+        "source_record_id": "C|A|H6|2023|842|276|0|30|M|C00|0",
+        "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2023&reporterCode=842&partnerCode=276%2C356%2C372&cmdCode=30&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&maxRecords=10&includeDesc=true",
+        "observed_at": "2026-10-24T03:38:56.312575Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "b353e84bc443e7f82ad13ba215492c010f50204c76fe25acbfd99ed3ef303387",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Observed at retrieval; historical version availability unknown."
+      }
+    },
+    {
+      "record_id": "comtrade:b9e0a7e0314c2363023dbd27645b2d495befcc2fcd90ad6b47adb01909c07aa4",
+      "hs_code": "30",
+      "classification": "H6",
+      "period": "2023",
+      "reporter_code": 842,
+      "partner_code": 372,
+      "flow": "M",
+      "value_usd": 36027269808.0,
+      "is_aggregate": true,
+      "is_reported": false,
+      "reporter_name": "USA",
+      "reporter_iso": "USA",
+      "partner_name": "Ireland",
+      "partner_iso": "IRL",
+      "commodity_description": "Pharmaceutical products",
+      "quantity": null,
+      "quantity_unit": null,
+      "quantity_estimated": false,
+      "evidence": {
+        "evidence_id": "comtrade:b9e0a7e0314c2363023dbd27645b2d495befcc2fcd90ad6b47adb01909c07aa4",
+        "kind": "observed",
+        "source": "comtrade",
+        "source_record_id": "C|A|H6|2023|842|372|0|30|M|C00|0",
+        "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2023&reporterCode=842&partnerCode=276%2C356%2C372&cmdCode=30&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&maxRecords=10&includeDesc=true",
+        "observed_at": "2026-10-24T03:38:56.312575Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "b9e0a7e0314c2363023dbd27645b2d495befcc2fcd90ad6b47adb01909c07aa4",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Observed at retrieval; historical version availability unknown."
+      }
+    }
+  ],
+  "world_input": null,
+  "previous_inputs": [],
+  "observed_import_value_usd": 55146159753.0,
+  "world_import_value_usd": null,
+  "value_coverage_fraction": null,
+  "complete_partner_coverage": false,
+  "national_hhi": null,
+  "countries": [
+    {
+      "country_iso": "DEU",
+      "country_code": 276,
+      "import_value_usd": 19118889945.0,
+      "observed_sample_share": 0.34669485655272514,
+      "national_import_share": null,
+      "historical_change_pct": null,
+      "historical_change_reason": "No unique adjacent comparable prior-period value available.",
+      "documented_country_event_ids": [],
+      "country_rating": {
+        "dimension": "country",
+        "level": null,
+        "rule_id": "country.insufficient_coverage",
+        "explanation": "National country risk is unclassified: the partner sample is incomplete. Sample share is not national dependence.",
+        "measurements": {
+          "observed_sample_share": 0.34669485655272514,
+          "national_import_share": null
+        },
+        "evidence_ids": [
+          "comtrade:b353e84bc443e7f82ad13ba215492c010f50204c76fe25acbfd99ed3ef303387"
+        ],
+        "limitations": [
+          "HS30 aggregates do not identify carboplatin suppliers or shipments. Geographic event matches do not prove product impacts."
+        ]
+      }
+    },
+    {
+      "country_iso": "IRL",
+      "country_code": 372,
+      "import_value_usd": 36027269808.0,
+      "observed_sample_share": 0.6533051434472749,
+      "national_import_share": null,
+      "historical_change_pct": null,
+      "historical_change_reason": "No unique adjacent comparable prior-period value available.",
+      "documented_country_event_ids": [],
+      "country_rating": {
+        "dimension": "country",
+        "level": null,
+        "rule_id": "country.insufficient_coverage",
+        "explanation": "National country risk is unclassified: the partner sample is incomplete. Sample share is not national dependence.",
+        "measurements": {
+          "observed_sample_share": 0.6533051434472749,
+          "national_import_share": null
+        },
+        "evidence_ids": [
+          "comtrade:b9e0a7e0314c2363023dbd27645b2d495befcc2fcd90ad6b47adb01909c07aa4"
+        ],
+        "limitations": [
+          "HS30 aggregates do not identify carboplatin suppliers or shipments. Geographic event matches do not prove product impacts."
+        ]
+      }
+    }
+  ]
+}

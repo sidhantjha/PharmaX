@@ -1,0 +1,2 @@
+record_id,po_id,facility_id,local_sku,account_id,line_id,revision,quantity,unit,status,expected_on
+ack-north,po-north,sim-nc-north,SAL-1000,sim-account-north,line-1,1,67,bag,accepted,2024-10-04

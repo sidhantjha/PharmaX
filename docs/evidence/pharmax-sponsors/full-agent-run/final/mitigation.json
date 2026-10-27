@@ -1,0 +1,159 @@
+{
+  "role_id": "mitigation",
+  "role_name": "Discover actual catalog stock/routes and choose untried candidates with retrieved rejection context.",
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "complete",
+  "continuation_occurred": true,
+  "live_verified": true,
+  "predecessor_roles": [
+    "news",
+    "verification",
+    "dependency",
+    "trade",
+    "disruption",
+    "memory"
+  ],
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "tool_selected": "mitigation.read",
+  "tool_input": {
+    "candidate_id": "sim-nc-north-to-sim-nc-central-172"
+  },
+  "tool_input_sha256": "939afa65658716729c100b66a4f6213fa33818092bf075597a89495df1b2eff7",
+  "tool_result_reference": "mitigation-tool.json",
+  "tool_result_sha256": "17c32a4fef351fc179ad98faad4b409250c6164ec29dd9c81cac0c7883504807",
+  "memory_ids": [
+    "mem-4",
+    "mem-2",
+    "mem-5",
+    "mem-1",
+    "mem-3"
+  ],
+  "excluded_due_to_recalled_rejection": [
+    "sim-nc-north-to-sim-nc-south-170",
+    "external-sim-nc-central",
+    "external-sim-nc-south",
+    "sim-nc-south-to-sim-nc-central-110",
+    "sim-nc-central-to-sim-nc-south-164"
+  ],
+  "structured_finding": {
+    "observation": "conditional_recommendation",
+    "evidence_ids": [
+      "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+    ],
+    "fact_keys": [
+      "deterministic_candidate_constraints_retained",
+      "human_pharmacy_review_required",
+      "no_physical_dispatch_authority"
+    ],
+    "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+    "memory_ids": [
+      "mem-4",
+      "mem-2",
+      "mem-5",
+      "mem-1",
+      "mem-3"
+    ]
+  },
+  "model_receipts": [
+    {
+      "role": "mitigation",
+      "request_no": 17,
+      "call_id": "call-30aeed6d-c3ae-4de6-b6ae-21a02f752585",
+      "response_id": "chatcmpl-8ca01924-cb45-412e-a693-46166b3ab142",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_4471onjb",
+      "request_id": null,
+      "decision_id": "req_4471onjb",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 1182,
+        "completion_tokens": 38,
+        "total_tokens": 1220
+      },
+      "selected_tool": "mitigation_compare",
+      "arguments": {
+        "candidate_id": "sim-nc-north-to-sim-nc-central-172"
+      },
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "mitigation",
+      "request_no": 18,
+      "call_id": "call-714b31d1-7c14-41a1-a255-4b9b53f229d0",
+      "response_id": "chatcmpl-2a957335-bee3-4ddf-9384-88967181fe5f",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_7minemsc",
+      "request_id": null,
+      "decision_id": "req_7minemsc",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 3329,
+        "completion_tokens": 178,
+        "total_tokens": 3507
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "conditional_recommendation",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "deterministic_candidate_constraints_retained",
+          "human_pharmacy_review_required",
+          "no_physical_dispatch_authority"
+        ],
+        "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ]
+      },
+      "live": true,
+      "runtime_mcp": null
+    }
+  ],
+  "request_records": [
+    {
+      "role": "mitigation",
+      "number": 17,
+      "started_at": "2026-10-27T19:14:51.276519+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 3840,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.52,
+      "completed_at": "2026-10-27T19:14:51.796480+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "mitigation",
+      "number": 18,
+      "started_at": "2026-10-27T19:14:51.938717+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 9405,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 1.805,
+      "completed_at": "2026-10-27T19:14:53.743687+00:00",
+      "usage_reported": true
+    }
+  ],
+  "completed_at": "2026-10-27T19:14:53.743959+00:00"
+}

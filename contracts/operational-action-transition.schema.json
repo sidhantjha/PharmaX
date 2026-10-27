@@ -1,0 +1,152 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "actor": {
+      "maxLength": 160,
+      "minLength": 1,
+      "title": "Actor",
+      "type": "string"
+    },
+    "attested": {
+      "title": "Attested",
+      "type": "boolean"
+    },
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "expires_on": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expires On"
+    },
+    "lot_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Lot Id"
+    },
+    "note": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Note",
+      "type": "string"
+    },
+    "policy_reference": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Policy Reference"
+    },
+    "quality": {
+      "anyOf": [
+        {
+          "enum": [
+            "released",
+            "quarantined",
+            "recalled"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Quality"
+    },
+    "receipt_id": {
+      "anyOf": [
+        {
+          "maxLength": 160,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Receipt Id"
+    },
+    "received_quantity": {
+      "anyOf": [
+        {
+          "maximum": 100000,
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Received Quantity"
+    },
+    "role": {
+      "enum": [
+        "operator",
+        "pharmacist",
+        "receiving"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "8.1",
+      "default": "8.1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "EVIDENCE_REVIEW",
+        "AUTHORIZATION_PENDING",
+        "AUTHORIZED",
+        "REQUEST_PREPARED",
+        "SIMULATED_DISPATCH",
+        "SIMULATED_RECEIPT",
+        "CLOSED",
+        "REJECTED",
+        "CANCELLED",
+        "EXPIRED",
+        "INFORMATION_REQUESTED"
+      ],
+      "title": "State",
+      "type": "string"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "state",
+    "actor",
+    "role",
+    "attested",
+    "note"
+  ],
+  "title": "ActionTransition",
+  "type": "object"
+}

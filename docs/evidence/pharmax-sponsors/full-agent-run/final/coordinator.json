@@ -1,0 +1,159 @@
+{
+  "role_id": "coordinator",
+  "role_name": "Coordinate bounded investigation, replan after rejection and rank calculated feasible options.",
+  "run_id": "final-585eb7e519e24dfbbc7a23330b2b86c7",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "status": "complete",
+  "continuation_occurred": true,
+  "live_verified": true,
+  "predecessor_roles": [
+    "news",
+    "verification",
+    "dependency",
+    "trade",
+    "disruption",
+    "mitigation",
+    "feasibility",
+    "memory",
+    "clinical",
+    "actions"
+  ],
+  "zetaris_trace_id": "zetaris-fe0a7ad39a7e40878c4ceb42aff59308",
+  "tool_selected": "mitigation.read",
+  "tool_input": {},
+  "tool_input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "tool_result_reference": "coordinator-tool.json",
+  "tool_result_sha256": "17c32a4fef351fc179ad98faad4b409250c6164ec29dd9c81cac0c7883504807",
+  "memory_ids": [
+    "mem-4",
+    "mem-2",
+    "mem-5",
+    "mem-1",
+    "mem-3"
+  ],
+  "excluded_due_to_recalled_rejection": [
+    "sim-nc-north-to-sim-nc-south-170",
+    "external-sim-nc-central",
+    "external-sim-nc-south",
+    "sim-nc-south-to-sim-nc-central-110",
+    "sim-nc-central-to-sim-nc-south-164"
+  ],
+  "structured_finding": {
+    "observation": "human_review_required",
+    "evidence_ids": [
+      "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+    ],
+    "fact_keys": [
+      "deterministic_candidate_constraints_retained",
+      "human_pharmacy_review_required",
+      "no_physical_dispatch_authority"
+    ],
+    "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+    "memory_ids": [
+      "mem-4",
+      "mem-2",
+      "mem-5",
+      "mem-1",
+      "mem-3"
+    ]
+  },
+  "model_receipts": [
+    {
+      "role": "coordinator",
+      "request_no": 26,
+      "call_id": "call-592d9b99-f3cc-47a7-a682-3569efa5767c",
+      "response_id": "chatcmpl-383a452a-8575-4cfa-b0dc-4c970a89b4e1",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_4gwtule1",
+      "request_id": null,
+      "decision_id": "req_4gwtule1",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 1123,
+        "completion_tokens": 17,
+        "total_tokens": 1140
+      },
+      "selected_tool": "coordinator_synthesis",
+      "arguments": {},
+      "live": true,
+      "runtime_mcp": null
+    },
+    {
+      "role": "coordinator",
+      "request_no": 27,
+      "call_id": "call-0593056b-4973-4580-89d5-a1768c693eef",
+      "response_id": "chatcmpl-2f46f71c-25b4-4a8d-b929-6bd7b2dd39d8",
+      "returned_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "receipt_id": "rcpt_req_sfw8t4mt",
+      "request_id": null,
+      "decision_id": "req_sfw8t4mt",
+      "winning_route": {
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "label": "Nemotron 3.5 Lightning 30B A3B",
+        "provider": "nvidia",
+        "kind": "cloud",
+        "tier": "A"
+      },
+      "tokens": {
+        "prompt_tokens": 4143,
+        "completion_tokens": 188,
+        "total_tokens": 4331
+      },
+      "selected_tool": "agent_finding",
+      "arguments": {
+        "observation": "human_review_required",
+        "evidence_ids": [
+          "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+        ],
+        "fact_keys": [
+          "deterministic_candidate_constraints_retained",
+          "human_pharmacy_review_required",
+          "no_physical_dispatch_authority"
+        ],
+        "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+        "memory_ids": [
+          "mem-4",
+          "mem-2",
+          "mem-5",
+          "mem-1",
+          "mem-3"
+        ]
+      },
+      "live": true,
+      "runtime_mcp": null
+    }
+  ],
+  "request_records": [
+    {
+      "role": "coordinator",
+      "number": 26,
+      "started_at": "2026-10-27T19:17:30.086703+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 3659,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 0.718,
+      "completed_at": "2026-10-27T19:17:30.804642+00:00",
+      "usage_reported": true
+    },
+    {
+      "role": "coordinator",
+      "number": 27,
+      "started_at": "2026-10-27T19:17:30.940157+00:00",
+      "possible_upstream_attempts": 3,
+      "token_reservation": 11606,
+      "http_status": 200,
+      "provider_request_ids": {},
+      "elapsed_seconds": 1.941,
+      "completed_at": "2026-10-27T19:17:32.880695+00:00",
+      "usage_reported": true
+    }
+  ],
+  "completed_at": "2026-10-27T19:17:32.881059+00:00"
+}

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pharmax"
+version = "0.1.0"
+description = "PharmaX pharmaceutical supply-chain intelligence foundation"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "httpx>=0.28,<1",
+    "pydantic>=2.14,<3",
+    "pypdf==6.21.2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1", "jsonschema>=4.23,<5"]
+docs = ["markdown-it-py>=4,<5", "beautifulsoup4>=4.12,<5"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["phases", "contracts"]
+
+[tool.pytest.ini_options]
+testpaths = ["phases/phase_01_foundation/tests", "phases/phase_02_data/tests", "phases/phase_03_risk/tests", "phases/phase_04_agents/tests", "phases/phase_04_agents/live_intelligence/tests", "phases/phase_05_product/tests", "phases/phase_06_helene/tests", "phases/phase_07_reconciliation/tests", "phases/phase_08_operations/tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

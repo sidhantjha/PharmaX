@@ -1,0 +1,5444 @@
+{
+  "verification": null,
+  "schema_version": "6.1",
+  "investigation_id": "helene-2024-10-01-f3aca5a9fbfd",
+  "scenario": "helene-north-cove",
+  "checkpoint": {
+    "schema_version": "6a.1",
+    "checkpoint_id": "helene-2024-10-01-2ad6f9705de6",
+    "scenario_id": "helene-north-cove",
+    "cutoff": "2024-10-02T00:00:00-04:00",
+    "mode": "reconstructed-historical-simulation",
+    "policy_version": "helene-admission-v1",
+    "source_revision_ids": [
+      "baxter-2024-09-29",
+      "baxter-2024-10-01"
+    ],
+    "import_ids": [
+      "sim-2024-10-01-facilities",
+      "sim-2024-10-01-catalog",
+      "sim-2024-10-01-inventory",
+      "sim-2024-10-01-consumption",
+      "sim-2024-10-01-purchasing",
+      "sim-2024-10-01-purchase_orders",
+      "sim-2024-10-01-acknowledgments",
+      "sim-2024-10-01-shipments",
+      "sim-2024-10-01-suppliers"
+    ],
+    "parent_checkpoint_id": null,
+    "parent_cutoff": null,
+    "parent_sha256": null,
+    "limitations": [
+      "Reconstructed historical simulation: exact 2024 version custody unproven; fictional receipt at document end-of-day.",
+      "All hospital operations, accounts, geography and supply timing are simulated; outputs are conditional calculations.",
+      "No real ERP, EDI partner, FHIR server, live Zetaris query, live model inference or external action.",
+      "No patient outcome estimate or clinical equivalence model for saline."
+    ]
+  },
+  "admission": {
+    "schema_version": "6a.1",
+    "checkpoint": {
+      "schema_version": "6a.1",
+      "checkpoint_id": "helene-2024-10-01-2ad6f9705de6",
+      "scenario_id": "helene-north-cove",
+      "cutoff": "2024-10-02T00:00:00-04:00",
+      "mode": "reconstructed-historical-simulation",
+      "policy_version": "helene-admission-v1",
+      "source_revision_ids": [
+        "baxter-2024-09-29",
+        "baxter-2024-10-01"
+      ],
+      "import_ids": [
+        "sim-2024-10-01-facilities",
+        "sim-2024-10-01-catalog",
+        "sim-2024-10-01-inventory",
+        "sim-2024-10-01-consumption",
+        "sim-2024-10-01-purchasing",
+        "sim-2024-10-01-purchase_orders",
+        "sim-2024-10-01-acknowledgments",
+        "sim-2024-10-01-shipments",
+        "sim-2024-10-01-suppliers"
+      ],
+      "parent_checkpoint_id": null,
+      "parent_cutoff": null,
+      "parent_sha256": null,
+      "limitations": [
+        "Reconstructed historical simulation: exact 2024 version custody unproven; fictional receipt at document end-of-day.",
+        "All hospital operations, accounts, geography and supply timing are simulated; outputs are conditional calculations.",
+        "No real ERP, EDI partner, FHIR server, live Zetaris query, live model inference or external action.",
+        "No patient outcome estimate or clinical equivalence model for saline."
+      ]
+    },
+    "reconstruction_acknowledged": true,
+    "sources": [
+      {
+        "schema_version": "6a.1",
+        "revision_id": "baxter-2024-09-29",
+        "publisher": "Baxter",
+        "document_id": "baxter-2024-09-29",
+        "issue_date": "2024-09-29",
+        "evidence": {
+          "evidence_id": "baxter-2024-09-29",
+          "kind": "observed",
+          "source": "Baxter manufacturer letter",
+          "source_record_id": "baxter-2024-09-29",
+          "source_url": "https://www.fda.gov/media/182564/download",
+          "observed_at": "2026-10-26T20:36:53.661984Z",
+          "published_on": "2024-09-29",
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "090bd715a4186c5636b57d24226b0f7573f34a3a2a156aed3472a86c506cef16",
+          "raw_ref": "phases/phase_06_helene/fixtures/manufacturer/090bd715a4186c5636b57d24226b0f7573f34a3a2a156aed3472a86c506cef16.pdf",
+          "parent_ids": [],
+          "note": "2024 exact-version availability unproven; current public rehost only"
+        },
+        "availability_proof": null,
+        "extraction_status": "validated",
+        "extractor_version": "pypdf-6.21.2-layout-v1",
+        "validation_reference": "phase6-exact-row-and-date-validation-v1"
+      },
+      {
+        "schema_version": "6a.1",
+        "revision_id": "baxter-2024-10-01",
+        "publisher": "Baxter",
+        "document_id": "baxter-2024-10-01",
+        "issue_date": "2024-10-01",
+        "evidence": {
+          "evidence_id": "baxter-2024-10-01",
+          "kind": "observed",
+          "source": "Baxter manufacturer letter",
+          "source_record_id": "baxter-2024-10-01",
+          "source_url": "https://nutritioncare.org/wp-content/uploads/2025/01/241001_Allocation-Letter-Baxter.pdf",
+          "observed_at": "2026-10-26T20:36:53.883183Z",
+          "published_on": "2024-10-01",
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+          "raw_ref": "phases/phase_06_helene/fixtures/manufacturer/1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b.pdf",
+          "parent_ids": [],
+          "note": "2024 exact-version availability unproven; current public rehost only"
+        },
+        "availability_proof": null,
+        "extraction_status": "validated",
+        "extractor_version": "pypdf-6.21.2-layout-v1",
+        "validation_reference": "phase6-exact-row-and-date-validation-v1"
+      }
+    ],
+    "allocations": [
+      {
+        "schema_version": "6a.1",
+        "notice_id": "baxter-2024-10-01-row-0",
+        "source_revision_id": "baxter-2024-10-01",
+        "source_sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+        "product_id": "sim-baxter-saline-1000",
+        "original_baxter_code": "2B1324X",
+        "original_ndc": "00338-0049-04",
+        "container_ml": 1000.0,
+        "quantity_unit": "bag",
+        "allocation_percent": 40.0,
+        "effective_on": "2024-10-01",
+        "kind": "observed",
+        "exact_claim": "2B1324X          SOD CHLOR 0.9% INJ USP VIAFLEX                00338-      40%\n                                   1000ML MIGRATED                               0049-04",
+        "customer_class": "US direct customers/distribution partners; not designated children hospitals",
+        "baseline_start": "2024-03-01",
+        "baseline_end": "2024-08-31",
+        "page": 5,
+        "table_location": "Table 1 product 2B1324X",
+        "validation_status": "validated"
+      }
+    ],
+    "imports": [
+      {
+        "schema_version": "6a.1",
+        "import_id": "sim-2024-10-01-facilities",
+        "scenario_id": "helene-north-cove",
+        "feed": "facilities",
+        "format": "csv",
+        "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/facilities.csv",
+        "content_sha256": "3b622257b4e68805806ed3e83ea71877a53c7430217fb6861a2f097ef27cb9f7",
+        "exported_at": "2026-10-26T21:20:58.285531Z",
+        "effective_at": "2024-10-01T23:00:00-04:00",
+        "modeled_available_at": "2024-10-02T00:00:00-04:00",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-facilities",
+          "kind": "simulated",
+          "source": "Fictional NC ERP facilities",
+          "source_record_id": "2024-10-01/facilities",
+          "source_url": "https://example.invalid/pharmax/simulated/facilities",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "3b622257b4e68805806ed3e83ea71877a53c7430217fb6861a2f097ef27cb9f7",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/facilities.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "mapping_version": "nc-csv-v8.1",
+        "record_ids": [
+          "sim-nc-central",
+          "sim-nc-north",
+          "sim-nc-south"
+        ],
+        "validation_status": "validated",
+        "assumptions": [
+          "Fictional operational feed; no organizational connectivity."
+        ]
+      },
+      {
+        "schema_version": "6a.1",
+        "import_id": "sim-2024-10-01-catalog",
+        "scenario_id": "helene-north-cove",
+        "feed": "catalog",
+        "format": "csv",
+        "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/catalog.csv",
+        "content_sha256": "65e2084e983429445c6bd3c8185095a8f77215ffeae3dba06703118c0c6dcdf1",
+        "exported_at": "2026-10-26T21:20:58.285531Z",
+        "effective_at": "2024-10-01T23:00:00-04:00",
+        "modeled_available_at": "2024-10-02T00:00:00-04:00",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-catalog",
+          "kind": "simulated",
+          "source": "Fictional NC ERP catalog",
+          "source_record_id": "2024-10-01/catalog",
+          "source_url": "https://example.invalid/pharmax/simulated/catalog",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "65e2084e983429445c6bd3c8185095a8f77215ffeae3dba06703118c0c6dcdf1",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/catalog.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "mapping_version": "nc-csv-v8.1",
+        "record_ids": [
+          "sim-nc-central",
+          "sim-nc-north",
+          "sim-nc-south"
+        ],
+        "validation_status": "validated",
+        "assumptions": [
+          "Fictional operational feed; no organizational connectivity."
+        ]
+      },
+      {
+        "schema_version": "6a.1",
+        "import_id": "sim-2024-10-01-inventory",
+        "scenario_id": "helene-north-cove",
+        "feed": "inventory",
+        "format": "csv",
+        "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/inventory.csv",
+        "content_sha256": "3c5def4dd7147cde5ce0886b4a92035ca6d6c80035952336813ebbe10721c4c9",
+        "exported_at": "2026-10-26T21:20:58.285531Z",
+        "effective_at": "2024-10-01T23:00:00-04:00",
+        "modeled_available_at": "2024-10-02T00:00:00-04:00",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-inventory",
+          "kind": "simulated",
+          "source": "Fictional NC ERP inventory",
+          "source_record_id": "2024-10-01/inventory",
+          "source_url": "https://example.invalid/pharmax/simulated/inventory",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "3c5def4dd7147cde5ce0886b4a92035ca6d6c80035952336813ebbe10721c4c9",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/inventory.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "mapping_version": "nc-csv-v8.1",
+        "record_ids": [
+          "stock-central",
+          "stock-north",
+          "stock-south"
+        ],
+        "validation_status": "validated",
+        "assumptions": [
+          "Fictional operational feed; no organizational connectivity."
+        ]
+      },
+      {
+        "schema_version": "6a.1",
+        "import_id": "sim-2024-10-01-consumption",
+        "scenario_id": "helene-north-cove",
+        "feed": "consumption",
+        "format": "csv",
+        "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+        "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+        "exported_at": "2026-10-26T21:20:58.285531Z",
+        "effective_at": "2024-10-01T23:00:00-04:00",
+        "modeled_available_at": "2024-10-02T00:00:00-04:00",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "mapping_version": "nc-csv-v8.1",
+        "record_ids": [
+          "use-central-2024-09-25",
+          "use-central-2024-09-26",
+          "use-central-2024-09-27",
+          "use-central-2024-09-28",
+          "use-central-2024-09-29",
+          "use-central-2024-09-30",
+          "use-central-2024-10-01",
+          "use-north-2024-09-25",
+          "use-north-2024-09-26",
+          "use-north-2024-09-27",
+          "use-north-2024-09-28",
+          "use-north-2024-09-29",
+          "use-north-2024-09-30",
+          "use-north-2024-10-01",
+          "use-south-2024-09-25",
+          "use-south-2024-09-26",
+          "use-south-2024-09-27",
+          "use-south-2024-09-28",
+          "use-south-2024-09-29",
+          "use-south-2024-09-30",
+          "use-south-2024-10-01"
+        ],
+        "validation_status": "validated",
+        "assumptions": [
+          "Fictional operational feed; no organizational connectivity."
+        ]
+      },
+      {
+        "schema_version": "6a.1",
+        "import_id": "sim-2024-10-01-purchasing",
+        "scenario_id": "helene-north-cove",
+        "feed": "purchasing",
+        "format": "csv",
+        "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+        "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+        "exported_at": "2026-10-26T21:20:58.285531Z",
+        "effective_at": "2024-10-01T23:00:00-04:00",
+        "modeled_available_at": "2024-10-02T00:00:00-04:00",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "mapping_version": "nc-csv-v8.1",
+        "record_ids": [
+          "purchase-central-3",
+          "purchase-central-4",
+          "purchase-central-5",
+          "purchase-central-6",
+          "purchase-central-7",
+          "purchase-central-8",
+          "purchase-north-3",
+          "purchase-north-4",
+          "purchase-north-5",
+          "purchase-north-6",
+          "purchase-north-7",
+          "purchase-north-8",
+          "purchase-south-3",
+          "purchase-south-4",
+          "purchase-south-5",
+          "purchase-south-6",
+          "purchase-south-7",
+          "purchase-south-8"
+        ],
+        "validation_status": "validated",
+        "assumptions": [
+          "Fictional operational feed; no organizational connectivity."
+        ]
+      },
+      {
+        "schema_version": "6a.1",
+        "import_id": "sim-2024-10-01-purchase_orders",
+        "scenario_id": "helene-north-cove",
+        "feed": "purchase_orders",
+        "format": "csv",
+        "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchase_orders.csv",
+        "content_sha256": "62af979ba80476d73b2043649c12fbfd0b55c383b9b336db93f8ab31db3ea89d",
+        "exported_at": "2026-10-26T21:20:58.285531Z",
+        "effective_at": "2024-10-01T23:00:00-04:00",
+        "modeled_available_at": "2024-10-02T00:00:00-04:00",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchase_orders",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchase_orders",
+          "source_record_id": "2024-10-01/purchase_orders",
+          "source_url": "https://example.invalid/pharmax/simulated/purchase_orders",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "62af979ba80476d73b2043649c12fbfd0b55c383b9b336db93f8ab31db3ea89d",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchase_orders.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "mapping_version": "nc-csv-v8.1",
+        "record_ids": [
+          "po-central",
+          "po-north",
+          "po-south"
+        ],
+        "validation_status": "validated",
+        "assumptions": [
+          "Fictional operational feed; no organizational connectivity."
+        ]
+      },
+      {
+        "schema_version": "6a.1",
+        "import_id": "sim-2024-10-01-acknowledgments",
+        "scenario_id": "helene-north-cove",
+        "feed": "acknowledgments",
+        "format": "csv",
+        "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/acknowledgments.csv",
+        "content_sha256": "dd7eaee16dbd63b060e8375ae612322edc3e73295a81905949523d92edad64d4",
+        "exported_at": "2026-10-26T21:20:58.285531Z",
+        "effective_at": "2024-10-01T23:00:00-04:00",
+        "modeled_available_at": "2024-10-02T00:00:00-04:00",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-acknowledgments",
+          "kind": "simulated",
+          "source": "Fictional NC ERP acknowledgments",
+          "source_record_id": "2024-10-01/acknowledgments",
+          "source_url": "https://example.invalid/pharmax/simulated/acknowledgments",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "dd7eaee16dbd63b060e8375ae612322edc3e73295a81905949523d92edad64d4",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/acknowledgments.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "mapping_version": "nc-csv-v8.1",
+        "record_ids": [
+          "ack-central",
+          "ack-north"
+        ],
+        "validation_status": "validated",
+        "assumptions": [
+          "Fictional operational feed; no organizational connectivity."
+        ]
+      },
+      {
+        "schema_version": "6a.1",
+        "import_id": "sim-2024-10-01-shipments",
+        "scenario_id": "helene-north-cove",
+        "feed": "shipments",
+        "format": "csv",
+        "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/shipments.csv",
+        "content_sha256": "1260beb8c0862e124c16ebae060cb327011a6855cad80371d099ce274d012f0c",
+        "exported_at": "2026-10-26T21:20:58.285531Z",
+        "effective_at": "2024-10-01T23:00:00-04:00",
+        "modeled_available_at": "2024-10-02T00:00:00-04:00",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-shipments",
+          "kind": "simulated",
+          "source": "Fictional NC ERP shipments",
+          "source_record_id": "2024-10-01/shipments",
+          "source_url": "https://example.invalid/pharmax/simulated/shipments",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "1260beb8c0862e124c16ebae060cb327011a6855cad80371d099ce274d012f0c",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/shipments.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "mapping_version": "nc-csv-v8.1",
+        "record_ids": [
+          "asn-central",
+          "asn-north"
+        ],
+        "validation_status": "validated",
+        "assumptions": [
+          "Fictional operational feed; no organizational connectivity."
+        ]
+      },
+      {
+        "schema_version": "6a.1",
+        "import_id": "sim-2024-10-01-suppliers",
+        "scenario_id": "helene-north-cove",
+        "feed": "suppliers",
+        "format": "csv",
+        "source_path": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/suppliers.csv",
+        "content_sha256": "607a37ce49bb820bfa69b43f7de2598ce352c2454b8996333b04c2b297b0a22b",
+        "exported_at": "2026-10-26T21:20:58.285531Z",
+        "effective_at": "2024-10-01T23:00:00-04:00",
+        "modeled_available_at": "2024-10-02T00:00:00-04:00",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-suppliers",
+          "kind": "simulated",
+          "source": "Fictional NC ERP suppliers",
+          "source_record_id": "2024-10-01/suppliers",
+          "source_url": "https://example.invalid/pharmax/simulated/suppliers",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "607a37ce49bb820bfa69b43f7de2598ce352c2454b8996333b04c2b297b0a22b",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/suppliers.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "mapping_version": "nc-csv-v8.1",
+        "record_ids": [
+          "sim-nc-central",
+          "sim-nc-north",
+          "sim-nc-south"
+        ],
+        "validation_status": "validated",
+        "assumptions": [
+          "Fictional operational feed; no organizational connectivity."
+        ]
+      }
+    ],
+    "parent_evidence": [],
+    "products": [
+      {
+        "product_id": "sim-baxter-saline-1000",
+        "name": "Baxter 0.9% Sodium Chloride Injection",
+        "package_ndc": "00338-0049-04",
+        "presentation": "0.9% / 1000 mL unopened bag",
+        "strength_mg_per_ml": 9.0,
+        "container_ml": 1000.0,
+        "total_mg": 9000.0,
+        "quantity_unit": "bag",
+        "storage_min_c": 20.0,
+        "storage_max_c": 25.0,
+        "protect_from_light": false,
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-catalog",
+          "kind": "simulated",
+          "source": "Fictional NC ERP catalog",
+          "source_record_id": "2024-10-01/catalog",
+          "source_url": "https://example.invalid/pharmax/simulated/catalog",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "65e2084e983429445c6bd3c8185095a8f77215ffeae3dba06703118c0c6dcdf1",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/catalog.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "aliases": [
+          {
+            "scheme": "baxter",
+            "original": "2B1324X",
+            "normalized": "2B1324X",
+            "review_reference": "catalog-exact-presentation"
+          },
+          {
+            "scheme": "ndc",
+            "original": "00338-0049-04",
+            "normalized": "00338-0049-04",
+            "review_reference": "catalog-segmented-ndc"
+          }
+        ]
+      }
+    ]
+  },
+  "operations": {
+    "schema_version": "6a.1",
+    "scenario_id": "helene-north-cove",
+    "network_id": "sim-nc-health-system",
+    "products": [
+      {
+        "product_id": "sim-baxter-saline-1000",
+        "name": "Baxter 0.9% Sodium Chloride Injection",
+        "package_ndc": "00338-0049-04",
+        "presentation": "0.9% / 1000 mL unopened bag",
+        "strength_mg_per_ml": 9.0,
+        "container_ml": 1000.0,
+        "total_mg": 9000.0,
+        "quantity_unit": "bag",
+        "storage_min_c": 20.0,
+        "storage_max_c": 25.0,
+        "protect_from_light": false,
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-catalog",
+          "kind": "simulated",
+          "source": "Fictional NC ERP catalog",
+          "source_record_id": "2024-10-01/catalog",
+          "source_url": "https://example.invalid/pharmax/simulated/catalog",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "65e2084e983429445c6bd3c8185095a8f77215ffeae3dba06703118c0c6dcdf1",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/catalog.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "aliases": [
+          {
+            "scheme": "baxter",
+            "original": "2B1324X",
+            "normalized": "2B1324X",
+            "review_reference": "catalog-exact-presentation"
+          },
+          {
+            "scheme": "ndc",
+            "original": "00338-0049-04",
+            "normalized": "00338-0049-04",
+            "review_reference": "catalog-segmented-ndc"
+          }
+        ]
+      }
+    ],
+    "hospitals": [
+      {
+        "hospital_id": "sim-nc-central",
+        "name": "Piedmont Central (fictional)",
+        "state": "NC",
+        "country_iso": "USA",
+        "storage_min_c": 20.0,
+        "storage_max_c": 25.0,
+        "protects_from_light": true,
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-facilities",
+          "kind": "simulated",
+          "source": "Fictional NC ERP facilities",
+          "source_record_id": "2024-10-01/facilities",
+          "source_url": "https://example.invalid/pharmax/simulated/facilities",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "3b622257b4e68805806ed3e83ea71877a53c7430217fb6861a2f097ef27cb9f7",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/facilities.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "network_id": "sim-nc-health-system"
+      },
+      {
+        "hospital_id": "sim-nc-north",
+        "name": "Foothills North (fictional)",
+        "state": "NC",
+        "country_iso": "USA",
+        "storage_min_c": 20.0,
+        "storage_max_c": 25.0,
+        "protects_from_light": true,
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-facilities",
+          "kind": "simulated",
+          "source": "Fictional NC ERP facilities",
+          "source_record_id": "2024-10-01/facilities",
+          "source_url": "https://example.invalid/pharmax/simulated/facilities",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "3b622257b4e68805806ed3e83ea71877a53c7430217fb6861a2f097ef27cb9f7",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/facilities.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "network_id": "sim-nc-health-system"
+      },
+      {
+        "hospital_id": "sim-nc-south",
+        "name": "Catawba South (fictional)",
+        "state": "NC",
+        "country_iso": "USA",
+        "storage_min_c": 20.0,
+        "storage_max_c": 25.0,
+        "protects_from_light": true,
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-facilities",
+          "kind": "simulated",
+          "source": "Fictional NC ERP facilities",
+          "source_record_id": "2024-10-01/facilities",
+          "source_url": "https://example.invalid/pharmax/simulated/facilities",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "3b622257b4e68805806ed3e83ea71877a53c7430217fb6861a2f097ef27cb9f7",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/facilities.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "network_id": "sim-nc-health-system"
+      }
+    ],
+    "inventory": [
+      {
+        "inventory_id": "stock-central",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "lot_id": "lot-central",
+        "as_of": "2024-10-02",
+        "on_hand": 184,
+        "reserved": 20,
+        "expiry_date": "2024-12-31",
+        "quality_status": "released",
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-inventory",
+          "kind": "simulated",
+          "source": "Fictional NC ERP inventory",
+          "source_record_id": "2024-10-01/inventory",
+          "source_url": "https://example.invalid/pharmax/simulated/inventory",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "3c5def4dd7147cde5ce0886b4a92035ca6d6c80035952336813ebbe10721c4c9",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/inventory.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "inventory_id": "stock-north",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "lot_id": "lot-north",
+        "as_of": "2024-10-02",
+        "on_hand": 719,
+        "reserved": 100,
+        "expiry_date": "2024-12-31",
+        "quality_status": "released",
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-inventory",
+          "kind": "simulated",
+          "source": "Fictional NC ERP inventory",
+          "source_record_id": "2024-10-01/inventory",
+          "source_url": "https://example.invalid/pharmax/simulated/inventory",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "3c5def4dd7147cde5ce0886b4a92035ca6d6c80035952336813ebbe10721c4c9",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/inventory.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "inventory_id": "stock-south",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "lot_id": "lot-south",
+        "as_of": "2024-10-02",
+        "on_hand": 128,
+        "reserved": 18,
+        "expiry_date": "2024-12-31",
+        "quality_status": "released",
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-inventory",
+          "kind": "simulated",
+          "source": "Fictional NC ERP inventory",
+          "source_record_id": "2024-10-01/inventory",
+          "source_url": "https://example.invalid/pharmax/simulated/inventory",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "3c5def4dd7147cde5ce0886b4a92035ca6d6c80035952336813ebbe10721c4c9",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/inventory.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      }
+    ],
+    "consumption": [
+      {
+        "consumption_id": "use-central-2024-09-25",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-25",
+        "quantity": 30,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-central-2024-09-26",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-26",
+        "quantity": 32,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-central-2024-09-27",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-27",
+        "quantity": 30,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-central-2024-09-28",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-28",
+        "quantity": 30,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-central-2024-09-29",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-29",
+        "quantity": 29,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-central-2024-09-30",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-30",
+        "quantity": 29,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-central-2024-10-01",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-10-01",
+        "quantity": 28,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-north-2024-09-25",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-25",
+        "quantity": 25,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-north-2024-09-26",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-26",
+        "quantity": 23,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-north-2024-09-27",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-27",
+        "quantity": 24,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-north-2024-09-28",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-28",
+        "quantity": 26,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-north-2024-09-29",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-29",
+        "quantity": 25,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-north-2024-09-30",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-30",
+        "quantity": 25,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-north-2024-10-01",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-10-01",
+        "quantity": 26,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-south-2024-09-25",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-25",
+        "quantity": 20,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-south-2024-09-26",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-26",
+        "quantity": 18,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-south-2024-09-27",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-27",
+        "quantity": 21,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-south-2024-09-28",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-28",
+        "quantity": 22,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-south-2024-09-29",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-29",
+        "quantity": 18,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-south-2024-09-30",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-09-30",
+        "quantity": 18,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "consumption_id": "use-south-2024-10-01",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "day": "2024-10-01",
+        "quantity": 18,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-consumption",
+          "kind": "simulated",
+          "source": "Fictional NC ERP consumption",
+          "source_record_id": "2024-10-01/consumption",
+          "source_url": "https://example.invalid/pharmax/simulated/consumption",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      }
+    ],
+    "purchase_orders": [
+      {
+        "purchase_order_id": "po-central",
+        "hospital_id": "sim-nc-central",
+        "supplier_id": "sim-baxter-channel",
+        "product_id": "sim-baxter-saline-1000",
+        "quantity": 210,
+        "quantity_unit": "bag",
+        "ordered_on": "2024-10-01",
+        "expected_delivery": "2024-10-04",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchase_orders",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchase_orders",
+          "source_record_id": "2024-10-01/purchase_orders",
+          "source_url": "https://example.invalid/pharmax/simulated/purchase_orders",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "62af979ba80476d73b2043649c12fbfd0b55c383b9b336db93f8ab31db3ea89d",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchase_orders.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "account_id": "sim-account-central",
+        "order_line_id": "line-1",
+        "customer_item_id": "IV-NS1L"
+      },
+      {
+        "purchase_order_id": "po-north",
+        "hospital_id": "sim-nc-north",
+        "supplier_id": "sim-baxter-channel",
+        "product_id": "sim-baxter-saline-1000",
+        "quantity": 168,
+        "quantity_unit": "bag",
+        "ordered_on": "2024-10-01",
+        "expected_delivery": "2024-10-04",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchase_orders",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchase_orders",
+          "source_record_id": "2024-10-01/purchase_orders",
+          "source_url": "https://example.invalid/pharmax/simulated/purchase_orders",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "62af979ba80476d73b2043649c12fbfd0b55c383b9b336db93f8ab31db3ea89d",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchase_orders.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "account_id": "sim-account-north",
+        "order_line_id": "line-1",
+        "customer_item_id": "SAL-1000"
+      },
+      {
+        "purchase_order_id": "po-south",
+        "hospital_id": "sim-nc-south",
+        "supplier_id": "sim-baxter-channel",
+        "product_id": "sim-baxter-saline-1000",
+        "quantity": 140,
+        "quantity_unit": "bag",
+        "ordered_on": "2024-10-01",
+        "expected_delivery": "2024-10-04",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchase_orders",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchase_orders",
+          "source_record_id": "2024-10-01/purchase_orders",
+          "source_url": "https://example.invalid/pharmax/simulated/purchase_orders",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "62af979ba80476d73b2043649c12fbfd0b55c383b9b336db93f8ab31db3ea89d",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchase_orders.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "account_id": "sim-account-south",
+        "order_line_id": "line-1",
+        "customer_item_id": "NACL009-L"
+      }
+    ],
+    "shipments": [
+      {
+        "shipment_id": "asn-central",
+        "purchase_order_id": "po-central",
+        "supplier_id": "sim-baxter-channel",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "quantity": 84,
+        "quantity_unit": "bag",
+        "dispatched_on": "2024-10-01",
+        "expected_arrival": "2024-10-04",
+        "status": "in_transit",
+        "origin_country_iso": "USA",
+        "temperature_min_c": 20.0,
+        "temperature_max_c": 25.0,
+        "protects_from_light": true,
+        "disruption_event_ids": [],
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-shipments",
+          "kind": "simulated",
+          "source": "Fictional NC ERP shipments",
+          "source_record_id": "2024-10-01/shipments",
+          "source_url": "https://example.invalid/pharmax/simulated/shipments",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "1260beb8c0862e124c16ebae060cb327011a6855cad80371d099ce274d012f0c",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/shipments.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "account_id": "sim-account-central",
+        "order_line_id": "line-1",
+        "revision": 1
+      },
+      {
+        "shipment_id": "asn-north",
+        "purchase_order_id": "po-north",
+        "supplier_id": "sim-baxter-channel",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "quantity": 67,
+        "quantity_unit": "bag",
+        "dispatched_on": "2024-10-01",
+        "expected_arrival": "2024-10-04",
+        "status": "in_transit",
+        "origin_country_iso": "USA",
+        "temperature_min_c": 20.0,
+        "temperature_max_c": 25.0,
+        "protects_from_light": true,
+        "disruption_event_ids": [],
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-shipments",
+          "kind": "simulated",
+          "source": "Fictional NC ERP shipments",
+          "source_record_id": "2024-10-01/shipments",
+          "source_url": "https://example.invalid/pharmax/simulated/shipments",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "1260beb8c0862e124c16ebae060cb327011a6855cad80371d099ce274d012f0c",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/shipments.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        },
+        "account_id": "sim-account-north",
+        "order_line_id": "line-1",
+        "revision": 1
+      }
+    ],
+    "purchasing": [
+      {
+        "purchasing_id": "purchase-central-3",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-central",
+        "customer_item_id": "IV-NS1L",
+        "purchased_on": "2024-03-31",
+        "quantity": 930,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-central-4",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-central",
+        "customer_item_id": "IV-NS1L",
+        "purchased_on": "2024-04-30",
+        "quantity": 900,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-central-5",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-central",
+        "customer_item_id": "IV-NS1L",
+        "purchased_on": "2024-05-31",
+        "quantity": 930,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-central-6",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-central",
+        "customer_item_id": "IV-NS1L",
+        "purchased_on": "2024-06-30",
+        "quantity": 900,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-central-7",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-central",
+        "customer_item_id": "IV-NS1L",
+        "purchased_on": "2024-07-31",
+        "quantity": 930,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-central-8",
+        "hospital_id": "sim-nc-central",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-central",
+        "customer_item_id": "IV-NS1L",
+        "purchased_on": "2024-08-31",
+        "quantity": 930,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-north-3",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-north",
+        "customer_item_id": "SAL-1000",
+        "purchased_on": "2024-03-31",
+        "quantity": 744,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-north-4",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-north",
+        "customer_item_id": "SAL-1000",
+        "purchased_on": "2024-04-30",
+        "quantity": 720,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-north-5",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-north",
+        "customer_item_id": "SAL-1000",
+        "purchased_on": "2024-05-31",
+        "quantity": 744,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-north-6",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-north",
+        "customer_item_id": "SAL-1000",
+        "purchased_on": "2024-06-30",
+        "quantity": 720,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-north-7",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-north",
+        "customer_item_id": "SAL-1000",
+        "purchased_on": "2024-07-31",
+        "quantity": 744,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-north-8",
+        "hospital_id": "sim-nc-north",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-north",
+        "customer_item_id": "SAL-1000",
+        "purchased_on": "2024-08-31",
+        "quantity": 744,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-south-3",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-south",
+        "customer_item_id": "NACL009-L",
+        "purchased_on": "2024-03-31",
+        "quantity": 620,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-south-4",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-south",
+        "customer_item_id": "NACL009-L",
+        "purchased_on": "2024-04-30",
+        "quantity": 600,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-south-5",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-south",
+        "customer_item_id": "NACL009-L",
+        "purchased_on": "2024-05-31",
+        "quantity": 620,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-south-6",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-south",
+        "customer_item_id": "NACL009-L",
+        "purchased_on": "2024-06-30",
+        "quantity": 600,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-south-7",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-south",
+        "customer_item_id": "NACL009-L",
+        "purchased_on": "2024-07-31",
+        "quantity": 620,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "purchasing_id": "purchase-south-8",
+        "hospital_id": "sim-nc-south",
+        "product_id": "sim-baxter-saline-1000",
+        "supplier_id": "sim-baxter-channel",
+        "account_id": "sim-account-south",
+        "customer_item_id": "NACL009-L",
+        "purchased_on": "2024-08-31",
+        "quantity": 620,
+        "returned_quantity": 0,
+        "quantity_unit": "bag",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-purchasing",
+          "kind": "simulated",
+          "source": "Fictional NC ERP purchasing",
+          "source_record_id": "2024-10-01/purchasing",
+          "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      }
+    ],
+    "acknowledgments": [
+      {
+        "acknowledgment_id": "ack-central",
+        "purchase_order_id": "po-central",
+        "order_line_id": "line-1",
+        "account_id": "sim-account-central",
+        "hospital_id": "sim-nc-central",
+        "supplier_id": "sim-baxter-channel",
+        "product_id": "sim-baxter-saline-1000",
+        "revision": 1,
+        "acknowledged_on": "2024-10-02",
+        "status": "accepted",
+        "quantity": 84,
+        "quantity_unit": "bag",
+        "expected_delivery": "2024-10-04",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-acknowledgments",
+          "kind": "simulated",
+          "source": "Fictional NC ERP acknowledgments",
+          "source_record_id": "2024-10-01/acknowledgments",
+          "source_url": "https://example.invalid/pharmax/simulated/acknowledgments",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "dd7eaee16dbd63b060e8375ae612322edc3e73295a81905949523d92edad64d4",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/acknowledgments.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      },
+      {
+        "acknowledgment_id": "ack-north",
+        "purchase_order_id": "po-north",
+        "order_line_id": "line-1",
+        "account_id": "sim-account-north",
+        "hospital_id": "sim-nc-north",
+        "supplier_id": "sim-baxter-channel",
+        "product_id": "sim-baxter-saline-1000",
+        "revision": 1,
+        "acknowledged_on": "2024-10-02",
+        "status": "accepted",
+        "quantity": 67,
+        "quantity_unit": "bag",
+        "expected_delivery": "2024-10-04",
+        "evidence": {
+          "evidence_id": "sim-2024-10-01-acknowledgments",
+          "kind": "simulated",
+          "source": "Fictional NC ERP acknowledgments",
+          "source_record_id": "2024-10-01/acknowledgments",
+          "source_url": "https://example.invalid/pharmax/simulated/acknowledgments",
+          "observed_at": "2026-10-26T21:20:58.285531Z",
+          "published_on": null,
+          "updated_on": null,
+          "version_available_at": null,
+          "content_sha256": "dd7eaee16dbd63b060e8375ae612322edc3e73295a81905949523d92edad64d4",
+          "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/acknowledgments.csv",
+          "parent_ids": [],
+          "note": "Synthetic export; modeled availability is separate from actual creation."
+        }
+      }
+    ]
+  },
+  "dataset_version": "f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a",
+  "created_at": "2026-10-27T19:01:33.010246Z",
+  "parent_id": null,
+  "evidence": [
+    {
+      "evidence_id": "baxter-2024-09-29",
+      "kind": "observed",
+      "source": "Baxter manufacturer letter",
+      "source_record_id": "baxter-2024-09-29",
+      "source_url": "https://www.fda.gov/media/182564/download",
+      "observed_at": "2026-10-26T20:36:53.661984Z",
+      "published_on": "2024-09-29",
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "090bd715a4186c5636b57d24226b0f7573f34a3a2a156aed3472a86c506cef16",
+      "raw_ref": "phases/phase_06_helene/fixtures/manufacturer/090bd715a4186c5636b57d24226b0f7573f34a3a2a156aed3472a86c506cef16.pdf",
+      "parent_ids": [],
+      "note": "2024 exact-version availability unproven; current public rehost only"
+    },
+    {
+      "evidence_id": "baxter-2024-10-01",
+      "kind": "observed",
+      "source": "Baxter manufacturer letter",
+      "source_record_id": "baxter-2024-10-01",
+      "source_url": "https://nutritioncare.org/wp-content/uploads/2025/01/241001_Allocation-Letter-Baxter.pdf",
+      "observed_at": "2026-10-26T20:36:53.883183Z",
+      "published_on": "2024-10-01",
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b",
+      "raw_ref": "phases/phase_06_helene/fixtures/manufacturer/1e93f05214455ccec60e4c62cc1aeff6f9a20b3533c5efb4432d960dc140438b.pdf",
+      "parent_ids": [],
+      "note": "2024 exact-version availability unproven; current public rehost only"
+    },
+    {
+      "evidence_id": "sim-2024-10-01-facilities",
+      "kind": "simulated",
+      "source": "Fictional NC ERP facilities",
+      "source_record_id": "2024-10-01/facilities",
+      "source_url": "https://example.invalid/pharmax/simulated/facilities",
+      "observed_at": "2026-10-26T21:20:58.285531Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "3b622257b4e68805806ed3e83ea71877a53c7430217fb6861a2f097ef27cb9f7",
+      "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/facilities.csv",
+      "parent_ids": [],
+      "note": "Synthetic export; modeled availability is separate from actual creation."
+    },
+    {
+      "evidence_id": "sim-2024-10-01-catalog",
+      "kind": "simulated",
+      "source": "Fictional NC ERP catalog",
+      "source_record_id": "2024-10-01/catalog",
+      "source_url": "https://example.invalid/pharmax/simulated/catalog",
+      "observed_at": "2026-10-26T21:20:58.285531Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "65e2084e983429445c6bd3c8185095a8f77215ffeae3dba06703118c0c6dcdf1",
+      "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/catalog.csv",
+      "parent_ids": [],
+      "note": "Synthetic export; modeled availability is separate from actual creation."
+    },
+    {
+      "evidence_id": "sim-2024-10-01-inventory",
+      "kind": "simulated",
+      "source": "Fictional NC ERP inventory",
+      "source_record_id": "2024-10-01/inventory",
+      "source_url": "https://example.invalid/pharmax/simulated/inventory",
+      "observed_at": "2026-10-26T21:20:58.285531Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "3c5def4dd7147cde5ce0886b4a92035ca6d6c80035952336813ebbe10721c4c9",
+      "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/inventory.csv",
+      "parent_ids": [],
+      "note": "Synthetic export; modeled availability is separate from actual creation."
+    },
+    {
+      "evidence_id": "sim-2024-10-01-consumption",
+      "kind": "simulated",
+      "source": "Fictional NC ERP consumption",
+      "source_record_id": "2024-10-01/consumption",
+      "source_url": "https://example.invalid/pharmax/simulated/consumption",
+      "observed_at": "2026-10-26T21:20:58.285531Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "6958d6b3059ecfd5a6545cd75ee53d34921e94b17b0fc2a7378acf84e35c28d6",
+      "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/consumption.csv",
+      "parent_ids": [],
+      "note": "Synthetic export; modeled availability is separate from actual creation."
+    },
+    {
+      "evidence_id": "sim-2024-10-01-purchasing",
+      "kind": "simulated",
+      "source": "Fictional NC ERP purchasing",
+      "source_record_id": "2024-10-01/purchasing",
+      "source_url": "https://example.invalid/pharmax/simulated/purchasing",
+      "observed_at": "2026-10-26T21:20:58.285531Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "68cece475f5d7a3da627d1234a73941d95bccb24e36d026791871d62d4f1166a",
+      "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchasing.csv",
+      "parent_ids": [],
+      "note": "Synthetic export; modeled availability is separate from actual creation."
+    },
+    {
+      "evidence_id": "sim-2024-10-01-purchase_orders",
+      "kind": "simulated",
+      "source": "Fictional NC ERP purchase_orders",
+      "source_record_id": "2024-10-01/purchase_orders",
+      "source_url": "https://example.invalid/pharmax/simulated/purchase_orders",
+      "observed_at": "2026-10-26T21:20:58.285531Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "62af979ba80476d73b2043649c12fbfd0b55c383b9b336db93f8ab31db3ea89d",
+      "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/purchase_orders.csv",
+      "parent_ids": [],
+      "note": "Synthetic export; modeled availability is separate from actual creation."
+    },
+    {
+      "evidence_id": "sim-2024-10-01-acknowledgments",
+      "kind": "simulated",
+      "source": "Fictional NC ERP acknowledgments",
+      "source_record_id": "2024-10-01/acknowledgments",
+      "source_url": "https://example.invalid/pharmax/simulated/acknowledgments",
+      "observed_at": "2026-10-26T21:20:58.285531Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "dd7eaee16dbd63b060e8375ae612322edc3e73295a81905949523d92edad64d4",
+      "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/acknowledgments.csv",
+      "parent_ids": [],
+      "note": "Synthetic export; modeled availability is separate from actual creation."
+    },
+    {
+      "evidence_id": "sim-2024-10-01-shipments",
+      "kind": "simulated",
+      "source": "Fictional NC ERP shipments",
+      "source_record_id": "2024-10-01/shipments",
+      "source_url": "https://example.invalid/pharmax/simulated/shipments",
+      "observed_at": "2026-10-26T21:20:58.285531Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "1260beb8c0862e124c16ebae060cb327011a6855cad80371d099ce274d012f0c",
+      "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/shipments.csv",
+      "parent_ids": [],
+      "note": "Synthetic export; modeled availability is separate from actual creation."
+    },
+    {
+      "evidence_id": "sim-2024-10-01-suppliers",
+      "kind": "simulated",
+      "source": "Fictional NC ERP suppliers",
+      "source_record_id": "2024-10-01/suppliers",
+      "source_url": "https://example.invalid/pharmax/simulated/suppliers",
+      "observed_at": "2026-10-26T21:20:58.285531Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "607a37ce49bb820bfa69b43f7de2598ce352c2454b8996333b04c2b297b0a22b",
+      "raw_ref": "docs/evidence/pharmax-sponsors/zetaris-final-verified/returned-inputs/2024-10-01/suppliers.csv",
+      "parent_ids": [],
+      "note": "Synthetic export; modeled availability is separate from actual creation."
+    },
+    {
+      "evidence_id": "replay-dataset-f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a",
+      "kind": "derived",
+      "source": "Admitted replay dataset",
+      "source_record_id": null,
+      "source_url": "https://example.invalid/pharmax/replay/f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a",
+      "observed_at": "2026-10-27T19:01:33.010206Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a",
+      "raw_ref": null,
+      "parent_ids": [
+        "baxter-2024-09-29",
+        "baxter-2024-10-01",
+        "sim-2024-10-01-facilities",
+        "sim-2024-10-01-catalog",
+        "sim-2024-10-01-inventory",
+        "sim-2024-10-01-consumption",
+        "sim-2024-10-01-purchasing",
+        "sim-2024-10-01-purchase_orders",
+        "sim-2024-10-01-acknowledgments",
+        "sim-2024-10-01-shipments",
+        "sim-2024-10-01-suppliers"
+      ],
+      "note": "Derived from observed documents plus simulated exports; reconstructed receipt limitations apply."
+    }
+  ],
+  "forecasts": [
+    {
+      "hospital_id": "sim-nc-central",
+      "quantity_unit": "bag",
+      "as_of": "2024-10-02",
+      "end_on": "2024-10-15",
+      "expected_daily_demand": 30,
+      "initial_usable": 164,
+      "total_received": 84,
+      "total_unmet": 172,
+      "projected_stockout_date": "2024-10-10",
+      "analysis_id": "7ad2f90252cdce56cf1ecb1f7538fd33083c1644c0ec93adf3e3e2cddfceca5d",
+      "points": [
+        {
+          "day": "2024-10-02",
+          "opening_physical": 184,
+          "expired_physical": 0,
+          "opening_usable": 164,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 134,
+          "closing_physical": 154,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 4.466666666666667,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-central",
+              "on_hand": 154,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 134,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-03",
+          "opening_physical": 154,
+          "expired_physical": 0,
+          "opening_usable": 134,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 104,
+          "closing_physical": 124,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 3.466666666666667,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-central",
+              "on_hand": 124,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 104,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-04",
+          "opening_physical": 124,
+          "expired_physical": 0,
+          "opening_usable": 104,
+          "received": 84,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 158,
+          "closing_physical": 178,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 5.266666666666667,
+          "received_shipment_ids": [
+            "asn-central"
+          ],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 54,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 54,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 124,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 104,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-05",
+          "opening_physical": 178,
+          "expired_physical": 0,
+          "opening_usable": 158,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 128,
+          "closing_physical": 148,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 4.266666666666667,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 24,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 24,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 124,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 104,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-06",
+          "opening_physical": 148,
+          "expired_physical": 0,
+          "opening_usable": 128,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 98,
+          "closing_physical": 118,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 3.2666666666666666,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 118,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 98,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-07",
+          "opening_physical": 118,
+          "expired_physical": 0,
+          "opening_usable": 98,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 68,
+          "closing_physical": 88,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 2.2666666666666666,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 88,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 68,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-08",
+          "opening_physical": 88,
+          "expired_physical": 0,
+          "opening_usable": 68,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 38,
+          "closing_physical": 58,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 1.2666666666666666,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 58,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 38,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-09",
+          "opening_physical": 58,
+          "expired_physical": 0,
+          "opening_usable": 38,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 8,
+          "closing_physical": 28,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 0.26666666666666666,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 28,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 8,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-10",
+          "opening_physical": 28,
+          "expired_physical": 0,
+          "opening_usable": 8,
+          "received": 0,
+          "demand": 30,
+          "served": 8,
+          "unmet": 22,
+          "closing_usable": 0,
+          "closing_physical": 20,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-11",
+          "opening_physical": 20,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 30,
+          "served": 0,
+          "unmet": 30,
+          "closing_usable": 0,
+          "closing_physical": 20,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-12",
+          "opening_physical": 20,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 30,
+          "served": 0,
+          "unmet": 30,
+          "closing_usable": 0,
+          "closing_physical": 20,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-13",
+          "opening_physical": 20,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 30,
+          "served": 0,
+          "unmet": 30,
+          "closing_usable": 0,
+          "closing_physical": 20,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-14",
+          "opening_physical": 20,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 30,
+          "served": 0,
+          "unmet": 30,
+          "closing_usable": 0,
+          "closing_physical": 20,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-15",
+          "opening_physical": 20,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 30,
+          "served": 0,
+          "unmet": 30,
+          "closing_usable": 0,
+          "closing_physical": 20,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "sim-2024-10-01-consumption",
+        "sim-2024-10-01-inventory",
+        "sim-2024-10-01-shipments"
+      ],
+      "limitations": [
+        "Reconstructed historical simulation: exact 2024 version custody unproven; fictional receipt at document end-of-day.",
+        "All hospital operations, accounts, geography and supply timing are simulated; outputs are conditional calculations.",
+        "No real ERP, EDI partner, FHIR server, live Zetaris query, live model inference or external action.",
+        "No patient outcome estimate or clinical equivalence model for saline."
+      ]
+    },
+    {
+      "hospital_id": "sim-nc-north",
+      "quantity_unit": "bag",
+      "as_of": "2024-10-02",
+      "end_on": "2024-10-15",
+      "expected_daily_demand": 25,
+      "initial_usable": 619,
+      "total_received": 67,
+      "total_unmet": 0,
+      "projected_stockout_date": null,
+      "analysis_id": "d4c4eff55173ad863a1b9e1ced470f9a24b6b6e79d77c2733c342f2d116c0d3b",
+      "points": [
+        {
+          "day": "2024-10-02",
+          "opening_physical": 719,
+          "expired_physical": 0,
+          "opening_usable": 619,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 594,
+          "closing_physical": 694,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 23.76,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-north",
+              "on_hand": 694,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 594,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-03",
+          "opening_physical": 694,
+          "expired_physical": 0,
+          "opening_usable": 594,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 569,
+          "closing_physical": 669,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 22.76,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-north",
+              "on_hand": 669,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 569,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-04",
+          "opening_physical": 669,
+          "expired_physical": 0,
+          "opening_usable": 569,
+          "received": 67,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 611,
+          "closing_physical": 711,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 24.44,
+          "received_shipment_ids": [
+            "asn-north"
+          ],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 42,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 42,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 669,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 569,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-05",
+          "opening_physical": 711,
+          "expired_physical": 0,
+          "opening_usable": 611,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 586,
+          "closing_physical": 686,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 23.44,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 17,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 17,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 669,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 569,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-06",
+          "opening_physical": 686,
+          "expired_physical": 0,
+          "opening_usable": 586,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 561,
+          "closing_physical": 661,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 22.44,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 661,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 561,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-07",
+          "opening_physical": 661,
+          "expired_physical": 0,
+          "opening_usable": 561,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 536,
+          "closing_physical": 636,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 21.44,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 636,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 536,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-08",
+          "opening_physical": 636,
+          "expired_physical": 0,
+          "opening_usable": 536,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 511,
+          "closing_physical": 611,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 20.44,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 611,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 511,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-09",
+          "opening_physical": 611,
+          "expired_physical": 0,
+          "opening_usable": 511,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 486,
+          "closing_physical": 586,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 19.44,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 586,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 486,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-10",
+          "opening_physical": 586,
+          "expired_physical": 0,
+          "opening_usable": 486,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 461,
+          "closing_physical": 561,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 18.44,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 561,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 461,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-11",
+          "opening_physical": 561,
+          "expired_physical": 0,
+          "opening_usable": 461,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 436,
+          "closing_physical": 536,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 17.44,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 536,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 436,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-12",
+          "opening_physical": 536,
+          "expired_physical": 0,
+          "opening_usable": 436,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 411,
+          "closing_physical": 511,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 16.44,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 511,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 411,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-13",
+          "opening_physical": 511,
+          "expired_physical": 0,
+          "opening_usable": 411,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 386,
+          "closing_physical": 486,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 15.44,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 486,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 386,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-14",
+          "opening_physical": 486,
+          "expired_physical": 0,
+          "opening_usable": 386,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 361,
+          "closing_physical": 461,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 14.44,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 461,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 361,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-15",
+          "opening_physical": 461,
+          "expired_physical": 0,
+          "opening_usable": 361,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 336,
+          "closing_physical": 436,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 13.44,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 436,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 336,
+              "quarantined": false
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "sim-2024-10-01-consumption",
+        "sim-2024-10-01-inventory",
+        "sim-2024-10-01-shipments"
+      ],
+      "limitations": [
+        "Reconstructed historical simulation: exact 2024 version custody unproven; fictional receipt at document end-of-day.",
+        "All hospital operations, accounts, geography and supply timing are simulated; outputs are conditional calculations.",
+        "No real ERP, EDI partner, FHIR server, live Zetaris query, live model inference or external action.",
+        "No patient outcome estimate or clinical equivalence model for saline."
+      ]
+    },
+    {
+      "hospital_id": "sim-nc-south",
+      "quantity_unit": "bag",
+      "as_of": "2024-10-02",
+      "end_on": "2024-10-15",
+      "expected_daily_demand": 20,
+      "initial_usable": 110,
+      "total_received": 0,
+      "total_unmet": 170,
+      "projected_stockout_date": "2024-10-07",
+      "analysis_id": "f305c5b287d7501bfa0c1a26ff480dd96840c323c5b199510a4b72d687a2a124",
+      "points": [
+        {
+          "day": "2024-10-02",
+          "opening_physical": 128,
+          "expired_physical": 0,
+          "opening_usable": 110,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 90,
+          "closing_physical": 108,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 4.5,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 108,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 90,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-03",
+          "opening_physical": 108,
+          "expired_physical": 0,
+          "opening_usable": 90,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 70,
+          "closing_physical": 88,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 3.5,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 88,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 70,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-04",
+          "opening_physical": 88,
+          "expired_physical": 0,
+          "opening_usable": 70,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 50,
+          "closing_physical": 68,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 2.5,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 68,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 50,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-05",
+          "opening_physical": 68,
+          "expired_physical": 0,
+          "opening_usable": 50,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 30,
+          "closing_physical": 48,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 1.5,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 48,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 30,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-06",
+          "opening_physical": 48,
+          "expired_physical": 0,
+          "opening_usable": 30,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 10,
+          "closing_physical": 28,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.5,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 28,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 10,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-07",
+          "opening_physical": 28,
+          "expired_physical": 0,
+          "opening_usable": 10,
+          "received": 0,
+          "demand": 20,
+          "served": 10,
+          "unmet": 10,
+          "closing_usable": 0,
+          "closing_physical": 18,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-08",
+          "opening_physical": 18,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 20,
+          "served": 0,
+          "unmet": 20,
+          "closing_usable": 0,
+          "closing_physical": 18,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-09",
+          "opening_physical": 18,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 20,
+          "served": 0,
+          "unmet": 20,
+          "closing_usable": 0,
+          "closing_physical": 18,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-10",
+          "opening_physical": 18,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 20,
+          "served": 0,
+          "unmet": 20,
+          "closing_usable": 0,
+          "closing_physical": 18,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-11",
+          "opening_physical": 18,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 20,
+          "served": 0,
+          "unmet": 20,
+          "closing_usable": 0,
+          "closing_physical": 18,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-12",
+          "opening_physical": 18,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 20,
+          "served": 0,
+          "unmet": 20,
+          "closing_usable": 0,
+          "closing_physical": 18,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-13",
+          "opening_physical": 18,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 20,
+          "served": 0,
+          "unmet": 20,
+          "closing_usable": 0,
+          "closing_physical": 18,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-14",
+          "opening_physical": 18,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 20,
+          "served": 0,
+          "unmet": 20,
+          "closing_usable": 0,
+          "closing_physical": 18,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-15",
+          "opening_physical": 18,
+          "expired_physical": 0,
+          "opening_usable": 0,
+          "received": 0,
+          "demand": 20,
+          "served": 0,
+          "unmet": 20,
+          "closing_usable": 0,
+          "closing_physical": 18,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "sim-2024-10-01-consumption",
+        "sim-2024-10-01-inventory"
+      ],
+      "limitations": [
+        "Reconstructed historical simulation: exact 2024 version custody unproven; fictional receipt at document end-of-day.",
+        "All hospital operations, accounts, geography and supply timing are simulated; outputs are conditional calculations.",
+        "No real ERP, EDI partner, FHIR server, live Zetaris query, live model inference or external action.",
+        "No patient outcome estimate or clinical equivalence model for saline."
+      ]
+    }
+  ],
+  "mitigated": [
+    {
+      "hospital_id": "sim-nc-central",
+      "quantity_unit": "bag",
+      "as_of": "2024-10-02",
+      "end_on": "2024-10-15",
+      "expected_daily_demand": 30,
+      "initial_usable": 164,
+      "total_received": 256,
+      "total_unmet": 0,
+      "projected_stockout_date": null,
+      "analysis_id": "15d22f4efb11ac0c23638d2da710d3e635e6281006a489cb5d90b79d6dbfc4df",
+      "points": [
+        {
+          "day": "2024-10-02",
+          "opening_physical": 184,
+          "expired_physical": 0,
+          "opening_usable": 164,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 134,
+          "closing_physical": 154,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 4.466666666666667,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-central",
+              "on_hand": 154,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 134,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-03",
+          "opening_physical": 154,
+          "expired_physical": 0,
+          "opening_usable": 134,
+          "received": 172,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 276,
+          "closing_physical": 296,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 9.2,
+          "received_shipment_ids": [
+            "sim-nc-north-to-sim-nc-central-172"
+          ],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 142,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 142,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 154,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 134,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-04",
+          "opening_physical": 296,
+          "expired_physical": 0,
+          "opening_usable": 276,
+          "received": 84,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 330,
+          "closing_physical": 350,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 11.0,
+          "received_shipment_ids": [
+            "asn-central"
+          ],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 84,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 84,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 112,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 112,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 154,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 134,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-05",
+          "opening_physical": 350,
+          "expired_physical": 0,
+          "opening_usable": 330,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 300,
+          "closing_physical": 320,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 10.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 84,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 84,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 82,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 82,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 154,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 134,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-06",
+          "opening_physical": 320,
+          "expired_physical": 0,
+          "opening_usable": 300,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 270,
+          "closing_physical": 290,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 9.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 84,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 84,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 52,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 52,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 154,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 134,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-07",
+          "opening_physical": 290,
+          "expired_physical": 0,
+          "opening_usable": 270,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 240,
+          "closing_physical": 260,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 8.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 84,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 84,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 22,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 22,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 154,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 134,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-08",
+          "opening_physical": 260,
+          "expired_physical": 0,
+          "opening_usable": 240,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 210,
+          "closing_physical": 230,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 7.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 76,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 76,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 154,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 134,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-09",
+          "opening_physical": 230,
+          "expired_physical": 0,
+          "opening_usable": 210,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 180,
+          "closing_physical": 200,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 6.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 46,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 46,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 154,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 134,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-10",
+          "opening_physical": 200,
+          "expired_physical": 0,
+          "opening_usable": 180,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 150,
+          "closing_physical": 170,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 5.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 16,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 16,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 154,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 134,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-11",
+          "opening_physical": 170,
+          "expired_physical": 0,
+          "opening_usable": 150,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 120,
+          "closing_physical": 140,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 4.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 140,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 120,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-12",
+          "opening_physical": 140,
+          "expired_physical": 0,
+          "opening_usable": 120,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 90,
+          "closing_physical": 110,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 3.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 110,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 90,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-13",
+          "opening_physical": 110,
+          "expired_physical": 0,
+          "opening_usable": 90,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 60,
+          "closing_physical": 80,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 2.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 80,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 60,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-14",
+          "opening_physical": 80,
+          "expired_physical": 0,
+          "opening_usable": 60,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 30,
+          "closing_physical": 50,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 1.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 50,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 30,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-15",
+          "opening_physical": 50,
+          "expired_physical": 0,
+          "opening_usable": 30,
+          "received": 0,
+          "demand": 30,
+          "served": 30,
+          "unmet": 0,
+          "closing_usable": 0,
+          "closing_physical": 20,
+          "reserved": 20,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-central",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-central-172",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-central",
+              "on_hand": 20,
+              "reserved": 20,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "sim-2024-10-01-consumption",
+        "sim-2024-10-01-inventory",
+        "sim-2024-10-01-shipments"
+      ],
+      "limitations": [
+        "Reconstructed historical simulation: exact 2024 version custody unproven; fictional receipt at document end-of-day.",
+        "All hospital operations, accounts, geography and supply timing are simulated; outputs are conditional calculations.",
+        "No real ERP, EDI partner, FHIR server, live Zetaris query, live model inference or external action.",
+        "No patient outcome estimate or clinical equivalence model for saline."
+      ]
+    },
+    {
+      "hospital_id": "sim-nc-north",
+      "quantity_unit": "bag",
+      "as_of": "2024-10-02",
+      "end_on": "2024-10-15",
+      "expected_daily_demand": 25,
+      "initial_usable": 283,
+      "total_received": 67,
+      "total_unmet": 0,
+      "projected_stockout_date": null,
+      "analysis_id": "f284a4a14c9c4290c19d42d665cb2660a2a237a78c17ecf49093c3905a5f6e1d",
+      "points": [
+        {
+          "day": "2024-10-02",
+          "opening_physical": 383,
+          "expired_physical": 0,
+          "opening_usable": 283,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 258,
+          "closing_physical": 358,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 10.32,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-north",
+              "on_hand": 358,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 258,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-03",
+          "opening_physical": 358,
+          "expired_physical": 0,
+          "opening_usable": 258,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 233,
+          "closing_physical": 333,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 9.32,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-north",
+              "on_hand": 333,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 233,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-04",
+          "opening_physical": 333,
+          "expired_physical": 0,
+          "opening_usable": 233,
+          "received": 67,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 275,
+          "closing_physical": 375,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 11.0,
+          "received_shipment_ids": [
+            "asn-north"
+          ],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 42,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 42,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 333,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 233,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-05",
+          "opening_physical": 375,
+          "expired_physical": 0,
+          "opening_usable": 275,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 250,
+          "closing_physical": 350,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 10.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 17,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 17,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 333,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 233,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-06",
+          "opening_physical": 350,
+          "expired_physical": 0,
+          "opening_usable": 250,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 225,
+          "closing_physical": 325,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 9.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 325,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 225,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-07",
+          "opening_physical": 325,
+          "expired_physical": 0,
+          "opening_usable": 225,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 200,
+          "closing_physical": 300,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 8.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 300,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 200,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-08",
+          "opening_physical": 300,
+          "expired_physical": 0,
+          "opening_usable": 200,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 175,
+          "closing_physical": 275,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 7.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 275,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 175,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-09",
+          "opening_physical": 275,
+          "expired_physical": 0,
+          "opening_usable": 175,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 150,
+          "closing_physical": 250,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 6.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 250,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 150,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-10",
+          "opening_physical": 250,
+          "expired_physical": 0,
+          "opening_usable": 150,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 125,
+          "closing_physical": 225,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 5.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 225,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 125,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-11",
+          "opening_physical": 225,
+          "expired_physical": 0,
+          "opening_usable": 125,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 100,
+          "closing_physical": 200,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 4.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 200,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 100,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-12",
+          "opening_physical": 200,
+          "expired_physical": 0,
+          "opening_usable": 100,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 75,
+          "closing_physical": 175,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 3.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 175,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 75,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-13",
+          "opening_physical": 175,
+          "expired_physical": 0,
+          "opening_usable": 75,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 50,
+          "closing_physical": 150,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 2.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 150,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 50,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-14",
+          "opening_physical": 150,
+          "expired_physical": 0,
+          "opening_usable": 50,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 25,
+          "closing_physical": 125,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 1.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 125,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 25,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-15",
+          "opening_physical": 125,
+          "expired_physical": 0,
+          "opening_usable": 25,
+          "received": 0,
+          "demand": 25,
+          "served": 25,
+          "unmet": 0,
+          "closing_usable": 0,
+          "closing_physical": 100,
+          "reserved": 100,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:asn-north",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-03",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-north",
+              "on_hand": 100,
+              "reserved": 100,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "sim-2024-10-01-consumption",
+        "sim-2024-10-01-inventory",
+        "sim-2024-10-01-shipments"
+      ],
+      "limitations": [
+        "Reconstructed historical simulation: exact 2024 version custody unproven; fictional receipt at document end-of-day.",
+        "All hospital operations, accounts, geography and supply timing are simulated; outputs are conditional calculations.",
+        "No real ERP, EDI partner, FHIR server, live Zetaris query, live model inference or external action.",
+        "No patient outcome estimate or clinical equivalence model for saline."
+      ]
+    },
+    {
+      "hospital_id": "sim-nc-south",
+      "quantity_unit": "bag",
+      "as_of": "2024-10-02",
+      "end_on": "2024-10-15",
+      "expected_daily_demand": 20,
+      "initial_usable": 110,
+      "total_received": 164,
+      "total_unmet": 6,
+      "projected_stockout_date": "2024-10-15",
+      "analysis_id": "8ba90d3bf8ff8f67986b6ca4f9e8171ae91ec634145d9b547149c596826a886f",
+      "points": [
+        {
+          "day": "2024-10-02",
+          "opening_physical": 128,
+          "expired_physical": 0,
+          "opening_usable": 110,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 90,
+          "closing_physical": 108,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 4.5,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "lot-south",
+              "on_hand": 108,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 90,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-03",
+          "opening_physical": 108,
+          "expired_physical": 0,
+          "opening_usable": 90,
+          "received": 164,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 234,
+          "closing_physical": 252,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 11.7,
+          "received_shipment_ids": [
+            "sim-nc-north-to-sim-nc-south-164"
+          ],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 144,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 144,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 108,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 90,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-04",
+          "opening_physical": 252,
+          "expired_physical": 0,
+          "opening_usable": 234,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 214,
+          "closing_physical": 232,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 10.7,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 124,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 124,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 108,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 90,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-05",
+          "opening_physical": 232,
+          "expired_physical": 0,
+          "opening_usable": 214,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 194,
+          "closing_physical": 212,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 9.7,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 104,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 104,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 108,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 90,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-06",
+          "opening_physical": 212,
+          "expired_physical": 0,
+          "opening_usable": 194,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 174,
+          "closing_physical": 192,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 8.7,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 84,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 84,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 108,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 90,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-07",
+          "opening_physical": 192,
+          "expired_physical": 0,
+          "opening_usable": 174,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 154,
+          "closing_physical": 172,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 7.7,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 64,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 64,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 108,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 90,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-08",
+          "opening_physical": 172,
+          "expired_physical": 0,
+          "opening_usable": 154,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 134,
+          "closing_physical": 152,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 6.7,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 44,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 44,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 108,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 90,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-09",
+          "opening_physical": 152,
+          "expired_physical": 0,
+          "opening_usable": 134,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 114,
+          "closing_physical": 132,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 5.7,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 24,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 24,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 108,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 90,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-10",
+          "opening_physical": 132,
+          "expired_physical": 0,
+          "opening_usable": 114,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 94,
+          "closing_physical": 112,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 4.7,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 4,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 4,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 108,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 90,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-11",
+          "opening_physical": 112,
+          "expired_physical": 0,
+          "opening_usable": 94,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 74,
+          "closing_physical": 92,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 3.7,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 92,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 74,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-12",
+          "opening_physical": 92,
+          "expired_physical": 0,
+          "opening_usable": 74,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 54,
+          "closing_physical": 72,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 2.7,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 72,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 54,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-13",
+          "opening_physical": 72,
+          "expired_physical": 0,
+          "opening_usable": 54,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 34,
+          "closing_physical": 52,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 1.7,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 52,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 34,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-14",
+          "opening_physical": 52,
+          "expired_physical": 0,
+          "opening_usable": 34,
+          "received": 0,
+          "demand": 20,
+          "served": 20,
+          "unmet": 0,
+          "closing_usable": 14,
+          "closing_physical": 32,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.7,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 32,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 14,
+              "quarantined": false
+            }
+          ]
+        },
+        {
+          "day": "2024-10-15",
+          "opening_physical": 32,
+          "expired_physical": 0,
+          "opening_usable": 14,
+          "received": 0,
+          "demand": 20,
+          "served": 14,
+          "unmet": 6,
+          "closing_usable": 0,
+          "closing_physical": 18,
+          "reserved": 18,
+          "quarantined": 0,
+          "buffer_days": 0.0,
+          "received_shipment_ids": [],
+          "lots": [
+            {
+              "lot_id": "arrival:sim-nc-north-to-sim-nc-south-164",
+              "on_hand": 0,
+              "reserved": 0,
+              "expiry_date": "2024-11-02",
+              "available": 0,
+              "quarantined": false
+            },
+            {
+              "lot_id": "lot-south",
+              "on_hand": 18,
+              "reserved": 18,
+              "expiry_date": "2024-12-31",
+              "available": 0,
+              "quarantined": false
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "sim-2024-10-01-consumption",
+        "sim-2024-10-01-inventory"
+      ],
+      "limitations": [
+        "Reconstructed historical simulation: exact 2024 version custody unproven; fictional receipt at document end-of-day.",
+        "All hospital operations, accounts, geography and supply timing are simulated; outputs are conditional calculations.",
+        "No real ERP, EDI partner, FHIR server, live Zetaris query, live model inference or external action.",
+        "No patient outcome estimate or clinical equivalence model for saline."
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+      "kind": "transfer",
+      "source_id": "sim-nc-north",
+      "hospital_id": "sim-nc-central",
+      "quantity": 172,
+      "quantity_unit": "bag",
+      "arrival_on": "2024-10-03",
+      "feasible": true,
+      "failures": [],
+      "remaining_unmet": 0,
+      "donor_unmet": 0,
+      "donor_reserved": 100,
+      "analysis_ids": [
+        "15d22f4efb11ac0c23638d2da710d3e635e6281006a489cb5d90b79d6dbfc4df",
+        "579dc8364831d9c959856beb46a38b74b2f1e09df338fb6ad943aa4de475018e",
+        "f305c5b287d7501bfa0c1a26ff480dd96840c323c5b199510a4b72d687a2a124"
+      ],
+      "requires_human_review": true,
+      "conservation": {
+        "debited": 172,
+        "recipient_receipt": 172,
+        "conserved": true
+      }
+    },
+    {
+      "candidate_id": "sim-nc-south-to-sim-nc-central-110",
+      "kind": "transfer",
+      "source_id": "sim-nc-south",
+      "hospital_id": "sim-nc-central",
+      "quantity": 110,
+      "quantity_unit": "bag",
+      "arrival_on": "2024-10-03",
+      "feasible": false,
+      "failures": [
+        "DONOR_SHORTAGE"
+      ],
+      "remaining_unmet": 62,
+      "donor_unmet": 280,
+      "donor_reserved": 18,
+      "analysis_ids": [
+        "846f550dde96c35606da702a26f6bf2081c95b830a608d877ee310ca212a0a81",
+        "d4c4eff55173ad863a1b9e1ced470f9a24b6b6e79d77c2733c342f2d116c0d3b",
+        "0f50cc9958110cc61f1759c7407615b00f623fec756edf37e15cdf0273a46e58"
+      ],
+      "requires_human_review": true,
+      "conservation": {
+        "debited": 110,
+        "recipient_receipt": 110,
+        "conserved": true
+      }
+    },
+    {
+      "candidate_id": "external-sim-nc-central",
+      "kind": "supplier_delivery",
+      "hospital_id": "sim-nc-central",
+      "quantity": 0,
+      "quantity_unit": "bag",
+      "feasible": false,
+      "failures": [
+        "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+      ],
+      "remaining_unmet": 172
+    },
+    {
+      "candidate_id": "sim-nc-central-to-sim-nc-south-164",
+      "kind": "transfer",
+      "source_id": "sim-nc-central",
+      "hospital_id": "sim-nc-south",
+      "quantity": 164,
+      "quantity_unit": "bag",
+      "arrival_on": "2024-10-03",
+      "feasible": false,
+      "failures": [
+        "DONOR_SHORTAGE"
+      ],
+      "remaining_unmet": 6,
+      "donor_unmet": 164,
+      "donor_reserved": 20,
+      "analysis_ids": [
+        "eec3ef80a2eee7c3365a0f36277dc5e1f3b25bf7c62dc20e4485511a6a4b6634",
+        "579dc8364831d9c959856beb46a38b74b2f1e09df338fb6ad943aa4de475018e",
+        "c4463900f23fe9d01bef5678682f6942601715f658ddd4add3a66eb26b65a38a"
+      ],
+      "requires_human_review": true,
+      "conservation": {
+        "debited": 164,
+        "recipient_receipt": 164,
+        "conserved": true
+      }
+    },
+    {
+      "candidate_id": "sim-nc-north-to-sim-nc-south-164",
+      "kind": "transfer",
+      "source_id": "sim-nc-north",
+      "hospital_id": "sim-nc-south",
+      "quantity": 164,
+      "quantity_unit": "bag",
+      "arrival_on": "2024-10-03",
+      "feasible": true,
+      "failures": [],
+      "remaining_unmet": 6,
+      "donor_unmet": 0,
+      "donor_reserved": 100,
+      "analysis_ids": [
+        "15d22f4efb11ac0c23638d2da710d3e635e6281006a489cb5d90b79d6dbfc4df",
+        "f284a4a14c9c4290c19d42d665cb2660a2a237a78c17ecf49093c3905a5f6e1d",
+        "8ba90d3bf8ff8f67986b6ca4f9e8171ae91ec634145d9b547149c596826a886f"
+      ],
+      "requires_human_review": true,
+      "conservation": {
+        "debited": 164,
+        "recipient_receipt": 164,
+        "conserved": true
+      }
+    },
+    {
+      "candidate_id": "sim-nc-north-to-sim-nc-south-170",
+      "kind": "transfer",
+      "source_id": "sim-nc-north",
+      "hospital_id": "sim-nc-south",
+      "quantity": 170,
+      "quantity_unit": "bag",
+      "arrival_on": "2024-10-03",
+      "feasible": false,
+      "failures": [
+        "DONOR_SHORTAGE"
+      ],
+      "remaining_unmet": 0,
+      "donor_unmet": 6,
+      "donor_reserved": 100,
+      "analysis_ids": [
+        "15d22f4efb11ac0c23638d2da710d3e635e6281006a489cb5d90b79d6dbfc4df",
+        "74d793099b2789da65dfccb8e4167fb6542e097a76f97032d5bad20ca9da8779",
+        "de3f1eda631c299ff9e85091aef27ab4df5c420876c70d96335f29e067af6ce5"
+      ],
+      "requires_human_review": true,
+      "conservation": {
+        "debited": 170,
+        "recipient_receipt": 170,
+        "conserved": true
+      }
+    },
+    {
+      "candidate_id": "external-sim-nc-south",
+      "kind": "supplier_delivery",
+      "hospital_id": "sim-nc-south",
+      "quantity": 0,
+      "quantity_unit": "bag",
+      "feasible": false,
+      "failures": [
+        "UNCONFIRMED_ALTERNATIVE_SUPPLY"
+      ],
+      "remaining_unmet": 170
+    }
+  ],
+  "selected": [
+    "sim-nc-north-to-sim-nc-central-172",
+    "sim-nc-north-to-sim-nc-south-164"
+  ],
+  "actions": [
+    {
+      "action_id": "action-617baf242e542e01",
+      "candidate_id": "sim-nc-north-to-sim-nc-central-172",
+      "quantity": 172,
+      "quantity_unit": "bag",
+      "status": "DRAFT",
+      "revision": 1,
+      "dispatch_available": false,
+      "required_authorizations": [
+        "Human pharmacy review",
+        "Donor release permission"
+      ],
+      "outstanding_verification": [
+        "Verify real inventory, pack identity and transport before action"
+      ],
+      "draft": "Review simulated transfer of 172 bags from sim-nc-north to sim-nc-central."
+    },
+    {
+      "action_id": "action-60e70fe18ebcb005",
+      "candidate_id": "sim-nc-north-to-sim-nc-south-164",
+      "quantity": 164,
+      "quantity_unit": "bag",
+      "status": "DRAFT",
+      "revision": 1,
+      "dispatch_available": false,
+      "required_authorizations": [
+        "Human pharmacy review",
+        "Donor release permission"
+      ],
+      "outstanding_verification": [
+        "Verify real inventory, pack identity and transport before action"
+      ],
+      "draft": "Review simulated transfer of 164 bags from sim-nc-north to sim-nc-south."
+    }
+  ],
+  "decisions": [
+    {
+      "agent_id": "verification",
+      "tool": "manufacturer.read",
+      "execution": "local-deterministic",
+      "result": {
+        "source_ids": [
+          "baxter-2024-09-29",
+          "baxter-2024-10-01"
+        ]
+      },
+      "classification": "executed-operation",
+      "dataset_version": "f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+    },
+    {
+      "agent_id": "dependency",
+      "tool": "catalog.read",
+      "execution": "local-deterministic",
+      "result": {
+        "accounts": [
+          "sim-account-central",
+          "sim-account-north",
+          "sim-account-south"
+        ]
+      },
+      "classification": "executed-operation",
+      "dataset_version": "f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+    },
+    {
+      "agent_id": "hospital",
+      "tool": "inventory.forecast",
+      "execution": "local-deterministic",
+      "result": {
+        "analysis_ids": [
+          "7ad2f90252cdce56cf1ecb1f7538fd33083c1644c0ec93adf3e3e2cddfceca5d",
+          "d4c4eff55173ad863a1b9e1ced470f9a24b6b6e79d77c2733c342f2d116c0d3b",
+          "f305c5b287d7501bfa0c1a26ff480dd96840c323c5b199510a4b72d687a2a124"
+        ]
+      },
+      "classification": "executed-operation",
+      "dataset_version": "f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+    },
+    {
+      "agent_id": "feasibility",
+      "tool": "mitigation.evaluate",
+      "execution": "local-deterministic",
+      "result": {
+        "candidates": 7,
+        "selected": [
+          "sim-nc-north-to-sim-nc-central-172",
+          "sim-nc-north-to-sim-nc-south-164"
+        ]
+      },
+      "classification": "executed-operation",
+      "dataset_version": "f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+    },
+    {
+      "agent_id": "mitigation",
+      "tool": "mitigation.rank",
+      "execution": "local-deterministic",
+      "result": {
+        "selected": [
+          "sim-nc-north-to-sim-nc-central-172",
+          "sim-nc-north-to-sim-nc-south-164"
+        ],
+        "ranking": "remaining unmet, quantity, stable identity"
+      },
+      "classification": "executed-operation",
+      "dataset_version": "f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+    },
+    {
+      "agent_id": "actions",
+      "tool": "draft.review_only",
+      "execution": "local-deterministic",
+      "result": {
+        "action_ids": [
+          "action-617baf242e542e01",
+          "action-60e70fe18ebcb005"
+        ],
+        "dispatch_available": false
+      },
+      "classification": "executed-operation",
+      "dataset_version": "f3aca5a9fbfd4bb53c09b1dc3027497fccd9b6713ccb630d6067e31fc42d907a"
+    }
+  ],
+  "memory": {},
+  "reconciliation": [
+    {
+      "order_id": "po-central",
+      "shipment_id": "asn-central",
+      "status": "accepted",
+      "quantity": 84,
+      "entitlement": 84,
+      "source_ids": [
+        "baxter-2024-10-01"
+      ],
+      "reason": "Independent simulated acknowledgment + ASN; allocation is a constraint, not a receipt."
+    },
+    {
+      "order_id": "po-north",
+      "shipment_id": "asn-north",
+      "status": "accepted",
+      "quantity": 67,
+      "entitlement": 67,
+      "source_ids": [
+        "baxter-2024-10-01"
+      ],
+      "reason": "Independent simulated acknowledgment + ASN; allocation is a constraint, not a receipt."
+    }
+  ],
+  "unresolved": [
+    "MISSING_ACKNOWLEDGMENT:po-south"
+  ],
+  "map_nodes": [
+    {
+      "id": "sim-nc-central",
+      "title": "Piedmont Central (fictional)",
+      "point": [
+        -81.0,
+        35.9
+      ],
+      "classification": "simulated; illustrative coordinates"
+    },
+    {
+      "id": "sim-nc-north",
+      "title": "Foothills North (fictional)",
+      "point": [
+        -81.4,
+        36.3
+      ],
+      "classification": "simulated; illustrative coordinates"
+    },
+    {
+      "id": "sim-nc-south",
+      "title": "Catawba South (fictional)",
+      "point": [
+        -80.8,
+        35.4
+      ],
+      "classification": "simulated; illustrative coordinates"
+    }
+  ],
+  "classification": "observed-documents+simulated-operations+derived-results"
+}

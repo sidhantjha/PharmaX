@@ -1,0 +1,92 @@
+{
+  "schema_version": "2.0",
+  "dataset_version": "203835cde76d7e5db5bc84056725901089e6a8c56efd65a090e0504ef6c66680",
+  "mode": "fixture",
+  "query": {
+    "collection": "suppliers",
+    "reporter_code": null,
+    "partner_code": null,
+    "product_id": null,
+    "hospital_id": null,
+    "record_id": null,
+    "limit": 100
+  },
+  "items": [
+    {
+      "supplier_id": "sim-atlas",
+      "name": "Fictional Atlas Pharma",
+      "country_iso": "IND",
+      "role": "modeled_manufacturer",
+      "evidence": {
+        "evidence_id": "sim:16d829e187fff45d9e4cd2d547b17b93d8a8a952e1357d68140e02990f8e69e4",
+        "kind": "simulated",
+        "source": "fictional-illinois-v1",
+        "source_record_id": null,
+        "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "16d829e187fff45d9e4cd2d547b17b93d8a8a952e1357d68140e02990f8e69e4",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+      }
+    },
+    {
+      "supplier_id": "sim-lakes",
+      "name": "Fictional Great Lakes Distributor",
+      "country_iso": "USA",
+      "role": "modeled_distributor",
+      "evidence": {
+        "evidence_id": "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+        "kind": "simulated",
+        "source": "fictional-illinois-v1",
+        "source_record_id": null,
+        "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": null,
+        "content_sha256": "9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+        "raw_ref": null,
+        "parent_ids": [],
+        "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "sim:16d829e187fff45d9e4cd2d547b17b93d8a8a952e1357d68140e02990f8e69e4",
+      "kind": "simulated",
+      "source": "fictional-illinois-v1",
+      "source_record_id": null,
+      "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "16d829e187fff45d9e4cd2d547b17b93d8a8a952e1357d68140e02990f8e69e4",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+    },
+    {
+      "evidence_id": "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+      "kind": "simulated",
+      "source": "fictional-illinois-v1",
+      "source_record_id": null,
+      "source_url": "https://github.com/Project-Lumyn/Project-Dot4/blob/codex/pharmax-phase-2-data/phases/phase_02_data/scenario.py",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": null,
+      "content_sha256": "9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+      "raw_ref": null,
+      "parent_ids": [],
+      "note": "Synthetic scenario timestamp, not a real observation. Fictional supply relationship; no clinical or operational authority."
+    }
+  ],
+  "returned_count": 2,
+  "truncated": false
+}

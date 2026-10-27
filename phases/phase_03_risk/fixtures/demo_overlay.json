@@ -1,0 +1,9 @@
+{
+  "overlay_id": "central-clean-onset-v1",
+  "base_dataset_version": "6a4a8d083742ed7ef0d8a2b1090898f5ab655f0b5b179701c20c8260ba377819",
+  "as_of": "2023-07-24",
+  "description": "Separate fictional demonstration starting condition: Central begins with 38 vials, 8 still reserved. This isolates a disruption-induced stockout onset within a 14-day horizon. It is not a recommendation or replenishment action. Original Phase 2 data is unchanged.",
+  "kind": "simulated",
+  "stock": [{"inventory_id": "stock-central", "on_hand": 38}],
+  "arrivals": []
+}

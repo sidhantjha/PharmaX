@@ -1,0 +1,551 @@
+{
+  "catalog_id": "pharmax-mitigation-v1",
+  "base_dataset_version": "6a4a8d083742ed7ef0d8a2b1090898f5ab655f0b5b179701c20c8260ba377819",
+  "scenario_as_of": "2023-07-24",
+  "available_at": "2023-07-24T00:00:00Z",
+  "supplier_stocks": [
+    {
+      "stock_id": "supplier-lakes-450",
+      "supplier_id": "sim-lakes",
+      "product_id": "sim-carboplatin-450",
+      "presentation": "450 mg / 45 mL unopened single-use vial; modeled product, not a clinical substitution",
+      "on_hand": 42,
+      "reserved": 6,
+      "quality_status": "released",
+      "expiry_date": "2023-09-30",
+      "available_on": "2023-07-24",
+      "evidence": {
+        "evidence_id": "sim:p4b-23671398fb142765d282f479958a3721fff6b0bdef896436ac17a5fddf4fd338",
+        "kind": "simulated",
+        "source": "pharmax-mitigation-fixture-v1",
+        "source_record_id": "supplier-lakes-450",
+        "source_url": "https://example.invalid/pharmax/mitigation-v1",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": "2023-07-24T00:00:00Z",
+        "content_sha256": "23671398fb142765d282f479958a3721fff6b0bdef896436ac17a5fddf4fd338",
+        "raw_ref": null,
+        "parent_ids": [
+          "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+          "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30"
+        ],
+        "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+      }
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "route-north",
+      "source_id": "sim-north",
+      "hospital_id": "sim-central",
+      "product_id": "sim-carboplatin-450",
+      "authorized": true,
+      "transfer_permitted": true,
+      "max_quantity": 200,
+      "earliest_dispatch": "2023-07-24",
+      "transit_days": 0,
+      "temperature_min_c": 20.0,
+      "temperature_max_c": 25.0,
+      "protects_from_light": true,
+      "release_hold_authorized": false,
+      "evidence": {
+        "evidence_id": "sim:p4b-b85885ee3a146a7edeec39f8e63b6f218f8ec6c8ca270af3fc9d7ec2e05123fd",
+        "kind": "simulated",
+        "source": "pharmax-mitigation-fixture-v1",
+        "source_record_id": "route-north",
+        "source_url": "https://example.invalid/pharmax/mitigation-v1",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": "2023-07-24T00:00:00Z",
+        "content_sha256": "b85885ee3a146a7edeec39f8e63b6f218f8ec6c8ca270af3fc9d7ec2e05123fd",
+        "raw_ref": null,
+        "parent_ids": [
+          "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+          "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+          "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42"
+        ],
+        "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+      }
+    },
+    {
+      "route_id": "route-north-150",
+      "source_id": "sim-north",
+      "hospital_id": "sim-central",
+      "product_id": "sim-carboplatin-150",
+      "authorized": true,
+      "transfer_permitted": true,
+      "max_quantity": 200,
+      "earliest_dispatch": "2023-07-24",
+      "transit_days": 0,
+      "temperature_min_c": 20.0,
+      "temperature_max_c": 25.0,
+      "protects_from_light": true,
+      "release_hold_authorized": false,
+      "evidence": {
+        "evidence_id": "sim:p4b-54d2bcdac6c080bf3c2c927cca6fe4959f68406a4aabd2bb0fa6188200874543",
+        "kind": "simulated",
+        "source": "pharmax-mitigation-fixture-v1",
+        "source_record_id": "route-north-150",
+        "source_url": "https://example.invalid/pharmax/mitigation-v1",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": "2023-07-24T00:00:00Z",
+        "content_sha256": "54d2bcdac6c080bf3c2c927cca6fe4959f68406a4aabd2bb0fa6188200874543",
+        "raw_ref": null,
+        "parent_ids": [
+          "sim:03e3d51b1b4c70dc05cf3dec91a097a84b8d9969d00318b1ec644ba4ee8880d4",
+          "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+          "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42"
+        ],
+        "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+      }
+    },
+    {
+      "route_id": "route-lakes",
+      "source_id": "sim-lakes",
+      "hospital_id": "sim-central",
+      "product_id": "sim-carboplatin-450",
+      "authorized": true,
+      "transfer_permitted": false,
+      "max_quantity": 200,
+      "earliest_dispatch": "2023-07-24",
+      "transit_days": 2,
+      "temperature_min_c": 20.0,
+      "temperature_max_c": 25.0,
+      "protects_from_light": true,
+      "release_hold_authorized": false,
+      "evidence": {
+        "evidence_id": "sim:p4b-d341a3126c5d124fdd05d0099a5820ad423eb47fab1ed8b14d52539d8034cffa",
+        "kind": "simulated",
+        "source": "pharmax-mitigation-fixture-v1",
+        "source_record_id": "route-lakes",
+        "source_url": "https://example.invalid/pharmax/mitigation-v1",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": "2023-07-24T00:00:00Z",
+        "content_sha256": "d341a3126c5d124fdd05d0099a5820ad423eb47fab1ed8b14d52539d8034cffa",
+        "raw_ref": null,
+        "parent_ids": [
+          "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+          "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+          "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42"
+        ],
+        "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+      }
+    },
+    {
+      "route_id": "route-atlas-release",
+      "source_id": "sim-atlas",
+      "hospital_id": "sim-central",
+      "product_id": "sim-carboplatin-450",
+      "authorized": true,
+      "transfer_permitted": false,
+      "max_quantity": 200,
+      "earliest_dispatch": "2023-07-24",
+      "transit_days": 2,
+      "temperature_min_c": 20.0,
+      "temperature_max_c": 25.0,
+      "protects_from_light": true,
+      "release_hold_authorized": false,
+      "evidence": {
+        "evidence_id": "sim:p4b-d63171af09e02aeb034c5ee119f6fd4b64cd89ca158566c72d9f8ce09046832c",
+        "kind": "simulated",
+        "source": "pharmax-mitigation-fixture-v1",
+        "source_record_id": "route-atlas-release",
+        "source_url": "https://example.invalid/pharmax/mitigation-v1",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": "2023-07-24T00:00:00Z",
+        "content_sha256": "d63171af09e02aeb034c5ee119f6fd4b64cd89ca158566c72d9f8ce09046832c",
+        "raw_ref": null,
+        "parent_ids": [
+          "sim:16d829e187fff45d9e4cd2d547b17b93d8a8a952e1357d68140e02990f8e69e4",
+          "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+          "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42"
+        ],
+        "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+      }
+    },
+    {
+      "route_id": "route-south",
+      "source_id": "sim-south",
+      "hospital_id": "sim-central",
+      "product_id": "sim-carboplatin-450",
+      "authorized": true,
+      "transfer_permitted": true,
+      "max_quantity": 200,
+      "earliest_dispatch": "2023-07-24",
+      "transit_days": 0,
+      "temperature_min_c": 20.0,
+      "temperature_max_c": 25.0,
+      "protects_from_light": true,
+      "release_hold_authorized": false,
+      "evidence": {
+        "evidence_id": "sim:p4b-095a50d3ab1147a08f147c1af3c381bd9703e264ad5ab64d4a9c39369ef89dc8",
+        "kind": "simulated",
+        "source": "pharmax-mitigation-fixture-v1",
+        "source_record_id": "route-south",
+        "source_url": "https://example.invalid/pharmax/mitigation-v1",
+        "observed_at": "2023-07-24T00:00:00Z",
+        "published_on": null,
+        "updated_on": null,
+        "version_available_at": "2023-07-24T00:00:00Z",
+        "content_sha256": "095a50d3ab1147a08f147c1af3c381bd9703e264ad5ab64d4a9c39369ef89dc8",
+        "raw_ref": null,
+        "parent_ids": [
+          "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+          "sim:550ad280727aadcb7171d33800aaa633e5babd3c8e37182d588e896e8a675211",
+          "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42"
+        ],
+        "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "north-other-strength",
+      "kind": "transfer",
+      "source_id": "stock-north-other-strength",
+      "route_id": "route-north-150",
+      "hospital_id": "sim-central",
+      "product_id": "sim-carboplatin-150",
+      "presentation": "150 mg / 15 mL unopened single-use vial; modeled product, not a clinical substitution",
+      "quantity": 80,
+      "dispatch_on": "2023-07-24",
+      "arrival_on": "2023-07-24",
+      "evidence_ids": [
+        "sim:p4b-edff0903b928547eb7329e605f1cd32da22c11e4ede8ab7477d41f20259e1d7c",
+        "sim:e9c60ce0f63dd540e8ef4cb827a0269e2ec3aadfba61a9a676bc4e88098d175c",
+        "sim:p4b-54d2bcdac6c080bf3c2c927cca6fe4959f68406a4aabd2bb0fa6188200874543"
+      ],
+      "kind_label": "simulated"
+    },
+    {
+      "candidate_id": "north-bulk",
+      "kind": "transfer",
+      "source_id": "stock-north",
+      "route_id": "route-north",
+      "hospital_id": "sim-central",
+      "product_id": "sim-carboplatin-450",
+      "presentation": "450 mg / 45 mL unopened single-use vial; modeled product, not a clinical substitution",
+      "quantity": 60,
+      "dispatch_on": "2023-07-24",
+      "arrival_on": "2023-07-24",
+      "evidence_ids": [
+        "sim:p4b-2fd2030d6286b5ddb81b8f01973075bdc75d129382b6c71d4b6987be6b7f00fa",
+        "sim:8c74820a60e14194f6d81ac6f2c63e3d3f6eef9f59b6b49894ed14fe8a2c62ca",
+        "sim:p4b-b85885ee3a146a7edeec39f8e63b6f218f8ec6c8ca270af3fc9d7ec2e05123fd"
+      ],
+      "kind_label": "simulated"
+    },
+    {
+      "candidate_id": "lakes-additional",
+      "kind": "supplier_delivery",
+      "source_id": "supplier-lakes-450",
+      "route_id": "route-lakes",
+      "hospital_id": "sim-central",
+      "product_id": "sim-carboplatin-450",
+      "presentation": "450 mg / 45 mL unopened single-use vial; modeled product, not a clinical substitution",
+      "quantity": 36,
+      "dispatch_on": "2023-07-24",
+      "arrival_on": "2023-07-26",
+      "evidence_ids": [
+        "sim:p4b-ae548db5da3ab19aff0efbffe74a0ddbe34ebcc3c7d2fcb5e595c1a5345d33f8",
+        "sim:p4b-23671398fb142765d282f479958a3721fff6b0bdef896436ac17a5fddf4fd338",
+        "sim:p4b-d341a3126c5d124fdd05d0099a5820ad423eb47fab1ed8b14d52539d8034cffa"
+      ],
+      "kind_label": "simulated"
+    },
+    {
+      "candidate_id": "north-conservative",
+      "kind": "transfer",
+      "source_id": "stock-north",
+      "route_id": "route-north",
+      "hospital_id": "sim-central",
+      "product_id": "sim-carboplatin-450",
+      "presentation": "450 mg / 45 mL unopened single-use vial; modeled product, not a clinical substitution",
+      "quantity": 24,
+      "dispatch_on": "2023-07-24",
+      "arrival_on": "2023-07-24",
+      "evidence_ids": [
+        "sim:p4b-f718b7cf134c76abb57a87df2a4b8781fddaf7f103c365275aaf320948af745f",
+        "sim:8c74820a60e14194f6d81ac6f2c63e3d3f6eef9f59b6b49894ed14fe8a2c62ca",
+        "sim:p4b-b85885ee3a146a7edeec39f8e63b6f218f8ec6c8ca270af3fc9d7ec2e05123fd"
+      ],
+      "kind_label": "simulated"
+    },
+    {
+      "candidate_id": "atlas-release",
+      "kind": "reschedule",
+      "source_id": "ship-central",
+      "route_id": "route-atlas-release",
+      "hospital_id": "sim-central",
+      "product_id": "sim-carboplatin-450",
+      "presentation": "450 mg / 45 mL unopened single-use vial; modeled product, not a clinical substitution",
+      "quantity": 60,
+      "dispatch_on": "2023-07-24",
+      "arrival_on": "2023-07-26",
+      "evidence_ids": [
+        "sim:p4b-c7cd32e19706eb65350f39503aea5272a0707a3f0ffc67ec2b3d3776671309f4",
+        "sim:7f481fe039beb18e23f58e7348f4ba173dc8730d33a93b9fd28d197dfadce9fc",
+        "sim:p4b-d63171af09e02aeb034c5ee119f6fd4b64cd89ca158566c72d9f8ce09046832c"
+      ],
+      "kind_label": "simulated"
+    },
+    {
+      "candidate_id": "south-quarantined",
+      "kind": "transfer",
+      "source_id": "stock-south",
+      "route_id": "route-south",
+      "hospital_id": "sim-central",
+      "product_id": "sim-carboplatin-450",
+      "presentation": "450 mg / 45 mL unopened single-use vial; modeled product, not a clinical substitution",
+      "quantity": 30,
+      "dispatch_on": "2023-07-24",
+      "arrival_on": "2023-07-24",
+      "evidence_ids": [
+        "sim:p4b-aaaa8fcdd232ee8e0ea48ec8cb6f7b17620dda307f743f723cddb437786b1926",
+        "sim:3ae9f148bc178031c8a92596514f13fc48ecdc628f469955f742e8197254a21b",
+        "sim:p4b-095a50d3ab1147a08f147c1af3c381bd9703e264ad5ab64d4a9c39369ef89dc8"
+      ],
+      "kind_label": "simulated"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "sim:p4b-23671398fb142765d282f479958a3721fff6b0bdef896436ac17a5fddf4fd338",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "supplier-lakes-450",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "23671398fb142765d282f479958a3721fff6b0bdef896436ac17a5fddf4fd338",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+        "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    },
+    {
+      "evidence_id": "sim:p4b-b85885ee3a146a7edeec39f8e63b6f218f8ec6c8ca270af3fc9d7ec2e05123fd",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "route-north",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "b85885ee3a146a7edeec39f8e63b6f218f8ec6c8ca270af3fc9d7ec2e05123fd",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+        "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+        "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    },
+    {
+      "evidence_id": "sim:p4b-54d2bcdac6c080bf3c2c927cca6fe4959f68406a4aabd2bb0fa6188200874543",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "route-north-150",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "54d2bcdac6c080bf3c2c927cca6fe4959f68406a4aabd2bb0fa6188200874543",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:03e3d51b1b4c70dc05cf3dec91a097a84b8d9969d00318b1ec644ba4ee8880d4",
+        "sim:59ceda88ed6fc5bc1abcde50b66ec457ee0360248e481d177285632c854a341c",
+        "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    },
+    {
+      "evidence_id": "sim:p4b-d341a3126c5d124fdd05d0099a5820ad423eb47fab1ed8b14d52539d8034cffa",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "route-lakes",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "d341a3126c5d124fdd05d0099a5820ad423eb47fab1ed8b14d52539d8034cffa",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+        "sim:9859ffe3d0553c1c908f05537df2e7c5df57197ea58b1ae7abffc73ab26dab30",
+        "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    },
+    {
+      "evidence_id": "sim:p4b-d63171af09e02aeb034c5ee119f6fd4b64cd89ca158566c72d9f8ce09046832c",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "route-atlas-release",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "d63171af09e02aeb034c5ee119f6fd4b64cd89ca158566c72d9f8ce09046832c",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:16d829e187fff45d9e4cd2d547b17b93d8a8a952e1357d68140e02990f8e69e4",
+        "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+        "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    },
+    {
+      "evidence_id": "sim:p4b-095a50d3ab1147a08f147c1af3c381bd9703e264ad5ab64d4a9c39369ef89dc8",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "route-south",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "095a50d3ab1147a08f147c1af3c381bd9703e264ad5ab64d4a9c39369ef89dc8",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:47458cfd37025a30e734c9173c1aa3356024f855c70494d973dd958811ced309",
+        "sim:550ad280727aadcb7171d33800aaa633e5babd3c8e37182d588e896e8a675211",
+        "sim:eaeaedd5713d682e24444c0dc05f15c24419f829bc998e17374345f668c8df42"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    },
+    {
+      "evidence_id": "sim:p4b-edff0903b928547eb7329e605f1cd32da22c11e4ede8ab7477d41f20259e1d7c",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "north-other-strength",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "edff0903b928547eb7329e605f1cd32da22c11e4ede8ab7477d41f20259e1d7c",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:e9c60ce0f63dd540e8ef4cb827a0269e2ec3aadfba61a9a676bc4e88098d175c",
+        "sim:p4b-54d2bcdac6c080bf3c2c927cca6fe4959f68406a4aabd2bb0fa6188200874543"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    },
+    {
+      "evidence_id": "sim:p4b-2fd2030d6286b5ddb81b8f01973075bdc75d129382b6c71d4b6987be6b7f00fa",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "north-bulk",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "2fd2030d6286b5ddb81b8f01973075bdc75d129382b6c71d4b6987be6b7f00fa",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:8c74820a60e14194f6d81ac6f2c63e3d3f6eef9f59b6b49894ed14fe8a2c62ca",
+        "sim:p4b-b85885ee3a146a7edeec39f8e63b6f218f8ec6c8ca270af3fc9d7ec2e05123fd"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    },
+    {
+      "evidence_id": "sim:p4b-ae548db5da3ab19aff0efbffe74a0ddbe34ebcc3c7d2fcb5e595c1a5345d33f8",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "lakes-additional",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "ae548db5da3ab19aff0efbffe74a0ddbe34ebcc3c7d2fcb5e595c1a5345d33f8",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:p4b-23671398fb142765d282f479958a3721fff6b0bdef896436ac17a5fddf4fd338",
+        "sim:p4b-d341a3126c5d124fdd05d0099a5820ad423eb47fab1ed8b14d52539d8034cffa"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    },
+    {
+      "evidence_id": "sim:p4b-f718b7cf134c76abb57a87df2a4b8781fddaf7f103c365275aaf320948af745f",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "north-conservative",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "f718b7cf134c76abb57a87df2a4b8781fddaf7f103c365275aaf320948af745f",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:8c74820a60e14194f6d81ac6f2c63e3d3f6eef9f59b6b49894ed14fe8a2c62ca",
+        "sim:p4b-b85885ee3a146a7edeec39f8e63b6f218f8ec6c8ca270af3fc9d7ec2e05123fd"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    },
+    {
+      "evidence_id": "sim:p4b-c7cd32e19706eb65350f39503aea5272a0707a3f0ffc67ec2b3d3776671309f4",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "atlas-release",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "c7cd32e19706eb65350f39503aea5272a0707a3f0ffc67ec2b3d3776671309f4",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:7f481fe039beb18e23f58e7348f4ba173dc8730d33a93b9fd28d197dfadce9fc",
+        "sim:p4b-d63171af09e02aeb034c5ee119f6fd4b64cd89ca158566c72d9f8ce09046832c"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    },
+    {
+      "evidence_id": "sim:p4b-aaaa8fcdd232ee8e0ea48ec8cb6f7b17620dda307f743f723cddb437786b1926",
+      "kind": "simulated",
+      "source": "pharmax-mitigation-fixture-v1",
+      "source_record_id": "south-quarantined",
+      "source_url": "https://example.invalid/pharmax/mitigation-v1",
+      "observed_at": "2023-07-24T00:00:00Z",
+      "published_on": null,
+      "updated_on": null,
+      "version_available_at": "2023-07-24T00:00:00Z",
+      "content_sha256": "aaaa8fcdd232ee8e0ea48ec8cb6f7b17620dda307f743f723cddb437786b1926",
+      "raw_ref": null,
+      "parent_ids": [
+        "sim:3ae9f148bc178031c8a92596514f13fc48ecdc628f469955f742e8197254a21b",
+        "sim:p4b-095a50d3ab1147a08f147c1af3c381bd9703e264ad5ab64d4a9c39369ef89dc8"
+      ],
+      "note": "Fictional operational assumption with hypothetical scenario-start knowledge; not an observed record or historical backtest."
+    }
+  ],
+  "assumptions": [
+    "All availability, routes, authorizations and interventions are fictional planning assumptions.",
+    "Same-day North courier is modeled at day start before demand; it is not a real logistics promise.",
+    "Supplier additional delivery is independent of existing purchase orders and shipments; 36 unreserved vials are assumed available.",
+    "Transfers dispatch at scenario start; reservations remain ring-fenced, no substitutions or stock release are authorized.",
+    "Incoming shelf life is conservatively modeled as 30 days and must not exceed actual source expiry.",
+    "Candidate quantities are proposals, never successful outcomes. Compare alternatives independently; do not add their improvements."
+  ],
+  "kind": "simulated"
+}
