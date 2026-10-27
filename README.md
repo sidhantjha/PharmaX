@@ -56,7 +56,11 @@ PharmaX serves pharmacy and supply-chain operators who need to understand where 
 
 ![Actual evidence-backed chat response with a source citation and hypothetical calculation](docs/assets/chat.png)
 
-**Demo video:** pending maintainer URL. **Presentation:** pending maintainer URL. No public live-demo URL is claimed.
+**Demo video:** pending maintainer URL.
+## Presentation
+
+[View or download the PharmaX presentation](docs/presentation/PharmaX_Hackathon_Submission_Deck_Final_v2.pptx)
+
 
 ## Measured Hurricane Helene case study
 
